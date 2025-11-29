@@ -8,15 +8,15 @@ import { SERVICES, SERVICE_PRICING, POS_PACKAGES } from '../../constants';
 // Helper to build dynamic context from the actual app data
 const buildKnowledgeBase = () => {
   let context = "DATA LAYANAN DAN HARGA TERBARU AGAM LATIFULLAH:\n\n";
-  
+
   // 1. POS PACKAGES (Core Offering - Prioritized)
   context += "--- KATEGORI UTAMA: SISTEM KASIR (POS) & INVENTORY ---\n";
   context += "Deskripsi: Solusi kasir, manajemen stok, dan laporan keuangan untuk UMKM (Cafe, Retail, Toko).\n";
   POS_PACKAGES.forEach(plan => {
-     context += `   • Paket: ${plan.name}\n`;
-     context += `     Harga: ${plan.price}\n`;
-     context += `     Cocok untuk: ${plan.description}\n`;
-     context += `     Fitur Utama: ${plan.features.slice(0, 6).join(', ')}\n`;
+    context += `   • Paket: ${plan.name}\n`;
+    context += `     Harga: ${plan.price}\n`;
+    context += `     Cocok untuk: ${plan.description}\n`;
+    context += `     Fitur Utama: ${plan.features.slice(0, 6).join(', ')}\n`;
   });
   context += "\n";
 
@@ -24,7 +24,7 @@ const buildKnowledgeBase = () => {
   SERVICES.forEach(service => {
     context += `--- KATEGORI: ${service.title} ---\n`;
     context += `Deskripsi: ${service.description}\n`;
-    
+
     const plans = SERVICE_PRICING[service.id];
     if (plans) {
       plans.forEach(plan => {
@@ -126,8 +126,8 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
 
   // Initialize Chat Session
   useEffect(() => {
-    const apiKey = (typeof process !== "undefined" && process.env && process.env.API_KEY) ? process.env.API_KEY : "";
-    
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "";
+
     if (isOpen && !chatSessionRef.current && apiKey) {
       try {
         const ai = new GoogleGenAI({ apiKey });
@@ -138,8 +138,8 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
             temperature: 0.7,
           },
           history: messages.map(m => ({
-             role: m.role,
-             parts: [{ text: m.text }]
+            role: m.role,
+            parts: [{ text: m.text }]
           }))
         });
       } catch (error) {
@@ -154,7 +154,7 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
 
     const userText = input.trim();
     setInput('');
-    
+
     // Add User Message
     const newUserMsg: Message = { id: Date.now().toString(), role: 'user', text: userText };
     setMessages(prev => [...prev, newUserMsg]);
@@ -162,29 +162,29 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
 
     try {
       if (!chatSessionRef.current) {
-         const apiKey = (typeof process !== "undefined" && process.env && process.env.API_KEY) ? process.env.API_KEY : "";
-         if (!apiKey) throw new Error("API Key missing");
-         
-         const ai = new GoogleGenAI({ apiKey });
-         chatSessionRef.current = ai.chats.create({
-            model: 'gemini-2.5-flash',
-            config: { systemInstruction: SYSTEM_INSTRUCTION }
-         });
+        const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "";
+        if (!apiKey) throw new Error("API Key missing");
+
+        const ai = new GoogleGenAI({ apiKey });
+        chatSessionRef.current = ai.chats.create({
+          model: 'gemini-2.5-flash',
+          config: { systemInstruction: SYSTEM_INSTRUCTION }
+        });
       }
 
       const resultStream = await chatSessionRef.current.sendMessageStream({ message: userText });
-      
+
       let fullResponse = '';
       const botMsgId = (Date.now() + 1).toString();
-      
+
       // Add placeholder bot message
       setMessages(prev => [...prev, { id: botMsgId, role: 'model', text: '' }]);
-      
+
       for await (const chunk of resultStream) {
         const chunkText = (chunk as GenerateContentResponse).text;
         if (chunkText) {
           fullResponse += chunkText;
-          setMessages(prev => 
+          setMessages(prev =>
             prev.map(msg => msg.id === botMsgId ? { ...msg, text: fullResponse } : msg)
           );
         }
@@ -192,10 +192,10 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
     } catch (error) {
       console.error("Chat error:", error);
       // Robust Error Handling with Direct WhatsApp Link
-      setMessages(prev => [...prev, { 
-        id: Date.now().toString(), 
-        role: 'model', 
-        text: 'Mohon maaf, saya sedang mengalami gangguan koneksi. 🙏\n\nSilakan hubungi Mas Agam langsung untuk respon cepat: [Chat WhatsApp Disini](https://wa.me/6285922430828)' 
+      setMessages(prev => [...prev, {
+        id: Date.now().toString(),
+        role: 'model',
+        text: 'Mohon maaf, saya sedang mengalami gangguan koneksi. 🙏\n\nSilakan hubungi Mas Agam langsung untuk respon cepat: [Chat WhatsApp Disini](https://wa.me/6285922430828)'
       }]);
     } finally {
       setIsTyping(false);
@@ -219,29 +219,29 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
   const renderMessageContent = (text: string) => {
     // Split by links [text](url) OR bold **text**
     const parts = text.split(/(\[.*?\]\(.*?\)|(?:\*\*.*?\*\*))/g);
-    
+
     return parts.map((part, i) => {
-        // Handle Link: [Text](Url)
-        const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
-        if (linkMatch) {
-            return (
-                <a 
-                    key={i} 
-                    href={linkMatch[2]} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-indigo-600 dark:text-indigo-400 font-bold underline decoration-indigo-300 hover:text-indigo-500 inline-flex items-center gap-1"
-                >
-                    {linkMatch[1]} <ExternalLink size={12} />
-                </a>
-            );
-        }
-        // Handle Bold: **Text**
-        if (part.startsWith('**') && part.endsWith('**')) {
-            return <strong key={i}>{part.slice(2, -2)}</strong>;
-        }
-        // Normal Text
-        return <span key={i}>{part}</span>;
+      // Handle Link: [Text](Url)
+      const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+      if (linkMatch) {
+        return (
+          <a
+            key={i}
+            href={linkMatch[2]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 dark:text-indigo-400 font-bold underline decoration-indigo-300 hover:text-indigo-500 inline-flex items-center gap-1"
+          >
+            {linkMatch[1]} <ExternalLink size={12} />
+          </a>
+        );
+      }
+      // Handle Bold: **Text**
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={i}>{part.slice(2, -2)}</strong>;
+      }
+      // Normal Text
+      return <span key={i}>{part}</span>;
     });
   };
 
@@ -254,9 +254,8 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
         animate={{ scale: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className={`fixed bottom-6 right-4 md:right-8 z-50 p-4 rounded-full shadow-2xl transition-colors flex items-center justify-center ${
-          isOpen ? 'bg-slate-800 text-white rotate-90' : 'bg-primary text-white hover:bg-primary-hover'
-        }`}
+        className={`fixed bottom-6 right-4 md:right-8 z-50 p-4 rounded-full shadow-2xl transition-colors flex items-center justify-center ${isOpen ? 'bg-slate-800 text-white rotate-90' : 'bg-primary text-white hover:bg-primary-hover'
+          }`}
         aria-label="Open AI Chat"
       >
         {isOpen ? <X size={28} /> : <Bot size={28} />}
@@ -285,14 +284,14 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
                   </span>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={clearHistory}
                 className="text-white/60 hover:text-white mr-2"
                 title="Hapus Riwayat Chat"
               >
                 <Trash2 size={18} />
               </button>
-              <button 
+              <button
                 onClick={() => setIsOpen(false)}
                 className="text-white/80 hover:text-white"
               >
@@ -308,11 +307,10 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
                   className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`max-w-[85%] p-3.5 text-sm leading-relaxed shadow-sm whitespace-pre-line ${
-                      msg.role === 'user'
+                    className={`max-w-[85%] p-3.5 text-sm leading-relaxed shadow-sm whitespace-pre-line ${msg.role === 'user'
                         ? 'bg-primary text-white rounded-t-2xl rounded-bl-2xl rounded-br-none'
                         : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-t-2xl rounded-br-2xl rounded-bl-none border border-slate-200 dark:border-slate-700'
-                    }`}
+                      }`}
                   >
                     {renderMessageContent(msg.text)}
                   </div>
