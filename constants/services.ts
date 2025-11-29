@@ -3,6 +3,56 @@ import { Service } from '../types';
 
 export const SERVICES: Service[] = [
   {
+    id: 'e-commerce',
+    title: 'Website E-Commerce / Toko Online',
+    shortTitle: 'E-Commerce',
+    description: 'Punya toko online sendiri tanpa potongan admin marketplace. Katalog produk unlimited, checkout via WhatsApp atau Payment Gateway.',
+    deliverables: [
+      'Katalog Produk & Keranjang Belanja',
+      'Checkout WhatsApp / Otomatis',
+      'Dashboard Admin Kelola Produk',
+      'Laporan Penjualan & Stok',
+      'Gratis Domain & Hosting'
+    ],
+    timeline: 'Est. 4-14 Hari',
+    priceRange: 'Mulai Rp 2.9jt',
+    icon: 'smartphone',
+    modalContent: {
+      title: "Jasa Pembuatan Toko Online",
+      description: "Jualan online lebih profesional dengan website e-commerce milik sendiri. Pilih paket:",
+      points: [
+        { title: "Starter - Mulai Jualan (Rp 2.9jt)", desc: "Toko online simpel, katalog 30 produk, checkout form ke WA. Cocok untuk UMKM baru mulai." },
+        { title: "Growth - Siap Jualan (Rp 5.9jt)", desc: "Sistem keranjang belanja, 100 produk, payment gateway, dashboard admin. Paling Laris." },
+        { title: "Ultimate - Full Otomatis (Rp 10.5jt)", desc: "Unlimited produk, varian lengkap, fitur marketing otomatis, prioritas support. Skala besar." }
+      ]
+    }
+  },
+  {
+    id: 'pos-system',
+    title: 'Sistem Kasir (POS) & Inventory',
+    shortTitle: 'Point of Sale',
+    description: 'Solusi operasional toko. Catat transaksi, stok, dan laporan keuangan secara otomatis. Anti boncos, anti ribet.',
+    deliverables: [
+      'Aplikasi Kasir (Web/Android)',
+      'Manajemen Stok Real-time',
+      'Laporan Laba Rugi',
+      'Support Printer Thermal',
+      'Hak Milik Source Code'
+    ],
+    timeline: 'Est. 3-14 Hari',
+    priceRange: 'Mulai Rp 4.5jt',
+    icon: 'smartphone',
+    modalContent: {
+      title: "Sistem Kasir & Inventory",
+      description: "Rapikan operasional bisnis dengan sistem yang dibuat khusus untuk alur kerja Anda.",
+      points: [
+        { title: "Basic POS (Rp 4.5jt)", desc: "Kasir digital simpel, catat transaksi & struk. Cocok untuk F&B kecil/Retail pemula." },
+        { title: "Standard POS (Rp 8.5jt)", desc: "Manajemen stok lengkap, resep/varian, & laporan laba kotor. Cocok untuk Resto/Toko berkembang." },
+        { title: "Premium POS (Rp 14.9jt)", desc: "Multi-cabang, manajemen supplier, PO otomatis, & akses owner real-time. Skala Enterprise." }
+      ]
+    }
+  },
+  {
     id: 'landing-page',
     title: 'Jasa Landing Page Profesional',
     shortTitle: 'Landing Page',
@@ -78,31 +128,6 @@ export const SERVICES: Service[] = [
     }
   },
   {
-    id: 'e-commerce',
-    title: 'Website E-Commerce / Toko Online',
-    shortTitle: 'E-Commerce',
-    description: 'Punya toko online sendiri tanpa potongan admin marketplace. Katalog produk unlimited, checkout via WhatsApp atau Payment Gateway.',
-    deliverables: [
-      'Katalog Produk & Keranjang Belanja',
-      'Checkout WhatsApp / Otomatis',
-      'Dashboard Admin Kelola Produk',
-      'Laporan Penjualan & Stok',
-      'Gratis Domain & Hosting'
-    ],
-    timeline: 'Est. 4-14 Hari',
-    priceRange: 'Mulai Rp 2.4jt',
-    icon: 'smartphone',
-     modalContent: {
-      title: "Jasa Pembuatan Toko Online",
-      description: "Jualan online lebih profesional dengan website e-commerce milik sendiri. Pilih paket:",
-      points: [
-        { title: "Basic - Start Selling (Rp 2.4jt)", desc: "Toko online simpel, katalog 20 produk, checkout form ke WA. Cocok untuk UMKM baru mulai." },
-        { title: "Premium - Full E-Com (Rp 3.9jt)", desc: "Sistem keranjang belanja, unlimited produk, filter kategori, auto-checkout WA. Fitur lengkap untuk brand." },
-        { title: "Pro - Store Growth (Rp 5.9jt)", desc: "Full payment gateway (QRIS), dashboard admin lengkap, manajemen stok, & fitur promo. Siap scale-up." }
-      ]
-    }
-  },
-  {
     id: 'travel-website',
     title: 'Website Tour & Travel',
     shortTitle: 'Tour & Travel',
@@ -124,31 +149,6 @@ export const SERVICES: Service[] = [
         { title: "Basic - Start Traveling (Rp 2.5jt)", desc: "Landing page travel, max 6 paket wisata, tombol booking WA. Cocok untuk travel baru online." },
         { title: "Premium - Experience (Rp 4.5jt)", desc: "Unlimited paket, detail itinerary lengkap, galeri premium, form booking profesional. Fokus jualan." },
         { title: "Pro - Travel Store (Rp 7.5jt)", desc: "Checkout system (pilih tanggal & jumlah), invoice otomatis, payment gateway, fitur upsell paket." }
-      ]
-    }
-  },
-  {
-    id: 'pos-system',
-    title: 'Sistem Kasir (POS) & Inventory',
-    shortTitle: 'Point of Sale',
-    description: 'Solusi operasional toko. Catat transaksi, stok, dan laporan keuangan secara otomatis. Anti boncos, anti ribet.',
-    deliverables: [
-      'Aplikasi Kasir (Web/Android)',
-      'Manajemen Stok Real-time',
-      'Laporan Laba Rugi',
-      'Support Printer Thermal',
-      'Hak Milik Source Code'
-    ],
-    timeline: 'Est. 3-14 Hari',
-    priceRange: 'Mulai Rp 4.5jt',
-    icon: 'smartphone',
-    modalContent: {
-      title: "Sistem Kasir & Inventory",
-      description: "Rapikan operasional bisnis dengan sistem yang dibuat khusus untuk alur kerja Anda.",
-      points: [
-        { title: "Basic POS (Rp 4.5jt)", desc: "Kasir digital simpel, catat transaksi & struk. Cocok untuk F&B kecil/Retail pemula." },
-        { title: "Standard POS (Rp 8.5jt)", desc: "Manajemen stok lengkap, resep/varian, & laporan laba kotor. Cocok untuk Resto/Toko berkembang." },
-        { title: "Premium POS (Rp 14.9jt)", desc: "Multi-cabang, manajemen supplier, PO otomatis, & akses owner real-time. Skala Enterprise." }
       ]
     }
   },

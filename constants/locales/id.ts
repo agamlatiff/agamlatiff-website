@@ -1,11 +1,11 @@
 export const id = {
   hero: {
-    badge: "Investasi Sekali Bayar",
+    badge: "E-Commerce Specialist",
     headline: {
-      part1: "Sistem yang Bikin Bisnis",
-      part2: "Jalan Sendiri."
+      part1: "Bangun Toko Online,",
+      part2: "Naikin Penjualan."
     },
-    subheadline: "Kasir otomatis, stok terkontrol, laporan real-time. **Bayar sekali, pakai selamanya.** Buat UMKM yang ingin fokus jualan, bukan ngurusin admin.",
+    subheadline: "Bantu UMKM punya toko online modern dengan fitur lengkap: pembayaran online, manajemen produk, dan otomatisasi. **Bayar sekali, pakai selamanya.**",
     cta: {
       consult: "Konsultasi Gratis",
       processing: "Processing...",
@@ -416,7 +416,7 @@ export const id = {
       description: "Konsultasikan kebutuhan sistem bisnis Anda hari ini. Gratis diskusi awal untuk menemukan solusi terbaik.",
       button: "Hubungi Saya"
     },
-    brandDescription: "Fullstack Developer spesialis solusi bisnis UMKM. Membangun sistem yang rapi, cepat, dan 100% hak milik Anda.",
+    brandDescription: "E-Commerce Specialist. Bantu UMKM bangun toko online modern yang siap jualan.",
     menus: {
       main: "Menu Utama",
       services: "Layanan",
@@ -439,7 +439,7 @@ export const id = {
     sourceCode: "Source Code Hak Milik"
   },
   pricingSection: {
-    title: "Paket Spesialis POS & Inventory",
+    title: "Paket E-Commerce & Sistem Bisnis",
     subtitle: "Pilih solusi sistem yang sesuai dengan tahapan bisnis Anda saat ini. Semua paket bersifat <strong>Investasi Sekali Bayar (One-time Payment)</strong> dengan Source Code menjadi hak milik Anda.",
     popular: "Paling Diminati",
     viewDetails: "Lihat Detail & Benefit",
@@ -448,10 +448,10 @@ export const id = {
   },
   about: {
     title: "Siapa Agam?",
-    subtitle: "Partner Digital Bisnis Anda.",
-    quote: "Saya Agam, freelance developer yang bantu UMKM menyelesaikan masalah operasional lewat sistem digital yang ringan, cepat, dan mudah dipakai.",
-    description1: "Fokus saya sederhana: <strong>bikin usaha Anda lebih tertata</strong> supaya Anda bisa fokus jualan, bukan pusing mengurus ribetnya catatan manual dan data yang berantakan.",
-    description2: "Saya tidak menjual 'kodingan' yang rumit. Saya menjual <strong>solusi bisnis</strong> agar operasional Anda rapi, stok aman, dan profit terukur.",
+    subtitle: "E-Commerce Specialist.",
+    quote: "Gua Agam, seorang E-Commerce Specialist yang fokus bantu UMKM membangun toko online modern dan meningkatkan penjualan lewat sistem digital yang rapi, cepat, dan mudah digunakan.",
+    description1: "Banyak UMKM punya produk bagus, tapi proses jualannya masih manual—order lewat DM, stok berantakan. Gua percaya masalah ini bisa diselesaikan dengan sistem yang tepat.",
+    description2: "Gua ngebangun toko online modern yang bukan cuma cantik, tapi juga kuat, aman, dan gampang dikelola. Supaya bisnis lo bisa level up: lebih efisien, lebih dipercaya, dan lebih menguntungkan.",
     whyChooseMe: "Kenapa UMKM Pilih Agam?",
     values: [
       { title: "Simpel & Praktis", desc: "Sistem langsung dipakai staf, minim training." },
@@ -536,8 +536,8 @@ export const id = {
         support: "Support Prioritas via WhatsApp"
       },
       demo: {
-        title: "Demo Live System",
-        description: "Jangan beli kucing dalam karung. Coba dulu sistemnya, klik tombolnya, rasakan alurnya sebelum bayar DP."
+        title: "Demo Website Toko Online",
+        description: "Jangan beli kucing dalam karung. Coba dulu website-nya, klik tombol beli, rasakan alur checkout sebelum bayar DP."
       },
       server: {
         title: "Gratis Setup Server",
@@ -555,135 +555,135 @@ export const id = {
     ]
   },
   painPoints: {
-    title: "Tinggalkan Cara Lama,<br/>Beralih ke Sistem Otomatis",
-    subtitle: "Ubah kendala operasional menjadi keunggulan kompetitif. Lihat bagaimana sistem saya menyelesaikan masalah harian Anda.",
-    currentChallenge: "Tantangan Saat Ini",
-    mySolution: "Solusi Agam",
+    title: "Jualan Manual vs<br/>Toko Online Otomatis",
+    subtitle: "Ubah kendala operasional menjadi keunggulan kompetitif. Lihat bagaimana Website E-Commerce menyelesaikan masalah harian Anda.",
+    currentChallenge: "Cara Lama (Manual)",
+    mySolution: "Solusi E-Commerce",
     list: [
       {
-        problem: "Proses Manual Buang Waktu & Bikin Antri",
-        impact: "Pelanggan harus tunggu chat dibalas, antre di tempat, atau menunggu respon lama. Potensi omzet hilang hanya karena proses lambat.",
-        solution: "Self-Service (QR/Web)",
-        solutionDescription: "Pelanggan order sendiri via QR/Web. Antrean berkurang, respon instan, dan penjualan naik tanpa tambah staf."
+        problem: "Balas Chat Satu-Satu Bikin Capek",
+        impact: "Calon pembeli kabur karena respon lama. Waktu habis cuma buat jawab pertanyaan berulang 'Barang ready gak?'.",
+        solution: "Katalog & Checkout Otomatis",
+        solutionDescription: "Pelanggan bisa lihat stok, detail produk, & belanja sendiri 24 jam tanpa perlu chat admin."
       },
       {
-        problem: "Bisnis Terlihat Kurang Profesional",
-        impact: "Tanpa website atau tampilan yang modern, pelanggan ragu transfer dan gampang lari ke kompetitor.",
-        solution: "Website & Branding Kuat",
-        solutionDescription: "Tampilan profesional & terpercaya. Meningkatkan rasa aman saat transaksi & stand out dari kompetitor."
+        problem: "Perang Harga di Marketplace",
+        impact: "Susah bersaing karena produk disandingkan langsung dengan kompetitor yang lebih murah. Margin makin tipis.",
+        solution: "Website Toko Online Eksklusif",
+        solutionDescription: "Bangun brand image premium. Pelanggan fokus ke value produk Anda, bukan harga tetangga."
       },
       {
-        problem: "Owner & Karyawan Kewalahan",
-        impact: "Harus balas chat berulang, input data manual, hitung stok, dan rekap laporan tiap hari. Capek, lambat, rawan salah.",
-        solution: "Otomasi Hemat Waktu",
-        solutionDescription: "Chat, Order, Notifikasi, Stok, & Laporan serba otomatis. Lebih cepat, minim error, hemat tenaga."
+        problem: "Rekap Orderan Manual Rawan Salah",
+        impact: "Salah catat alamat, salah kirim barang, atau lupa input resi bikin pelanggan marah dan kapok belanja.",
+        solution: "Manajemen Order Terpusat",
+        solutionDescription: "Order masuk, stok berkurang, dan label pengiriman terbuat otomatis. Minim human error."
       },
       {
-        problem: "Keputusan Bisnis Masih 'Feeling'",
-        impact: "Tanpa data jelas, owner sering menebak-nebak: Produk mana yang laku? Penjualan naik atau turun? Jam paling ramai kapan?",
-        solution: "Kontrol Penuh via Data",
-        solutionDescription: "Laporan real-time dengan insight produk, pelanggan, dan jam ramai. Keputusan lebih tepat & terukur."
+        problem: "Tidak Punya Data Pelanggan",
+        impact: "Di marketplace, data pembeli disembunyikan. Anda tidak bisa menghubungi mereka lagi untuk promosi (Retargeting).",
+        solution: "Database Pelanggan Milik Sendiri",
+        solutionDescription: "Simpan data email/WA pembeli. Kirim promo kapan saja untuk tingkatkan repeat order (CLV)."
       }
     ]
   },
   comparison: {
-    title: "Perbandingan Investasi & Fitur",
-    subtitle: "Jangan terjebak biaya langganan yang membengkak. Bandingkan bagaimana <strong>Custom Development</strong> memberikan ROI terbaik untuk jangka panjang.",
+    title: "Perbandingan Platform Toko Online",
+    subtitle: "Jangan terjebak biaya langganan bulanan. Bandingkan bagaimana <strong>Custom E-Commerce</strong> memberikan ROI terbaik untuk jangka panjang.",
     headers: {
       criteria: "Kriteria",
-      saas: "Aplikasi SaaS",
-      agency: "Digital Agency",
-      custom: "Agam Custom",
+      saas: "Sewa Toko (SaaS)",
+      agency: "Jasa Web Umum",
+      custom: "Agam E-Commerce",
       bestValue: "Best Value"
     },
     mobile: {
       winner: "WINNER",
-      description: "Pilihan terbaik untuk bisnis yang ingin berkembang tanpa batasan fitur dan biaya bulanan.",
-      saas: "Aplikasi SaaS",
-      agency: "Agensi Besar"
+      description: "Pilihan terbaik untuk brand yang ingin mandiri tanpa potongan biaya admin dan batasan fitur.",
+      saas: "Sewa Toko (SaaS)",
+      agency: "Jasa Web Umum"
     },
     list: [
       {
         criteria: "Sistem Kepemilikan",
-        saas: "Sewa (Tidak Pernah Memiliki)",
+        saas: "Sewa (Numpang Lapak)",
         agency: "Lisensi Terbatas",
-        custom: "Hak Milik 100% (Full Source Code)"
+        custom: "Hak Milik 100% (Source Code)"
       },
       {
-        criteria: "Biaya",
-        saas: "Bayar Bulanan Selamanya",
-        agency: "Ada Maintenance Fee",
-        custom: "Sekali Bayar — Pakai Selamanya"
+        criteria: "Biaya & Potongan",
+        saas: "Langganan + Potongan Admin",
+        agency: "Biaya Maintenance Tahunan",
+        custom: "Sekali Bayar (Tanpa Potongan)"
       },
       {
-        criteria: "Fleksibilitas Fitur",
-        saas: "Terbatas, Tidak Bisa Custom",
-        agency: "Custom Terbatas & Mahal",
-        custom: "Bebas Request Fitur & Integrasi"
+        criteria: "Fitur Jualan",
+        saas: "Terbatas Template Platform",
+        agency: "Standar Company Profile",
+        custom: "Custom (Promo, Bundling, Grosir)"
       },
       {
         criteria: "Kepemilikan Data",
         saas: "Data Disimpan Vendor",
         agency: "Shared Server",
-        custom: "Data 100% Milik Anda (Private DB)"
+        custom: "Private Database (Aman)"
       },
       {
-        criteria: "Skalabilitas Bisnis",
-        saas: "Banyak Biaya Tambahan",
-        agency: "Sering Kena Biaya Revisi",
-        custom: "Unlimited User & Cabang"
+        criteria: "Skalabilitas Brand",
+        saas: "Biaya Naik jika Order Naik",
+        agency: "Sulit Dikembangkan",
+        custom: "Unlimited Produk & Transaksi"
       }
     ]
   },
   roiCalculator: {
     badge: "Simulasi & Studi Kasus",
-    title: "Mau Jadi Pebisnis Tipe Apa?",
-    subtitle: "Lihat perbedaan nasib bisnis yang bertahan dengan cara lama vs bisnis yang beradaptasi dengan teknologi.",
+    title: "Pedagang Biasa vs Brand Owner Modern",
+    subtitle: "Lihat perbedaan nasib bisnis yang terjebak perang harga vs bisnis yang membangun aset digital jangka panjang.",
     cases: {
       manual: {
-        title: "Tipe A: 'Saya Gaptek / Cara Lama'",
-        description: "Masih catat manual, owner merangkap admin, stok sering selisih tapi dimaklumi.",
-        effect: "• Efek: Bisnis jalan di tempat, Owner tidak bisa libur."
+        title: "Tipe A: 'Pedagang Marketplace / Chat'",
+        description: "Bergantung pada algoritma, perang harga kompetitor, dan database pelanggan tidak dipegang sendiri.",
+        effect: "• Efek: Penjualan tidak stabil, Margin tipis."
       },
       digital: {
-        title: "Tipe B: 'Saya Mau Adaptasi'",
-        description: "Sistem otomatis, stok tercatat real-time, laporan masuk ke HP owner tiap malam.",
-        effect: "• Efek: Mudah buka cabang, Profit maksimal."
+        title: "Tipe B: 'Brand Owner E-Commerce'",
+        description: "Punya website sendiri, database pelanggan aman, brand image kuat & premium.",
+        effect: "• Efek: Loyalitas tinggi, Profit maksimal."
       }
     },
     calculator: {
       checkPotentialLoss: "Cek Potensi Kerugian",
       manualRisk: "Resiko Manual",
-      digitalPotential: "Potensi Digital",
+      digitalPotential: "Potensi E-Commerce",
       switchMode: "Switch Mode",
       averageRevenue: "Rata-rata Omzet / Bulan",
       smallBusiness: "Small Business",
       growingBusiness: "Growing Business",
-      moneyLost: "Uang Melayang / Tahun",
+      moneyLost: "Potensi Hilang / Tahun",
       potentialProfit: "Potensi Profit Tambahan / Tahun",
-      manualNote: "(Akibat stok hilang, salah hitung, & waktu admin terbuang)",
-      digitalNote: "(Dari efisiensi stok, kecepatan layanan, & analisa data)",
+      manualNote: "(Akibat perang harga, fee admin, & lost sales)",
+      digitalNote: "(Dari efisiensi, tanpa potongan admin, & repeat order)",
       ctaManual: "Saya Mau Stop Kebocoran Ini",
-      ctaDigital: "Saya Mau Bangun Sistem Ini"
+      ctaDigital: "Saya Mau Bangun Brand Ini"
     }
   },
   cta: {
-    title: "Siap Merapikan Bisnis Anda?",
-    subtitle: "Jangan biarkan masalah operasional menghambat pertumbuhan omzet. Konsultasikan kebutuhan sistem Anda sekarang.",
+    title: "Siap Punya Toko Online Sendiri?",
+    subtitle: "Tinggalkan cara jualan manual. Bangun brand Anda sekarang dengan website e-commerce profesional.",
     button: "Hubungi Saya"
   },
   seo: {
     hero: {
-      title: "Agam Latifullah | Spesialis POS & Inventory",
-      desc: "Agam Latifullah (agamlatiff) adalah Fullstack Developer spesialis Sistem Kasir (POS) & Inventory Management menggunakan Laravel & React, serta pembuatan Website Bisnis."
+      title: "Agam Latifullah | E-Commerce Specialist",
+      desc: "Agam Latifullah (agamlatiff) adalah E-Commerce Specialist yang fokus membantu UMKM membangun toko online modern untuk meningkatkan penjualan."
     },
     'roi-calculator': {
       title: "Cegah Kebocoran Stok & Keuangan | agamlatiff",
-      desc: "Hitung berapa banyak uang yang hilang dari bisnis Anda karena pembukuan manual. Solusi POS akurat untuk efisiensi maksimal."
+      desc: "Hitung berapa banyak uang yang hilang dari bisnis Anda karena pembukuan manual. Solusi E-Commerce & Sistem Bisnis untuk efisiensi maksimal."
     },
     services: {
-      title: "Jasa Pembuatan POS & Website | agamlatiff",
-      desc: "Melayani pembuatan Sistem POS Retail, Aplikasi Gudang (Inventory), Landing Page UMKM, dan Website Company Profile dengan CMS."
+      title: "Jasa Pembuatan Toko Online & Website | agamlatiff",
+      desc: "Melayani pembuatan Website E-Commerce, Toko Online, Landing Page UMKM, dan Sistem Bisnis Custom."
     },
     'pain-points': {
       title: "Masalah Stok & Pembukuan? | agamlatiff",
@@ -698,24 +698,24 @@ export const id = {
       desc: "Bandingkan solusi custom Laravel & React saya dengan software jadi. Investasi jangka panjang untuk sistem yang scalable dan mudah dirawat."
     },
     pricing: {
-      title: "Harga Jasa Pembuatan POS | agamlatiff",
-      desc: "Paket harga transparan untuk pembuatan Website, Sistem POS Basic, dan Custom Enterprise. Jual putus tanpa biaya langganan bulanan."
+      title: "Harga Jasa Pembuatan Website & Sistem | agamlatiff",
+      desc: "Paket harga transparan untuk pembuatan Toko Online, Website Company Profile, dan Sistem Custom. Jual putus tanpa biaya langganan bulanan."
     },
     process: {
       title: "Alur Kerja Sistem Custom | agamlatiff",
       desc: "Proses pengembangan sistem yang transparan dari bedah masalah, desain database, development, hingga training staff."
     },
     projects: {
-      title: "Portofolio Sistem POS & Web | agamlatiff",
-      desc: "Lihat studi kasus penerapan Sistem POS Coffee Shop, Manajemen Gudang Grosir, dan Landing Page Barbershop."
+      title: "Portofolio E-Commerce & Website | agamlatiff",
+      desc: "Lihat studi kasus penerapan Website E-Commerce Fashion, Sistem Manajemen Gudang, dan Landing Page."
     },
     testimonials: {
       title: "Review Klien Bisnis | agamlatiff",
-      desc: "Apa kata pemilik bisnis tentang sistem kasir dan website yang saya bangun. Fokus pada efisiensi dan kemudahan penggunaan."
+      desc: "Apa kata pemilik bisnis tentang toko online dan sistem yang saya bangun. Fokus pada efisiensi dan kemudahan penggunaan."
     },
     about: {
       title: "Tentang Agam Latifullah | agamlatiff",
-      desc: "Fullstack Developer dengan keahlian mendalam di ekosistem Laravel, React, dan Database Management untuk solusi bisnis B2B."
+      desc: "E-Commerce Specialist dengan keahlian membangun toko online modern, sistem manajemen stok, dan integrasi pembayaran digital."
     },
     faq: {
       title: "FAQ System & Website | agamlatiff",
@@ -723,7 +723,7 @@ export const id = {
     },
     contact: {
       title: "Hubungi Agam Latifullah | agamlatiff",
-      desc: "Siap merapikan sistem bisnis Anda? Hubungi saya untuk konsultasi pembuatan POS, Inventory, atau Website."
+      desc: "Siap merapikan sistem bisnis Anda? Hubungi saya untuk konsultasi pembuatan Toko Online, Website, atau Sistem Custom."
     }
   },
   contact: {
@@ -731,7 +731,7 @@ export const id = {
     subtitle: "Konsultasikan kebutuhan sistem bisnis atau website Anda. Gratis diskusi awal.",
     info: {
       title: "Informasi Kontak",
-      description: "Butuh Sistem POS Kasir, Booking Online, atau Website Company Profile? Hubungi saya sekarang.",
+      description: "Butuh Website Toko Online, Landing Page, atau Sistem Bisnis? Hubungi saya sekarang.",
       email: "Email",
       status: "Status",
       open: "Open for Projects",
@@ -746,11 +746,11 @@ export const id = {
       service: {
         label: "Jenis Layanan",
         options: [
+          "Toko Online / E-Commerce",
+          "Landing Page Promosi",
+          "Website Company Profile (CMS)",
           "Sistem POS & Inventory (Kasir)",
           "Sistem Booking / Reservasi Online",
-          "Website Company Profile (CMS)",
-          "Landing Page Promosi",
-          "Toko Online / E-Commerce",
           "Dashboard Admin Custom",
           "Lainnya / Custom Request"
         ]
@@ -1321,111 +1321,111 @@ export const id = {
         }
       ]
     },
-    'ec-basic': {
-      name: 'BASIC',
-      description: 'Start Selling Fast. Landing page produk + katalog simpel untuk jualan cepat via WA.',
+    'ec-starter': {
+      name: 'STARTER',
+      description: 'Mulai Jualan Online. Solusi tepat untuk UMKM yang baru mau punya toko online sendiri.',
       features: [
-        '1 Halaman Landing Utama',
-        'Katalog Max 20 Produk',
-        'Gratis Domain & Hosting',
-        'Checkout via WhatsApp + Form',
-        'Manajemen Produk Sederhana',
-        'Desain Mobile Friendly',
-        'Akses Admin Ringan',
-        '2x Revisi',
+        'Website E-Commerce (Landing + Katalog)',
+        'Katalog Max 30 Produk',
+        'Keranjang & Checkout via WhatsApp',
+        'Manajemen Produk & Kategori',
+        'Order Masuk ke WA Admin',
+        'SEO Basic & SSL Gratis',
+        'Bonus Copywriting 5 Produk',
+        '1x Training Penggunaan',
         'Maintenance 15 Hari'
       ],
-      cta: 'Ambil Paket Basic',
+      cta: 'Ambil Paket Starter',
       details: [
         {
-          feature: "Pegang Aset Sendiri",
-          problem: "Algoritma marketplace berubah, jualan sepi. Perang harga tidak ada habisnya.",
-          solution: "Membangun website sendiri berarti punya kontrol 100% tanpa tergantung platform lain.",
-          benefit: "Bisnis lebih aman & sustain jangka panjang."
+          feature: "Pindah ke Online",
+          problem: "Jualan cuma di story WA/IG, pelanggan susah lihat katalog lengkap.",
+          solution: "Punya website katalog sendiri yang rapi dan mudah diakses.",
+          benefit: "Terlihat lebih profesional & memudahkan pelanggan belanja."
         },
         {
-          feature: "Kurangi Chat Berulang",
-          problem: "Capek jawab pertanyaan 'Mbak harga berapa?' atau 'Ada foto lain?' setiap hari.",
-          solution: "Katalog produk lengkap dengan foto, harga, dan deskripsi yang jelas.",
-          benefit: "Hemat energi & waktu admin, proses jualan lebih cepat."
+          feature: "Hemat Waktu Admin",
+          problem: "Capek kirim foto produk satu-satu ke setiap chat pelanggan.",
+          solution: "Cukup kirim link website, pelanggan lihat semua produk & detailnya.",
+          benefit: "Admin lebih santai, respon ke pelanggan lebih cepat."
         },
         {
-          feature: "Menangkan Kompetisi",
-          problem: "Banyak kompetitor masih jualan manual lewat chat atau marketplace saja.",
-          solution: "Tampil beda dengan website profesional yang meyakinkan.",
-          benefit: "Kesempatan emas untuk terlihat lebih bonafit dari pesaing."
+          feature: "Aset Digital Sendiri",
+          problem: "Takut akun sosmed kena banned atau hack.",
+          solution: "Website adalah aset 100% milik Anda, kontrol penuh di tangan Anda.",
+          benefit: "Bisnis aman jangka panjang, tidak tergantung platform lain."
         }
       ]
     },
-    'ec-premium': {
-      name: 'PREMIUM',
-      description: 'Full E-Commerce Modern. Sistem keranjang belanja & fitur lengkap tanpa biaya bulanan.',
+    'ec-growth': {
+      name: 'GROWTH',
+      description: 'Toko Online Siap Jualan. Paling direkomendasikan untuk UMKM yang ingin naik level.',
       features: [
-        'Semua Fitur Basic',
-        'Struktur Halaman Lengkap',
-        'Sistem Keranjang (Cart) Website',
-        'Auto Checkout ke WhatsApp',
-        'Unlimited Produk (Upload CSV)',
-        'Fitur Search & Filter Kategori',
-        'Tracking Analitik Lengkap',
-        '4x Revisi',
+        'Website E-Commerce Lengkap (100 Produk)',
+        'Checkout Online Otomatis (Bukan WA)',
+        'Payment Gateway (QRIS, E-Wallet, VA)',
+        'Dashboard Admin (Stok, Order, Laporan)',
+        'Hitung Ongkir Otomatis (JNE, J&T, dll)',
+        'Kupon Diskon & Produk Terlaris',
+        'Notifikasi Email & Invoice Otomatis',
+        'Bonus Banner & Setup Pixel/Analytics',
         'Maintenance 30 Hari'
       ],
-      cta: 'Ambil Paket Premium',
+      cta: 'Ambil Paket Growth',
       details: [
         {
-          feature: "Jualan Auto-Pilot 24/7",
-          problem: "Toko tutup, admin tidur, orderan hilang.",
-          solution: "Website e-commerce bekerja 24 jam. Pelanggan bisa lihat produk & checkout kapan saja.",
-          benefit: "Tetap jualan dan terima orderan bahkan saat Anda tidur."
+          feature: "Sistem Otomatis",
+          problem: "Ribet cek mutasi transfer manual & hitung ongkir satu-satu.",
+          solution: "Pembayaran terverifikasi otomatis & ongkir langsung muncul.",
+          benefit: "Operasional jauh lebih efisien, minim human error."
         },
         {
-          feature: "Data Pengunjung (Analytics)",
-          problem: "Di IG/Marketplace data pelanggan terbatas. Susah retargeting.",
-          solution: "Tracking lengkap: produk paling dilihat, asal pengunjung, & perilaku klik.",
-          benefit: "Strategi marketing lebih tajam & biaya iklan lebih efisien."
+          feature: "Manajemen Stok Rapi",
+          problem: "Sering selisih stok antara catatan dan gudang.",
+          solution: "Stok berkurang otomatis saat ada penjualan sukses.",
+          benefit: "Stok selalu akurat, tidak perlu pusing rekap manual."
         },
         {
-          feature: "Brand Credibility",
-          problem: "Pembeli makin pintar, suka cek website sebelum transfer.",
-          solution: "Website lengkap dengan keranjang belanja membuktikan bisnis Anda serius.",
-          benefit: "Trust naik drastis, pelanggan tidak ragu untuk beli."
+          feature: "Data Pelanggan Lengkap",
+          problem: "Tidak punya database pelanggan untuk promosi ulang.",
+          solution: "Data pembeli tersimpan rapi di dashboard admin.",
+          benefit: "Bisa lakukan retargeting & email marketing untuk repeat order."
         }
       ]
     },
-    'ec-pro': {
-      name: 'PRO',
-      description: 'Serious Online Store Growth. Full Payment Gateway & Dashboard Admin untuk scale-up.',
+    'ec-ultimate': {
+      name: 'ULTIMATE',
+      description: 'Sistem Penjualan Full Otomatis. Untuk bisnis yang butuh fitur advanced & automasi.',
       features: [
-        'Semua Fitur Premium',
-        'Full Checkout Website (No WA)',
-        'Integrasi Payment Gateway (QRIS)',
-        'Dashboard Admin Full Control',
-        'Manajemen Stok & Harga',
-        'Fitur Promo & Diskon',
-        'Tracking Pixel (FB/Google Ads)',
-        'Laporan Insight 30 Hari',
-        '6x Revisi & Maintenance 45 Hari'
+        'Website Premium Custom (Unlimited Produk)',
+        'Fitur Varian Produk (Warna/Ukuran)',
+        'Full Payment Gateway & Split Shipping',
+        'Dashboard Analytics & Laporan Lengkap',
+        'Manajemen Pelanggan (CRM Mini)',
+        'Fitur Wishlist & Sticky Cart',
+        'Multi Admin Role (Owner/Staff)',
+        'Auto Reminder & Abandoned Cart',
+        'Maintenance 45 Hari & Prioritas Support'
       ],
-      cta: 'Ambil Paket Pro',
+      cta: 'Konsultasi Ultimate',
       details: [
         {
-          feature: "Modal Kecil, Efek Panjang",
-          problem: "Iklan berbayar biayanya habis kalau saldo habis.",
-          solution: "Website dibayar sekali, jadi aset marketing seumur hidup.",
-          benefit: "Investasi marketing paling hemat dengan ROI tinggi."
+          feature: "Scale Up Tanpa Batas",
+          problem: "Sistem lama tidak sanggup handle ribuan produk & transaksi.",
+          solution: "Website performa tinggi dengan unlimited produk & fitur varian.",
+          benefit: "Siap menampung pertumbuhan bisnis yang pesat."
         },
         {
-          feature: "Leveling Up Brand",
-          problem: "Bisnis UMKM sering dianggap kecil dan kurang terpercaya.",
-          solution: "Tampilan website pro dengan fitur canggih (promo, payment gateway) membuat bisnis terlihat besar.",
-          benefit: "Lebih meyakinkan investor, mitra, dan pelanggan premium."
+          feature: "Keputusan Berbasis Data",
+          problem: "Bingung strategi penjualan karena buta data.",
+          solution: "Laporan penjualan harian/bulanan & grafik analitik lengkap.",
+          benefit: "Strategi bisnis lebih tajam berdasarkan data real."
         },
         {
-          feature: "Pondasi Digital Marketing",
-          problem: "Bingung mau arahkan traffic iklan kemana agar konversi tinggi.",
-          solution: "Website adalah landing page terbaik untuk semua aktivitas iklan (FB/IG/TikTok Ads).",
-          benefit: "Satu pusat kontrol untuk semua channel penjualan."
+          feature: "Otomasi Marketing",
+          problem: "Banyak keranjang ditinggalkan (abandoned cart) tanpa follow-up.",
+          solution: "Sistem otomatis ingatkan customer untuk selesaikan pembayaran.",
+          benefit: "Meningkatkan konversi penjualan secara signifikan."
         }
       ]
     },

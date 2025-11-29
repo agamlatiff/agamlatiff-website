@@ -152,21 +152,30 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-xl animate-fade-in-down h-screen z-40">
           <div className="px-4 py-4 flex flex-col gap-4">
-            {NAV_LINKS.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.href}
-                className={({ isActive }) =>
-                  `text-base font-medium py-3 border-b border-slate-50 dark:border-slate-800 transition-colors ${isActive
-                    ? 'text-primary dark:text-primary font-bold pl-2 border-l-4 border-l-primary'
-                    : 'text-slate-700 dark:text-slate-300 hover:text-primary'
-                  }`
-                }
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </NavLink>
-            ))}
+            {NAV_LINKS.map((link) => {
+              let label = link.name;
+              if (link.href === '/') label = t('nav.home');
+              else if (link.href === '/services') label = t('nav.services');
+              else if (link.href === '/projects') label = t('nav.projects');
+              else if (link.href === '/about') label = t('nav.about');
+              else if (link.href === '/contact') label = t('nav.contact');
+
+              return (
+                <NavLink
+                  key={link.name}
+                  to={link.href}
+                  className={({ isActive }) =>
+                    `text-base font-medium py-3 border-b border-slate-50 dark:border-slate-800 transition-colors ${isActive
+                      ? 'text-primary dark:text-primary font-bold pl-2 border-l-4 border-l-primary'
+                      : 'text-slate-700 dark:text-slate-300 hover:text-primary'
+                    }`
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
+                  {label}
+                </NavLink>
+              );
+            })}
             <a
               href={WA_LINKS.general}
               target="_blank"

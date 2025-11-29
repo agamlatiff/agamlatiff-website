@@ -1,11 +1,11 @@
 export const en = {
   hero: {
-    badge: "One-Time Investment",
+    badge: "E-Commerce Specialist",
     headline: {
-      part1: "Systems That Make Your",
-      part2: "Business Run Itself."
+      part1: "Build Online Store,",
+      part2: "Boost Sales."
     },
-    subheadline: "Automated cashier, controlled inventory, real-time reports. **Pay once, use forever.** For Bussiness who want to focus on selling, not managing admin.",
+    subheadline: "Helping UMKM own modern online stores with complete features: online payment, product management, and automation. **Pay once, use forever.**",
     cta: {
       consult: "Free Consultation",
       processing: "Processing...",
@@ -416,7 +416,7 @@ export const en = {
       description: "Consult your business system needs today. Free initial discussion to find the best solution.",
       button: "Contact Me"
     },
-    brandDescription: "Fullstack Developer specializing in business solutions. Building systems that are neat, fast, and 100% yours.",
+    brandDescription: "E-Commerce Specialist. Helping UMKM build modern online stores ready to sell.",
     menus: {
       main: "Main Menu",
       services: "Services",
@@ -439,7 +439,7 @@ export const en = {
     sourceCode: "Source Code Ownership"
   },
   pricingSection: {
-    title: "POS & Inventory Specialist Packages",
+    title: "E-Commerce & Business System Packages",
     subtitle: "Choose the system solution that fits your current business stage. All packages are <strong>One-time Payment</strong> with Source Code ownership.",
     popular: "Most Popular",
     viewDetails: "View Details & Benefits",
@@ -448,10 +448,10 @@ export const en = {
   },
   about: {
     title: "Who is Agam?",
-    subtitle: "Your Digital Business Partner.",
-    quote: "I am Agam, a freelance developer helping Bussiness solve operational problems through digital systems that are lightweight, fast, and easy to use.",
-    description1: "My focus is simple: <strong>make your business more organized</strong> so you can focus on selling, not worrying about the hassle of manual records and messy data.",
-    description2: "I don't sell complicated 'coding'. I sell <strong>business solutions</strong> so your operations are neat, stock is safe, and profit is measurable.",
+    subtitle: "E-Commerce Specialist.",
+    quote: "I'm Agam, an E-Commerce Specialist focused on helping UMKM build modern online stores and increase sales through neat, fast, and easy-to-use digital systems.",
+    description1: "Many UMKM have good products, but the selling process is still manual—ordering via DM, messy stock. I believe this problem can be solved with the right system.",
+    description2: "I build modern online stores that are not only beautiful, but also strong, secure, and easy to manage. So your business can level up: more efficient, more trusted, and more profitable.",
     whyChooseMe: "Why Bussiness Choose Agam?",
     values: [
       { title: "Simple & Practical", desc: "System ready to use by staff, minimal training." },
@@ -536,8 +536,8 @@ export const en = {
         support: "Priority Support via WhatsApp"
       },
       demo: {
-        title: "Demo Live System",
-        description: "Don't buy a cat in a sack. Try the system first, click the buttons, feel the flow before paying DP."
+        title: "Live Online Store Demo",
+        description: "Don't buy a cat in a sack. Try the website first, click buy buttons, experience the checkout flow before paying DP."
       },
       server: {
         title: "Free Server Setup",
@@ -555,135 +555,135 @@ export const en = {
     ]
   },
   painPoints: {
-    title: "Leave Old Ways,<br/>Switch to Automatic System",
-    subtitle: "Turn operational constraints into competitive advantages. See how my system solves your daily problems.",
-    currentChallenge: "Current Challenge",
-    mySolution: "Agam's Solution",
+    title: "Manual Selling vs<br/>Automated Online Store",
+    subtitle: "Turn operational constraints into competitive advantages. See how an E-Commerce Website solves your daily problems.",
+    currentChallenge: "Old Way (Manual)",
+    mySolution: "E-Commerce Solution",
     list: [
       {
-        problem: "Manual Process Wastes Time & Causes Queues",
-        impact: "Customers have to wait for chat replies, queue on site, or wait for slow responses. Potential revenue lost just because of slow process.",
-        solution: "Self-Service (QR/Web)",
-        solutionDescription: "Customers order themselves via QR/Web. Queues reduced, instant response, and sales increase without adding staff."
+        problem: "Replying Chats One-by-One is Exhausting",
+        impact: "Buyers leave because of slow response. Time wasted just answering repeated questions like 'Is this available?'.",
+        solution: "Automated Catalog & Checkout",
+        solutionDescription: "Customers can check stock, product details & shop themselves 24/7 without chatting admin."
       },
       {
-        problem: "Business Looks Less Professional",
-        impact: "Without a modern website or appearance, customers doubt transferring and easily run to competitors.",
-        solution: "Strong Website & Branding",
-        solutionDescription: "Professional & trusted appearance. Increases security feeling during transaction & stand out from competitors."
+        problem: "Price War in Marketplaces",
+        impact: "Hard to compete because products are displayed next to cheaper competitors. Margins get thinner.",
+        solution: "Exclusive Online Store Website",
+        solutionDescription: "Build a premium brand image. Customers focus on your product value, not the neighbor's price."
       },
       {
-        problem: "Owner & Employees Overwhelmed",
-        impact: "Must reply to repeated chats, input manual data, count stock, and recap reports every day. Tired, slow, prone to errors.",
-        solution: "Time-Saving Automation",
-        solutionDescription: "Chat, Order, Notification, Stock, & Report all automated. Faster, minimal error, save energy."
+        problem: "Manual Order Recap Prone to Errors",
+        impact: "Wrong address, wrong item sent, or forgot to input receipt number makes customers angry and stop buying.",
+        solution: "Centralized Order Management",
+        solutionDescription: "Order comes in, stock decreases, and shipping label generated automatically. Minimal human error."
       },
       {
-        problem: "Business Decisions Still 'Feeling'",
-        impact: "Without clear data, owner often guesses: Which product sells? Sales up or down? When is the busiest hour?",
-        solution: "Full Control via Data",
-        solutionDescription: "Real-time reports with product, customer, and busy hour insights. Decisions more accurate & measurable."
+        problem: "No Customer Data Ownership",
+        impact: "In marketplaces, buyer data is hidden. You cannot contact them again for promotion (Retargeting).",
+        solution: "Own Customer Database",
+        solutionDescription: "Save buyer email/WA data. Send promos anytime to increase repeat orders (CLV)."
       }
     ]
   },
   comparison: {
-    title: "Investment & Feature Comparison",
-    subtitle: "Don't get trapped in swelling subscription fees. Compare how <strong>Custom Development</strong> gives the best ROI for the long term.",
+    title: "Online Store Platform Comparison",
+    subtitle: "Don't get trapped in monthly subscription fees. Compare how <strong>Custom E-Commerce</strong> gives the best ROI for the long term.",
     headers: {
       criteria: "Criteria",
-      saas: "SaaS App",
-      agency: "Digital Agency",
-      custom: "Agam Custom",
+      saas: "Store Rental (SaaS)",
+      agency: "General Web Agency",
+      custom: "Agam E-Commerce",
       bestValue: "Best Value"
     },
     mobile: {
       winner: "WINNER",
-      description: "Best choice for businesses wanting to grow without feature limits and monthly fees.",
-      saas: "SaaS App",
-      agency: "Big Agency"
+      description: "Best choice for brands wanting independence without admin fee deductions and feature limits.",
+      saas: "Store Rental (SaaS)",
+      agency: "General Web Agency"
     },
     list: [
       {
         criteria: "Ownership System",
-        saas: "Rent (Never Own)",
+        saas: "Rent (Renting Space)",
         agency: "Limited License",
-        custom: "100% Ownership (Full Source Code)"
+        custom: "100% Ownership (Source Code)"
       },
       {
-        criteria: "Cost",
-        saas: "Monthly Fee Forever",
-        agency: "Maintenance Fee Exists",
-        custom: "One-Time Payment — Use Forever"
+        criteria: "Cost & Deductions",
+        saas: "Subscription + Admin Fees",
+        agency: "Annual Maintenance Fee",
+        custom: "One-Time Payment (No Deductions)"
       },
       {
-        criteria: "Feature Flexibility",
-        saas: "Limited, Cannot Custom",
-        agency: "Limited Custom & Expensive",
-        custom: "Free Request Features & Integration"
+        criteria: "Selling Features",
+        saas: "Limited Platform Templates",
+        agency: "Standard Company Profile",
+        custom: "Custom (Promo, Bundling, Wholesale)"
       },
       {
         criteria: "Data Ownership",
         saas: "Data Stored by Vendor",
         agency: "Shared Server",
-        custom: "Data 100% Yours (Private DB)"
+        custom: "Private Database (Secure)"
       },
       {
-        criteria: "Business Scalability",
-        saas: "Many Extra Fees",
-        agency: "Often Revision Fees",
-        custom: "Unlimited User & Branch"
+        criteria: "Brand Scalability",
+        saas: "Cost Increases with Orders",
+        agency: "Hard to Develop",
+        custom: "Unlimited Products & Transactions"
       }
     ]
   },
   roiCalculator: {
     badge: "Simulation & Case Study",
-    title: "What Type of Entrepreneur Do You Want to Be?",
-    subtitle: "See the difference in fate between businesses that stick with old ways vs businesses that adapt with technology.",
+    title: "Regular Seller vs Modern Brand Owner",
+    subtitle: "See the difference in fate between businesses trapped in price wars vs businesses building long-term digital assets.",
     cases: {
       manual: {
-        title: "Type A: 'I'm Tech-Challenged / Old Way'",
-        description: "Still manual recording, owner doubles as admin, stock often mismatches but tolerated.",
-        effect: "• Effect: Business stuck in place, Owner can't take time off."
+        title: "Type A: 'Marketplace / Chat Seller'",
+        description: "Dependent on algorithms, competitor price wars, and customer database not owned.",
+        effect: "• Effect: Unstable sales, Thin margins."
       },
       digital: {
-        title: "Type B: 'I Want to Adapt'",
-        description: "Automated system, stock recorded real-time, reports sent to owner's phone every night.",
-        effect: "• Effect: Easy to open branches, Maximum profit."
+        title: "Type B: 'E-Commerce Brand Owner'",
+        description: "Owns website, secure customer database, strong & premium brand image.",
+        effect: "• Effect: High loyalty, Max profit."
       }
     },
     calculator: {
       checkPotentialLoss: "Check Potential Loss",
       manualRisk: "Manual Risk",
-      digitalPotential: "Digital Potential",
+      digitalPotential: "E-Commerce Potential",
       switchMode: "Switch Mode",
       averageRevenue: "Average Revenue / Month",
       smallBusiness: "Small Business",
       growingBusiness: "Growing Business",
-      moneyLost: "Money Lost / Year",
-      potentialProfit: "Additional Profit Potential / Year",
-      manualNote: "(Due to lost stock, miscalculation, & wasted admin time)",
-      digitalNote: "(From stock efficiency, service speed, & data analysis)",
+      moneyLost: "Potential Loss / Year",
+      potentialProfit: "Potential Extra Profit / Year",
+      manualNote: "(Due to price wars, admin fees, & lost sales)",
+      digitalNote: "(From efficiency, no admin fees, & repeat orders)",
       ctaManual: "I Want to Stop This Leak",
-      ctaDigital: "I Want to Build This System"
+      ctaDigital: "I Want to Build This Brand"
     }
   },
   cta: {
-    title: "Ready to Streamline Your Business?",
-    subtitle: "Don't let operational problems hinder revenue growth. Consult your system needs now.",
+    title: "Ready to Have Your Own Online Store?",
+    subtitle: "Leave manual selling behind. Build your brand now with a professional e-commerce website.",
     button: "Contact Me"
   },
   seo: {
     hero: {
-      title: "Agam Latifullah | POS & Inventory Specialist",
-      desc: "Agam Latifullah (agamlatiff) is a Fullstack Developer specializing in Point of Sale (POS) & Inventory Management Systems using Laravel & React, as well as Business Website development."
+      title: "Agam Latifullah | E-Commerce Specialist",
+      desc: "Agam Latifullah (agamlatiff) is an E-Commerce Specialist focused on helping UMKM build modern online stores to increase sales."
     },
     'roi-calculator': {
       title: "Prevent Stock & Financial Leaks | agamlatiff",
-      desc: "Calculate how much money is lost from your business due to manual bookkeeping. Accurate POS solution for maximum efficiency."
+      desc: "Calculate how much money is lost from your business due to manual bookkeeping. E-Commerce & Business System Solutions for maximum efficiency."
     },
     services: {
-      title: "POS & Website Development Services | agamlatiff",
-      desc: "Providing Retail POS System, Warehouse Application (Inventory), Bussiness Landing Page, and Company Profile Website with CMS development."
+      title: "Online Store & Website Development Services | agamlatiff",
+      desc: "Providing E-Commerce Website, Online Store, Business Landing Page, and Custom Business System development."
     },
     'pain-points': {
       title: "Stock & Bookkeeping Problems? | agamlatiff",
@@ -698,24 +698,24 @@ export const en = {
       desc: "Compare my custom Laravel & React solution with ready-made software. Long-term investment for scalable and maintainable systems."
     },
     pricing: {
-      title: "POS Development Service Pricing | agamlatiff",
-      desc: "Transparent pricing packages for Website, Basic POS System, and Custom Enterprise development. One-time payment without monthly subscription fees."
+      title: "Website & System Development Pricing | agamlatiff",
+      desc: "Transparent pricing packages for Online Store, Company Profile Website, and Custom System development. One-time payment without monthly subscription fees."
     },
     process: {
       title: "Custom System Workflow | agamlatiff",
       desc: "Transparent development process from problem analysis, database design, development, to staff training."
     },
     projects: {
-      title: "POS System & Web Portfolio | agamlatiff",
-      desc: "See case studies of Coffee Shop POS System, Wholesale Warehouse Management, and Barbershop Landing Page implementation."
+      title: "E-Commerce & Website Portfolio | agamlatiff",
+      desc: "See case studies of Fashion E-Commerce Website, Warehouse Management System, and Landing Page implementation."
     },
     testimonials: {
       title: "Business Client Reviews | agamlatiff",
-      desc: "What business owners say about the cashier systems and websites I built. Focus on efficiency and ease of use."
+      desc: "What business owners say about the online stores and systems I built. Focus on efficiency and ease of use."
     },
     about: {
       title: "About Agam Latifullah | agamlatiff",
-      desc: "Fullstack Developer with deep expertise in Laravel, React, and Database Management ecosystem for B2B business solutions."
+      desc: "E-Commerce Specialist with expertise in building modern online stores, stock management systems, and digital payment integrations."
     },
     faq: {
       title: "FAQ System & Website | agamlatiff",
@@ -723,7 +723,7 @@ export const en = {
     },
     contact: {
       title: "Contact Agam Latifullah | agamlatiff",
-      desc: "Ready to streamline your business system? Contact me for POS, Inventory, or Website development consultation."
+      desc: "Ready to streamline your business system? Contact me for Online Store, Website, or Custom System development consultation."
     }
   },
   contact: {
@@ -731,7 +731,7 @@ export const en = {
     subtitle: "Consult your business system or website needs. Free initial discussion.",
     info: {
       title: "Contact Information",
-      description: "Need a POS Cashier System, Online Booking, or Company Profile Website? Contact me now.",
+      description: "Need an Online Store Website, Landing Page, or Business System? Contact me now.",
       email: "Email",
       status: "Status",
       open: "Open for Projects",
@@ -746,11 +746,11 @@ export const en = {
       service: {
         label: "Service Type",
         options: [
+          "Online Store / E-Commerce",
+          "Promotional Landing Page",
+          "Company Profile Website (CMS)",
           "POS System & Inventory (Cashier)",
           "Online Booking / Reservation System",
-          "Company Profile Website (CMS)",
-          "Promotional Landing Page",
-          "Online Store / E-Commerce",
           "Custom Admin Dashboard",
           "Other / Custom Request"
         ]
@@ -1318,114 +1318,6 @@ export const en = {
           problem: "Afraid social media/marketplace account gets banned or algorithm changes.",
           solution: "Website is 100% your asset. Full control.",
           benefit: "Business not vulnerable, organic traffic remains safe."
-        }
-      ]
-    },
-    'ec-basic': {
-      name: 'BASIC',
-      description: 'Start Selling Fast. Product landing page + simple catalog for fast selling via WA.',
-      features: [
-        '1 Main Landing Page',
-        'Catalog Max 20 Products',
-        'Free Domain & Hosting',
-        'Checkout via WhatsApp + Form',
-        'Simple Product Management',
-        'Mobile Friendly Design',
-        'Light Admin Access',
-        '2x Revisions',
-        'Maintenance 15 Days'
-      ],
-      cta: 'Get Basic Package',
-      details: [
-        {
-          feature: "Hold Own Asset",
-          problem: "Marketplace algorithm changes, sales quiet. Price war never ends.",
-          solution: "Building own website means having 100% control without depending on other platforms.",
-          benefit: "Business safer & sustain long term."
-        },
-        {
-          feature: "Reduce Repeated Chats",
-          problem: "Tired of answering 'Sis how much?' or 'Any other photos?' every day.",
-          solution: "Complete product catalog with photos, prices, and clear descriptions.",
-          benefit: "Save energy & admin time, selling process faster."
-        },
-        {
-          feature: "Win Competition",
-          problem: "Many competitors still sell manually via chat or marketplace only.",
-          solution: "Stand out with a convincing professional website.",
-          benefit: "Golden opportunity to look more bonafide than competitors."
-        }
-      ]
-    },
-    'ec-premium': {
-      name: 'PREMIUM',
-      description: 'Full Modern E-Commerce. Shopping cart system & complete features without monthly fees.',
-      features: [
-        'All Basic Features',
-        'Complete Page Structure',
-        'Website Cart System',
-        'Auto Checkout to WhatsApp',
-        'Unlimited Products (Upload CSV)',
-        'Search & Category Filter Features',
-        'Complete Analytics Tracking',
-        '4x Revisions',
-        'Maintenance 30 Days'
-      ],
-      cta: 'Get Premium Package',
-      details: [
-        {
-          feature: "Auto-Pilot Sales 24/7",
-          problem: "Shop closed, admin sleeping, orders lost.",
-          solution: "E-commerce website works 24 hours. Customers can view products & checkout anytime.",
-          benefit: "Keep selling and receiving orders even when you sleep."
-        },
-        {
-          feature: "Visitor Data (Analytics)",
-          problem: "On IG/Marketplace customer data is limited. Hard to retarget.",
-          solution: "Complete tracking: most viewed products, visitor origin, & click behavior.",
-          benefit: "Marketing strategy sharper & ad costs more efficient."
-        },
-        {
-          feature: "Brand Credibility",
-          problem: "Buyers getting smarter, like to check website before transfer.",
-          solution: "Complete website with shopping cart proves your business is serious.",
-          benefit: "Trust up drastically, customers don't hesitate to buy."
-        }
-      ]
-    },
-    'ec-pro': {
-      name: 'PRO',
-      description: 'Serious Online Store Growth. Full Payment Gateway & Admin Dashboard for scale-up.',
-      features: [
-        'All Premium Features',
-        'Full Website Checkout (No WA)',
-        'Payment Gateway Integration (QRIS)',
-        'Full Control Admin Dashboard',
-        'Stock & Price Management',
-        'Promo & Discount Features',
-        'Tracking Pixel (FB/Google Ads)',
-        '30 Days Insight Report',
-        '6x Revisions & Maintenance 45 Days'
-      ],
-      cta: 'Get Pro Package',
-      details: [
-        {
-          feature: "Small Capital, Long Effect",
-          problem: "Paid ads cost run out if balance runs out.",
-          solution: "Website paid once, becomes lifetime marketing asset.",
-          benefit: "Most economical marketing investment with high ROI."
-        },
-        {
-          feature: "Leveling Up Brand",
-          problem: "Bussiness businesses often considered small and less trusted.",
-          solution: "Pro website look with advanced features (promo, payment gateway) makes business look big.",
-          benefit: "More convincing to investors, partners, and premium customers."
-        },
-        {
-          feature: "Digital Marketing Foundation",
-          problem: "Confused where to direct ad traffic for high conversion.",
-          solution: "Website is best landing page for all ad activities (FB/IG/TikTok Ads).",
-          benefit: "One control center for all sales channels."
         }
       ]
     },

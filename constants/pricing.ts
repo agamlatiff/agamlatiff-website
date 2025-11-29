@@ -664,125 +664,125 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
   ],
   'e-commerce': [
     {
-      id: 'ec-basic',
-      name: 'BASIC',
-      price: 'Rp 2.400.000',
-      originalPrice: 'Rp 3.500.000',
-      description: 'Start Selling Fast. Landing page produk + katalog simpel untuk jualan cepat via WA.',
+      id: 'ec-starter',
+      name: 'STARTER',
+      price: 'Rp 2.900.000',
+      originalPrice: 'Rp 4.500.000',
+      description: 'Mulai Jualan Online. Solusi tepat untuk UMKM yang baru mau punya toko online sendiri.',
       features: [
-        '1 Halaman Landing Utama',
-        'Katalog Max 20 Produk',
-        'Gratis Domain & Hosting',
-        'Checkout via WhatsApp + Form',
-        'Manajemen Produk Sederhana',
-        'Desain Mobile Friendly',
-        'Akses Admin Ringan',
-        '2x Revisi',
+        'Website E-Commerce (Landing + Katalog)',
+        'Katalog Max 30 Produk',
+        'Keranjang & Checkout via WhatsApp',
+        'Manajemen Produk & Kategori',
+        'Order Masuk ke WA Admin',
+        'SEO Basic & SSL Gratis',
+        'Bonus Copywriting 5 Produk',
+        '1x Training Penggunaan',
         'Maintenance 15 Hari'
       ],
       isPopular: false,
-      cta: 'Ambil Paket Basic',
+      cta: 'Ambil Paket Starter',
       icon: ShoppingBag,
       details: [
         {
-          feature: "Pegang Aset Sendiri",
-          problem: "Algoritma marketplace berubah, jualan sepi. Perang harga tidak ada habisnya.",
-          solution: "Membangun website sendiri berarti punya kontrol 100% tanpa tergantung platform lain.",
-          benefit: "Bisnis lebih aman & sustain jangka panjang."
+          feature: "Pindah ke Online",
+          problem: "Jualan cuma di story WA/IG, pelanggan susah lihat katalog lengkap.",
+          solution: "Punya website katalog sendiri yang rapi dan mudah diakses.",
+          benefit: "Terlihat lebih profesional & memudahkan pelanggan belanja."
         },
         {
-          feature: "Kurangi Chat Berulang",
-          problem: "Capek jawab pertanyaan 'Mbak harga berapa?' atau 'Ada foto lain?' setiap hari.",
-          solution: "Katalog produk lengkap dengan foto, harga, dan deskripsi yang jelas.",
-          benefit: "Hemat energi & waktu admin, proses jualan lebih cepat."
+          feature: "Hemat Waktu Admin",
+          problem: "Capek kirim foto produk satu-satu ke setiap chat pelanggan.",
+          solution: "Cukup kirim link website, pelanggan lihat semua produk & detailnya.",
+          benefit: "Admin lebih santai, respon ke pelanggan lebih cepat."
         },
         {
-          feature: "Menangkan Kompetisi",
-          problem: "Banyak kompetitor masih jualan manual lewat chat atau marketplace saja.",
-          solution: "Tampil beda dengan website profesional yang meyakinkan.",
-          benefit: "Kesempatan emas untuk terlihat lebih bonafit dari pesaing."
+          feature: "Aset Digital Sendiri",
+          problem: "Takut akun sosmed kena banned atau hack.",
+          solution: "Website adalah aset 100% milik Anda, kontrol penuh di tangan Anda.",
+          benefit: "Bisnis aman jangka panjang, tidak tergantung platform lain."
         }
       ]
     },
     {
-      id: 'ec-premium',
-      name: 'PREMIUM',
-      price: 'Rp 3.900.000',
-      originalPrice: 'Rp 5.000.000',
-      description: 'Full E-Commerce Modern. Sistem keranjang belanja & fitur lengkap tanpa biaya bulanan.',
+      id: 'ec-growth',
+      name: 'GROWTH',
+      price: 'Rp 5.900.000',
+      originalPrice: 'Rp 8.500.000',
+      description: 'Toko Online Siap Jualan. Paling direkomendasikan untuk UMKM yang ingin naik level.',
       features: [
-        'Semua Fitur Basic',
-        'Struktur Halaman Lengkap',
-        'Sistem Keranjang (Cart) Website',
-        'Auto Checkout ke WhatsApp',
-        'Unlimited Produk (Upload CSV)',
-        'Fitur Search & Filter Kategori',
-        'Tracking Analitik Lengkap',
-        '4x Revisi',
+        'Website E-Commerce Lengkap (100 Produk)',
+        'Checkout Online Otomatis (Bukan WA)',
+        'Payment Gateway (QRIS, E-Wallet, VA)',
+        'Dashboard Admin (Stok, Order, Laporan)',
+        'Hitung Ongkir Otomatis (JNE, J&T, dll)',
+        'Kupon Diskon & Produk Terlaris',
+        'Notifikasi Email & Invoice Otomatis',
+        'Bonus Banner & Setup Pixel/Analytics',
         'Maintenance 30 Hari'
       ],
       isPopular: true,
-      cta: 'Ambil Paket Premium',
+      cta: 'Ambil Paket Growth',
       icon: Store,
       details: [
         {
-          feature: "Jualan Auto-Pilot 24/7",
-          problem: "Toko tutup, admin tidur, orderan hilang.",
-          solution: "Website e-commerce bekerja 24 jam. Pelanggan bisa lihat produk & checkout kapan saja.",
-          benefit: "Tetap jualan dan terima orderan bahkan saat Anda tidur."
+          feature: "Sistem Otomatis",
+          problem: "Ribet cek mutasi transfer manual & hitung ongkir satu-satu.",
+          solution: "Pembayaran terverifikasi otomatis & ongkir langsung muncul.",
+          benefit: "Operasional jauh lebih efisien, minim human error."
         },
         {
-          feature: "Data Pengunjung (Analytics)",
-          problem: "Di IG/Marketplace data pelanggan terbatas. Susah retargeting.",
-          solution: "Tracking lengkap: produk paling dilihat, asal pengunjung, & perilaku klik.",
-          benefit: "Strategi marketing lebih tajam & biaya iklan lebih efisien."
+          feature: "Manajemen Stok Rapi",
+          problem: "Sering selisih stok antara catatan dan gudang.",
+          solution: "Stok berkurang otomatis saat ada penjualan sukses.",
+          benefit: "Stok selalu akurat, tidak perlu pusing rekap manual."
         },
         {
-          feature: "Brand Credibility",
-          problem: "Pembeli makin pintar, suka cek website sebelum transfer.",
-          solution: "Website lengkap dengan keranjang belanja membuktikan bisnis Anda serius.",
-          benefit: "Trust naik drastis, pelanggan tidak ragu untuk beli."
+          feature: "Data Pelanggan Lengkap",
+          problem: "Tidak punya database pelanggan untuk promosi ulang.",
+          solution: "Data pembeli tersimpan rapi di dashboard admin.",
+          benefit: "Bisa lakukan retargeting & email marketing untuk repeat order."
         }
       ]
     },
     {
-      id: 'ec-pro',
-      name: 'PRO',
-      price: 'Rp 5.900.000',
-      originalPrice: 'Rp 8.500.000',
-      description: 'Serious Online Store Growth. Full Payment Gateway & Dashboard Admin untuk scale-up.',
+      id: 'ec-ultimate',
+      name: 'ULTIMATE',
+      price: 'Rp 10.500.000',
+      originalPrice: 'Rp 15.000.000',
+      description: 'Sistem Penjualan Full Otomatis. Untuk bisnis yang butuh fitur advanced & automasi.',
       features: [
-        'Semua Fitur Premium',
-        'Full Checkout Website (No WA)',
-        'Integrasi Payment Gateway (QRIS)',
-        'Dashboard Admin Full Control',
-        'Manajemen Stok & Harga',
-        'Fitur Promo & Diskon',
-        'Tracking Pixel (FB/Google Ads)',
-        'Laporan Insight 30 Hari',
-        '6x Revisi & Maintenance 45 Hari'
+        'Website Premium Custom (Unlimited Produk)',
+        'Fitur Varian Produk (Warna/Ukuran)',
+        'Full Payment Gateway & Split Shipping',
+        'Dashboard Analytics & Laporan Lengkap',
+        'Manajemen Pelanggan (CRM Mini)',
+        'Fitur Wishlist & Sticky Cart',
+        'Multi Admin Role (Owner/Staff)',
+        'Auto Reminder & Abandoned Cart',
+        'Maintenance 45 Hari & Prioritas Support'
       ],
       isPopular: false,
-      cta: 'Ambil Paket Pro',
+      cta: 'Konsultasi Ultimate',
       icon: Crown,
       details: [
         {
-          feature: "Modal Kecil, Efek Panjang",
-          problem: "Iklan berbayar biayanya habis kalau saldo habis.",
-          solution: "Website dibayar sekali, jadi aset marketing seumur hidup.",
-          benefit: "Investasi marketing paling hemat dengan ROI tinggi."
+          feature: "Scale Up Tanpa Batas",
+          problem: "Sistem lama tidak sanggup handle ribuan produk & transaksi.",
+          solution: "Website performa tinggi dengan unlimited produk & fitur varian.",
+          benefit: "Siap menampung pertumbuhan bisnis yang pesat."
         },
         {
-          feature: "Leveling Up Brand",
-          problem: "Bisnis UMKM sering dianggap kecil dan kurang terpercaya.",
-          solution: "Tampilan website pro dengan fitur canggih (promo, payment gateway) membuat bisnis terlihat besar.",
-          benefit: "Lebih meyakinkan investor, mitra, dan pelanggan premium."
+          feature: "Keputusan Berbasis Data",
+          problem: "Bingung strategi penjualan karena buta data.",
+          solution: "Laporan penjualan harian/bulanan & grafik analitik lengkap.",
+          benefit: "Strategi bisnis lebih tajam berdasarkan data real."
         },
         {
-          feature: "Pondasi Digital Marketing",
-          problem: "Bingung mau arahkan traffic iklan kemana agar konversi tinggi.",
-          solution: "Website adalah landing page terbaik untuk semua aktivitas iklan (FB/IG/TikTok Ads).",
-          benefit: "Satu pusat kontrol untuk semua channel penjualan."
+          feature: "Otomasi Marketing",
+          problem: "Banyak keranjang ditinggalkan (abandoned cart) tanpa follow-up.",
+          solution: "Sistem otomatis ingatkan customer untuk selesaikan pembayaran.",
+          benefit: "Meningkatkan konversi penjualan secara signifikan."
         }
       ]
     }
