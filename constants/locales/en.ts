@@ -416,7 +416,7 @@ export const en = {
       description: "Consult your business system needs today. Free initial discussion to find the best solution.",
       button: "Contact Me"
     },
-    brandDescription: "Fullstack Developer specializing in SME business solutions. Building systems that are neat, fast, and 100% yours.",
+    brandDescription: "Fullstack Developer specializing in business solutions. Building systems that are neat, fast, and 100% yours.",
     menus: {
       main: "Main Menu",
       services: "Services",
@@ -683,7 +683,7 @@ export const en = {
     },
     services: {
       title: "POS & Website Development Services | agamlatiff",
-      desc: "Providing Retail POS System, Warehouse Application (Inventory), MSME Landing Page, and Company Profile Website with CMS development."
+      desc: "Providing Retail POS System, Warehouse Application (Inventory), Bussiness Landing Page, and Company Profile Website with CMS development."
     },
     'pain-points': {
       title: "Stock & Bookkeeping Problems? | agamlatiff",
@@ -771,7 +771,7 @@ export const en = {
   pricing: {
     'pos-basic': {
       name: 'BASIC Package',
-      description: 'Suitable for: Small SMEs, kiosks, barbershops, beverage stalls.',
+      description: 'Suitable for: Small Bussiness, kiosks, barbershops, beverage stalls.',
       features: [
         'Basic Point of Sale (Cashier)',
         'Product Management (CRUD)',
@@ -891,7 +891,7 @@ export const en = {
     },
     'queue-basic': {
       name: 'BASIC QUEUE',
-      description: 'Single Counter Queue. Basic but neat queue for SMEs, Small Clinics, or Service Centers.',
+      description: 'Single Counter Queue. Basic but neat queue for Bussiness, Small Clinics, or Service Centers.',
       features: [
         'Simple queue system (1 Service/Counter)',
         'Print queue number (Thermal Bluetooth)',
@@ -1215,7 +1215,7 @@ export const en = {
     },
     'cp-basic': {
       name: 'BASIC',
-      description: 'Start Looking Professional. Fast and neat website for SMEs & Freelancers.',
+      description: 'Start Looking Professional. Fast and neat website for Bussiness & Freelancers.',
       features: [
         '1 Main Landing Page',
         '3 Additional Pages (Home/About/Service)',
@@ -1417,7 +1417,7 @@ export const en = {
         },
         {
           feature: "Leveling Up Brand",
-          problem: "SME businesses often considered small and less trusted.",
+          problem: "Bussiness businesses often considered small and less trusted.",
           solution: "Pro website look with advanced features (promo, payment gateway) makes business look big.",
           benefit: "More convincing to investors, partners, and premium customers."
         },
@@ -1759,7 +1759,8 @@ export const en = {
     services: "Services & Pricing",
     projects: "Projects",
     about: "About",
-    contact: "Contact"
+    contact: "Contact",
+    contactMe: "Contact Me"
   },
   common: {
     loading: "Loading...",

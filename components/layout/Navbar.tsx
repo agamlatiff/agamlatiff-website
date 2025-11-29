@@ -118,7 +118,7 @@ const Navbar: React.FC = () => {
             rel="noopener noreferrer"
             className="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-md text-sm font-medium transition-all hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5"
           >
-            Hubungi Saya
+            {t('nav.contactMe')}
           </a>
         </div>
 
@@ -174,7 +174,7 @@ const Navbar: React.FC = () => {
               className="bg-primary text-white text-center py-3 rounded-md font-semibold mt-4 shadow-lg shadow-primary/20"
               onClick={() => setIsOpen(false)}
             >
-              Hubungi Saya
+              {t('nav.contactMe')}
             </a>
           </div>
         </div>

@@ -1735,7 +1735,8 @@ export const id = {
     services: "Layanan & Harga",
     projects: "Proyek",
     about: "Tentang",
-    contact: "Kontak"
+    contact: "Kontak",
+    contactMe: "Hubungi Saya"
   },
   common: {
     loading: "Memuat...",
