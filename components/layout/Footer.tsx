@@ -5,7 +5,7 @@ import { FaInstagram, FaTiktok, FaLinkedinIn, FaGithub, FaYoutube } from 'react-
 import { Link } from 'react-router-dom';
 
 import { useLanguage } from '../../context/LanguageContext';
-import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
+import { createWhatsAppLink } from '@/constants/whatsapp';
 import { SERVICES } from '@/constants/services';
 
 // Social media links with modern icons

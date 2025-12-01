@@ -5,7 +5,7 @@ import { Check, Zap, Eye, Star } from 'lucide-react';
 import PlanDetailModal from '../ui/PlanDetailModal';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
-import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
+import { createWhatsAppLink } from '@/constants/whatsapp';
 
 const Pricing: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);

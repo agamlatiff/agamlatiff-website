@@ -4,7 +4,7 @@ import { Menu, X, Hexagon, Sun, Moon } from 'lucide-react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import { NAV_LINKS } from '@/constants/nav';
-import { WA_LINKS } from '@/constants/whatsapp';
+import { createWhatsAppLink } from '@/constants/whatsapp';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
           </div>
 
           <a
-            href={WA_LINKS.general}
+            href={createWhatsAppLink(t('whatsappMessages.general'))}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-md text-sm font-medium transition-all hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5"
@@ -178,7 +178,7 @@ const Navbar: React.FC = () => {
               );
             })}
             <a
-              href={WA_LINKS.general}
+              href={createWhatsAppLink(t('whatsappMessages.general'))}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary text-white text-center py-3 rounded-md font-semibold mt-4 shadow-lg shadow-primary/20"

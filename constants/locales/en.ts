@@ -1321,6 +1321,114 @@ export const en = {
         }
       ]
     },
+    'ec-starter': {
+      name: 'STARTER',
+      description: 'Start Selling Online. The right solution for MSMEs who want to have their own online store.',
+      features: [
+        'E-Commerce Website (Landing + Catalog)',
+        'Catalog Max 30 Products',
+        'Cart & Checkout via WhatsApp',
+        'Product & Category Management',
+        'Orders Enter WA Admin',
+        'Basic SEO & Free SSL',
+        'Bonus Copywriting 5 Products',
+        '1x Usage Training',
+        'Maintenance 15 Days'
+      ],
+      cta: 'Get Starter Package',
+      details: [
+        {
+          feature: "Move to Online",
+          problem: "Selling only on WA/IG story, customers find it hard to see full catalog.",
+          solution: "Have your own neat and accessible catalog website.",
+          benefit: "Look more professional & make it easier for customers to shop."
+        },
+        {
+          feature: "Save Admin Time",
+          problem: "Tired of sending product photos one by one to every customer chat.",
+          solution: "Just send website link, customers see all products & details.",
+          benefit: "Admin more relaxed, faster response to customers."
+        },
+        {
+          feature: "Own Digital Asset",
+          problem: "Afraid social media account gets banned or hacked.",
+          solution: "Website is 100% your asset, full control in your hands.",
+          benefit: "Business safe long term, not dependent on other platforms."
+        }
+      ]
+    },
+    'ec-growth': {
+      name: 'GROWTH',
+      description: 'Online Store Ready to Sell. Most recommended for MSMEs who want to level up.',
+      features: [
+        'Complete E-Commerce Website (100 Products)',
+        'Automatic Online Checkout (Not WA)',
+        'Payment Gateway (QRIS, E-Wallet, VA)',
+        'Admin Dashboard (Stock, Order, Report)',
+        'Automatic Shipping Calculation (JNE, J&T, etc)',
+        'Discount Coupons & Best Selling Products',
+        'Email Notification & Automatic Invoice',
+        'Bonus Banner & Pixel/Analytics Setup',
+        'Maintenance 30 Days'
+      ],
+      cta: 'Get Growth Package',
+      details: [
+        {
+          feature: "Automatic System",
+          problem: "Complicated checking transfer mutations manually & calculating shipping one by one.",
+          solution: "Payments verified automatically & shipping costs appear immediately.",
+          benefit: "Operations much more efficient, minimal human error."
+        },
+        {
+          feature: "Neat Stock Management",
+          problem: "Often stock discrepancy between records and warehouse.",
+          solution: "Stock reduces automatically when there is a successful sale.",
+          benefit: "Stock always accurate, no need to headache manual recap."
+        },
+        {
+          feature: "Complete Customer Data",
+          problem: "Don't have customer database for re-promotion.",
+          solution: "Buyer data stored neatly in admin dashboard.",
+          benefit: "Can do retargeting & email marketing for repeat orders."
+        }
+      ]
+    },
+    'ec-ultimate': {
+      name: 'ULTIMATE',
+      description: 'Full Automatic Sales System. For businesses needing advanced features & automation.',
+      features: [
+        'Custom Premium Website (Unlimited Products)',
+        'Product Variant Feature (Color/Size)',
+        'Full Payment Gateway & Split Shipping',
+        'Dashboard Analytics & Complete Report',
+        'Customer Management (Mini CRM)',
+        'Wishlist & Sticky Cart Feature',
+        'Multi Admin Role (Owner/Staff)',
+        'Auto Reminder & Abandoned Cart',
+        'Maintenance 45 Days & Priority Support'
+      ],
+      cta: 'Consult Ultimate',
+      details: [
+        {
+          feature: "Scale Up Limitlessly",
+          problem: "Old system cannot handle thousands of products & transactions.",
+          solution: "High performance website with unlimited products & variant features.",
+          benefit: "Ready to accommodate rapid business growth."
+        },
+        {
+          feature: "Data-Driven Decisions",
+          problem: "Confused sales strategy because blind to data.",
+          solution: "Daily/monthly sales reports & complete analytic graphs.",
+          benefit: "Business strategy sharper based on real data."
+        },
+        {
+          feature: "Marketing Automation",
+          problem: "Many abandoned carts without follow-up.",
+          solution: "System automatically reminds customers to complete payment.",
+          benefit: "Significantly increases sales conversion."
+        }
+      ]
+    },
     'book-basic': {
       name: 'BASIC',
       description: 'Booking Starter. Initial solution for barbershops, clinics, or small studios.',

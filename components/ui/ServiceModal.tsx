@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { X, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Service } from '@/types/service';
-import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
+import { createWhatsAppLink } from '@/constants/whatsapp';
 import { useLanguage } from '@/context/LanguageContext';
 
 

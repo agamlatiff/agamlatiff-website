@@ -3,7 +3,7 @@ import { PricingPlan } from '../../constants/pricing';
 import { X, Check, Zap, HelpCircle, Lightbulb, TrendingUp, ShieldCheck, Code2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
-import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
+import { createWhatsAppLink } from '@/constants/whatsapp';
 
 interface PlanDetailModalProps {
   plan: PricingPlan | null;

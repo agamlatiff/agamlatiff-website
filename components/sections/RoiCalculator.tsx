@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Calculator, ArrowRight, XCircle, CheckCircle, RefreshCcw, TrendingUp, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
-import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
+import { createWhatsAppLink } from '@/constants/whatsapp';
 
 const RoiCalculator: React.FC = () => {
   const { t } = useLanguage();
@@ -11,24 +11,13 @@ const RoiCalculator: React.FC = () => {
   const [isDigital, setIsDigital] = useState(false); // False = Manual, True = Digital
 
   // State Kalkulasi
-  const [valueCalculation, setValueCalculation] = useState(0);
-
-  useEffect(() => {
-    // Logic: 
-    // Manual = Kehilangan 5% (Shrinkage + Error)
-    // Digital = Hemat 5% + Efisiensi Waktu (Valued at +10% Productivity/Growth potential)
-
-    const monthlyRevenue = dailyRevenue * 30;
-
-    if (!isDigital) {
-      // Mode Manual: Menghitung Kerugian (5% rata-rata industri)
-      setValueCalculation(monthlyRevenue * 0.05);
-    } else {
-      // Mode Digital: Menghitung Penghematan + Potensi Growth (Total impact ~15%)
-      // 5% Saved from shrinkage + 10% opportunity cost saved (time)
-      setValueCalculation(monthlyRevenue * 0.15);
-    }
-  }, [dailyRevenue, isDigital]);
+  // Logic: 
+  // Manual = Kehilangan 5% (Shrinkage + Error)
+  // Digital = Hemat 5% + Efisiensi Waktu (Valued at +10% Productivity/Growth potential)
+  const monthlyRevenue = dailyRevenue * 30;
+  const valueCalculation = !isDigital
+    ? monthlyRevenue * 0.05
+    : monthlyRevenue * 0.15;
 
   const formatCurrency = (num: number) => {
     return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(num);

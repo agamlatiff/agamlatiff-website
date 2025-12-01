@@ -7,7 +7,7 @@ import { motion, AnimatePresence, useMotionTemplate, useMotionValue } from 'fram
 import PlanDetailModal from '../ui/PlanDetailModal';
 import { useLanguage } from '../../context/LanguageContext';
 import { SERVICES } from '@/constants/services';
-import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
+import { createWhatsAppLink } from '@/constants/whatsapp';
 
 const iconMap = {
   code: Code,

@@ -1,9 +1,8 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { PROCESS_STEPS } from '@/constants/process';
-import { WA_LINKS } from '@/constants/whatsapp';
+import { createWhatsAppLink } from '@/constants/whatsapp';
 
 const Process: React.FC = () => {
   const { t, translations } = useLanguage();
@@ -119,7 +118,7 @@ const Process: React.FC = () => {
           </div>
           <br />
           <a
-            href={WA_LINKS.process}
+            href={createWhatsAppLink(t('whatsappMessages.consultation'))}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/25 transition-all hover:-translate-y-1"
