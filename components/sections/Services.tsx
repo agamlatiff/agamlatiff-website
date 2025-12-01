@@ -7,7 +7,7 @@ import { motion, AnimatePresence, useMotionTemplate, useMotionValue } from 'fram
 import PlanDetailModal from '../ui/PlanDetailModal';
 import { useLanguage } from '../../context/LanguageContext';
 import { SERVICES } from '@/constants/services';
-import { WA_LINKS } from '@/constants/whatsapp';
+import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
 
 const iconMap = {
   code: Code,
@@ -38,7 +38,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({ children, className = "",
       className={`group relative border rounded-3xl transition-all duration-500 ${isPopular
         ? 'border-primary/50 bg-slate-900/5 dark:bg-white/5 shadow-2xl shadow-primary/20 scale-105 z-20'
         : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary dark:hover:border-primary z-10'
-        } ${className}`}
+        } ${className} overflow-hidden`}
       onMouseMove={handleMouseMove}
     >
       {/* Spotlight Effect Layer */}
@@ -246,7 +246,7 @@ const Services: React.FC = () => {
           </motion.div>
 
           {/* Pricing Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 items-stretch">
+          <div className="flex flex-nowrap md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 md:gap-10 pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar items-stretch">
             <AnimatePresence mode="popLayout">
               {activePricingPlans.map((plan, index) => {
                 const PlanIcon = plan.icon;
@@ -265,6 +265,7 @@ const Services: React.FC = () => {
                     viewport={{ once: true, margin: "-50px" }}
                     exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="min-w-[300px] max-w-[320px] md:min-w-0 md:max-w-none snap-center h-full flex-shrink-0"
                   >
                     <SpotlightCard
                       isPopular={plan.isPopular}
@@ -343,7 +344,7 @@ const Services: React.FC = () => {
                         {/* CTA Buttons */}
                         <div className="mt-auto space-y-3">
                           <a
-                            href={WA_LINKS.pricing(planName)}
+                            href={createWhatsAppLink(t('whatsappMessages.pricing').replace('{plan}', planName))}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`relative w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-sm transition-all duration-300 overflow-hidden group/btn ${plan.isPopular
@@ -374,12 +375,19 @@ const Services: React.FC = () => {
             </AnimatePresence>
           </div>
 
+          {/* Swipe Hint */}
+          <div className="md:hidden text-center mt-2 mb-6 animate-pulse">
+            <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
+              {t('common.swipeHint')}
+            </span>
+          </div>
+
           {/* Custom App CTA */}
           <div className="mt-16 text-center">
             <div className="inline-block p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 max-w-2xl mx-auto hover:border-primary/20 transition-colors">
               <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                 <span dangerouslySetInnerHTML={{ __html: t('pricingSection.customApp') }} /> <br />
-                <a href={WA_LINKS.general} target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:underline inline-flex items-center gap-1 mt-2">
+                <a href={createWhatsAppLink(t('whatsappMessages.general'))} target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:underline inline-flex items-center gap-1 mt-2">
                   {t('pricingSection.contactMe')} &rarr;
                 </a>
               </p>

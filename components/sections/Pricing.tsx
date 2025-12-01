@@ -5,7 +5,7 @@ import { Check, Zap, Eye, Star } from 'lucide-react';
 import PlanDetailModal from '../ui/PlanDetailModal';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
-import { WA_LINKS } from '@/constants/whatsapp';
+import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
 
 const Pricing: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
@@ -33,7 +33,7 @@ const Pricing: React.FC = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 md:gap-8 pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar items-start">
           {POS_PACKAGES.map((plan, index) => {
             const Icon = plan.icon;
             // @ts-ignore
@@ -50,9 +50,9 @@ const Pricing: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`relative rounded-2xl p-8 transition-all duration-300 flex flex-col h-full ${plan.isPopular
-                    ? 'bg-white dark:bg-slate-900 border-2 border-primary shadow-2xl shadow-primary/10 scale-105 z-10'
-                    : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/30 hover:shadow-xl'
+                className={`min-w-[300px] max-w-[320px] md:min-w-0 md:max-w-none snap-center flex-shrink-0 relative rounded-2xl p-8 transition-all duration-300 flex flex-col h-full ${plan.isPopular
+                  ? 'bg-white dark:bg-slate-900 border-2 border-primary shadow-2xl shadow-primary/10 scale-105 z-10'
+                  : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/30 hover:shadow-xl'
                   }`}
               >
                 {plan.isPopular && (
@@ -93,12 +93,12 @@ const Pricing: React.FC = () => {
 
                 <div className="space-y-3 mt-auto">
                   <a
-                    href={WA_LINKS.pricing(planName)}
+                    href={createWhatsAppLink(t('whatsappMessages.pricing').replace('{plan}', planName))}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-full block text-center py-3.5 rounded-xl font-bold transition-all hover:-translate-y-1 ${plan.isPopular
-                        ? 'bg-primary hover:bg-primary-hover text-white shadow-lg shadow-primary/25 hover:shadow-xl'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700'
+                      ? 'bg-primary hover:bg-primary-hover text-white shadow-lg shadow-primary/25 hover:shadow-xl'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700'
                       }`}
                   >
                     {planCta}
@@ -117,11 +117,18 @@ const Pricing: React.FC = () => {
           })}
         </div>
 
+        {/* Swipe Hint */}
+        <div className="md:hidden text-center mt-4 animate-pulse">
+          <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
+            {t('common.swipeHint')}
+          </span>
+        </div>
+
         <div className="mt-16 text-center">
           <div className="inline-block p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 max-w-2xl mx-auto hover:border-primary/20 transition-colors">
             <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
               <span dangerouslySetInnerHTML={{ __html: t('pricingSection.customApp') }} /> <br />
-              <a href={WA_LINKS.general} target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:underline inline-flex items-center gap-1 mt-2">
+              <a href={createWhatsAppLink(t('whatsappMessages.general'))} target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:underline inline-flex items-center gap-1 mt-2">
                 {t('pricingSection.contactMe')} &rarr;
               </a>
             </p>

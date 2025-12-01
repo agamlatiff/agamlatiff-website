@@ -5,7 +5,7 @@ import { FaInstagram, FaTiktok, FaLinkedinIn, FaGithub, FaYoutube } from 'react-
 import { Link } from 'react-router-dom';
 
 import { useLanguage } from '../../context/LanguageContext';
-import { WA_LINKS } from '@/constants/whatsapp';
+import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
 import { SERVICES } from '@/constants/services';
 
 // Social media links with modern icons
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
               <p className="text-indigo-100 max-w-lg">{t('footer.cta.description')}</p>
             </div>
             <a
-              href={WA_LINKS.general}
+              href={createWhatsAppLink(t('whatsappMessages.general'))}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-primary px-8 py-3.5 rounded-xl font-bold text-base hover:bg-indigo-50 transition-all shadow-lg transform hover:-translate-y-1 flex items-center gap-2 whitespace-nowrap"

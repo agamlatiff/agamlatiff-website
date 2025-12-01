@@ -2,10 +2,10 @@ export const id = {
   hero: {
     badge: "E-Commerce Specialist",
     headline: {
-      part1: "Bangun Toko Online,",
-      part2: "Naikin Penjualan."
+      part1: "Stop Jualan Manual,",
+      part2: "Bikin Brand Kamu Level Up."
     },
-    subheadline: "Bantu UMKM punya toko online modern dengan fitur lengkap: pembayaran online, manajemen produk, dan otomatisasi. **Bayar sekali, pakai selamanya.**",
+    subheadline: "Website E-Commerce profesional untuk **Meningkatkan Kepercayaan Pelanggan** dan **Otomatisasi Order 24/7**. Fokus besarkan bisnis, bukan sibuk balas chat.",
     cta: {
       consult: "Konsultasi Gratis",
       processing: "Processing...",
@@ -587,51 +587,51 @@ export const id = {
     ]
   },
   comparison: {
-    title: "Perbandingan Platform Toko Online",
-    subtitle: "Jangan terjebak biaya langganan bulanan. Bandingkan bagaimana <strong>Custom E-Commerce</strong> memberikan ROI terbaik untuk jangka panjang.",
+    title: "Perbandingan Platform Jualan",
+    subtitle: "Jangan terjebak perang harga atau admin yang kewalahan. Bandingkan bagaimana <strong>Custom E-Commerce</strong> memberikan ROI terbaik.",
     headers: {
       criteria: "Kriteria",
-      saas: "Sewa Toko (SaaS)",
-      agency: "Jasa Web Umum",
+      saas: "Marketplace",
+      agency: "Manual (WhatsApp)",
       custom: "Agam E-Commerce",
       bestValue: "Best Value"
     },
     mobile: {
       winner: "WINNER",
       description: "Pilihan terbaik untuk brand yang ingin mandiri tanpa potongan biaya admin dan batasan fitur.",
-      saas: "Sewa Toko (SaaS)",
-      agency: "Jasa Web Umum"
+      saas: "Marketplace",
+      agency: "Manual (WhatsApp)"
     },
     list: [
       {
         criteria: "Sistem Kepemilikan",
-        saas: "Sewa (Numpang Lapak)",
-        agency: "Lisensi Terbatas",
+        saas: "Numpang Lapak (Sewa)",
+        agency: "Tidak Ada Sistem",
         custom: "Hak Milik 100% (Source Code)"
       },
       {
         criteria: "Biaya & Potongan",
-        saas: "Langganan + Potongan Admin",
-        agency: "Biaya Maintenance Tahunan",
-        custom: "Sekali Bayar (Tanpa Potongan)"
+        saas: "Potongan Admin 5-10%",
+        agency: "Gratis tapi Capek",
+        custom: "Sekali Bayar (0% Potongan)"
       },
       {
-        criteria: "Fitur Jualan",
-        saas: "Terbatas Template Platform",
-        agency: "Standar Company Profile",
-        custom: "Custom (Promo, Bundling, Grosir)"
+        criteria: "Persaingan",
+        saas: "Perang Harga Keras",
+        agency: "Terbatas Kontak WA",
+        custom: "Brand Eksklusif (Blue Ocean)"
       },
       {
-        criteria: "Kepemilikan Data",
-        saas: "Data Disimpan Vendor",
-        agency: "Shared Server",
-        custom: "Private Database (Aman)"
+        criteria: "Data Pelanggan",
+        saas: "Data Disembunyikan",
+        agency: "Data Tidak Terawat",
+        custom: "Database Lengkap (Retargeting)"
       },
       {
-        criteria: "Skalabilitas Brand",
-        saas: "Biaya Naik jika Order Naik",
-        agency: "Sulit Dikembangkan",
-        custom: "Unlimited Produk & Transaksi"
+        criteria: "Skalabilitas",
+        saas: "Tergantung Algoritma",
+        agency: "Mentok Tenaga Admin",
+        custom: "Unlimited Growth"
       }
     ]
   },
@@ -1740,6 +1740,14 @@ export const id = {
   },
   common: {
     loading: "Memuat...",
-    error: "Terjadi kesalahan"
+    error: "Terjadi kesalahan",
+    swipeHint: "← Geser untuk melihat selengkapnya →"
+  },
+  whatsappMessages: {
+    general: "Halo Mas Agam, saya ingin bertanya tentang jasa pembuatan sistem/website.",
+    consultation: "Halo Mas Agam, saya ingin konsultasi gratis mengenai kebutuhan sistem bisnis saya.",
+    roi: "Halo Mas Agam, saya sudah cek simulasi ROI dan tertarik untuk mengamankan profit bisnis saya. Bisa diskusi?",
+    pricing: "Halo Mas Agam, saya tertarik dengan paket {plan}. Bisa dijelaskan detailnya?",
+    product: "Halo Mas Agam, saya tertarik dengan layanan {service}. Mohon infonya."
   }
 };

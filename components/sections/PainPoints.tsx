@@ -32,7 +32,8 @@ const PainPoints: React.FC = () => {
           </motion.p>
         </div>
 
-        <div className="space-y-6">
+        {/* Mobile: Horizontal Scroll / Desktop: Vertical Stack */}
+        <div className="flex md:flex-col overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 md:gap-6 pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar">
           {translations.painPoints.list.map((point: any, index: number) => {
             const Icon = PAIN_POINTS[index].icon;
             return (
@@ -42,7 +43,7 @@ const PainPoints: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300 overflow-hidden flex flex-col md:flex-row items-stretch"
+                className="min-w-[85vw] md:min-w-0 snap-center group relative bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300 overflow-hidden flex flex-col md:flex-row items-stretch"
               >
                 {/* LEFT SIDE: THE PROBLEM (Old Way) */}
                 <div className="md:w-[40%] bg-slate-50 dark:bg-slate-950/50 p-6 md:p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-800 relative overflow-hidden">
@@ -61,16 +62,6 @@ const PainPoints: React.FC = () => {
                       {point.impact}
                     </p>
                   </div>
-                </div>
-
-                {/* CONNECTOR (Mobile: Down, Desktop: Right) */}
-                <div className="hidden md:flex absolute left-[40%] top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 w-10 h-10 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 items-center justify-center text-slate-300 group-hover:text-primary group-hover:border-primary transition-all duration-300 shadow-sm">
-                  <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
-                </div>
-
-                {/* Mobile Connector */}
-                <div className="md:hidden absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-8 h-8 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-300 shadow-sm">
-                  <ArrowRight size={14} className="rotate-90" />
                 </div>
 
                 {/* RIGHT SIDE: THE SOLUTION (New Way) */}
@@ -98,6 +89,13 @@ const PainPoints: React.FC = () => {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Swipe Hint */}
+        <div className="md:hidden text-center mt-4 animate-pulse">
+          <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
+            {t('common.swipeHint')}
+          </span>
         </div>
       </div>
     </section>

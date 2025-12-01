@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Calculator, ArrowRight, XCircle, CheckCircle, RefreshCcw, TrendingUp, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
-import { WA_LINKS } from '@/constants/whatsapp';
+import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
 
 const RoiCalculator: React.FC = () => {
   const { t } = useLanguage();
@@ -66,13 +66,13 @@ const RoiCalculator: React.FC = () => {
             </p>
 
             {/* Case Study Cards */}
-            <div className="space-y-4">
+            <div className="flex md:flex-col overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 md:gap-4 pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar">
               {/* Manual Case */}
               <div
                 onClick={() => setIsDigital(false)}
-                className={`cursor-pointer p-5 rounded-xl border-2 transition-all duration-300 relative overflow-hidden ${!isDigital
-                    ? 'border-red-400 bg-red-50/50 dark:bg-red-900/10 shadow-lg'
-                    : 'border-slate-100 dark:border-slate-800 opacity-60 hover:opacity-100'
+                className={`min-w-[85vw] md:min-w-0 snap-center cursor-pointer p-5 rounded-xl border-2 transition-all duration-300 relative overflow-hidden ${!isDigital
+                  ? 'border-red-400 bg-red-50/50 dark:bg-red-900/10 shadow-lg'
+                  : 'border-slate-100 dark:border-slate-800 opacity-60 hover:opacity-100'
                   }`}
               >
                 <div className="flex items-start gap-4 relative z-10">
@@ -94,9 +94,9 @@ const RoiCalculator: React.FC = () => {
               {/* Digital Case */}
               <div
                 onClick={() => setIsDigital(true)}
-                className={`cursor-pointer p-5 rounded-xl border-2 transition-all duration-300 relative overflow-hidden ${isDigital
-                    ? 'border-green-500 bg-green-50/50 dark:bg-green-900/10 shadow-lg'
-                    : 'border-slate-100 dark:border-slate-800 opacity-60 hover:opacity-100'
+                className={`min-w-[85vw] md:min-w-0 snap-center cursor-pointer p-5 rounded-xl border-2 transition-all duration-300 relative overflow-hidden ${isDigital
+                  ? 'border-green-500 bg-green-50/50 dark:bg-green-900/10 shadow-lg'
+                  : 'border-slate-100 dark:border-slate-800 opacity-60 hover:opacity-100'
                   }`}
               >
                 <div className="flex items-start gap-4 relative z-10">
@@ -116,6 +116,13 @@ const RoiCalculator: React.FC = () => {
               </div>
             </div>
 
+            {/* Swipe Hint for Cards */}
+            <div className="md:hidden text-center mt-2 mb-6 animate-pulse">
+              <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
+                {t('common.swipeHint')}
+              </span>
+            </div>
+
           </motion.div>
 
           {/* RIGHT SIDE: The Interactive Calculator */}
@@ -125,8 +132,8 @@ const RoiCalculator: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className={`rounded-3xl shadow-2xl p-6 md:p-8 border transition-all duration-500 relative overflow-hidden ${!isDigital
-                ? 'bg-white dark:bg-slate-800 border-red-100 dark:border-red-900/30'
-                : 'bg-slate-900 dark:bg-slate-800 border-green-500/30'
+              ? 'bg-white dark:bg-slate-800 border-red-100 dark:border-red-900/30'
+              : 'bg-white dark:bg-slate-800 border-green-500 dark:border-green-500/30'
               }`}>
 
             {/* Header Simulator */}
@@ -157,7 +164,7 @@ const RoiCalculator: React.FC = () => {
                 <label className={isDigital ? 'text-slate-500 dark:text-slate-300' : 'text-slate-600 dark:text-slate-300'}>
                   {t('roiCalculator.calculator.averageRevenue')}
                 </label>
-                <span className={`font-bold px-3 py-1 rounded-lg ${!isDigital ? 'bg-red-50 text-red-600' : 'bg-green-500/20 text-green-500'
+                <span className={`font-bold px-3 py-1 rounded-lg ${!isDigital ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-600 dark:bg-green-500/20 dark:text-green-500'
                   }`}>
                   {formatCurrency(dailyRevenue * 30)}
                 </span>
@@ -166,7 +173,7 @@ const RoiCalculator: React.FC = () => {
                 type="range" min="1000000" max="10000000" step="500000"
                 value={dailyRevenue}
                 onChange={(e) => setDailyRevenue(parseInt(e.target.value))}
-                className={`w-full h-2 rounded-lg appearance-none cursor-pointer ${!isDigital ? 'bg-red-200 accent-red-500' : 'bg-slate-700 accent-green-500'
+                className={`w-full h-2 rounded-lg appearance-none cursor-pointer ${!isDigital ? 'bg-red-200 accent-red-500' : 'bg-slate-200 dark:bg-slate-700 accent-green-500'
                   }`}
               />
               <div className="flex justify-between text-[10px] text-slate-400 mt-2">
@@ -177,23 +184,23 @@ const RoiCalculator: React.FC = () => {
 
             {/* Result Display */}
             <div className={`p-6 rounded-2xl border transition-all duration-300 ${!isDigital
-                ? 'bg-red-50 dark:bg-red-900/10 border-red-100 dark:border-red-900/20'
-                : 'bg-slate-800 dark:bg-slate-900 border-slate-700'
+              ? 'bg-red-50 dark:bg-red-900/10 border-red-100 dark:border-red-900/20'
+              : 'bg-green-50 dark:bg-green-900/10 border-green-100 dark:border-green-900/20'
               }`}>
               <div className="text-center">
-                <div className={`text-xs font-bold uppercase tracking-widest mb-2 ${!isDigital ? 'text-red-500' : 'text-green-400'
+                <div className={`text-xs font-bold uppercase tracking-widest mb-2 ${!isDigital ? 'text-red-500' : 'text-green-600 dark:text-green-400'
                   }`}>
                   {!isDigital ? t('roiCalculator.calculator.moneyLost') : t('roiCalculator.calculator.potentialProfit')}
                 </div>
 
                 <div
-                  className={`text-3xl sm:text-4xl font-extrabold mb-1 ${!isDigital ? 'text-red-600 dark:text-red-500' : 'text-white dark:text-green-400'
+                  className={`text-3xl sm:text-4xl font-extrabold mb-1 ${!isDigital ? 'text-red-600 dark:text-red-500' : 'text-green-600 dark:text-green-400'
                     }`}
                 >
                   {formatCurrency(valueCalculation * 12)}
                 </div>
 
-                <p className={`text-xs mt-2 ${!isDigital ? 'text-red-400' : 'text-slate-400'}`}>
+                <p className={`text-xs mt-2 ${!isDigital ? 'text-red-400' : 'text-slate-500 dark:text-slate-400'}`}>
                   {!isDigital
                     ? t('roiCalculator.calculator.manualNote')
                     : t('roiCalculator.calculator.digitalNote')}
@@ -203,12 +210,12 @@ const RoiCalculator: React.FC = () => {
 
             <div className="mt-8">
               <a
-                href={WA_LINKS.roi}
+                href={createWhatsAppLink(t('whatsappMessages.roi'))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 overflow-hidden relative ${!isDigital
-                    ? 'bg-slate-900 text-white hover:bg-slate-800'
-                    : 'bg-green-500 text-white hover:bg-green-600 shadow-green-500/20'
+                  ? 'bg-slate-900 text-white hover:bg-slate-800'
+                  : 'bg-green-500 text-white hover:bg-green-600 shadow-green-500/20'
                   }`}
               >
                 <span className="relative z-10">
@@ -218,6 +225,12 @@ const RoiCalculator: React.FC = () => {
               </a>
             </div>
 
+            {/* Swipe Hint */}
+            <div className="md:hidden text-center mt-4 animate-pulse">
+              <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
+                {t('common.swipeHint')}
+              </span>
+            </div>
           </motion.div>
         </div>
       </div>

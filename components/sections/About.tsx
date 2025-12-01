@@ -47,7 +47,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <section id="about" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
@@ -109,7 +109,7 @@ const About: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
-            <div className="relative w-82 h-82 sm:w-96 sm:h-96">
+            <div className="relative w-72 h-72 sm:w-96 sm:h-96">
               <div className="absolute inset-0 border-2 border-slate-100 dark:border-slate-800 rounded-full animate-[spin_10s_linear_infinite]"></div>
               <div className="absolute inset-4 border-2 border-dashed border-primary/30 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
               <div className="absolute inset-0 flex items-center justify-center">

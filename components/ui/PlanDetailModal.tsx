@@ -3,7 +3,7 @@ import { PricingPlan } from '../../constants/pricing';
 import { X, Check, Zap, HelpCircle, Lightbulb, TrendingUp, ShieldCheck, Code2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
-import { WA_LINKS } from '@/constants/whatsapp';
+import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
 
 interface PlanDetailModalProps {
   plan: PricingPlan | null;
@@ -177,7 +177,7 @@ const PlanDetailModal: React.FC<PlanDetailModalProps> = ({ plan, isOpen, onClose
                       </div>
 
                       <a
-                        href={WA_LINKS.pricing(planName)}
+                        href={createWhatsAppLink(t('whatsappMessages.pricing').replace('{plan}', planName))}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full block text-center py-4 rounded-xl font-bold bg-primary text-white shadow-lg shadow-primary/25 hover:bg-primary-hover hover:-translate-y-1 transition-all mb-4"

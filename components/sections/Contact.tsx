@@ -198,7 +198,7 @@ const Contact: React.FC<ContactProps> = ({ onOpenChat }) => {
         <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-2xl shadow-slate-200/50 dark:shadow-black/50 border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row">
 
           {/* Info Side */}
-          <div className="bg-primary dark:bg-slate-800 p-10 lg:p-12 lg:w-2/5 text-white flex flex-col justify-between transition-colors duration-300 relative overflow-hidden">
+          <div className="hidden lg:flex bg-primary dark:bg-slate-800 p-10 lg:p-12 lg:w-2/5 text-white flex-col justify-between transition-colors duration-300 relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 

@@ -3,7 +3,8 @@ import React, { useEffect } from 'react';
 import { X, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Service } from '@/types/service';
-import { WA_LINKS } from '@/constants/whatsapp';
+import { WA_LINKS, createWhatsAppLink } from '@/constants/whatsapp';
+import { useLanguage } from '@/context/LanguageContext';
 
 
 interface ServiceModalProps {
@@ -13,6 +14,7 @@ interface ServiceModalProps {
 }
 
 const ServiceModal: React.FC<ServiceModalProps> = ({ service, isOpen, onClose }) => {
+  const { t } = useLanguage();
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -20,7 +22,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ service, isOpen, onClose })
       }
     };
     window.addEventListener('keydown', handleEsc);
-    
+
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -46,7 +48,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ service, isOpen, onClose })
             className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"
             onClick={onClose}
           ></motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -60,12 +62,12 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ service, isOpen, onClose })
                 <X size={20} />
               </button>
             </div>
-            
+
             <div className="p-6 overflow-y-auto">
               <p className="text-slate-600 dark:text-slate-400 mb-6">{service.modalContent.description}</p>
-              
+
               <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Solusi yang Anda Dapatkan:</h3>
-              
+
               <div className="space-y-5">
                 {service.modalContent.points.map((point, idx) => (
                   <div key={idx} className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-800">
@@ -85,13 +87,13 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ service, isOpen, onClose })
               <div>
                 <span className="text-xs text-slate-500 dark:text-slate-400">Estimasi Pengerjaan: <strong className="text-slate-700 dark:text-slate-200">{service.timeline}</strong></span>
               </div>
-              <a 
-                href={WA_LINKS.general}
+              <a
+                href={createWhatsAppLink(t('whatsappMessages.general'))}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-xl"
               >
-                Diskusi Kebutuhan
+                {t('hero.cta.consult')}
               </a>
             </div>
           </motion.div>

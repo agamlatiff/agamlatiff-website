@@ -2,10 +2,10 @@ export const en = {
   hero: {
     badge: "E-Commerce Specialist",
     headline: {
-      part1: "Build Online Store,",
-      part2: "Boost Sales."
+      part1: "Stop Manual Selling,",
+      part2: "Level Up Your Brand."
     },
-    subheadline: "Helping UMKM own modern online stores with complete features: online payment, product management, and automation. **Pay once, use forever.**",
+    subheadline: "Professional E-Commerce Website to **Increase Customer Trust** and **Automate Orders 24/7**. Focus on growing your business, not busy replying to chats.",
     cta: {
       consult: "Free Consultation",
       processing: "Processing...",
@@ -1656,6 +1656,14 @@ export const en = {
   },
   common: {
     loading: "Loading...",
-    error: "An error occurred"
+    error: "An error occurred",
+    swipeHint: "Swipe left to see details →"
+  },
+  whatsappMessages: {
+    general: "Hello Agam, I would like to ask about system/website development services.",
+    consultation: "Hello Agam, I would like a free consultation regarding my business system needs.",
+    roi: "Hello Agam, I have checked the ROI simulation and I am interested in securing my business profit. Can we discuss?",
+    pricing: "Hello Agam, I am interested in the {plan} package. Can you explain the details?",
+    product: "Hello Agam, I am interested in the {service} service. Please provide info."
   }
 };

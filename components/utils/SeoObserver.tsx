@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 const SEO_DATA: Record<string, { title: string; desc: string }> = {
   hero: {
-    title: "Agam | Modern Web & App Developer",
+    title: "Agam | Web & App Developer",
     desc: "Membangun website & aplikasi modern yang scalable untuk menjawab masalah bisnis nyata. Fokus pada performa, UX, dan efisiensi operasional."
   },
   'roi-calculator': {
