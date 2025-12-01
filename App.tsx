@@ -1,6 +1,6 @@
 
 import React, { useState, lazy, Suspense } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout
 import Navbar from './components/layout/Navbar';
