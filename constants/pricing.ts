@@ -439,7 +439,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Basic SEO On-Page',
         'Full Source Code (Handover)',
         'Panduan Update Konten Dasar',
-        '2x Revisi Minor'
+        '2x Revisi Minor',
+        'Garansi & Maintenance 15 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket STARTER',
@@ -506,7 +507,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'SEO Dasar & Optimasi On-Page',
         'Integrasi Tracking / Analitik',
         'Full Source Code & Aset',
-        '3x Revisi Minor'
+        '4x Revisi Minor',
+        'Garansi & Maintenance 30 Hari'
       ],
       isPopular: true,
       cta: 'Ambil Paket GROWTH',
@@ -576,7 +578,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'SEO On-Page & Technical',
         'Setup Hosting, Domain, SSL Premium',
         'Dokumentasi Lengkap & Hak Milik Penuh',
-        '5x Revisi & Support 1 Bulan'
+        '6x Revisi Minor',
+        'Garansi & Maintenance 45 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket ULTIMATE',
@@ -647,31 +650,58 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Basic SEO On-Page',
         'Full Source Code (Handover)',
         'Panduan Update Konten',
-        '2x Revisi Minor'
+        '2x Revisi Minor',
+        'Garansi & Maintenance 15 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket Starter',
       icon: Globe,
-      details: [
-        {
-          feature: "Kredibilitas Langsung",
-          problem: "Tanpa website, calon pelanggan ragu bisnis Anda asli atau tidak.",
-          solution: "Website profesional menjadi bukti eksistensi digital yang valid.",
-          benefit: "Pelanggan langsung percaya saat melihat website resmi Anda."
-        },
-        {
-          feature: "Info Selalu Up-to-Date",
-          problem: "Capek jawab pertanyaan berulang tentang alamat, jam buka, atau harga.",
-          solution: "Website jadi pusat informasi akurat yang bisa diakses 24 jam.",
-          benefit: "Menghemat waktu admin dan memudahkan pelanggan mencari info."
-        },
-        {
-          feature: "Mudah Ditemukan (SEO Basic)",
-          problem: "Bisnis tidak muncul saat orang mencari di Google sekitar lokasi.",
-          solution: "Optimasi dasar agar bisnis muncul di pencarian lokal & Maps.",
-          benefit: "Potensi pelanggan baru datang langsung dari Google."
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Struktur & Tampilan Halaman Dasar",
+            items: [
+              "Halaman beranda (home) + Tentang Kami (About) + Layanan (Services) + Kontak.",
+              "Desain sederhana tapi profesional — tampilan bersih, rapi, dan mobile-friendly.",
+              "Navigasi dasar yang memudahkan user menjelajahi website."
+            ]
+          },
+          {
+            title: "📄 Konten & Informasi Perusahaan",
+            items: [
+              "Profil perusahaan, visi-misi, dan nilai perusahaan.",
+              "Daftar layanan/produk yang ditawarkan.",
+              "Informasi kontak lengkap & peta lokasi (Google Maps).",
+              "Integrasi link media sosial perusahaan."
+            ]
+          },
+          {
+            title: "🛠️ Setup & Deployment Dasar",
+            items: [
+              "Setup domain + hosting dasar (shared/ringan).",
+              "Struktur kode sederhana & cepat loading.",
+              "Basic SEO on-page: meta tag dasar & struktur HTML rapi."
+            ]
+          },
+          {
+            title: "📄 Dokumentasi & Layanan",
+            items: [
+              "Full source code + akses admin/data (Handover).",
+              "Panduan singkat update konten dasar.",
+              "2x revisi minor & Maintenance 15 Hari."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Untuk Siapa Paket Starter Ini Cocok",
+          items: [
+            "UKM, startup kecil, atau bisnis baru yang ingin 'etalase online'.",
+            "Usaha yang belum butuh fitur kompleks, cukup profil & kontak.",
+            "Pelaku usaha dengan budget terbatas untuk 'kanvas awal'.",
+            "Perusahaan yang butuh identitas resmi & sarana branding."
+          ]
         }
-      ]
+      }
     },
     {
       id: 'cp-growth',
@@ -689,31 +719,57 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Integrasi Analytics / Tracking',
         'CMS / Admin Panel (Opsional)',
         'Full Source Code & Aset',
-        '3x Revisi Minor'
+        '4x Revisi Minor',
+        'Garansi & Maintenance 30 Hari'
       ],
       isPopular: true,
       cta: 'Ambil Paket Growth',
       icon: Building2,
-      details: [
-        {
-          feature: "Ubah Pengunjung Jadi Prospek",
-          problem: "Banyak yang lihat tapi lalu pergi tanpa kontak.",
-          solution: "Penempatan tombol CTA (Call to Action) strategis & copywriting persuasif.",
-          benefit: "Lebih banyak pengunjung yang akhirnya chat WA atau isi form."
-        },
-        {
-          feature: "Hemat Biaya Marketing",
-          problem: "Ketergantungan iklan berbayar yang biayanya naik terus.",
-          solution: "Website bekerja sebagai 'salesman' 24 jam dengan biaya sekali bayar.",
-          benefit: "Investasi aset jangka panjang yang jauh lebih murah dari gaji sales."
-        },
-        {
-          feature: "Kontrol Narasi Brand",
-          problem: "Susah menceritakan keunggulan bisnis secara utuh di medsos.",
-          solution: "Halaman 'Tentang Kami' & 'Layanan' yang menceritakan value bisnis Anda.",
-          benefit: "Brand awareness meningkat, pelanggan paham kenapa harus pilih Anda."
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Struktur Lengkap & Brand Identity",
+            items: [
+              "6 Halaman: Home, About, Services, Portfolio/Galeri, Blog (opsional), Contact.",
+              "Desain profesional & kustom sesuai identitas brand (logo, warna, font).",
+              "Navigasi & struktur user-friendly yang rapi."
+            ]
+          },
+          {
+            title: "📄 Konten Kredibilitas & Interaksi",
+            items: [
+              "Profil lengkap, portofolio/galeri proyek, & testimoni.",
+              "Halaman kontak lengkap dengan form inquiry/leads.",
+              "Integrasi chat/WhatsApp untuk komunikasi real-time."
+            ]
+          },
+          {
+            title: "🔎 SEO & Performa",
+            items: [
+              "Struktur SEO-friendly (meta tag, heading, alt text).",
+              "Optimasi performa & loading cepat (desktop + mobile).",
+              "Integrasi analytics/tracking untuk monitoring pengunjung."
+            ]
+          },
+          {
+            title: "📄 Dokumentasi & Kontrol",
+            items: [
+              "Full source code + aset + akses lengkap.",
+              "Panduan update konten mandiri.",
+              "4x revisi minor & Maintenance 30 Hari."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Untuk Siapa Paket Growth Ini Cocok",
+          items: [
+            "Perusahaan yang ingin memperkuat identitas & kredibilitas.",
+            "Bisnis yang ingin menampilkan portofolio & testimoni.",
+            "Usaha yang mencari leads/klien via website.",
+            "Brand yang ingin website jangka panjang & mudah dikembangkan."
+          ]
         }
-      ]
+      }
     },
     {
       id: 'cp-ultimate',
@@ -731,31 +787,58 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'CMS / Manajemen Konten Lengkap',
         'Setup Server/Hosting Premium',
         'Prioritas Support',
-        '6x Revisi Minor'
+        'Prioritas Support',
+        '6x Revisi Minor',
+        'Garansi & Maintenance 45 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket Ultimate',
       icon: Crown,
-      details: [
-        {
-          feature: "Kurangi Hambatan Transaksi",
-          problem: "Pelanggan butuh waktu lama untuk memutuskan beli.",
-          solution: "Informasi super lengkap & testimoni dinamis yang meyakinkan.",
-          benefit: "Mempercepat proses pengambilan keputusan pelanggan."
-        },
-        {
-          feature: "Keunggulan Kompetitif",
-          problem: "Kompetitor lain mulai punya website juga.",
-          solution: "Desain eksklusif & fitur blog yang membuat Anda terlihat sebagai market leader.",
-          benefit: "Menang persaingan dengan image yang jauh lebih bonafit."
-        },
-        {
-          feature: "Aman & Mandiri",
-          problem: "Takut akun sosmed/marketplace kena banned atau algoritma berubah.",
-          solution: "Website adalah aset 100% milik Anda. Kontrol penuh.",
-          benefit: "Bisnis tidak rentan, traffic organik tetap aman."
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Tampilan Premium & Struktur Komprehensif",
+            items: [
+              "Desain kustom penuh, eksklusif & mencerminkan brand identity.",
+              "10+ Halaman: Home, About, Services, Portfolio, Blog, Karir, Team, dll.",
+              "UX premium: navigasi mudah, struktur informasi jelas."
+            ]
+          },
+          {
+            title: "📄 Fitur Interaksi & Konten Lengkap",
+            items: [
+              "Portofolio unlimited dengan filter, testimoni dinamis.",
+              "Blog/Artikel untuk SEO & engagement.",
+              "Sistem kontak lengkap: form advanced, peta interaktif, live chat."
+            ]
+          },
+          {
+            title: "🔎 SEO, Performa & Infrastruktur",
+            items: [
+              "SEO Advanced & Technical (schema, speed optimization).",
+              "Infrastruktur hosting/server premium & aman.",
+              "CMS / Manajemen Konten untuk update mandiri yang mudah."
+            ]
+          },
+          {
+            title: "🛠️ Support & Layanan VIP",
+            items: [
+              "Dokumentasi lengkap & full handover.",
+              "Prioritas support & maintenance.",
+              "6x revisi minor & Maintenance 45 Hari."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Untuk Siapa Paket Ultimate Ini Cocok",
+          items: [
+            "Korporasi atau brand profesional yang butuh citra kuat.",
+            "Bisnis dengan layanan kompleks yang butuh portofolio detail.",
+            "Perusahaan yang ingin aset digital jangka panjang & scalable.",
+            "Klien yang butuh kontrol penuh, CMS, & performa tinggi."
+          ]
         }
-      ]
+      }
     }
   ],
   'e-commerce': [
@@ -775,7 +858,9 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Mobile Friendly & Responsif',
         'Setup Hosting & Domain Dasar',
         'Source Code & Database Full',
-        'Dokumentasi Penggunaan Admin'
+        'Dokumentasi Penggunaan Admin',
+        '2x Revisi Minor',
+        'Garansi & Maintenance 15 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket BASIC',
@@ -820,7 +905,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
             items: [
               "Full source code + database (Hak Milik Penuh).",
               "Dokumentasi dasar penggunaan admin panel.",
-              "1x revisi minor sebelum final delivery."
+              "Dokumentasi dasar penggunaan admin panel.",
+              "2x revisi minor & Maintenance 15 Hari."
             ]
           }
         ],
@@ -851,7 +937,9 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Manajemen Akun Pelanggan (Login/Register)',
         'Struktur Kode Maintainable',
         'Setup Hosting, Domain, SSL',
-        'Keamanan & Optimasi Dasar'
+        'Keamanan & Optimasi Dasar',
+        '4x Revisi Minor',
+        'Garansi & Maintenance 30 Hari'
       ],
       isPopular: true,
       cta: 'Ambil Paket STANDARD',
@@ -920,6 +1008,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Optimasi Performa & Keamanan Tinggi',
         'Integrasi Logistik / Ongkir (Opsional)',
         'Support & Maintenance Prioritas',
+        '6x Revisi Minor',
+        'Garansi & Maintenance 45 Hari',
         'Skalabilitas Tinggi (Siap Trafik Besar)'
       ],
       isPopular: false,

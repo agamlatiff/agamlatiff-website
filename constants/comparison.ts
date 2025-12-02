@@ -86,6 +86,12 @@ export const ECOMMERCE_COMPARISON: ComparisonRow[] = [
     pro: "VIP (Direct WA)"
   },
   {
+    feature: "Revisi Desain",
+    basic: "2x Revisi",
+    standard: "4x Revisi",
+    pro: "6x Revisi"
+  },
+  {
     feature: "Garansi",
     basic: "15 Hari",
     standard: "30 Hari",
@@ -301,7 +307,7 @@ export const COMPANY_PROFILE_COMPARISON: ComparisonRow[] = [
   {
     feature: "Revisi Desain",
     basic: "2x Revisi",
-    standard: "3x Revisi",
+    standard: "4x Revisi",
     pro: "6x Revisi"
   },
   {

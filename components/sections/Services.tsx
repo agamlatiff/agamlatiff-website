@@ -196,29 +196,27 @@ const Services: React.FC = () => {
           </motion.p>
         </div>
 
-        {/* SLIDER FILTER TABS (Normal Scroll) */}
+        {/* SLIDER FILTER TABS (Responsive & Conditional) */}
         <div className="relative max-w-4xl mx-auto mb-12 group/slider px-8 md:px-12">
-          {/* Left Arrow */}
-          <button
-            onClick={() => handleScroll('left')}
-            disabled={!canScrollLeft}
-            className={`absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white dark:bg-slate-800 p-2 rounded-full shadow-md border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 transition-all md:-translate-x-2 ${!canScrollLeft
-              ? 'opacity-50 cursor-not-allowed text-slate-300 dark:text-slate-600'
-              : 'hover:bg-primary hover:text-white hover:border-primary'
-              }`}
-            aria-label="Scroll Left"
-          >
-            <ChevronLeft size={20} />
-          </button>
+          {/* Left Arrow - Only show if scrollable */}
+          {canScrollLeft && (
+            <button
+              onClick={() => handleScroll('left')}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white dark:bg-slate-800 p-2 rounded-full shadow-md border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 transition-all md:-translate-x-2 hover:bg-primary hover:text-white hover:border-primary"
+              aria-label="Scroll Left"
+            >
+              <ChevronLeft size={20} />
+            </button>
+          )}
 
           {/* List Container */}
           <div
             ref={scrollContainerRef}
             onScroll={checkScrollButtons}
-            className="overflow-x-auto no-scrollbar scroll-smooth"
+            className={`overflow-x-auto no-scrollbar scroll-smooth flex ${!canScrollLeft && !canScrollRight ? 'justify-center' : 'justify-start'}`}
           >
             <div className="flex gap-3 py-2 px-1">
-              {SERVICES.map((service) => {
+              {SERVICES.filter(s => ['e-commerce', 'landing-page', 'company-profile'].includes(s.id)).map((service) => {
                 const Icon = iconMap[service.icon];
                 const isActive = activeTabId === service.id;
                 const tSvc = translations.services[service.id as keyof typeof translations.services];
@@ -239,20 +237,18 @@ const Services: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Arrow */}
-          <button
-            onClick={() => handleScroll('right')}
-            disabled={!canScrollRight}
-            className={`absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white dark:bg-slate-800 p-2 rounded-full shadow-md border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 transition-all md:translate-x-2 ${!canScrollRight
-              ? 'opacity-50 cursor-not-allowed text-slate-300 dark:text-slate-600'
-              : 'hover:bg-primary hover:text-white hover:border-primary'
-              }`}
-            aria-label="Scroll Right"
-          >
-            <ChevronRight size={20} />
-          </button>
+          {/* Right Arrow - Only show if scrollable */}
+          {canScrollRight && (
+            <button
+              onClick={() => handleScroll('right')}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white dark:bg-slate-800 p-2 rounded-full shadow-md border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 transition-all md:translate-x-2 hover:bg-primary hover:text-white hover:border-primary"
+              aria-label="Scroll Right"
+            >
+              <ChevronRight size={20} />
+            </button>
+          )}
 
-          {/* Fade Indicators for aesthetics */}
+          {/* Fade Indicators for aesthetics - Only show if scrollable */}
           <div className={`absolute top-0 bottom-0 left-8 md:left-12 w-8 bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent pointer-events-none transition-opacity duration-300 ${!canScrollLeft ? 'opacity-0' : 'opacity-100'}`}></div>
           <div className={`absolute top-0 bottom-0 right-8 md:right-12 w-8 bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent pointer-events-none transition-opacity duration-300 ${!canScrollRight ? 'opacity-0' : 'opacity-100'}`}></div>
         </div>
