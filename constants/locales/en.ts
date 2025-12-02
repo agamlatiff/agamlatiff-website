@@ -108,9 +108,9 @@ export const en = {
         title: "Online Store Creation Service",
         description: "Sell online more professionally with your own e-commerce website. Choose a package:",
         points: [
-          { title: "Basic - Start Selling (IDR 2.4m)", desc: "Simple online store, 20 product catalog, checkout form to WA. Suitable for new Bussiness." },
-          { title: "Premium - Full E-Com (IDR 3.9m)", desc: "Shopping cart system, unlimited products, category filters, auto-checkout WA. Complete features for brands." },
-          { title: "Pro - Store Growth (IDR 5.9m)", desc: "Full payment gateway (QRIS), complete admin dashboard, stock management, & promo features. Ready to scale-up." }
+          { title: "Basic - Entry / Start-up (IDR 4.0m)", desc: "Simple online store, product catalog, checkout form to WA. Suitable for new Bussiness." },
+          { title: "Standard - Balanced (IDR 7.5m)", desc: "Auto checkout, payment gateway, stock & variation management. For growing stores." },
+          { title: "Pro - Premium (IDR 12.5m)", desc: "Full custom UI/UX, complete features (wishlist, review, promo), analytics, priority support. Large scale." }
         ]
       }
     },
@@ -591,6 +591,8 @@ export const en = {
     subtitle: "Don't get trapped in monthly subscription fees. Compare how <strong>Custom E-Commerce</strong> gives the best ROI for the long term.",
     headers: {
       criteria: "Criteria",
+      manual: "Manual Selling",
+      marketplace: "Marketplace",
       saas: "Store Rental (SaaS)",
       agency: "General Web Agency",
       custom: "Agam E-Commerce",
@@ -605,30 +607,40 @@ export const en = {
     list: [
       {
         criteria: "Ownership System",
+        manual: "None (Chat Only)",
+        marketplace: "Platform Dependent",
         saas: "Rent (Renting Space)",
         agency: "Limited License",
         custom: "100% Ownership (Source Code)"
       },
       {
         criteria: "Cost & Deductions",
+        manual: "Time & Energy",
+        marketplace: "Admin Fees (5-10%)",
         saas: "Subscription + Admin Fees",
         agency: "Annual Maintenance Fee",
         custom: "One-Time Payment (No Deductions)"
       },
       {
         criteria: "Selling Features",
+        manual: "Manual Reply",
+        marketplace: "Standard Template",
         saas: "Limited Platform Templates",
         agency: "Standard Company Profile",
         custom: "Custom (Promo, Bundling, Wholesale)"
       },
       {
         criteria: "Data Ownership",
+        manual: "Scattered in Chat",
+        marketplace: "Hidden by Platform",
         saas: "Data Stored by Vendor",
         agency: "Shared Server",
         custom: "Private Database (Secure)"
       },
       {
         criteria: "Brand Scalability",
+        manual: "Hard to Scale",
+        marketplace: "Price War Trap",
         saas: "Cost Increases with Orders",
         agency: "Hard to Develop",
         custom: "Unlimited Products & Transactions"
@@ -1104,115 +1116,6 @@ export const en = {
         }
       ]
     },
-    'lp-basic': {
-      name: 'BASIC',
-      description: 'Fast & Professional Landing Page. Economical solution for validating new businesses.',
-      features: [
-        '1 Clean & Modern Page',
-        'Free .com Domain + Hosting 6 months',
-        'Mobile Friendly (Responsive)',
-        'Light Copywriting (Headline + CTA)',
-        'Simple Contact Form',
-        'Business Email Setup',
-        'Content Editing Video Tutorial',
-        '2x Revisions',
-        'Warranty & Maintenance 15 Days'
-      ],
-      cta: 'Get Basic Promo',
-      details: [
-        {
-          feature: "Losing Customers (Visibility)",
-          problem: "Business without a website = invisible online. Customers run to competitors who have a web.",
-          solution: "Landing Page makes your business 'exist' and easy to find 24 hours.",
-          benefit: "Stop losing potential customers every day just because you are not online."
-        },
-        {
-          feature: "All-in-One",
-          problem: "Headache dealing with technicalities like buying domain, hosting, and installing website.",
-          solution: "Package includes Domain, Fast Hosting 6 Months, & Setup. Just receive it done.",
-          benefit: "Practical. No need to worry about technicalities, focus on selling."
-        },
-        {
-          feature: "Trust Increases 3-5x",
-          problem: "Potential buyers hesitate to transfer because the business looks less serious/less bonafide.",
-          solution: "Official website gives a professional and credible impression instantly.",
-          benefit: "Closing is easier because customers trust your brand more."
-        }
-      ]
-    },
-    'lp-premium': {
-      name: 'PREMIUM',
-      description: 'High-Conversion Landing Page. Interactive design to generate leads & sales.',
-      features: [
-        'All Basic Features',
-        'Free .com Domain + Hosting 6 months',
-        'Modern Design + Light Animation',
-        'High Conversion Copywriting',
-        'Analytics (Visitor Tracking)',
-        'Speed Optimization & Basic SEO',
-        'Complete Admin Video Tutorial',
-        '4x Revisions',
-        'Warranty & Maintenance 30 Days'
-      ],
-      cta: 'Get Premium Promo',
-      details: [
-        {
-          feature: "Accelerate Buyer Decision",
-          problem: "Customers chat for a long time just to ask for info, end up not buying.",
-          solution: "Complete information & clear CTA in one structured page.",
-          benefit: "Customers don't think long, directly press Order/WA button."
-        },
-        {
-          feature: "Lifetime Asset",
-          problem: "Ads or renting marketplace stalls are operational costs that run out.",
-          solution: "Landing Page is a digital asset of your own (pay once, benefit forever).",
-          benefit: "Not a cost, but an investment that continues to generate leads long term."
-        },
-        {
-          feature: "Win Competition",
-          problem: "Competitors already have a website first and dominate the market.",
-          solution: "Build an online brand now before being left far behind.",
-          benefit: "Whoever builds digital assets faster, wins."
-        }
-      ]
-    },
-    'lp-pro': {
-      name: 'PRO',
-      description: 'Branding Landing Page + Strategy. Look expensive & dominant for the long term.',
-      features: [
-        'All Premium Features',
-        'Free .com Domain + Hosting 6 months',
-        'Premium Branding + Storytelling',
-        'Exclusive Design + Micro-interactions',
-        'Core Web Vitals Optimization (High Speed)',
-        'Advanced SEO (Schema, Meta Tags)',
-        'WA Chatbot Integration',
-        'Video Tutorial + Strategy',
-        '6x Revisions',
-        'Warranty & Maintenance 45 Days'
-      ],
-      cta: 'Get Pro Promo',
-      details: [
-        {
-          feature: "Mandatory For Ads",
-          problem: "FB/TikTok/Google Ads without Landing Page results in expensive & small conversion.",
-          solution: "Special LP for ads traffic so visitor data is recorded & measured.",
-          benefit: "Ad costs down, sales conversion up drastically."
-        },
-        {
-          feature: "Diversification & Security",
-          problem: "Only rely on IG/TikTok? If account banned/hacked, business paralyzed.",
-          solution: "Website is 'Own Home'. 100% control in your hands, not renting.",
-          benefit: "Business safe long term, not dependent on social media algorithms."
-        },
-        {
-          feature: "Premium Brand Dominance",
-          problem: "Brand looks the same as competitors, hard to sell high price.",
-          solution: "Exclusive design & storytelling that builds emotional bond.",
-          benefit: "Strong Brand Positioning, looks much more expensive & premium."
-        }
-      ]
-    },
     'cp-basic': {
       name: 'BASIC',
       description: 'Start Looking Professional. Fast and neat website for Bussiness & Freelancers.',
@@ -1321,113 +1224,205 @@ export const en = {
         }
       ]
     },
-    'ec-starter': {
-      name: 'STARTER',
-      description: 'Start Selling Online. The right solution for MSMEs who want to have their own online store.',
+    'ec-basic': {
+      name: 'BASIC',
+      description: 'E-Commerce Fullstack “Entry / Start-up”. Minimal & Entry-Level Version.',
       features: [
-        'E-Commerce Website (Landing + Catalog)',
-        'Catalog Max 30 Products',
-        'Cart & Checkout via WhatsApp',
-        'Product & Category Management',
-        'Orders Enter WA Admin',
-        'Basic SEO & Free SSL',
-        'Bonus Copywriting 5 Products',
-        '1x Usage Training',
-        'Maintenance 15 Days'
+        'Simple Frontend & Landing Page',
+        'Product Catalog (Grid/List View)',
+        'Product Detail (Main Photo, Desc)',
+        'Shopping Cart & Simple Checkout',
+        'Manual Order (Transfer/WA)',
+        'Basic Admin Panel (Product & Order)',
+        'Mobile Friendly & Responsive',
+        'Basic Hosting & Domain Setup',
+        'Full Source Code & Database',
+        'Admin Usage Documentation'
       ],
-      cta: 'Get Starter Package',
-      details: [
-        {
-          feature: "Move to Online",
-          problem: "Selling only on WA/IG story, customers find it hard to see full catalog.",
-          solution: "Have your own neat and accessible catalog website.",
-          benefit: "Look more professional & make it easier for customers to shop."
-        },
-        {
-          feature: "Save Admin Time",
-          problem: "Tired of sending product photos one by one to every customer chat.",
-          solution: "Just send website link, customers see all products & details.",
-          benefit: "Admin more relaxed, faster response to customers."
-        },
-        {
-          feature: "Own Digital Asset",
-          problem: "Afraid social media account gets banned or hacked.",
-          solution: "Website is 100% your asset, full control in your hands.",
-          benefit: "Business safe long term, not dependent on other platforms."
+      cta: 'Get BASIC Package',
+      modalDetails: {
+        sections: [
+          {
+            title: "📦 Frontend & User Experience",
+            items: [
+              "Simple homepage: banner + store info + catalog link.",
+              "Product catalog page: grid/list layout, simple categories.",
+              "Product detail page: one main image, description, price.",
+              "Responsive / mobile-friendly display on all devices."
+            ]
+          },
+          {
+            title: "🛒 Shopping Features: Cart + Simple Checkout",
+            items: [
+              "Shopping cart: add, modify quantity, remove products.",
+              "Simple checkout: customer data form (name, address, contact).",
+              "Manual payment method: bank transfer / WA confirmation (no auto gateway)."
+            ]
+          },
+          {
+            title: "⚙️ Backend / Basic Admin Panel",
+            items: [
+              "Simple admin login panel.",
+              "Product management: add/edit/delete, set basic price/stock, upload image.",
+              "Simple order management: view incoming order list & order details."
+            ]
+          },
+          {
+            title: "🛠️ Technical & Infrastructure",
+            items: [
+              "Hosting + domain setup (shared/light) as agreed.",
+              "Simple & light code structure (React + Laravel).",
+              "Basic security: input validation, standard protection."
+            ]
+          },
+          {
+            title: "🎁 Additional Services",
+            items: [
+              "Full source code + database (Full Ownership).",
+              "Basic admin panel usage documentation.",
+              "1x minor revision before final delivery."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Who is this Basic Package Suitable For",
+          items: [
+            "Small UMKM / home businesses wanting to start selling online.",
+            "Businesses with few products & don't need complex features.",
+            "Business owners wanting to 'test the market' with minimal cost.",
+            "Limited budget but want their own website (not marketplace)."
+          ]
         }
-      ]
+      }
     },
-    'ec-growth': {
-      name: 'GROWTH',
-      description: 'Online Store Ready to Sell. Most recommended for MSMEs who want to level up.',
+    'ec-standard': {
+      name: 'STANDARD',
+      description: 'E-Commerce Fullstack “Balanced”. Medium & More Complete Version.',
       features: [
-        'Complete E-Commerce Website (100 Products)',
-        'Automatic Online Checkout (Not WA)',
-        'Payment Gateway (QRIS, E-Wallet, VA)',
-        'Admin Dashboard (Stock, Order, Report)',
-        'Automatic Shipping Calculation (JNE, J&T, etc)',
-        'Discount Coupons & Best Selling Products',
-        'Email Notification & Automatic Invoice',
-        'Bonus Banner & Pixel/Analytics Setup',
-        'Maintenance 30 Days'
+        'Professional Frontend & Complete Categories',
+        'Product Detail (Multi-Image, Variations)',
+        'Product Search & Filter',
+        'Checkout & Online Payment Gateway',
+        'Order Management & Shipping Status',
+        'Category & Option Management Admin',
+        'Customer Account Management (Login/Register)',
+        'Maintainable Code Structure',
+        'Hosting, Domain, SSL Setup',
+        'Basic Security & Optimization'
       ],
-      cta: 'Get Growth Package',
-      details: [
-        {
-          feature: "Automatic System",
-          problem: "Complicated checking transfer mutations manually & calculating shipping one by one.",
-          solution: "Payments verified automatically & shipping costs appear immediately.",
-          benefit: "Operations much more efficient, minimal human error."
-        },
-        {
-          feature: "Neat Stock Management",
-          problem: "Often stock discrepancy between records and warehouse.",
-          solution: "Stock reduces automatically when there is a successful sale.",
-          benefit: "Stock always accurate, no need to headache manual recap."
-        },
-        {
-          feature: "Complete Customer Data",
-          problem: "Don't have customer database for re-promotion.",
-          solution: "Buyer data stored neatly in admin dashboard.",
-          benefit: "Can do retargeting & email marketing for repeat orders."
+      cta: 'Get STANDARD Package',
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Frontend & User Experience (Medium)",
+            items: [
+              "Homepage + categories + catalog with more professional look.",
+              "Product detail: multi-image, description, variations (color/size).",
+              "Search, filter, & sorting features.",
+              "Good navigation & menu structure for comfortable browsing."
+            ]
+          },
+          {
+            title: "🛒 Shopping & Transaction Features (Semi-Auto)",
+            items: [
+              "Functional shopping cart.",
+              "Checkout & Payment Gateway: secure online payment (Virtual Account, E-Wallet).",
+              "Backend order system: admin manages payment/shipping status."
+            ]
+          },
+          {
+            title: "🧑‍💼 Backend / Medium Admin Panel",
+            items: [
+              "Complete product management: variations, stock, multi-image.",
+              "Structured category & product option management.",
+              "Order management: payment confirmation, update receipt/status.",
+              "User management: customers can register/login."
+            ]
+          },
+          {
+            title: "🔧 Infrastructure & Professionalism",
+            items: [
+              "Hosting + domain + SSL setup for secure transactions.",
+              "Better & maintainable code structure for development.",
+              "Standard e-commerce security (data encryption)."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Who is this Standard Package Suitable For",
+          items: [
+            "Growing online stores needing a more professional system.",
+            "Businesses with medium catalogs & product variations.",
+            "Store owners wanting easy order management & online payment.",
+            "Ready to scale up but don't need enterprise features yet."
+          ]
         }
-      ]
+      }
     },
-    'ec-ultimate': {
-      name: 'ULTIMATE',
-      description: 'Full Automatic Sales System. For businesses needing advanced features & automation.',
+    'ec-pro': {
+      name: 'PRO',
+      description: 'E-Commerce Fullstack “Premium”. Full-Features, Scalable & Secure.',
       features: [
-        'Custom Premium Website (Unlimited Products)',
-        'Product Variant Feature (Color/Size)',
-        'Full Payment Gateway & Split Shipping',
-        'Dashboard Analytics & Complete Report',
-        'Customer Management (Mini CRM)',
-        'Wishlist & Sticky Cart Feature',
-        'Multi Admin Role (Owner/Staff)',
-        'Auto Reminder & Abandoned Cart',
-        'Maintenance 45 Days & Priority Support'
+        'Premium Frontend & Custom Branding',
+        'Complete Product Detail (Gallery, Stock, Variants)',
+        'Complete & Auto Payment Gateway',
+        'User Management, Wishlist & Review',
+        'Comprehensive Admin Panel & Analytics',
+        'Promotion Features (Discount, Voucher)',
+        'High Performance & Security Optimization',
+        'Logistics / Shipping Integration (Optional)',
+        'Priority Support & Maintenance',
+        'High Scalability (Ready for Big Traffic)'
       ],
-      cta: 'Consult Ultimate',
-      details: [
-        {
-          feature: "Scale Up Limitlessly",
-          problem: "Old system cannot handle thousands of products & transactions.",
-          solution: "High performance website with unlimited products & variant features.",
-          benefit: "Ready to accommodate rapid business growth."
-        },
-        {
-          feature: "Data-Driven Decisions",
-          problem: "Confused sales strategy because blind to data.",
-          solution: "Daily/monthly sales reports & complete analytic graphs.",
-          benefit: "Business strategy sharper based on real data."
-        },
-        {
-          feature: "Marketing Automation",
-          problem: "Many abandoned carts without follow-up.",
-          solution: "System automatically reminds customers to complete payment.",
-          benefit: "Significantly increases sales conversion."
+      cta: 'Get PRO Package',
+      modalDetails: {
+        sections: [
+          {
+            title: "💎 Frontend & User Experience (Premium)",
+            items: [
+              "Professional design & strong branding matching business identity.",
+              "Complete product detail: gallery, real-time stock, complex variants.",
+              "Advanced features: Wishlist, Review & Rating, Product Recommendations.",
+              "Optimal UX: clear navigation, breadcrumbs, mobile-first design."
+            ]
+          },
+          {
+            title: "💳 Complete Transaction & Automation",
+            items: [
+              "Complete Checkout & Payment Gateway (CC, VA, E-Wallet, QRIS).",
+              "Login / Guest Checkout options.",
+              "Customer account management: order history, easy repeat order.",
+              "Automated order & payment management system."
+            ]
+          },
+          {
+            title: "📊 Backend / Admin Panel & Analytics",
+            items: [
+              "Comprehensive admin panel: complete CRUD, custom fields.",
+              "Analytics Dashboard & Reports: sales data, revenue, best sellers.",
+              "Promotion features: discounts, coupons/vouchers, flash sale.",
+              "Detailed customer & order data management."
+            ]
+          },
+          {
+            title: "🔒 Infrastructure & Scalability",
+            items: [
+              "Server setup (VPS/Cloud) + Domain + Premium SSL.",
+              "Performance optimization (caching, speed) & high security.",
+              "Scalable architecture: ready for high traffic & future feature development."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Who is this Pro Package Suitable For",
+          items: [
+            "Big brands / serious online stores ready to scale up.",
+            "Need complete system: payment, stock, user, analytics, promo.",
+            "Want full control & maximum flexibility for long term.",
+            "Prioritize security, performance, and best customer experience."
+          ]
         }
-      ]
+      }
     },
     'book-basic': {
       name: 'BASIC',

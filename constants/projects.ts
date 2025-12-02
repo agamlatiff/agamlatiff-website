@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
     industry: 'Retail & Fashion',
     date: 'Oktober 2023',
     isFeatured: true,
-    liveLink: 'https://alizonstore.netlify.app',
+    liveLink: 'https://alizonstore.vercel.app',
     repoUrl: 'https://github.com/agamlatiff/alizon-store'
   },
   {

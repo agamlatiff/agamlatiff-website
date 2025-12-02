@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SERVICE_PRICING, PricingPlan } from '../../constants/pricing';
@@ -8,6 +7,8 @@ import PlanDetailModal from '../ui/PlanDetailModal';
 import { useLanguage } from '../../context/LanguageContext';
 import { SERVICES } from '@/constants/services';
 import { createWhatsAppLink } from '@/constants/whatsapp';
+import { ECOMMERCE_COMPARISON, LANDING_PAGE_COMPARISON, POS_COMPARISON, COMPANY_PROFILE_COMPARISON } from '../../constants/comparison';
+import ComparisonTable from '../ui/ComparisonTable';
 
 const iconMap = {
   code: Code,
@@ -60,7 +61,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({ children, className = "",
 };
 
 const Services: React.FC = () => {
-  const [activeTabId, setActiveTabId] = useState(SERVICES[0]?.id);
+  const [activeTabId, setActiveTabId] = useState(SERVICES[0]?.id || 'e-commerce');
   const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -122,6 +123,39 @@ const Services: React.FC = () => {
 
   const { translations, t } = useLanguage();
   const tService = translations.services[activeTabId as keyof typeof translations.services];
+
+  const getComparisonData = () => {
+    switch (activeTabId) {
+      case 'e-commerce':
+        return {
+          rows: ECOMMERCE_COMPARISON,
+          plans: { basic: 'Basic', standard: 'Standard', pro: 'Pro' },
+          title: 'Perbandingan Fitur Toko Online'
+        };
+      case 'landing-page':
+        return {
+          rows: LANDING_PAGE_COMPARISON,
+          plans: { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' },
+          title: 'Perbandingan Fitur Landing Page'
+        };
+      case 'company-profile':
+        return {
+          rows: COMPANY_PROFILE_COMPARISON,
+          plans: { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' },
+          title: 'Perbandingan Fitur Company Profile'
+        };
+      case 'pos-system':
+        return {
+          rows: POS_COMPARISON,
+          plans: { basic: 'Basic', standard: 'Standard', pro: 'Premium' },
+          title: 'Perbandingan Fitur Sistem Kasir'
+        };
+      default:
+        return null;
+    }
+  };
+
+  const comparisonData = getComparisonData();
 
   return (
     <section id="services" className="py-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 relative overflow-hidden">
@@ -226,24 +260,27 @@ const Services: React.FC = () => {
         {/* Content Area */}
         <div>
           {/* Context Description */}
-          <motion.div
-            key={activeTabId}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            className="text-center max-w-2xl mx-auto mb-10"
-          >
-            {/* NEW: Dynamic Title based on selection */}
-            <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              Paket {(tService && 'shortTitle' in tService && tService.shortTitle) || (tService && 'title' in tService && tService.title) || activeServiceInfo?.title}
-            </h3>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTabId}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="text-center max-w-2xl mx-auto mb-10"
+            >
+              {/* NEW: Dynamic Title based on selection */}
+              <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-4">
+                Paket {(tService && 'shortTitle' in tService && tService.shortTitle) || (tService && 'title' in tService && tService.title) || activeServiceInfo?.title}
+              </h3>
 
-            <div className="inline-flex flex-col items-center gap-3 bg-blue-50/50 dark:bg-blue-900/10 px-6 py-4 rounded-2xl border border-blue-100 dark:border-blue-800/30">
-              <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base font-medium leading-relaxed">
-                💡 {(tService && 'description' in tService && tService.description) || activeServiceInfo?.description}
-              </p>
-            </div>
-          </motion.div>
+              <div className="inline-flex flex-col items-center gap-3 bg-blue-50/50 dark:bg-blue-900/10 px-6 py-4 rounded-2xl border border-blue-100 dark:border-blue-800/30">
+                <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base font-medium leading-relaxed">
+                  💡 {(tService && 'description' in tService && tService.description) || activeServiceInfo?.description}
+                </p>
+              </div>
+            </motion.div>
+          </AnimatePresence>
 
           {/* Pricing Cards Grid */}
           <div className="flex flex-nowrap md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 md:gap-10 pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar items-stretch">
@@ -325,7 +362,7 @@ const Services: React.FC = () => {
 
                         {/* Features List */}
                         <div className="flex-1 space-y-3 mb-8">
-                          {planFeatures.map((feat: string, idx: number) => (
+                          {planFeatures.slice(0, 5).map((feat: string, idx: number) => (
                             <div key={idx} className="flex items-start gap-3 group/feat">
                               <div className={`flex-shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center transition-colors ${plan.isPopular
                                 ? 'bg-green-500 text-white shadow-sm shadow-green-500/30'
@@ -339,6 +376,14 @@ const Services: React.FC = () => {
                               </span>
                             </div>
                           ))}
+                          {planFeatures.length > 5 && (
+                            <div
+                              onClick={() => setSelectedPlan(plan)}
+                              className="pl-8 text-xs font-medium text-slate-400 dark:text-slate-500 italic cursor-pointer hover:text-primary dark:hover:text-primary transition-colors"
+                            >
+                              + {planFeatures.length - 5} {translations.services.general.viewFeatures || "fitur lainnya..."}
+                            </div>
+                          )}
                         </div>
 
                         {/* CTA Buttons */}
@@ -381,6 +426,16 @@ const Services: React.FC = () => {
               {t('common.swipeHint')}
             </span>
           </div>
+
+          {/* Comparison Table */}
+          {comparisonData && (
+            <ComparisonTable
+              key={activeTabId}
+              title={comparisonData.title}
+              plans={comparisonData.plans}
+              rows={comparisonData.rows}
+            />
+          )}
 
           {/* Custom App CTA */}
           <div className="mt-16 text-center">

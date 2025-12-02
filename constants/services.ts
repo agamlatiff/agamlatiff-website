@@ -21,9 +21,9 @@ export const SERVICES: Service[] = [
       title: "Jasa Pembuatan Toko Online",
       description: "Jualan online lebih profesional dengan website e-commerce milik sendiri. Pilih paket:",
       points: [
-        { title: "Starter - Mulai Jualan (Rp 2.9jt)", desc: "Toko online simpel, katalog 30 produk, checkout form ke WA. Cocok untuk UMKM baru mulai." },
-        { title: "Growth - Siap Jualan (Rp 5.9jt)", desc: "Sistem keranjang belanja, 100 produk, payment gateway, dashboard admin. Paling Laris." },
-        { title: "Ultimate - Full Otomatis (Rp 10.5jt)", desc: "Unlimited produk, varian lengkap, fitur marketing otomatis, prioritas support. Skala besar." }
+        { title: "Basic - Entry / Start-up (Rp 4.0jt)", desc: "Toko online simpel, katalog produk, checkout form ke WA. Cocok untuk UMKM baru mulai." },
+        { title: "Standard - Balanced (Rp 7.5jt)", desc: "Checkout otomatis, payment gateway, manajemen stok & variasi. Untuk toko berkembang." },
+        { title: "Pro - Premium (Rp 12.5jt)", desc: "Full custom UI/UX, fitur lengkap (wishlist, review, promo), analitik, prioritas support. Skala besar." }
       ]
     }
   },
@@ -90,15 +90,15 @@ export const SERVICES: Service[] = [
       'Gratis Domain & Hosting 6 Bulan'
     ],
     timeline: 'Est. 2-10 Hari',
-    priceRange: 'Mulai Rp 2.2jt',
+    priceRange: 'Mulai Rp 2.0jt',
     icon: 'consulting',
     modalContent: {
       title: "Jasa Website Company Profile",
       description: "Bangun kepercayaan pelanggan dengan identitas digital yang kuat. Pilih paket sesuai skala bisnis:",
       points: [
-        { title: "Paket Basic (Rp 2.2jt)", desc: "Mulai tampil profesional. 4 Halaman utama, desain clean, mobile friendly. Cocok untuk UMKM/Freelancer." },
-        { title: "Paket Premium (Rp 3.2jt)", desc: "Tingkatkan kredibilitas. 6 Halaman, desain premium, animasi halus, & copywriting. Cocok untuk bisnis berkembang." },
-        { title: "Paket Pro (Rp 5.5jt)", desc: "Branding maksimal. Hingga 10 halaman, desain eksklusif, fitur blog, SEO advanced. Aset marketing jangka panjang." }
+        { title: "Paket Starter (Rp 2.0jt)", desc: "Etalase online sederhana. 4 Halaman utama, desain clean, mobile friendly. Cocok untuk UKM/Startup baru." },
+        { title: "Paket Growth (Rp 3.0jt)", desc: "Siap tumbuh. 6 Halaman, desain custom brand identity, portfolio, & fitur lengkap. Cocok untuk bisnis berkembang." },
+        { title: "Paket Ultimate (Rp 4.0jt)", desc: "Full-featured premium. 10+ halaman, desain eksklusif, blog, SEO advanced, & CMS lengkap. Aset jangka panjang." }
       ]
     }
   },

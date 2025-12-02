@@ -103,14 +103,14 @@ export const id = {
         'Gratis Domain & Hosting'
       ],
       timeline: 'Est. 4-14 Hari',
-      priceRange: 'Mulai Rp 2.4jt',
+      priceRange: 'Mulai Rp 4.0jt',
       modalContent: {
         title: "Jasa Pembuatan Toko Online",
         description: "Jualan online lebih profesional dengan website e-commerce milik sendiri. Pilih paket:",
         points: [
-          { title: "Basic - Start Selling (Rp 2.4jt)", desc: "Toko online simpel, katalog 20 produk, checkout form ke WA. Cocok untuk UMKM baru mulai." },
-          { title: "Premium - Full E-Com (Rp 3.9jt)", desc: "Sistem keranjang belanja, unlimited produk, filter kategori, auto-checkout WA. Fitur lengkap untuk brand." },
-          { title: "Pro - Store Growth (Rp 5.9jt)", desc: "Full payment gateway (QRIS), dashboard admin lengkap, manajemen stok, & fitur promo. Siap scale-up." }
+          { title: "Basic - Entry / Start-up (Rp 4.0jt)", desc: "Toko online simpel, katalog produk, checkout form ke WA. Cocok untuk UMKM baru mulai." },
+          { title: "Standard - Balanced (Rp 7.5jt)", desc: "Checkout otomatis, payment gateway, manajemen stok & variasi. Untuk toko berkembang." },
+          { title: "Pro - Premium (Rp 12.5jt)", desc: "Full custom UI/UX, fitur lengkap (wishlist, review, promo), analitik, prioritas support. Skala besar." }
         ]
       }
     },
@@ -591,8 +591,10 @@ export const id = {
     subtitle: "Jangan terjebak perang harga atau admin yang kewalahan. Bandingkan bagaimana <strong>Custom E-Commerce</strong> memberikan ROI terbaik.",
     headers: {
       criteria: "Kriteria",
-      saas: "Marketplace",
-      agency: "Manual (WhatsApp)",
+      manual: "Manual (WhatsApp)",
+      marketplace: "Marketplace",
+      saas: "Sewa Toko (SaaS)",
+      agency: "Jasa Web Umum",
       custom: "Agam E-Commerce",
       bestValue: "Best Value"
     },
@@ -605,32 +607,42 @@ export const id = {
     list: [
       {
         criteria: "Sistem Kepemilikan",
-        saas: "Numpang Lapak (Sewa)",
-        agency: "Tidak Ada Sistem",
+        manual: "Tidak Ada Sistem",
+        marketplace: "Numpang Lapak",
+        saas: "Sewa (Numpang)",
+        agency: "Lisensi Terbatas",
         custom: "Hak Milik 100% (Source Code)"
       },
       {
         criteria: "Biaya & Potongan",
-        saas: "Potongan Admin 5-10%",
-        agency: "Gratis tapi Capek",
+        manual: "Waktu & Tenaga",
+        marketplace: "Potongan Admin 5-10%",
+        saas: "Langganan + Fee Admin",
+        agency: "Biaya Maintenance Tahunan",
         custom: "Sekali Bayar (0% Potongan)"
       },
       {
         criteria: "Persaingan",
-        saas: "Perang Harga Keras",
-        agency: "Terbatas Kontak WA",
+        manual: "Capek Balas Chat",
+        marketplace: "Perang Harga Keras",
+        saas: "Template Terbatas",
+        agency: "Profil Standar",
         custom: "Brand Eksklusif (Blue Ocean)"
       },
       {
         criteria: "Data Pelanggan",
-        saas: "Data Disembunyikan",
-        agency: "Data Tidak Terawat",
+        manual: "Tercecer di Chat",
+        marketplace: "Data Disembunyikan",
+        saas: "Data Disimpan Vendor",
+        agency: "Server Bersama",
         custom: "Database Lengkap (Retargeting)"
       },
       {
         criteria: "Skalabilitas",
-        saas: "Tergantung Algoritma",
-        agency: "Mentok Tenaga Admin",
+        manual: "Mentok Tenaga",
+        marketplace: "Tergantung Algoritma",
+        saas: "Biaya Naik seiring Order",
+        agency: "Sulit Dikembangkan",
         custom: "Unlimited Growth"
       }
     ]
@@ -1104,114 +1116,196 @@ export const id = {
         }
       ]
     },
-    'lp-basic': {
-      name: 'BASIC',
-      description: 'Landing Page Cepat & Profesional. Solusi hemat untuk validasi bisnis baru.',
+    'lp-starter': {
+      name: 'STARTER',
+      description: 'Single Page / Simple Landing Page. Solusi cepat & hemat untuk presence online.',
       features: [
-        '1 Halaman Clean & Modern',
-        'Gratis Domain .com + Hosting 6 bulan',
-        'Mobile Friendly (Responsive)',
-        'Copywriting Ringan (Judul + CTA)',
-        'Form Kontak Sederhana',
-        'Setup Email Bisnis',
-        'Video Tutorial Edit Konten',
-        '2x Revisi',
-        'Garansi & Maintenance 15 Hari'
+        'Single Page Layout (Rapi & Simpel)',
+        'Desain Responsif (Mobile Friendly)',
+        'Konten Dasar (Hero, Produk, Benefit)',
+        'CTA Button (WA/Kontak/Order)',
+        'Form Kontak Sederhana (Opsional)',
+        'Setup Domain & Hosting Dasar',
+        'Basic SEO On-Page',
+        'Full Source Code (Handover)',
+        'Panduan Update Konten Dasar',
+        '2x Revisi Minor'
       ],
-      cta: 'Ambil Promo Basic',
-      details: [
-        {
-          feature: "Kehilangan Pelanggan (Visibility)",
-          problem: "Bisnis tanpa website = tidak terlihat online. Pelanggan lari ke kompetitor yang punya web.",
-          solution: "Landing Page membuat bisnis Anda 'ada' dan mudah ditemukan 24 jam.",
-          benefit: "Stop kehilangan pelanggan potensial setiap hari hanya karena tidak online."
-        },
-        {
-          feature: "Terima Beres (All-in-One)",
-          problem: "Pusing urus teknis seperti beli domain, hosting, dan install website.",
-          solution: "Paket sudah termasuk Domain, Hosting Cepat 6 Bulan, & Setup. Tinggal terima jadi.",
-          benefit: "Praktis. Tidak perlu pusing teknis, langsung fokus jualan."
-        },
-        {
-          feature: "Trust Meningkat 3-5x",
-          problem: "Calon pembeli ragu transfer karena bisnis terlihat kurang serius/kurang bonafit.",
-          solution: "Website resmi memberikan kesan profesional dan kredibel secara instan.",
-          benefit: "Closing lebih mudah karena pelanggan lebih percaya pada brand Anda."
+      cta: 'Ambil Paket STARTER',
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Tampilan & Struktur Halaman",
+            items: [
+              "Satu halaman (single-page) layout rapi & simpel.",
+              "Hero/banner, headline, value proposition, dan CTA.",
+              "Desain responsif: optimal di desktop, tablet, dan HP."
+            ]
+          },
+          {
+            title: "📄 Konten & Fungsi Dasar",
+            items: [
+              "Elemen dasar: foto produk, deskripsi, benefit.",
+              "CTA langsung ke WhatsApp/Kontak/Order.",
+              "Form kontak/lead capture sederhana (opsional)."
+            ]
+          },
+          {
+            title: "🛠️ Setup & Deployment",
+            items: [
+              "Setup & konfigurasi domain + hosting dasar.",
+              "Struktur kode sederhana & ringan.",
+              "Basic SEO on-page: meta tag dasar, URL friendly."
+            ]
+          },
+          {
+            title: "📄 Dokumentasi & Handover",
+            items: [
+              "Handover full source code & aset.",
+              "Panduan singkat update konten dasar.",
+              "2x revisi minor setelah implementasi awal."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Untuk Siapa Paket Starter Ini Cocok",
+          items: [
+            "Pelaku usaha kecil / UMKM / freelancer yang ingin online cepat.",
+            "Bisnis fokus pada 1-2 produk/layanan saja.",
+            "Kampanye khusus: promosi, pre-order, launching produk.",
+            "Budget terbatas tapi ingin presence online profesional."
+          ]
         }
-      ]
+      }
     },
-    'lp-premium': {
-      name: 'PREMIUM',
-      description: 'High-Conversion Landing Page. Desain interaktif untuk menghasilkan leads & penjualan.',
+    'lp-growth': {
+      name: 'GROWTH',
+      description: 'Landing Page + Optimasi & Konversi. Desain profesional untuk hasil nyata.',
       features: [
-        'Semua Fitur Basic',
-        'Gratis Domain .com + Hosting 6 bulan',
-        'Desain Modern + Animasi Ringan',
-        'Copywriting High Conversion',
-        'Analitik (Tracking Pengunjung)',
-        'Optimasi Speed & SEO Dasar',
-        'Video Tutorial Admin Lengkap',
-        '4x Revisi',
-        'Garansi & Maintenance 30 Hari'
+        'Desain Profesional & Konversi-Ramah',
+        'Struktur Konten Terorganisir',
+        'CTA Persuasif & Jelas',
+        'Form Lead / Order Sederhana',
+        'Social Proof (Testimoni/Badge)',
+        'Optimasi Kecepatan & Performa',
+        'SEO Dasar & Optimasi On-Page',
+        'Integrasi Tracking / Analitik',
+        'Full Source Code & Aset',
+        '3x Revisi Minor'
       ],
-      cta: 'Ambil Promo Premium',
-      details: [
-        {
-          feature: "Percepat Keputusan Pembeli",
-          problem: "Pelanggan chat lama cuma buat tanya info, ujungnya nggak beli.",
-          solution: "Informasi lengkap & CTA jelas dalam satu halaman yang terstruktur.",
-          benefit: "Pelanggan nggak mikir lama, langsung tekan tombol Order/WA."
-        },
-        {
-          feature: "Aset Seumur Hidup",
-          problem: "Iklan atau sewa lapak marketplace itu biaya operasional yang habis terus.",
-          solution: "Landing Page adalah aset digital milik sendiri (sekali bayar, manfaat selamanya).",
-          benefit: "Bukan biaya, tapi investasi yang terus menghasilkan leads jangka panjang."
-        },
-        {
-          feature: "Menangkan Kompetisi",
-          problem: "Kompetitor sudah punya website duluan dan mendominasi pasar.",
-          solution: "Bangun brand online sekarang sebelum makin tertinggal jauh.",
-          benefit: "Siapa yang lebih cepat bangun aset digital, dia yang menang."
+      cta: 'Ambil Paket GROWTH',
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Tampilan & Struktur — Konversi-Ramah",
+            items: [
+              "Desain bersih, modern, ditata untuk konversi.",
+              "Hero menarik, value-proposition jelas, visual mendukung.",
+              "Struktur konten terorganisir (heading, bullet, icon).",
+              "Responsif & mobile-friendly optimal."
+            ]
+          },
+          {
+            title: "🛠️ Konversi & Optimasi",
+            items: [
+              "CTA persuasif & mencolok.",
+              "Form lead/kontak/order sederhana.",
+              "Social proof: testimoni, badge kepercayaan.",
+              "Optimasi kecepatan & loading ringan."
+            ]
+          },
+          {
+            title: "📈 Tracking & Analitik",
+            items: [
+              "Integrasi alat analitik (Google Analytics/Pixel).",
+              "Pantau performa: pengunjung, konversi, sumber trafik.",
+              "Dukungan optimasi konversi (CRO) dasar."
+            ]
+          },
+          {
+            title: "🧰 Deployment & Kepemilikan",
+            items: [
+              "Full source code & aset + akses penuh.",
+              "Deployment + konfigurasi hosting + domain + SSL.",
+              "Dokumentasi panduan ubah konten dasar.",
+              "3x revisi minor setelah live."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Untuk Siapa Paket Growth Ini Cocok",
+          items: [
+            "Bisnis/startup yang butuh alat konversi (bukan sekadar etalase).",
+            "Pelaku usaha yang ingin data pengunjung & hasil nyata.",
+            "Brand yang butuh profesionalisme & peluang scaling.",
+            "Serius jangka menengah/panjang dengan aset digital."
+          ]
         }
-      ]
+      }
     },
-    'lp-pro': {
-      name: 'PRO',
-      description: 'Branding Landing Page + Strategy. Tampil mahal & dominan untuk jangka panjang.',
+    'lp-ultimate': {
+      name: 'ULTIMATE',
+      description: 'Landing Page Premium / High-End. Full Custom, Conversion-Ready & Layanan Lengkap.',
       features: [
-        'Semua Fitur Premium',
-        'Gratis Domain .com + Hosting 6 bulan',
-        'Premium Branding + Storytelling',
-        'Desain Eksklusif + Micro-interactions',
-        'Optimasi Core Web Vitals (High Speed)',
-        'Advanced SEO (Schema, Meta Tags)',
-        'Integrasi Chatbot WA',
-        'Video Tutorial + Strategi',
-        '6x Revisi',
-        'Garansi & Maintenance 45 Hari'
+        'Desain Kustom Penuh & Branding',
+        'Struktur Komprehensif (Banyak Section)',
+        'Copywriting Persuasif & Konversi',
+        'Lead Capture & Funnel Lanjutan',
+        'Integrasi Tracking & Analitik Lengkap',
+        'Optimasi Performa & Kecepatan Tinggi',
+        'SEO On-Page & Technical',
+        'Setup Hosting, Domain, SSL Premium',
+        'Dokumentasi Lengkap & Hak Milik Penuh',
+        '5x Revisi & Support 1 Bulan'
       ],
-      cta: 'Ambil Promo Pro',
-      details: [
-        {
-          feature: "Wajib Untuk Iklan (Ads)",
-          problem: "Iklan FB/TikTok/Google tanpa Landing Page hasilnya mahal & konversi kecil.",
-          solution: "LP khusus traffic ads agar data pengunjung terekam & terukur.",
-          benefit: "Biaya iklan turun, konversi penjualan naik drastis."
-        },
-        {
-          feature: "Diversifikasi & Keamanan",
-          problem: "Cuma andalkan IG/TikTok? Kalau akun ke-banned/hack, bisnis lumpuh.",
-          solution: "Website adalah 'Rumah Sendiri'. Kendali 100% di tangan Anda, bukan numpang.",
-          benefit: "Bisnis aman jangka panjang, tidak tergantung algoritma sosmed."
-        },
-        {
-          feature: "Dominasi Brand Premium",
-          problem: "Brand terlihat sama saja dengan kompetitor, sulit jual harga tinggi.",
-          solution: "Desain eksklusif & storytelling yang membangun ikatan emosional.",
-          benefit: "Brand Positioning kuat, terlihat jauh lebih mahal & premium."
+      cta: 'Ambil Paket ULTIMATE',
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Tampilan, Struktur & Branding Lengkap",
+            items: [
+              "Desain kustom penuh sesuai identitas brand.",
+              "Struktur komprehensif: hero, fitur, galeri, testimoni, FAQ, pricing.",
+              "Desain responsif & mobile-first optimal."
+            ]
+          },
+          {
+            title: "📈 Optimasi Konversi & UX Lanjutan",
+            items: [
+              "Copywriting persuasif & konversi-oriented.",
+              "Lead capture / form & funnel integrasi (Email/CRM/WA).",
+              "Integrasi tracking & analitik lengkap (Event tracking).",
+              "Performance optimization: lazy loading, minifikasi, speed."
+            ]
+          },
+          {
+            title: "🧰 Fitur & Layanan Profesional",
+            items: [
+              "Deployment + setup hosting/server + SSL premium.",
+              "Backup & security dasar, proteksi spam.",
+              "Dokumentasi lengkap & hak milik penuh.",
+              "Layanan tambahan custom (integrasi API, multi-bahasa, dll)."
+            ]
+          },
+          {
+            title: "🚀 Value & Orientasi Jangka Panjang",
+            items: [
+              "Siap untuk kampanye iklan/marketing intensif.",
+              "Struktur scalable: bisa dikembangkan jadi website penuh.",
+              "Fokus konversi, branding, kecepatan, & keamanan."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Untuk Siapa Paket Ultimate Ini Cocok",
+          items: [
+            "Brand profesional / produk premium yang butuh trust tinggi.",
+            "Kampanye besar: launching, pre-order, iklan skala besar.",
+            "Perusahaan yang ingin aset digital serius & jangka panjang.",
+            "Klien yang ingin hasil maksimal & layanan all-in-one."
+          ]
         }
-      ]
+      }
     },
     'cp-basic': {
       name: 'BASIC',
@@ -1321,113 +1415,205 @@ export const id = {
         }
       ]
     },
-    'ec-starter': {
-      name: 'STARTER',
-      description: 'Mulai Jualan Online. Solusi tepat untuk UMKM yang baru mau punya toko online sendiri.',
+    'ec-basic': {
+      name: 'BASIC',
+      description: 'E-Commerce Fullstack “Entry / Start-up”. Versi Minimal & Entry-Level.',
       features: [
-        'Website E-Commerce (Landing + Katalog)',
-        'Katalog Max 30 Produk',
-        'Keranjang & Checkout via WhatsApp',
-        'Manajemen Produk & Kategori',
-        'Order Masuk ke WA Admin',
-        'SEO Basic & SSL Gratis',
-        'Bonus Copywriting 5 Produk',
-        '1x Training Penggunaan',
-        'Maintenance 15 Hari'
+        'Frontend & Landing Page Sederhana',
+        'Katalog Produk (Grid/List View)',
+        'Detail Produk (Foto Utama, Deskripsi)',
+        'Shopping Cart & Checkout Sederhana',
+        'Order Manual (Transfer/WA)',
+        'Admin Panel Dasar (Produk & Order)',
+        'Mobile Friendly & Responsif',
+        'Setup Hosting & Domain Dasar',
+        'Source Code & Database Full',
+        'Dokumentasi Penggunaan Admin'
       ],
-      cta: 'Ambil Paket Starter',
-      details: [
-        {
-          feature: "Pindah ke Online",
-          problem: "Jualan cuma di story WA/IG, pelanggan susah lihat katalog lengkap.",
-          solution: "Punya website katalog sendiri yang rapi dan mudah diakses.",
-          benefit: "Terlihat lebih profesional & memudahkan pelanggan belanja."
-        },
-        {
-          feature: "Hemat Waktu Admin",
-          problem: "Capek kirim foto produk satu-satu ke setiap chat pelanggan.",
-          solution: "Cukup kirim link website, pelanggan lihat semua produk & detailnya.",
-          benefit: "Admin lebih santai, respon ke pelanggan lebih cepat."
-        },
-        {
-          feature: "Aset Digital Sendiri",
-          problem: "Takut akun sosmed kena banned atau hack.",
-          solution: "Website adalah aset 100% milik Anda, kontrol penuh di tangan Anda.",
-          benefit: "Bisnis aman jangka panjang, tidak tergantung platform lain."
+      cta: 'Ambil Paket BASIC',
+      modalDetails: {
+        sections: [
+          {
+            title: "📦 Frontend & User Experience",
+            items: [
+              "Halaman utama sederhana: banner + info toko + link katalog.",
+              "Halaman katalog produk: layout grid/list, kategori sederhana.",
+              "Halaman detail produk: satu gambar utama, deskripsi, harga.",
+              "Tampilan responsif / mobile-friendly di semua perangkat."
+            ]
+          },
+          {
+            title: "🛒 Fitur Belanja: Cart + Checkout Sederhana",
+            items: [
+              "Shopping cart: tambah, ubah jumlah, hapus produk.",
+              "Checkout sederhana: form data pelanggan (nama, alamat, kontak).",
+              "Metode pembayaran manual: transfer bank / konfirmasi WA (tanpa gateway otomatis)."
+            ]
+          },
+          {
+            title: "⚙️ Backend / Admin Panel Dasar",
+            items: [
+              "Admin login panel sederhana.",
+              "Manajemen produk: tambah/edit/hapus, atur harga/stok dasar, upload gambar.",
+              "Manajemen order sederhana: lihat daftar order masuk & detail pesanan."
+            ]
+          },
+          {
+            title: "🛠️ Teknis & Infrastruktur",
+            items: [
+              "Setup hosting + domain (shared/ringan) sesuai kesepakatan.",
+              "Struktur kode sederhana & ringan (React + Laravel).",
+              "Keamanan dasar: validasi input, proteksi standar."
+            ]
+          },
+          {
+            title: "🎁 Layanan Tambahan",
+            items: [
+              "Full source code + database (Hak Milik Penuh).",
+              "Dokumentasi dasar penggunaan admin panel.",
+              "1x revisi minor sebelum final delivery."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Untuk Siapa Paket Basic Ini Cocok",
+          items: [
+            "UMKM kecil / bisnis rumahan yang ingin mulai jualan online.",
+            "Usaha dengan produk sedikit & tidak butuh fitur kompleks.",
+            "Pelaku usaha yang ingin 'uji pasar' dengan biaya minimal.",
+            "Budget terbatas tapi ingin website milik sendiri (bukan marketplace)."
+          ]
         }
-      ]
+      }
     },
-    'ec-growth': {
-      name: 'GROWTH',
-      description: 'Toko Online Siap Jualan. Paling direkomendasikan untuk UMKM yang ingin naik level.',
+    'ec-standard': {
+      name: 'STANDARD',
+      description: 'E-Commerce Fullstack “Balanced”. Versi Menengah & Lebih Lengkap.',
       features: [
-        'Website E-Commerce Lengkap (100 Produk)',
-        'Checkout Online Otomatis (Bukan WA)',
-        'Payment Gateway (QRIS, E-Wallet, VA)',
-        'Dashboard Admin (Stok, Order, Laporan)',
-        'Hitung Ongkir Otomatis (JNE, J&T, dll)',
-        'Kupon Diskon & Produk Terlaris',
-        'Notifikasi Email & Invoice Otomatis',
-        'Bonus Banner & Setup Pixel/Analytics',
-        'Maintenance 30 Hari'
+        'Frontend Profesional & Kategori Lengkap',
+        'Detail Produk (Multi-Image, Variasi)',
+        'Pencarian & Filter Produk',
+        'Checkout & Payment Gateway Online',
+        'Manajemen Order & Status Pengiriman',
+        'Admin Panel Manajemen Kategori & Opsi',
+        'Manajemen Akun Pelanggan (Login/Register)',
+        'Struktur Kode Maintainable',
+        'Setup Hosting, Domain, SSL',
+        'Keamanan & Optimasi Dasar'
       ],
-      cta: 'Ambil Paket Growth',
-      details: [
-        {
-          feature: "Sistem Otomatis",
-          problem: "Ribet cek mutasi transfer manual & hitung ongkir satu-satu.",
-          solution: "Pembayaran terverifikasi otomatis & ongkir langsung muncul.",
-          benefit: "Operasional jauh lebih efisien, minim human error."
-        },
-        {
-          feature: "Manajemen Stok Rapi",
-          problem: "Sering selisih stok antara catatan dan gudang.",
-          solution: "Stok berkurang otomatis saat ada penjualan sukses.",
-          benefit: "Stok selalu akurat, tidak perlu pusing rekap manual."
-        },
-        {
-          feature: "Data Pelanggan Lengkap",
-          problem: "Tidak punya database pelanggan untuk promosi ulang.",
-          solution: "Data pembeli tersimpan rapi di dashboard admin.",
-          benefit: "Bisa lakukan retargeting & email marketing untuk repeat order."
+      cta: 'Ambil Paket STANDARD',
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Frontend & User Experience (Menengah)",
+            items: [
+              "Halaman utama + kategori + katalog dengan tampilan lebih profesional.",
+              "Detail produk: multi-image, deskripsi, variasi (warna/ukuran).",
+              "Fitur pencarian (search), filter, & sorting produk.",
+              "Navigasi & struktur menu yang baik untuk browsing nyaman."
+            ]
+          },
+          {
+            title: "🛒 Fitur Belanja & Transaksi (Semi-Otomatis)",
+            items: [
+              "Shopping cart fungsional.",
+              "Checkout & Payment Gateway: pembayaran online aman (Virtual Account, E-Wallet).",
+              "Sistem order backend: admin kelola status pembayaran/pengiriman."
+            ]
+          },
+          {
+            title: "🧑‍💼 Backend / Admin Panel Menengah",
+            items: [
+              "Manajemen produk lengkap: variasi, stok, multi-image.",
+              "Manajemen kategori & opsi produk terstruktur.",
+              "Manajemen order: konfirmasi pembayaran, update resi/status.",
+              "Manajemen pengguna: pelanggan bisa register/login."
+            ]
+          },
+          {
+            title: "🔧 Infrastruktur & Profesionalisme",
+            items: [
+              "Setup hosting + domain + SSL untuk transaksi aman.",
+              "Struktur kode lebih baik & maintainable untuk pengembangan.",
+              "Keamanan standar e-commerce (enkripsi data penting)."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Untuk Siapa Paket Standard Ini Cocok",
+          items: [
+            "Toko online berkembang yang butuh sistem lebih profesional.",
+            "Usaha dengan katalog menengah & variasi produk.",
+            "Pemilik toko yang ingin kemudahan manajemen order & pembayaran online.",
+            "Siap scale up tapi belum butuh fitur enterprise."
+          ]
         }
-      ]
+      }
     },
-    'ec-ultimate': {
-      name: 'ULTIMATE',
-      description: 'Sistem Penjualan Full Otomatis. Untuk bisnis yang butuh fitur advanced & automasi.',
+    'ec-pro': {
+      name: 'PRO',
+      description: 'E-Commerce Fullstack “Premium”. Full-Features, Scalable & Aman.',
       features: [
-        'Website Premium Custom (Unlimited Produk)',
-        'Fitur Varian Produk (Warna/Ukuran)',
-        'Full Payment Gateway & Split Shipping',
-        'Dashboard Analytics & Laporan Lengkap',
-        'Manajemen Pelanggan (CRM Mini)',
-        'Fitur Wishlist & Sticky Cart',
-        'Multi Admin Role (Owner/Staff)',
-        'Auto Reminder & Abandoned Cart',
-        'Maintenance 45 Hari & Prioritas Support'
+        'Frontend Premium & Branding Kustom',
+        'Detail Produk Lengkap (Galeri, Stok, Varian)',
+        'Payment Gateway Lengkap & Otomatis',
+        'Manajemen User, Wishlist & Review',
+        'Admin Panel Komprehensif & Analitik',
+        'Fitur Promosi (Diskon, Voucher)',
+        'Optimasi Performa & Keamanan Tinggi',
+        'Integrasi Logistik / Ongkir (Opsional)',
+        'Support & Maintenance Prioritas',
+        'Skalabilitas Tinggi (Siap Trafik Besar)'
       ],
-      cta: 'Konsultasi Ultimate',
-      details: [
-        {
-          feature: "Scale Up Tanpa Batas",
-          problem: "Sistem lama tidak sanggup handle ribuan produk & transaksi.",
-          solution: "Website performa tinggi dengan unlimited produk & fitur varian.",
-          benefit: "Siap menampung pertumbuhan bisnis yang pesat."
-        },
-        {
-          feature: "Keputusan Berbasis Data",
-          problem: "Bingung strategi penjualan karena buta data.",
-          solution: "Laporan penjualan harian/bulanan & grafik analitik lengkap.",
-          benefit: "Strategi bisnis lebih tajam berdasarkan data real."
-        },
-        {
-          feature: "Otomasi Marketing",
-          problem: "Banyak keranjang ditinggalkan (abandoned cart) tanpa follow-up.",
-          solution: "Sistem otomatis ingatkan customer untuk selesaikan pembayaran.",
-          benefit: "Meningkatkan konversi penjualan secara signifikan."
+      cta: 'Ambil Paket PRO',
+      modalDetails: {
+        sections: [
+          {
+            title: "💎 Frontend & User Experience (Premium)",
+            items: [
+              "Desain profesional & branding kuat sesuai identitas bisnis.",
+              "Detail produk lengkap: galeri, stok real-time, varian kompleks.",
+              "Fitur canggih: Wishlist, Review & Rating, Rekomendasi Produk.",
+              "UX optimal: navigasi jelas, breadcrumbs, mobile-first design."
+            ]
+          },
+          {
+            title: "💳 Transaksi & Otomatisasi Lengkap",
+            items: [
+              "Checkout & Payment Gateway lengkap (CC, VA, E-Wallet, QRIS).",
+              "Opsi Login / Guest Checkout.",
+              "Manajemen akun pelanggan: histori order, repeat order mudah.",
+              "Sistem manajemen order & pembayaran otomatis."
+            ]
+          },
+          {
+            title: "📊 Backend / Admin Panel & Analitik",
+            items: [
+              "Admin panel komprehensif: CRUD lengkap, custom fields.",
+              "Laporan & Dashboard Analitik: data penjualan, omzet, produk terlaris.",
+              "Fitur Promosi: diskon, kupon/voucher, flash sale.",
+              "Manajemen pelanggan & data order detail."
+            ]
+          },
+          {
+            title: "🔒 Infrastruktur & Skalabilitas",
+            items: [
+              "Setup server (VPS/Cloud) + Domain + SSL Premium.",
+              "Optimasi performa (caching, speed) & keamanan tinggi.",
+              "Arsitektur scalable: siap untuk trafik tinggi & pengembangan fitur masa depan."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Untuk Siapa Paket Pro Ini Cocok",
+          items: [
+            "Brand besar / toko online serius yang siap scale up.",
+            "Butuh sistem lengkap: pembayaran, stok, user, analitik, promo.",
+            "Ingin kontrol penuh & fleksibilitas maksimal untuk jangka panjang.",
+            "Mengutamakan keamanan, performa, dan pengalaman pelanggan terbaik."
+          ]
         }
-      ]
+      }
     },
     'book-basic': {
       name: 'BASIC',

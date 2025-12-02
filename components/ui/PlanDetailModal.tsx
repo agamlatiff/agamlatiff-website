@@ -106,49 +106,97 @@ const PlanDetailModal: React.FC<PlanDetailModalProps> = ({ plan, isOpen, onClose
 
                   {/* Left Column: Feature Breakdown */}
                   <div className="lg:col-span-2 space-y-8">
-                    <div>
-                      <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                        <Lightbulb size={20} className="text-yellow-500" />
-                        {t('modal.featureBreakdown')}
-                      </h4>
+                    {/* New Modal Details Structure */}
+                    {translatedPlan.modalDetails ? (
+                      <div className="space-y-8">
+                        {translatedPlan.modalDetails.sections.map((section: any, idx: number) => (
+                          <div key={idx}>
+                            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                              {idx === 0 ? <Lightbulb size={20} className="text-yellow-500" /> :
+                                idx === 1 ? <Zap size={20} className="text-blue-500" /> :
+                                  idx === 2 ? <Code2 size={20} className="text-purple-500" /> :
+                                    <Check size={20} className="text-green-500" />
+                              }
+                              {section.title}
+                            </h4>
+                            <div className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-800 hover:border-primary/20 transition-colors">
+                              <ul className="space-y-3">
+                                {section.items.map((item: string, i: number) => (
+                                  <li key={i} className="flex items-start gap-3">
+                                    <Check size={16} className="text-green-500 mt-1 shrink-0" />
+                                    <span className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        ))}
 
-                      <div className="space-y-4">
-                        {planDetails && planDetails.length > 0 ? (
-                          planDetails.map((detail: any, idx: number) => (
-                            <div key={idx} className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-800 hover:border-primary/20 transition-colors">
-                              <h5 className="font-bold text-slate-900 dark:text-white mb-3 text-lg">
-                                {detail.feature}
-                              </h5>
-                              <div className="space-y-3">
-                                <div className="flex items-start gap-3">
-                                  <HelpCircle size={18} className="text-red-400 mt-0.5 shrink-0" />
-                                  <div>
-                                    <span className="text-xs font-bold text-red-500 uppercase tracking-wider block mb-0.5">{t('modal.problem')}</span>
-                                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{detail.problem}</p>
+                        {translatedPlan.modalDetails.valueProps && (
+                          <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
+                            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                              <TrendingUp size={20} className="text-primary" />
+                              {translatedPlan.modalDetails.valueProps.title}
+                            </h4>
+                            <div className="bg-primary/5 dark:bg-primary/10 rounded-2xl p-5 border border-primary/10">
+                              <ul className="space-y-3">
+                                {translatedPlan.modalDetails.valueProps.items.map((item: string, i: number) => (
+                                  <li key={i} className="flex items-start gap-3">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                                    <span className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-medium">{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      /* Legacy Details Structure */
+                      <div>
+                        <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                          <Lightbulb size={20} className="text-yellow-500" />
+                          {t('modal.featureBreakdown')}
+                        </h4>
+
+                        <div className="space-y-4">
+                          {planDetails && planDetails.length > 0 ? (
+                            planDetails.map((detail: any, idx: number) => (
+                              <div key={idx} className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-800 hover:border-primary/20 transition-colors">
+                                <h5 className="font-bold text-slate-900 dark:text-white mb-3 text-lg">
+                                  {detail.feature}
+                                </h5>
+                                <div className="space-y-3">
+                                  <div className="flex items-start gap-3">
+                                    <HelpCircle size={18} className="text-red-400 mt-0.5 shrink-0" />
+                                    <div>
+                                      <span className="text-xs font-bold text-red-500 uppercase tracking-wider block mb-0.5">{t('modal.problem')}</span>
+                                      <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{detail.problem}</p>
+                                    </div>
                                   </div>
-                                </div>
-                                <div className="flex items-start gap-3">
-                                  <Check size={18} className="text-green-500 mt-0.5 shrink-0" />
-                                  <div>
-                                    <span className="text-xs font-bold text-green-600 uppercase tracking-wider block mb-0.5">{t('modal.solution')}</span>
-                                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{detail.solution}</p>
+                                  <div className="flex items-start gap-3">
+                                    <Check size={18} className="text-green-500 mt-0.5 shrink-0" />
+                                    <div>
+                                      <span className="text-xs font-bold text-green-600 uppercase tracking-wider block mb-0.5">{t('modal.solution')}</span>
+                                      <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{detail.solution}</p>
+                                    </div>
                                   </div>
-                                </div>
-                                <div className="flex items-start gap-3 bg-blue-50 dark:bg-blue-900/10 p-3 rounded-xl">
-                                  <TrendingUp size={18} className="text-blue-500 mt-0.5 shrink-0" />
-                                  <div>
-                                    <span className="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-0.5">{t('modal.benefit')}</span>
-                                    <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-medium">{detail.benefit}</p>
+                                  <div className="flex items-start gap-3 bg-blue-50 dark:bg-blue-900/10 p-3 rounded-xl">
+                                    <TrendingUp size={18} className="text-blue-500 mt-0.5 shrink-0" />
+                                    <div>
+                                      <span className="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-0.5">{t('modal.benefit')}</span>
+                                      <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-medium">{detail.benefit}</p>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          ))
-                        ) : (
-                          <p className="text-slate-500 italic">{t('modal.detailsPreparing')}</p>
-                        )}
+                            ))
+                          ) : (
+                            <p className="text-slate-500 italic">{t('modal.detailsPreparing')}</p>
+                          )}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
 
                   {/* Right Column: Summary & CTA */}

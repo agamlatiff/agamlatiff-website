@@ -1,19 +1,25 @@
 
 import React, { useState } from 'react';
-import { Check, X, Info, Star, ShieldCheck, Zap, Layout, ShoppingBag, MessageCircle } from 'lucide-react';
+import { Check, Star, ShieldCheck, ShoppingBag, MessageCircle, User, Store } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Comparison: React.FC = () => {
   const { t, translations } = useLanguage();
+  const [competitorMode, setCompetitorMode] = useState('marketplace');
   const [activeTab, setActiveTab] = useState('custom');
+
+  const competitors = [
+    { id: 'manual', icon: User, label: 'Manual' },
+    { id: 'marketplace', icon: Store, label: 'Marketplace' },
+    { id: 'saas', icon: ShoppingBag, label: 'SaaS' },
+    { id: 'agency', icon: MessageCircle, label: 'Agency' },
+  ];
 
   return (
     <section id="comparison" className="py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 overflow-hidden border-y border-slate-200/60 dark:border-slate-800">
-      <div
-        className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8"
-      >
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">
             {t('comparison.title')}
           </h2>
@@ -23,19 +29,43 @@ const Comparison: React.FC = () => {
           />
         </div>
 
+        {/* Competitor Selector (Desktop & Mobile) */}
+        <div className="flex justify-center mb-10">
+          <div className="bg-white dark:bg-slate-950 p-1.5 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 inline-flex flex-wrap justify-center gap-1">
+            {competitors.map((comp) => {
+              const Icon = comp.icon;
+              const isSelected = competitorMode === comp.id;
+              return (
+                <button
+                  key={comp.id}
+                  onClick={() => setCompetitorMode(comp.id)}
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold transition-all ${isSelected
+                      ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm'
+                      : 'text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900'
+                    }`}
+                >
+                  <Icon size={16} className={isSelected ? 'text-primary' : 'text-slate-400'} />
+                  <span>{t(`comparison.headers.${comp.id}`).split(' ')[0]}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         {/* Desktop View Table */}
         <div className="hidden md:block relative">
-          {/* Glow Effect behind the 'Me' column */}
+          {/* Glow Effect */}
           <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 dark:bg-primary/10 blur-3xl rounded-full -z-10 pointer-events-none"></div>
 
           <div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl bg-white dark:bg-slate-900">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-slate-50 dark:bg-slate-950">
-                  <th className="p-6 text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider w-1/4">{t('comparison.headers.criteria')}</th>
-                  <th className="p-6 text-lg font-bold text-slate-400 dark:text-slate-500 w-1/4 text-center">{t('comparison.headers.saas')}</th>
-                  <th className="p-6 text-lg font-bold text-slate-600 dark:text-slate-300 w-1/4 text-center">{t('comparison.headers.agency')}</th>
-                  <th className="p-0 w-1/4 relative">
+                  <th className="p-6 text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider w-1/3">{t('comparison.headers.criteria')}</th>
+                  <th className="p-6 text-lg font-bold text-slate-500 dark:text-slate-400 w-1/3 text-center transition-all duration-300">
+                    {t(`comparison.headers.${competitorMode}`)}
+                  </th>
+                  <th className="p-0 w-1/3 relative">
                     <div className="absolute inset-0 bg-primary/5 dark:bg-primary/10 border-b-4 border-primary"></div>
                     <div className="relative p-6">
                       <div className="flex items-center justify-center gap-2 text-xl font-extrabold text-primary text-center">
@@ -54,16 +84,15 @@ const Comparison: React.FC = () => {
                       {row.criteria}
                     </td>
                     <td className="p-6 text-center text-slate-500 dark:text-slate-400 border-r border-slate-100 dark:border-slate-800">
-                      <div className="flex flex-col items-center gap-2">
-                        <ShoppingBag size={20} className="text-slate-300" />
-                        <span className="text-sm">{row.saas}</span>
-                      </div>
-                    </td>
-                    <td className="p-6 text-center text-slate-600 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
-                      <div className="flex flex-col items-center gap-2">
-                        <MessageCircle size={20} className="text-blue-400/70" />
-                        <span className="text-sm">{row.agency}</span>
-                      </div>
+                      <motion.div
+                        key={competitorMode}
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {row[competitorMode]}
+                      </motion.div>
                     </td>
                     <td className="p-6 text-center bg-primary/5 dark:bg-primary/10 relative">
                       <div className="flex flex-col items-center gap-2 relative z-10">
@@ -81,13 +110,14 @@ const Comparison: React.FC = () => {
         </div>
 
         {/* Mobile View Cards (Tabbed Filter) */}
-        {/* Mobile View Cards (Tabbed Filter) - Premium Redesign */}
         <div className="md:hidden">
-          {/* Mobile Tabs - Segmented Control Style */}
+          {/* Mobile Tabs */}
           <div className="bg-white dark:bg-slate-900 p-1.5 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-800 mb-8 flex relative z-10">
-            {['saas', 'agency', 'custom'].map((tab) => {
+            {[competitorMode, 'custom'].map((tab) => {
               const isSelected = activeTab === tab;
-              const Icon = tab === 'saas' ? ShoppingBag : tab === 'agency' ? MessageCircle : Star;
+              const isCustom = tab === 'custom';
+              // Find icon for the current tab
+              const CompIcon = competitors.find(c => c.id === tab)?.icon || Star;
 
               return (
                 <button
@@ -106,9 +136,9 @@ const Comparison: React.FC = () => {
                     />
                   )}
                   <div className="relative z-10 flex flex-col items-center gap-1">
-                    <Icon size={18} className={isSelected ? 'fill-primary/20' : ''} />
+                    <CompIcon size={18} className={isSelected ? 'fill-primary/20' : ''} />
                     <span className="text-[10px] font-bold uppercase tracking-wider text-center leading-tight">
-                      {tab === 'custom' ? 'Agam' : t(`comparison.headers.${tab}`).split(' ')[0]}
+                      {isCustom ? 'Agam' : t(`comparison.headers.${tab}`).split(' ')[0]}
                     </span>
                   </div>
                 </button>
@@ -116,11 +146,11 @@ const Comparison: React.FC = () => {
             })}
           </div>
 
-          {/* Mobile Content - Premium Card */}
+          {/* Mobile Content */}
           <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeTab}
+                key={activeTab + competitorMode}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
