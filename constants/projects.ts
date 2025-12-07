@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
     date: 'Oktober 2023',
     isFeatured: true,
     liveLink: 'https://alizonstore.vercel.app',
-    repoUrl: 'https://github.com/agamlatiff/alizon-store'
+    repoLink: 'https://github.com/agamlatiff/alizon-store'
   },
   {
     id: '2',
@@ -109,7 +109,7 @@ export const PROJECTS: Project[] = [
     date: 'Desember 2023',
     isFeatured: true,
     youtubeId: 'Sba29tQRzyE', // Video Demo tersedia (Ganti ID jika ada yang baru)
-    repoUrl: 'https://github.com/agamlatiff/saturday'
+    repoLink: 'https://github.com/agamlatiff/saturday'
   },
   {
     id: '1',
@@ -167,7 +167,7 @@ export const PROJECTS: Project[] = [
     date: 'Januari 2024',
     isFeatured: true,
     youtubeId: '-qq7Lu6KJ0o', // Video Demo tersedia
-    repoUrl: 'https://github.com/agamlatiff/upskills'
+    repoLink: 'https://github.com/agamlatiff/upskills'
   }
 ];
 

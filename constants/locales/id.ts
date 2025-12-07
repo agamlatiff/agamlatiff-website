@@ -2,10 +2,10 @@ export const id = {
   hero: {
     badge: "E-Commerce Specialist",
     headline: {
-      part1: "Stop Jualan Manual,",
-      part2: "Bikin Brand Kamu Level Up."
+      part1: "Capek Perang Harga",
+      part2: "di Marketplace Terus?"
     },
-    subheadline: "Website E-Commerce profesional untuk **Meningkatkan Kepercayaan Pelanggan** dan **Otomatisasi Order 24/7**. Fokus besarkan bisnis, bukan sibuk balas chat.",
+    subheadline: "Saatnya punya <strong>Website Toko Online Sendiri</strong>. Bangun brand lebih profesional, database pelanggan aman, dan profit lebih maksimal tanpa potongan admin.",
     cta: {
       consult: "Konsultasi Gratis",
       processing: "Processing...",
@@ -593,7 +593,6 @@ export const id = {
       criteria: "Kriteria",
       manual: "Manual (WhatsApp)",
       marketplace: "Marketplace",
-      saas: "Sewa Toko (SaaS)",
       agency: "Jasa Web Umum",
       custom: "Agam E-Commerce",
       bestValue: "Best Value"
@@ -601,7 +600,6 @@ export const id = {
     mobile: {
       winner: "WINNER",
       description: "Pilihan terbaik untuk brand yang ingin mandiri tanpa potongan biaya admin dan batasan fitur.",
-      saas: "Marketplace",
       agency: "Manual (WhatsApp)"
     },
     list: [
@@ -609,7 +607,6 @@ export const id = {
         criteria: "Sistem Kepemilikan",
         manual: "Tidak Ada Sistem",
         marketplace: "Numpang Lapak",
-        saas: "Sewa (Numpang)",
         agency: "Lisensi Terbatas",
         custom: "Hak Milik 100% (Source Code)"
       },
@@ -617,7 +614,7 @@ export const id = {
         criteria: "Biaya & Potongan",
         manual: "Waktu & Tenaga",
         marketplace: "Potongan Admin 5-10%",
-        saas: "Langganan + Fee Admin",
+
         agency: "Biaya Maintenance Tahunan",
         custom: "Sekali Bayar (0% Potongan)"
       },
@@ -625,7 +622,7 @@ export const id = {
         criteria: "Persaingan",
         manual: "Capek Balas Chat",
         marketplace: "Perang Harga Keras",
-        saas: "Template Terbatas",
+
         agency: "Profil Standar",
         custom: "Brand Eksklusif (Blue Ocean)"
       },
@@ -633,7 +630,7 @@ export const id = {
         criteria: "Data Pelanggan",
         manual: "Tercecer di Chat",
         marketplace: "Data Disembunyikan",
-        saas: "Data Disimpan Vendor",
+
         agency: "Server Bersama",
         custom: "Database Lengkap (Retargeting)"
       },
@@ -641,9 +638,17 @@ export const id = {
         criteria: "Skalabilitas",
         manual: "Mentok Tenaga",
         marketplace: "Tergantung Algoritma",
-        saas: "Biaya Naik seiring Order",
+
         agency: "Sulit Dikembangkan",
         custom: "Unlimited Growth"
+      },
+      {
+        criteria: "Keamanan Data",
+        manual: "Tidak Ada (Rawan)",
+        marketplace: "Aman (Tergantung Platform)",
+
+        agency: "Standar",
+        custom: "Keamanan SSL (HTTPS)"
       }
     ]
   },
@@ -795,8 +800,8 @@ export const id = {
         'Multi User (Admin + Kasir)',
         'Dashboard sederhana',
         'Backup & Restore data manual',
-        'Revisi 2x',
-        'Maintenance 15 hari',
+        '2x Revisi',
+        'Maintenance 15 Hari',
         'Free Tutorial Video'
       ],
       cta: 'Ambil Paket Basic',
@@ -835,8 +840,8 @@ export const id = {
         'Struk Custom (Logo)',
         'Export Laporan (PDF/Excel)',
         'Dashboard Real-time',
-        'Revisi 2x',
-        'Maintenance 30 hari',
+        '4x Revisi',
+        'Maintenance 30 Hari',
         'Free Tutorial Video'
       ],
       cta: 'Ambil Paket Standard',
@@ -876,7 +881,8 @@ export const id = {
         'Printer Dapur / Bar (Optional)',
         'Mode Offline (Auto Sync)',
         'Custom Fitur Ringan',
-        'Revisi 2x & Maintenance 45 hari',
+        '6x Revisi',
+        'Maintenance 45 Hari',
         'Free Tutorial Video'
       ],
       cta: 'Ambil Paket Premium',
@@ -913,7 +919,8 @@ export const id = {
         'Statistik Harian',
         'Mode Responsif (TV/Tablet)',
         'Branding warna sesuai bisnis',
-        'Revisi 2x & Maintenance 15 Hari'
+        '2x Revisi',
+        'Maintenance 15 Hari'
       ],
       cta: 'Ambil Basic Queue',
       details: [
@@ -949,7 +956,8 @@ export const id = {
         'Real-time Dashboard Display TV',
         'Statistik Mingguan/Bulanan',
         'Log Aktivitas Petugas',
-        'Revisi 4x & Maintenance 30 Hari'
+        '4x Revisi',
+        'Maintenance 30 Hari'
       ],
       cta: 'Ambil Standard Queue',
       details: [
@@ -985,7 +993,8 @@ export const id = {
         'Laporan Performa Petugas (KPI)',
         'Mode Offline Sync',
         'Penjadwalan Jam Layanan',
-        'Revisi 6x & Maintenance 45 Hari'
+        '6x Revisi',
+        'Maintenance 45 Hari'
       ],
       cta: 'Konsultasi Premium',
       details: [
@@ -1019,8 +1028,8 @@ export const id = {
         'User role admin & staff',
         'Pengaturan jam kerja',
         'Dashboard sederhana',
-        '2x revisi',
-        'Maintenance 15 hari'
+        '2x Revisi',
+        'Maintenance 15 Hari'
       ],
       cta: 'Ambil Basic Presensi',
       details: [
@@ -1056,7 +1065,8 @@ export const id = {
         'Peta Lokasi Absensi',
         'Notifikasi Telat / Pulang Cepat',
         'Dashboard Lengkap',
-        '4x revisi & Maintenance 30 hari'
+        '4x Revisi',
+        'Maintenance 30 Hari'
       ],
       cta: 'Ambil Standard Presensi',
       details: [
@@ -1092,7 +1102,8 @@ export const id = {
         'Performance Tracking',
         'Approval Cuti Berlevel',
         'Integrasi Sistem Lain (API)',
-        '6x revisi & Maintenance 45 hari'
+        '6x Revisi',
+        'Maintenance 45 Hari'
       ],
       cta: 'Konsultasi Premium',
       details: [
@@ -1129,7 +1140,8 @@ export const id = {
         'Basic SEO On-Page',
         'Full Source Code (Handover)',
         'Panduan Update Konten Dasar',
-        '2x Revisi Minor'
+        '2x Revisi',
+        'Maintenance 15 Hari'
       ],
       cta: 'Ambil Paket STARTER',
       modalDetails: {
@@ -1163,7 +1175,7 @@ export const id = {
             items: [
               "Handover full source code & aset.",
               "Panduan singkat update konten dasar.",
-              "2x revisi minor setelah implementasi awal."
+              "2x revisi."
             ]
           }
         ],
@@ -1191,7 +1203,8 @@ export const id = {
         'SEO Dasar & Optimasi On-Page',
         'Integrasi Tracking / Analitik',
         'Full Source Code & Aset',
-        '3x Revisi Minor'
+        '4x Revisi',
+        'Maintenance 30 Hari'
       ],
       cta: 'Ambil Paket GROWTH',
       modalDetails: {
@@ -1228,7 +1241,7 @@ export const id = {
               "Full source code & aset + akses penuh.",
               "Deployment + konfigurasi hosting + domain + SSL.",
               "Dokumentasi panduan ubah konten dasar.",
-              "3x revisi minor setelah live."
+              "4x revisi."
             ]
           }
         ],
@@ -1256,7 +1269,8 @@ export const id = {
         'SEO On-Page & Technical',
         'Setup Hosting, Domain, SSL Premium',
         'Dokumentasi Lengkap & Hak Milik Penuh',
-        '5x Revisi & Support 1 Bulan'
+        '6x Revisi',
+        'Maintenance 45 Hari'
       ],
       cta: 'Ambil Paket ULTIMATE',
       modalDetails: {
@@ -1319,7 +1333,7 @@ export const id = {
         'Integrasi Google Maps',
         'Video Tutorial Update Konten',
         '2x Revisi',
-        'Garansi & Maintenance 15 Hari'
+        'Maintenance 15 Hari'
       ],
       cta: 'Ambil Promo Basic',
       details: [
@@ -1355,7 +1369,7 @@ export const id = {
         'Analitik Pengunjung Website',
         'Video Tutorial Admin',
         '4x Revisi',
-        'Garansi & Maintenance 30 Hari'
+        'Maintenance 30 Hari'
       ],
       cta: 'Ambil Promo Premium',
       details: [
@@ -1391,7 +1405,7 @@ export const id = {
         'SEO Advanced (Indexing & Keyword)',
         'Laporan Performa Website',
         '6x Revisi',
-        'Garansi & Maintenance 45 Hari'
+        'Maintenance 45 Hari'
       ],
       cta: 'Ambil Promo Pro',
       details: [
@@ -1428,7 +1442,9 @@ export const id = {
         'Mobile Friendly & Responsif',
         'Setup Hosting & Domain Dasar',
         'Source Code & Database Full',
-        'Dokumentasi Penggunaan Admin'
+        'Dokumentasi Penggunaan Admin',
+        '2x Revisi',
+        'Maintenance 15 Hari'
       ],
       cta: 'Ambil Paket BASIC',
       modalDetails: {
@@ -1499,7 +1515,9 @@ export const id = {
         'Manajemen Akun Pelanggan (Login/Register)',
         'Struktur Kode Maintainable',
         'Setup Hosting, Domain, SSL',
-        'Keamanan & Optimasi Dasar'
+        'Keamanan & Optimasi Dasar',
+        '4x Revisi',
+        'Maintenance 30 Hari'
       ],
       cta: 'Ambil Paket STANDARD',
       modalDetails: {
@@ -1563,7 +1581,9 @@ export const id = {
         'Optimasi Performa & Keamanan Tinggi',
         'Integrasi Logistik / Ongkir (Opsional)',
         'Support & Maintenance Prioritas',
-        'Skalabilitas Tinggi (Siap Trafik Besar)'
+        'Skalabilitas Tinggi (Siap Trafik Besar)',
+        '6x Revisi',
+        'Maintenance 45 Hari'
       ],
       cta: 'Ambil Paket PRO',
       modalDetails: {
@@ -1580,7 +1600,7 @@ export const id = {
           {
             title: "💳 Transaksi & Otomatisasi Lengkap",
             items: [
-              "Checkout & Payment Gateway lengkap (CC, VA, E-Wallet, QRIS).",
+              "Checkout & Payment Gateway lengkap (VA, E-Wallet, QRIS).",
               "Opsi Login / Guest Checkout.",
               "Manajemen akun pelanggan: histori order, repeat order mudah.",
               "Sistem manajemen order & pembayaran otomatis."
@@ -1598,7 +1618,7 @@ export const id = {
           {
             title: "🔒 Infrastruktur & Skalabilitas",
             items: [
-              "Setup server (VPS/Cloud) + Domain + SSL Premium.",
+              "Setup server (VPS) + Domain + SSL Premium.",
               "Optimasi performa (caching, speed) & keamanan tinggi.",
               "Arsitektur scalable: siap untuk trafik tinggi & pengembangan fitur masa depan."
             ]
@@ -1935,5 +1955,60 @@ export const id = {
     roi: "Halo Mas Agam, saya sudah cek simulasi ROI dan tertarik untuk mengamankan profit bisnis saya. Bisa diskusi?",
     pricing: "Halo Mas Agam, saya tertarik dengan paket {plan}. Bisa dijelaskan detailnya?",
     product: "Halo Mas Agam, saya tertarik dengan layanan {service}. Mohon infonya."
+  },
+  pricingFeatures: {
+    'e-commerce': {
+      title: 'Perbandingan Fitur Toko Online',
+      rows: [
+        { feature: "Desain Website", basic: "Template Pro", standard: "Custom Brand", pro: "Premium Exclusive" },
+        { feature: "Jumlah Produk", basic: "Max 50", standard: "Max 500", pro: "Unlimited" },
+        { feature: "Payment Gateway", basic: "Manual (Transfer)", standard: "Otomatis (VA/QRIS)", pro: "Otomatis (VA/QRIS)" },
+        { feature: "Hitung Ongkir", basic: "Manual / Flat", standard: "Otomatis (RajaOngkir)", pro: "Otomatis + Custom" },
+        { feature: "Manajemen Stok", basic: true, standard: true, pro: true },
+        { feature: "Varian Produk", basic: "Simpel (1 varian)", standard: "Multi (Warna/Size)", pro: "Kompleks" },
+        { feature: "Akun Pelanggan", basic: false, standard: true, pro: true },
+        { feature: "Wishlist & Review", basic: false, standard: true, pro: true },
+        { feature: "Fitur Promo/Kupon", basic: false, standard: "Basic", pro: "Advanced" },
+        { feature: "Laporan Penjualan", basic: "Sederhana", standard: "Lengkap", pro: "Analitik Detail" },
+        { feature: "Domain (.com)", basic: true, standard: true, pro: true },
+        { feature: "Hosting / Server", basic: "Shared Hosting", standard: "VPS Hosting", pro: "VPS Hosting" },
+        { feature: "SSL Security", basic: "Standard", standard: "Premium", pro: "Enterprise" },
+        { feature: "Revisi Desain", basic: "2x Revisi", standard: "4x Revisi", pro: "6x Revisi" },
+        { feature: "Garansi", basic: "15 Hari", standard: "30 Hari", pro: "45 Hari" }
+      ]
+    },
+    'landing-page': {
+      title: 'Perbandingan Fitur Landing Page',
+      rows: [
+        { feature: "Jumlah Section", basic: "3-5 Section", standard: "5-8 Section", pro: "8-12 Section" },
+        { feature: "Desain UI/UX", basic: "Clean & Simple", standard: "Professional", pro: "High-End Custom" },
+        { feature: "Copywriting", basic: "Headline & CTA", standard: "Persuasive", pro: "Storytelling" },
+        { feature: "Mobile Responsive", basic: true, standard: true, pro: true },
+        { feature: "Form Kontak / Lead", basic: "Sederhana", standard: "Custom Fields", pro: "Integrasi CRM/Email" },
+        { feature: "Tombol WhatsApp", basic: true, standard: true, pro: true },
+        { feature: "SEO Optimization", basic: "Basic Meta", standard: "On-Page SEO", pro: "Advanced Technical" },
+        { feature: "Analitik (Google/Pixel)", basic: false, standard: true, pro: true },
+        { feature: "Kecepatan Loading", basic: "Standard", standard: "Optimized", pro: "Ultra Fast (90+)" },
+        { feature: "Domain (.com)", basic: true, standard: true, pro: true },
+        { feature: "Revisi Desain", basic: "2x Revisi", standard: "4x Revisi", pro: "6x Revisi" },
+        { feature: "Garansi & Maintenance", basic: "15 Hari", standard: "30 Hari", pro: "45 Hari" }
+      ]
+    },
+    'pos-system': {
+      title: 'Perbandingan Fitur Sistem Kasir',
+      rows: [
+        { feature: "Manajemen Produk", basic: "Basic (CRUD)", standard: "Advanced (Modifiers)", pro: "Unlimited + Supplier" },
+        { feature: "Laporan Penjualan", basic: "Harian", standard: "Lengkap (Laba Kotor)", pro: "Analitik (COGS)" },
+        { feature: "Manajemen Stok", basic: false, standard: true, pro: true },
+        { feature: "Multi User", basic: "Admin + Kasir", standard: "Role Detail", pro: "Custom Roles" },
+        { feature: "Cetak Struk", basic: true, standard: "Custom Logo", pro: "Custom Logo + Dapur" },
+        { feature: "Metode Pembayaran", basic: "Cash", standard: "Cash + QRIS", pro: "Integrated Gateway" },
+        { feature: "Multi Cabang", basic: false, standard: false, pro: true },
+        { feature: "Mode Offline", basic: false, standard: false, pro: true },
+        { feature: "Dashboard Owner", basic: "Sederhana", standard: "Real-time", pro: "Real-time + Mobile" },
+        { feature: "Revisi", basic: "2x Revisi", standard: "4x Revisi", pro: "6x Revisi" },
+        { feature: "Maintenance", basic: "15 Hari", standard: "30 Hari", pro: "45 Hari" }
+      ]
+    }
   }
 };

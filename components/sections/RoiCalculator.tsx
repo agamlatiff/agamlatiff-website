@@ -105,12 +105,7 @@ const RoiCalculator: React.FC = () => {
               </div>
             </div>
 
-            {/* Swipe Hint for Cards */}
-            <div className="md:hidden text-center mt-2 mb-6 animate-pulse">
-              <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
-                {t('common.swipeHint')}
-              </span>
-            </div>
+
 
           </motion.div>
 
@@ -214,12 +209,7 @@ const RoiCalculator: React.FC = () => {
               </a>
             </div>
 
-            {/* Swipe Hint */}
-            <div className="md:hidden text-center mt-4 animate-pulse">
-              <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
-                {t('common.swipeHint')}
-              </span>
-            </div>
+
           </motion.div>
         </div>
       </div>

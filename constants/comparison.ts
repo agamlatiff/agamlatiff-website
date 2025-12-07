@@ -17,7 +17,7 @@ export const ECOMMERCE_COMPARISON: ComparisonRow[] = [
     feature: "Payment Gateway",
     basic: "Manual (Transfer)",
     standard: "Otomatis (VA/QRIS)",
-    pro: "Lengkap (CC/Cicilan)"
+    pro: "Otomatis (VA/QRIS)"
   },
   {
     feature: "Hitung Ongkir",
@@ -70,20 +70,14 @@ export const ECOMMERCE_COMPARISON: ComparisonRow[] = [
   {
     feature: "Hosting / Server",
     basic: "Shared Hosting",
-    standard: "Cloud Hosting",
-    pro: "Private VPS"
+    standard: "VPS Hosting",
+    pro: "VPS Hosting"
   },
   {
     feature: "SSL Security",
     basic: "Standard",
     standard: "Premium",
     pro: "Enterprise"
-  },
-  {
-    feature: "Prioritas Support",
-    basic: "Standard (24h)",
-    standard: "Fast (12h)",
-    pro: "VIP (Direct WA)"
   },
   {
     feature: "Revisi Desain",

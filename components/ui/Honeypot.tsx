@@ -20,8 +20,8 @@ const Honeypot: React.FC<HoneypotProps> = ({ value, onChange }) => {
         height: '1px',
         opacity: 0,
         pointerEvents: 'none',
-        tabIndex: -1,
       }}
+      tabIndex={-1}
       aria-hidden="true"
     >
       <label htmlFor="website_url">

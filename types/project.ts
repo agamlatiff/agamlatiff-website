@@ -10,7 +10,7 @@ export interface Project {
   techStack: string[];
   industry: string;
   youtubeId?: string; // ID video YouTube (misal: dQw4w9WgXcQ)
-  repoUrl?: string;
+  repoLink?: string;
   liveLink?: string;
   date: string;
   isFeatured?: boolean;

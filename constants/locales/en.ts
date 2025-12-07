@@ -2,10 +2,10 @@ export const en = {
   hero: {
     badge: "E-Commerce Specialist",
     headline: {
-      part1: "Stop Manual Selling,",
-      part2: "Level Up Your Brand."
+      part1: "Tired of Price Wars",
+      part2: "in Marketplaces?"
     },
-    subheadline: "Professional E-Commerce Website to **Increase Customer Trust** and **Automate Orders 24/7**. Focus on growing your business, not busy replying to chats.",
+    subheadline: "It's time to have <strong>Your Own Online Store</strong>. Build a more professional brand, secure customer database, and maximize profit without admin fees.",
     cta: {
       consult: "Free Consultation",
       processing: "Processing...",
@@ -593,7 +593,6 @@ export const en = {
       criteria: "Criteria",
       manual: "Manual Selling",
       marketplace: "Marketplace",
-      saas: "Store Rental (SaaS)",
       agency: "General Web Agency",
       custom: "Agam E-Commerce",
       bestValue: "Best Value"
@@ -601,7 +600,6 @@ export const en = {
     mobile: {
       winner: "WINNER",
       description: "Best choice for brands wanting independence without admin fee deductions and feature limits.",
-      saas: "Store Rental (SaaS)",
       agency: "General Web Agency"
     },
     list: [
@@ -609,7 +607,7 @@ export const en = {
         criteria: "Ownership System",
         manual: "None (Chat Only)",
         marketplace: "Platform Dependent",
-        saas: "Rent (Renting Space)",
+
         agency: "Limited License",
         custom: "100% Ownership (Source Code)"
       },
@@ -617,7 +615,7 @@ export const en = {
         criteria: "Cost & Deductions",
         manual: "Time & Energy",
         marketplace: "Admin Fees (5-10%)",
-        saas: "Subscription + Admin Fees",
+
         agency: "Annual Maintenance Fee",
         custom: "One-Time Payment (No Deductions)"
       },
@@ -625,7 +623,7 @@ export const en = {
         criteria: "Selling Features",
         manual: "Manual Reply",
         marketplace: "Standard Template",
-        saas: "Limited Platform Templates",
+
         agency: "Standard Company Profile",
         custom: "Custom (Promo, Bundling, Wholesale)"
       },
@@ -633,7 +631,7 @@ export const en = {
         criteria: "Data Ownership",
         manual: "Scattered in Chat",
         marketplace: "Hidden by Platform",
-        saas: "Data Stored by Vendor",
+
         agency: "Shared Server",
         custom: "Private Database (Secure)"
       },
@@ -641,9 +639,17 @@ export const en = {
         criteria: "Brand Scalability",
         manual: "Hard to Scale",
         marketplace: "Price War Trap",
-        saas: "Cost Increases with Orders",
+
         agency: "Hard to Develop",
         custom: "Unlimited Products & Transactions"
+      },
+      {
+        criteria: "Data Security",
+        manual: "None (Risky)",
+        marketplace: "Safe (Platform Dependent)",
+
+        agency: "Standard",
+        custom: "SSL Security (HTTPS)"
       }
     ]
   },
@@ -835,7 +841,7 @@ export const en = {
         'Custom Receipt (Logo)',
         'Export Report (PDF/Excel)',
         'Real-time Dashboard',
-        '2x Revisions',
+        '4x Revisions',
         '30 Days Maintenance',
         'Free Tutorial Video'
       ],
@@ -876,7 +882,8 @@ export const en = {
         'Kitchen / Bar Printer (Optional)',
         'Offline Mode (Auto Sync)',
         'Light Custom Features',
-        '2x Revisions & 45 Days Maintenance',
+        '6x Revisions',
+        '45 Days Maintenance',
         'Free Tutorial Video'
       ],
       cta: 'Get Premium Package',
@@ -913,7 +920,8 @@ export const en = {
         'Daily Statistics',
         'Responsive Mode (TV/Tablet)',
         'Branding colors according to business',
-        '2x Revisions & 15 Days Maintenance'
+        '2x Revisions',
+        '15 Days Maintenance'
       ],
       cta: 'Get Basic Queue',
       details: [
@@ -949,7 +957,8 @@ export const en = {
         'Real-time Dashboard Display TV',
         'Weekly/Monthly Statistics',
         'Staff Activity Log',
-        '4x Revisions & 30 Days Maintenance'
+        '4x Revisions',
+        '30 Days Maintenance'
       ],
       cta: 'Get Standard Queue',
       details: [
@@ -985,7 +994,8 @@ export const en = {
         'Staff Performance Report (KPI)',
         'Offline Sync Mode',
         'Service Hour Scheduling',
-        '6x Revisions & 45 Days Maintenance'
+        '6x Revisions',
+        '45 Days Maintenance'
       ],
       cta: 'Consult Premium',
       details: [
@@ -1019,8 +1029,8 @@ export const en = {
         'User role admin & staff',
         'Work hour settings',
         'Simple Dashboard',
-        '2x revisions',
-        '15 days maintenance'
+        '2x Revisions',
+        '15 Days Maintenance'
       ],
       cta: 'Get Basic Attendance',
       details: [
@@ -1056,7 +1066,8 @@ export const en = {
         'Attendance Location Map',
         'Late / Early Leave Notification',
         'Complete Dashboard',
-        '4x revisions & 30 days maintenance'
+        '4x Revisions',
+        '30 Days Maintenance'
       ],
       cta: 'Get Standard Attendance',
       details: [
@@ -1092,7 +1103,8 @@ export const en = {
         'Performance Tracking',
         'Multi-level Leave Approval',
         'Other System Integration (API)',
-        '6x revisions & 45 days maintenance'
+        '6x Revisions',
+        '45 Days Maintenance'
       ],
       cta: 'Consult Premium',
       details: [
@@ -1116,6 +1128,200 @@ export const en = {
         }
       ]
     },
+    'lp-starter': {
+      name: 'STARTER',
+      description: 'Single Page / Simple Landing Page. Fast & economical solution for online presence.',
+      features: [
+        'Single Page Layout (Neat & Simple)',
+        'Responsive Design (Mobile Friendly)',
+        'Basic Content (Hero, Product, Benefit)',
+        'CTA Button (WA/Contact/Order)',
+        'Simple Contact Form (Optional)',
+        'Basic Domain & Hosting Setup',
+        'Basic SEO On-Page',
+        'Full Source Code (Handover)',
+        'Basic Content Update Guide',
+        '2x Revisions',
+        '15 Days Maintenance'
+      ],
+      cta: 'Get STARTER Package',
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Layout & Structure",
+            items: [
+              "Single-page layout, neat & simple.",
+              "Hero/banner, headline, value proposition, and CTA.",
+              "Responsive design: optimal on desktop, tablet, and mobile."
+            ]
+          },
+          {
+            title: "📄 Content & Basic Functions",
+            items: [
+              "Basic elements: product photos, description, benefits.",
+              "Direct CTA to WhatsApp/Contact/Order.",
+              "Simple contact/lead capture form (optional)."
+            ]
+          },
+          {
+            title: "🛠️ Setup & Deployment",
+            items: [
+              "Basic domain + hosting setup & configuration.",
+              "Simple & light code structure.",
+              "Basic SEO on-page: basic meta tags, friendly URL."
+            ]
+          },
+          {
+            title: "📄 Documentation & Handover",
+            items: [
+              "Full source code & assets handover.",
+              "Brief guide for basic content updates.",
+              "2x revisi."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Who is this Starter Package Suitable For",
+          items: [
+            "Small businesses / UMKM / freelancers wanting to go online quickly.",
+            "Businesses focusing on 1-2 products/services only.",
+            "Special campaigns: promotions, pre-orders, product launches.",
+            "Limited budget but want professional online presence."
+          ]
+        }
+      }
+    },
+    'lp-growth': {
+      name: 'GROWTH',
+      description: 'Landing Page + Optimization & Conversion. Professional design for real results.',
+      features: [
+        'Professional & Conversion-Friendly Design',
+        'Organized Content Structure',
+        'Persuasive & Clear CTA',
+        'Simple Lead / Order Form',
+        'Social Proof (Testimonials/Badges)',
+        'Speed & Performance Optimization',
+        'Basic SEO & On-Page Optimization',
+        'Tracking / Analytics Integration',
+        'Full Source Code & Assets',
+        '4x Revisions',
+        '30 Days Maintenance'
+      ],
+      cta: 'Get GROWTH Package',
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Layout & Structure — Conversion-Friendly",
+            items: [
+              "Clean, modern design, arranged for conversion.",
+              "Attractive hero, clear value proposition, supporting visuals.",
+              "Organized content structure (headings, bullets, icons).",
+              "Optimal responsive & mobile-friendly."
+            ]
+          },
+          {
+            title: "🛠️ Conversion & Optimization",
+            items: [
+              "Persuasive & prominent CTA.",
+              "Simple lead/contact/order form.",
+              "Social proof: testimonials, trust badges.",
+              "Speed optimization & light loading."
+            ]
+          },
+          {
+            title: "📈 Tracking & Analytics",
+            items: [
+              "Analytics tool integration (Google Analytics/Pixel).",
+              "Monitor performance: visitors, conversions, traffic sources.",
+              "Basic conversion rate optimization (CRO) support."
+            ]
+          },
+          {
+            title: "🧰 Deployment & Ownership",
+            items: [
+              "Full source code & assets + full access.",
+              "Deployment + hosting configuration + domain + SSL.",
+              "Documentation guide for basic content changes.",
+              "2x revisi."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Who is this Growth Package Suitable For",
+          items: [
+            "Businesses/startups needing conversion tools (not just a showcase).",
+            "Business owners wanting visitor data & real results.",
+            "Brands needing professionalism & scaling opportunities.",
+            "Serious medium/long-term intent with digital assets."
+          ]
+        }
+      }
+    },
+    'lp-ultimate': {
+      name: 'ULTIMATE',
+      description: 'Premium / High-End Landing Page. Full Custom, Conversion-Ready & Complete Service.',
+      features: [
+        'Full Custom Design & Branding',
+        'Comprehensive Structure (Many Sections)',
+        'Persuasive & Conversion Copywriting',
+        'Advanced Lead Capture & Funnel',
+        'Complete Tracking & Analytics Integration',
+        'High Performance & Speed Optimization',
+        'On-Page & Technical SEO',
+        'Premium Hosting, Domain, SSL Setup',
+        'Complete Documentation & Full Ownership',
+        '6x Revisions',
+        '45 Days Maintenance'
+      ],
+      cta: 'Get ULTIMATE Package',
+      modalDetails: {
+        sections: [
+          {
+            title: "🌐 Layout, Structure & Complete Branding",
+            items: [
+              "Full custom design matching brand identity.",
+              "Comprehensive structure: hero, features, gallery, testimonials, FAQ, pricing.",
+              "Optimal responsive & mobile-first design."
+            ]
+          },
+          {
+            title: "📈 Conversion Optimization & Advanced UX",
+            items: [
+              "Persuasive & conversion-oriented copywriting.",
+              "Lead capture / form & funnel integration (Email/CRM/WA).",
+              "Complete tracking & analytics integration (Event tracking).",
+              "Performance optimization: lazy loading, minification, speed."
+            ]
+          },
+          {
+            title: "🧰 Professional Features & Services",
+            items: [
+              "Deployment + hosting/server setup + premium SSL.",
+              "Basic backup & security, spam protection.",
+              "Complete documentation & full ownership.",
+              "Custom additional services (API integration, multi-language, etc)."
+            ]
+          },
+          {
+            title: "🚀 Value & Long-Term Orientation",
+            items: [
+              "Ready for intensive ad/marketing campaigns.",
+              "Scalable structure: can be developed into a full website.",
+              "Focus on conversion, branding, speed, & security."
+            ]
+          }
+        ],
+        valueProps: {
+          title: "🎯 Who is this Ultimate Package Suitable For",
+          items: [
+            "Professional brands / premium products needing high trust.",
+            "Big campaigns: launching, pre-order, large-scale ads.",
+            "Companies wanting serious & long-term digital assets.",
+            "Clients wanting maximum results & all-in-one service."
+          ]
+        }
+      }
+    },
     'cp-basic': {
       name: 'BASIC',
       description: 'Start Looking Professional. Fast and neat website for Bussiness & Freelancers.',
@@ -1128,7 +1334,7 @@ export const en = {
         'Google Maps Integration',
         'Content Update Video Tutorial',
         '2x Revisions',
-        'Warranty & Maintenance 15 Days'
+        '15 Days Maintenance'
       ],
       cta: 'Get Basic Promo',
       details: [
@@ -1164,7 +1370,7 @@ export const en = {
         'Website Visitor Analytics',
         'Admin Video Tutorial',
         '4x Revisions',
-        'Warranty & Maintenance 30 Days'
+        '30 Days Maintenance'
       ],
       cta: 'Get Premium Promo',
       details: [
@@ -1200,7 +1406,7 @@ export const en = {
         'Advanced SEO (Indexing & Keyword)',
         'Website Performance Report',
         '6x Revisions',
-        'Warranty & Maintenance 45 Days'
+        '45 Days Maintenance'
       ],
       cta: 'Get Pro Promo',
       details: [
@@ -1237,7 +1443,9 @@ export const en = {
         'Mobile Friendly & Responsive',
         'Basic Hosting & Domain Setup',
         'Full Source Code & Database',
-        'Admin Usage Documentation'
+        'Admin Usage Documentation',
+        '2x Revisions',
+        '15 Days Maintenance'
       ],
       cta: 'Get BASIC Package',
       modalDetails: {
@@ -1280,7 +1488,7 @@ export const en = {
             items: [
               "Full source code + database (Full Ownership).",
               "Basic admin panel usage documentation.",
-              "1x minor revision before final delivery."
+              "2x minor revision before final delivery."
             ]
           }
         ],
@@ -1308,7 +1516,9 @@ export const en = {
         'Customer Account Management (Login/Register)',
         'Maintainable Code Structure',
         'Hosting, Domain, SSL Setup',
-        'Basic Security & Optimization'
+        'Basic Security & Optimization',
+        '4x Revisions',
+        '30 Days Maintenance'
       ],
       cta: 'Get STANDARD Package',
       modalDetails: {
@@ -1372,7 +1582,9 @@ export const en = {
         'High Performance & Security Optimization',
         'Logistics / Shipping Integration (Optional)',
         'Priority Support & Maintenance',
-        'High Scalability (Ready for Big Traffic)'
+        'High Scalability (Ready for Big Traffic)',
+        '6x Revisions',
+        '45 Days Maintenance'
       ],
       cta: 'Get PRO Package',
       modalDetails: {
@@ -1389,7 +1601,7 @@ export const en = {
           {
             title: "💳 Complete Transaction & Automation",
             items: [
-              "Complete Checkout & Payment Gateway (CC, VA, E-Wallet, QRIS).",
+              "Complete Checkout & Payment Gateway (VA, E-Wallet, QRIS).",
               "Login / Guest Checkout options.",
               "Customer account management: order history, easy repeat order.",
               "Automated order & payment management system."
@@ -1768,5 +1980,60 @@ export const en = {
     roi: "Hello Agam, I have checked the ROI simulation and I am interested in securing my business profit. Can we discuss?",
     pricing: "Hello Agam, I am interested in the {plan} package. Can you explain the details?",
     product: "Hello Agam, I am interested in the {service} service. Please provide info."
+  },
+  pricingFeatures: {
+    'e-commerce': {
+      title: 'Online Store Feature Comparison',
+      rows: [
+        { feature: "Website Design", basic: "Template Pro", standard: "Custom Brand", pro: "Premium Exclusive" },
+        { feature: "Number of Products", basic: "Max 50", standard: "Max 500", pro: "Unlimited" },
+        { feature: "Payment Gateway", basic: "Manual (Transfer)", standard: "Automatic (VA/QRIS)", pro: "Automatic (VA/QRIS)" },
+        { feature: "Shipping Calculation", basic: "Manual / Flat", standard: "Automatic (RajaOngkir)", pro: "Automatic + Custom" },
+        { feature: "Stock Management", basic: true, standard: true, pro: true },
+        { feature: "Product Variants", basic: "Simple (1 variant)", standard: "Multi (Color/Size)", pro: "Complex" },
+        { feature: "Customer Account", basic: false, standard: true, pro: true },
+        { feature: "Wishlist & Review", basic: false, standard: true, pro: true },
+        { feature: "Promo/Coupon Features", basic: false, standard: "Basic", pro: "Advanced" },
+        { feature: "Sales Reports", basic: "Simple", standard: "Complete", pro: "Detailed Analytics" },
+        { feature: "Domain (.com)", basic: true, standard: true, pro: true },
+        { feature: "Hosting / Server", basic: "Shared Hosting", standard: "VPS Hosting", pro: "VPS Hosting" },
+        { feature: "SSL Security", basic: "Standard", standard: "Premium", pro: "Enterprise" },
+        { feature: "Design Revision", basic: "2x Revisions", standard: "4x Revisions", pro: "6x Revisions" },
+        { feature: "Warranty", basic: "15 Days", standard: "30 Days", pro: "45 Days" }
+      ]
+    },
+    'landing-page': {
+      title: 'Landing Page Feature Comparison',
+      rows: [
+        { feature: "Number of Sections", basic: "3-5 Sections", standard: "5-8 Sections", pro: "8-12 Sections" },
+        { feature: "UI/UX Design", basic: "Clean & Simple", standard: "Professional", pro: "High-End Custom" },
+        { feature: "Copywriting", basic: "Headline & CTA", standard: "Persuasive", pro: "Storytelling" },
+        { feature: "Mobile Responsive", basic: true, standard: true, pro: true },
+        { feature: "Contact Form / Lead", basic: "Simple", standard: "Custom Fields", pro: "CRM/Email Integration" },
+        { feature: "WhatsApp Button", basic: true, standard: true, pro: true },
+        { feature: "SEO Optimization", basic: "Basic Meta", standard: "On-Page SEO", pro: "Advanced Technical" },
+        { feature: "Analytics (Google/Pixel)", basic: false, standard: true, pro: true },
+        { feature: "Loading Speed", basic: "Standard", standard: "Optimized", pro: "Ultra Fast (90+)" },
+        { feature: "Domain (.com)", basic: true, standard: true, pro: true },
+        { feature: "Design Revision", basic: "2x Revisions", standard: "4x Revisions", pro: "6x Revisions" },
+        { feature: "Warranty & Maintenance", basic: "15 Days", standard: "30 Days", pro: "45 Days" }
+      ]
+    },
+    'pos-system': {
+      title: 'POS System Feature Comparison',
+      rows: [
+        { feature: "Product Management", basic: "Basic (CRUD)", standard: "Advanced (Modifiers)", pro: "Unlimited + Supplier" },
+        { feature: "Sales Reports", basic: "Daily", standard: "Complete (Gross Profit)", pro: "Analytics (COGS)" },
+        { feature: "Stock Management", basic: false, standard: true, pro: true },
+        { feature: "Multi User", basic: "Admin + Cashier", standard: "Role Detail", pro: "Custom Roles" },
+        { feature: "Receipt Printing", basic: true, standard: "Custom Logo", pro: "Custom Logo + Kitchen" },
+        { feature: "Payment Methods", basic: "Cash", standard: "Cash + QRIS", pro: "Integrated Gateway" },
+        { feature: "Multi Branch", basic: false, standard: false, pro: true },
+        { feature: "Offline Mode", basic: false, standard: false, pro: true },
+        { feature: "Owner Dashboard", basic: "Simple", standard: "Real-time", pro: "Real-time + Mobile" },
+        { feature: "Revision", basic: "2x Revisions", standard: "4x Revisions", pro: "6x Revisions" },
+        { feature: "Maintenance", basic: "15 Days", standard: "30 Days", pro: "45 Days" }
+      ]
+    }
   }
 };

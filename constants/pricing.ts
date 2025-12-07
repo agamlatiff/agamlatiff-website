@@ -49,8 +49,8 @@ export const POS_PACKAGES: PricingPlan[] = [
       'Multi User (Admin + Kasir)',
       'Dashboard sederhana',
       'Backup & Restore data manual',
-      'Revisi 2x',
-      'Maintenance 15 hari',
+      '2x Revisi',
+      'Maintenance 15 Hari',
       'Free Tutorial Video'
     ],
     isPopular: false,
@@ -94,8 +94,8 @@ export const POS_PACKAGES: PricingPlan[] = [
       'Struk Custom (Logo)',
       'Export Laporan (PDF/Excel)',
       'Dashboard Real-time',
-      'Revisi 2x',
-      'Maintenance 30 hari',
+      '4x Revisi',
+      'Maintenance 30 Hari',
       'Free Tutorial Video'
     ],
     isPopular: true,
@@ -140,7 +140,8 @@ export const POS_PACKAGES: PricingPlan[] = [
       'Printer Dapur / Bar (Optional)',
       'Mode Offline (Auto Sync)',
       'Custom Fitur Ringan',
-      'Revisi 2x & Maintenance 45 hari',
+      '6x Revisi',
+      'Maintenance 45 Hari',
       'Free Tutorial Video'
     ],
     isPopular: false,
@@ -185,7 +186,8 @@ export const QUEUE_PACKAGES: PricingPlan[] = [
       'Statistik Harian',
       'Mode Responsif (TV/Tablet)',
       'Branding warna sesuai bisnis',
-      'Revisi 2x & Maintenance 15 Hari'
+      '2x Revisi',
+      'Maintenance 15 Hari'
     ],
     isPopular: false,
     cta: 'Ambil Basic Queue',
@@ -226,7 +228,8 @@ export const QUEUE_PACKAGES: PricingPlan[] = [
       'Real-time Dashboard Display TV',
       'Statistik Mingguan/Bulanan',
       'Log Aktivitas Petugas',
-      'Revisi 4x & Maintenance 30 Hari'
+      '4x Revisi',
+      'Maintenance 30 Hari'
     ],
     isPopular: true,
     cta: 'Ambil Standard Queue',
@@ -267,7 +270,8 @@ export const QUEUE_PACKAGES: PricingPlan[] = [
       'Laporan Performa Petugas (KPI)',
       'Mode Offline Sync',
       'Penjadwalan Jam Layanan',
-      'Revisi 6x & Maintenance 45 Hari'
+      '6x Revisi',
+      'Maintenance 45 Hari'
     ],
     isPopular: false,
     cta: 'Konsultasi Premium',
@@ -309,8 +313,8 @@ export const ATTENDANCE_PACKAGES: PricingPlan[] = [
       'User role admin & staff',
       'Pengaturan jam kerja',
       'Dashboard sederhana',
-      '2x revisi',
-      'Maintenance 15 hari'
+      '2x Revisi',
+      'Maintenance 15 Hari'
     ],
     isPopular: false,
     cta: 'Ambil Basic Presensi',
@@ -351,7 +355,8 @@ export const ATTENDANCE_PACKAGES: PricingPlan[] = [
       'Peta Lokasi Absensi',
       'Notifikasi Telat / Pulang Cepat',
       'Dashboard Lengkap',
-      '4x revisi & Maintenance 30 hari'
+      '4x Revisi',
+      'Maintenance 30 Hari'
     ],
     isPopular: true,
     cta: 'Ambil Standard Presensi',
@@ -392,7 +397,8 @@ export const ATTENDANCE_PACKAGES: PricingPlan[] = [
       'Performance Tracking',
       'Approval Cuti Berlevel',
       'Integrasi Sistem Lain (API)',
-      '6x revisi & Maintenance 45 hari'
+      '6x Revisi',
+      'Maintenance 45 Hari'
     ],
     isPopular: false,
     cta: 'Konsultasi Premium',
@@ -439,8 +445,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Basic SEO On-Page',
         'Full Source Code (Handover)',
         'Panduan Update Konten Dasar',
-        '2x Revisi Minor',
-        'Garansi & Maintenance 15 Hari'
+        '2x Revisi',
+        'Maintenance 15 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket STARTER',
@@ -476,7 +482,7 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
             items: [
               "Handover full source code & aset.",
               "Panduan singkat update konten dasar.",
-              "2x revisi minor setelah implementasi awal."
+              "2x revisi."
             ]
           }
         ],
@@ -507,8 +513,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'SEO Dasar & Optimasi On-Page',
         'Integrasi Tracking / Analitik',
         'Full Source Code & Aset',
-        '4x Revisi Minor',
-        'Garansi & Maintenance 30 Hari'
+        '4x Revisi',
+        'Maintenance 30 Hari'
       ],
       isPopular: true,
       cta: 'Ambil Paket GROWTH',
@@ -547,7 +553,7 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
               "Full source code & aset + akses penuh.",
               "Deployment + konfigurasi hosting + domain + SSL.",
               "Dokumentasi panduan ubah konten dasar.",
-              "3x revisi minor setelah live."
+              "4x revisi."
             ]
           }
         ],
@@ -578,8 +584,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'SEO On-Page & Technical',
         'Setup Hosting, Domain, SSL Premium',
         'Dokumentasi Lengkap & Hak Milik Penuh',
-        '6x Revisi Minor',
-        'Garansi & Maintenance 45 Hari'
+        '6x Revisi',
+        'Maintenance 45 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket ULTIMATE',
@@ -650,8 +656,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Basic SEO On-Page',
         'Full Source Code (Handover)',
         'Panduan Update Konten',
-        '2x Revisi Minor',
-        'Garansi & Maintenance 15 Hari'
+        '2x Revisi',
+        'Maintenance 15 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket Starter',
@@ -688,7 +694,7 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
             items: [
               "Full source code + akses admin/data (Handover).",
               "Panduan singkat update konten dasar.",
-              "2x revisi minor & Maintenance 15 Hari."
+              "2x revisi."
             ]
           }
         ],
@@ -719,8 +725,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Integrasi Analytics / Tracking',
         'CMS / Admin Panel (Opsional)',
         'Full Source Code & Aset',
-        '4x Revisi Minor',
-        'Garansi & Maintenance 30 Hari'
+        '4x Revisi',
+        'Maintenance 30 Hari'
       ],
       isPopular: true,
       cta: 'Ambil Paket Growth',
@@ -788,8 +794,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Setup Server/Hosting Premium',
         'Prioritas Support',
         'Prioritas Support',
-        '6x Revisi Minor',
-        'Garansi & Maintenance 45 Hari'
+        '6x Revisi',
+        'Maintenance 45 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket Ultimate',
@@ -825,7 +831,7 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
             items: [
               "Dokumentasi lengkap & full handover.",
               "Prioritas support & maintenance.",
-              "6x revisi minor & Maintenance 45 Hari."
+              "6x Revisi & Maintenance 45 Hari."
             ]
           }
         ],
@@ -859,8 +865,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Setup Hosting & Domain Dasar',
         'Source Code & Database Full',
         'Dokumentasi Penggunaan Admin',
-        '2x Revisi Minor',
-        'Garansi & Maintenance 15 Hari'
+        '2x Revisi',
+        'Maintenance 15 Hari'
       ],
       isPopular: false,
       cta: 'Ambil Paket BASIC',
@@ -906,7 +912,7 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
               "Full source code + database (Hak Milik Penuh).",
               "Dokumentasi dasar penggunaan admin panel.",
               "Dokumentasi dasar penggunaan admin panel.",
-              "2x revisi minor & Maintenance 15 Hari."
+              "2x Revisi."
             ]
           }
         ],
@@ -938,8 +944,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Struktur Kode Maintainable',
         'Setup Hosting, Domain, SSL',
         'Keamanan & Optimasi Dasar',
-        '4x Revisi Minor',
-        'Garansi & Maintenance 30 Hari'
+        '4x Revisi',
+        'Maintenance 30 Hari'
       ],
       isPopular: true,
       cta: 'Ambil Paket STANDARD',
@@ -1008,8 +1014,8 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
         'Optimasi Performa & Keamanan Tinggi',
         'Integrasi Logistik / Ongkir (Opsional)',
         'Support & Maintenance Prioritas',
-        '6x Revisi Minor',
-        'Garansi & Maintenance 45 Hari',
+        '6x Revisi',
+        'Maintenance 45 Hari',
         'Skalabilitas Tinggi (Siap Trafik Besar)'
       ],
       isPopular: false,
@@ -1029,7 +1035,7 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
           {
             title: "💳 Transaksi & Otomatisasi Lengkap",
             items: [
-              "Checkout & Payment Gateway lengkap (CC, VA, E-Wallet, QRIS).",
+              "Checkout & Payment Gateway lengkap (VA, E-Wallet, QRIS).",
               "Opsi Login / Guest Checkout.",
               "Manajemen akun pelanggan: histori order, repeat order mudah.",
               "Sistem manajemen order & pembayaran otomatis."
@@ -1047,7 +1053,7 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
           {
             title: "🔒 Infrastruktur & Skalabilitas",
             items: [
-              "Setup server (VPS/Cloud) + Domain + SSL Premium.",
+              "Setup server (VPS) + Domain + SSL Premium.",
               "Optimasi performa (caching, speed) & keamanan tinggi.",
               "Arsitektur scalable: siap untuk trafik tinggi & pengembangan fitur masa depan."
             ]

@@ -129,7 +129,7 @@ const Services: React.FC = () => {
       case 'e-commerce':
         return {
           rows: ECOMMERCE_COMPARISON,
-          plans: { basic: 'Basic', standard: 'Standard', pro: 'Pro' },
+          plans: { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' },
           title: 'Perbandingan Fitur Toko Online'
         };
       case 'landing-page':

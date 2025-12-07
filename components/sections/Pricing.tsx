@@ -1,49 +1,59 @@
 import React, { useState } from 'react';
-import { SERVICE_PRICING, PricingPlan } from '../../constants/pricing';
-import { ECOMMERCE_COMPARISON, LANDING_PAGE_COMPARISON, POS_COMPARISON } from '../../constants/comparison';
-import ComparisonTable from '../ui/ComparisonTable';
-import { Check, Zap, Eye, Star, Store, Smartphone, Rocket } from 'lucide-react';
-import PlanDetailModal from '../ui/PlanDetailModal';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Zap,
+  Check,
+  Eye,
+  ShoppingCart,
+  Store,
+  Layout,
+  Globe,
+  Calendar,
+  Plane,
+  RefreshCw
+} from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import { SERVICE_PRICING, PricingPlan } from '../../constants/pricing';
 import { createWhatsAppLink } from '@/constants/whatsapp';
+import ComparisonTable from '../ui/ComparisonTable';
+import PlanDetailModal from '../ui/PlanDetailModal';
+import {
+  ECOMMERCE_COMPARISON,
+  LANDING_PAGE_COMPARISON,
+  POS_COMPARISON,
+  COMPANY_PROFILE_COMPARISON
+} from '../../constants/comparison';
 
 const CATEGORIES = [
-  { id: 'pos-system', label: 'Sistem Kasir (POS)', icon: Store },
-  { id: 'landing-page', label: 'Landing Page', icon: Rocket },
-  { id: 'e-commerce', label: 'Toko Online', icon: Smartphone }
+  { id: 'e-commerce', label: 'E-Commerce', icon: ShoppingCart },
+  { id: 'pos-system', label: 'Kasir (POS)', icon: Store },
+  { id: 'landing-page', label: 'Landing Page', icon: Layout },
+  { id: 'company-profile', label: 'Company Profile', icon: Globe },
+  { id: 'booking-system', label: 'Booking System', icon: Calendar },
+  { id: 'travel-website', label: 'Tour & Travel', icon: Plane },
+  { id: 'revamp-website', label: 'Revamp Web', icon: RefreshCw },
 ];
 
 const Pricing: React.FC = () => {
+  const { translations, t } = useLanguage();
+  const [activeCategory, setActiveCategory] = useState('e-commerce');
   const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
-  const [activeCategory, setActiveCategory] = useState('pos-system');
-  const { t, translations } = useLanguage();
 
-  const activePackages = SERVICE_PRICING[activeCategory] || SERVICE_PRICING['pos-system'];
+  const activePackages = SERVICE_PRICING[activeCategory] || [];
 
   const getComparisonData = () => {
-    switch (activeCategory) {
-      case 'e-commerce':
-        return {
-          rows: ECOMMERCE_COMPARISON,
-          plans: { basic: 'Basic', standard: 'Standard', pro: 'Pro' },
-          title: 'Perbandingan Fitur Toko Online'
-        };
-      case 'landing-page':
-        return {
-          rows: LANDING_PAGE_COMPARISON,
-          plans: { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' },
-          title: 'Perbandingan Fitur Landing Page'
-        };
-      case 'pos-system':
-        return {
-          rows: POS_COMPARISON,
-          plans: { basic: 'Basic', standard: 'Standard', pro: 'Premium' },
-          title: 'Perbandingan Fitur Sistem Kasir'
-        };
-      default:
-        return null;
+    // @ts-ignore
+    const features = translations.pricingFeatures?.[activeCategory];
+
+    if (features) {
+      return {
+        title: features.title,
+        rows: features.rows,
+        plans: { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' }
+      };
     }
+
+    return null;
   };
 
   const comparisonData = getComparisonData();
@@ -111,7 +121,7 @@ const Pricing: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`min-w-[300px] max-w-[320px] md:min-w-0 md:max-w-none snap-center flex-shrink-0 relative rounded-2xl p-8 transition-all duration-300 flex flex-col h-full ${plan.isPopular
+                  className={`w-[85vw] md:w-auto md:max-w-none snap-center flex-shrink-0 relative rounded-2xl p-8 transition-all duration-300 flex flex-col h-full ${plan.isPopular
                     ? 'bg-white dark:bg-slate-900 border-2 border-primary shadow-2xl shadow-primary/10 scale-105 z-10'
                     : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/30 hover:shadow-xl'
                     }`}
