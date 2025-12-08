@@ -7,7 +7,6 @@ import PlanDetailModal from '../ui/PlanDetailModal';
 import { useLanguage } from '../../context/LanguageContext';
 import { SERVICES } from '@/constants/services';
 import { createWhatsAppLink } from '@/constants/whatsapp';
-import { ECOMMERCE_COMPARISON, LANDING_PAGE_COMPARISON, POS_COMPARISON, COMPANY_PROFILE_COMPARISON } from '../../constants/comparison';
 import ComparisonTable from '../ui/ComparisonTable';
 
 const iconMap = {
@@ -62,6 +61,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({ children, className = "",
 
 const Services: React.FC = () => {
   const [activeTabId, setActiveTabId] = useState(SERVICES[0]?.id || 'e-commerce');
+  const [mobilePlanIndex, setMobilePlanIndex] = useState(1); // Default to middle plan (usually Standard/Growth)
   const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -83,6 +83,7 @@ const Services: React.FC = () => {
 
   const handleTabClick = (id: string) => {
     setActiveTabId(id);
+    setMobilePlanIndex(1); // Reset to popular plan when changing service category
     setSearchParams({ tab: id }, { replace: true });
   };
 
@@ -125,34 +126,25 @@ const Services: React.FC = () => {
   const tService = translations.services[activeTabId as keyof typeof translations.services];
 
   const getComparisonData = () => {
-    switch (activeTabId) {
-      case 'e-commerce':
-        return {
-          rows: ECOMMERCE_COMPARISON,
-          plans: { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' },
-          title: 'Perbandingan Fitur Toko Online'
-        };
-      case 'landing-page':
-        return {
-          rows: LANDING_PAGE_COMPARISON,
-          plans: { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' },
-          title: 'Perbandingan Fitur Landing Page'
-        };
-      case 'company-profile':
-        return {
-          rows: COMPANY_PROFILE_COMPARISON,
-          plans: { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' },
-          title: 'Perbandingan Fitur Company Profile'
-        };
-      case 'pos-system':
-        return {
-          rows: POS_COMPARISON,
-          plans: { basic: 'Basic', standard: 'Standard', pro: 'Premium' },
-          title: 'Perbandingan Fitur Sistem Kasir'
-        };
-      default:
-        return null;
+    // @ts-ignore
+    const features = translations.pricingFeatures?.[activeTabId];
+
+    if (features) {
+      // Custom plan names for specific categories if needed
+      let plans = { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' };
+
+      if (activeTabId === 'pos-system') {
+        plans = { basic: 'Basic', standard: 'Standard', pro: 'Premium' };
+      }
+
+      return {
+        title: features.title,
+        rows: features.rows,
+        plans: plans
+      };
     }
+
+    return null;
   };
 
   const comparisonData = getComparisonData();
@@ -278,9 +270,39 @@ const Services: React.FC = () => {
             </motion.div>
           </AnimatePresence>
 
+          {/* Mobile Pricing Tabs */}
+          <div className="md:hidden flex justify-center mb-8 px-4">
+            <div className="flex p-1.5 bg-slate-100 dark:bg-slate-800 rounded-xl w-full max-w-sm border border-slate-200 dark:border-slate-700">
+              {activePricingPlans.map((plan, index) => {
+                // @ts-ignore
+                const planName = translations.pricing[plan.id]?.name || plan.name;
+                const isActive = mobilePlanIndex === index;
+                return (
+                  <button
+                    key={plan.id}
+                    onClick={() => setMobilePlanIndex(index)}
+                    className={`flex-1 py-2.5 text-xs font-bold rounded-lg transition-all duration-300 relative ${isActive
+                      ? 'text-primary shadow-sm'
+                      : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                      }`}
+                  >
+                    {isActive && (
+                      <motion.div
+                        layoutId="activePlanTab"
+                        className="absolute inset-0 bg-white dark:bg-slate-700 rounded-lg shadow-sm border border-slate-200/50 dark:border-slate-600"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+                    <span className="relative z-10">{planName.replace('Paket ', '').replace(' Package', '')}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           {/* Pricing Cards Grid */}
-          <div className="flex flex-nowrap md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 md:gap-10 pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar items-stretch">
-            <AnimatePresence mode="popLayout">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+            <AnimatePresence mode="wait">
               {activePricingPlans.map((plan, index) => {
                 const PlanIcon = plan.icon;
                 // @ts-ignore
@@ -290,15 +312,17 @@ const Services: React.FC = () => {
                 const planFeatures = planTrans.features || plan.features;
                 const planCta = planTrans.cta || plan.cta;
 
+                // Logic to hide cards on mobile that aren't selected
+                const isActiveMobile = mobilePlanIndex === index;
+
                 return (
                   <motion.div
                     key={plan.id}
                     initial={{ opacity: 0, y: 30, scale: 0.95 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="min-w-[300px] max-w-[320px] md:min-w-0 md:max-w-none snap-center h-full flex-shrink-0"
+                    className={`h-full ${isActiveMobile ? 'block' : 'hidden md:block'}`}
                   >
                     <SpotlightCard
                       isPopular={plan.isPopular}
@@ -416,12 +440,7 @@ const Services: React.FC = () => {
             </AnimatePresence>
           </div>
 
-          {/* Swipe Hint */}
-          <div className="md:hidden text-center mt-2 mb-6 animate-pulse">
-            <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
-              {t('common.swipeHint')}
-            </span>
-          </div>
+
 
           {/* Comparison Table */}
           {comparisonData && (
@@ -430,6 +449,11 @@ const Services: React.FC = () => {
               title={comparisonData.title}
               plans={comparisonData.plans}
               rows={comparisonData.rows}
+              activeTab={['basic', 'standard', 'pro'][mobilePlanIndex] as 'basic' | 'standard' | 'pro'}
+              onTabChange={(tab) => {
+                const index = ['basic', 'standard', 'pro'].indexOf(tab);
+                if (index !== -1) setMobilePlanIndex(index);
+              }}
             />
           )}
 

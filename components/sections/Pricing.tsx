@@ -17,12 +17,6 @@ import { SERVICE_PRICING, PricingPlan } from '../../constants/pricing';
 import { createWhatsAppLink } from '@/constants/whatsapp';
 import ComparisonTable from '../ui/ComparisonTable';
 import PlanDetailModal from '../ui/PlanDetailModal';
-import {
-  ECOMMERCE_COMPARISON,
-  LANDING_PAGE_COMPARISON,
-  POS_COMPARISON,
-  COMPANY_PROFILE_COMPARISON
-} from '../../constants/comparison';
 
 const CATEGORIES = [
   { id: 'e-commerce', label: 'E-Commerce', icon: ShoppingCart },
@@ -37,6 +31,7 @@ const CATEGORIES = [
 const Pricing: React.FC = () => {
   const { translations, t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState('e-commerce');
+  const [mobilePlanIndex, setMobilePlanIndex] = useState(1);
   const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
 
   const activePackages = SERVICE_PRICING[activeCategory] || [];
@@ -46,10 +41,15 @@ const Pricing: React.FC = () => {
     const features = translations.pricingFeatures?.[activeCategory];
 
     if (features) {
+      let plans = { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' };
+      if (activeCategory === 'pos-system') {
+        plans = { basic: 'Basic', standard: 'Standard', pro: 'Premium' };
+      }
+
       return {
         title: features.title,
         rows: features.rows,
-        plans: { basic: 'Starter', standard: 'Growth', pro: 'Ultimate' }
+        plans
       };
     }
 
@@ -89,7 +89,10 @@ const Pricing: React.FC = () => {
               return (
                 <button
                   key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
+                  onClick={() => {
+                    setActiveCategory(cat.id);
+                    setMobilePlanIndex(1);
+                  }}
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${isActive
                     ? 'bg-white dark:bg-slate-700 text-primary shadow-sm'
                     : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
@@ -103,7 +106,38 @@ const Pricing: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-4 md:gap-8 pb-6 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar items-start">
+        {/* Mobile Pricing Tabs */}
+        <div className="md:hidden flex justify-center mb-8">
+          <div className="flex p-1.5 bg-slate-100 dark:bg-slate-800 rounded-xl w-full max-w-sm border border-slate-200 dark:border-slate-700">
+            {activePackages.map((plan, index) => {
+              // @ts-ignore
+              const planInfo = translations.pricing?.[plan.id] || plan;
+              const planName = planInfo.name || plan.name;
+              const isActive = mobilePlanIndex === index;
+              return (
+                <button
+                  key={plan.id}
+                  onClick={() => setMobilePlanIndex(index)}
+                  className={`flex-1 py-2.5 text-xs font-bold rounded-lg transition-all duration-300 relative ${isActive
+                    ? 'text-primary shadow-sm'
+                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                    }`}
+                >
+                  {isActive && (
+                    <motion.div
+                      layoutId="activePlanTabPricing"
+                      className="absolute inset-0 bg-white dark:bg-slate-700 rounded-lg shadow-sm border border-slate-200/50 dark:border-slate-600"
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                  )}
+                  <span className="relative z-10">{planName.replace('Paket ', '').replace(' Package', '')}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           <AnimatePresence mode="wait">
             {activePackages.map((plan, index) => {
               const Icon = plan.icon;
@@ -114,16 +148,18 @@ const Pricing: React.FC = () => {
               const planFeatures = planTrans.features || plan.features;
               const planCta = planTrans.cta || plan.cta;
 
+              const isActiveMobile = mobilePlanIndex === index;
+
               return (
                 <motion.div
                   key={`${activeCategory}-${plan.id}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`w-[85vw] md:w-auto md:max-w-none snap-center flex-shrink-0 relative rounded-2xl p-8 transition-all duration-300 flex flex-col h-full ${plan.isPopular
-                    ? 'bg-white dark:bg-slate-900 border-2 border-primary shadow-2xl shadow-primary/10 scale-105 z-10'
-                    : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/30 hover:shadow-xl'
+                  className={`w-full relative rounded-2xl p-8 transition-all duration-300 flex flex-col h-full ${isActiveMobile ? 'block' : 'hidden md:flex'
+                    } ${plan.isPopular
+                      ? 'bg-white dark:bg-slate-900 border-2 border-primary shadow-2xl shadow-primary/10 scale-100 md:scale-105 z-10'
+                      : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/30 hover:shadow-xl'
                     }`}
                 >
                   {plan.isPopular && (
@@ -197,12 +233,6 @@ const Pricing: React.FC = () => {
           </AnimatePresence>
         </div>
 
-        {/* Swipe Hint */}
-        <div className="md:hidden text-center mt-4 animate-pulse">
-          <span className="text-xs font-medium text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
-            {t('common.swipeHint')}
-          </span>
-        </div>
 
         {/* Comparison Table */}
         {comparisonData && (
@@ -211,6 +241,7 @@ const Pricing: React.FC = () => {
             title={comparisonData.title}
             plans={comparisonData.plans}
             rows={comparisonData.rows}
+            activeTab={['basic', 'standard', 'pro'][mobilePlanIndex] as 'basic' | 'standard' | 'pro'}
           />
         )}
 

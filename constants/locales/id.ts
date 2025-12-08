@@ -600,7 +600,7 @@ export const id = {
     mobile: {
       winner: "WINNER",
       description: "Pilihan terbaik untuk brand yang ingin mandiri tanpa potongan biaya admin dan batasan fitur.",
-      agency: "Manual (WhatsApp)"
+      agency: "Jasa Web Umum"
     },
     list: [
       {
@@ -1791,6 +1791,42 @@ export const id = {
         }
       ]
     },
+    'travel-premium': {
+      name: 'PREMIUM',
+      description: 'Professional Travel Agent. Unlimited paket & formulir booking lengkap.',
+      features: [
+        'Unlimited Paket Wisata',
+        'Filter Destinasi / Kategori',
+        'Form Booking Custom',
+        'Blog Travel Tips',
+        'Testimoni Pelanggan',
+        'Integrasi Google Maps',
+        'SEO Basic untuk Wisata',
+        '4x Revisi',
+        'Maintenance 30 Hari'
+      ],
+      cta: 'Ambil Paket Premium',
+      details: [
+        {
+          feature: "Pencarian Paket Mudah",
+          problem: "Pelanggan bingung cari paket yang cocok.",
+          solution: "Fitur filter berdasarkan lokasi, harga, atau durasi hari.",
+          benefit: "User experience bagus, pelanggan cepat menemukan yang dicari."
+        },
+        {
+          feature: "SEO Pariwisata",
+          problem: "Ingin ditemukan turis yang cari 'Paket Wisata Bali' di Google.",
+          solution: "Struktur web SEO friendly dan fitur blog untuk artikel wisata.",
+          benefit: "Traffic gratis dari Google (Organic Search)."
+        },
+        {
+          feature: "Data Tamu Lengkap",
+          problem: "Data booking di WA sering tidak lengkap.",
+          solution: "Form booking website meminta detail lengkap (Paspor/NIK/Tgl).",
+          benefit: "Administrasi tour lebih rapi sejak awal."
+        }
+      ]
+    },
     'travel-pro': {
       name: 'PRO',
       description: 'Online Travel Agent (OTA) System. Pembayaran online & invoice otomatis.',
@@ -2008,6 +2044,23 @@ export const id = {
         { feature: "Dashboard Owner", basic: "Sederhana", standard: "Real-time", pro: "Real-time + Mobile" },
         { feature: "Revisi", basic: "2x Revisi", standard: "4x Revisi", pro: "6x Revisi" },
         { feature: "Maintenance", basic: "15 Hari", standard: "30 Hari", pro: "45 Hari" }
+      ]
+    },
+    'company-profile': {
+      title: 'Perbandingan Fitur Company Profile',
+      rows: [
+        { feature: "Jumlah Halaman", basic: "4 Halaman", standard: "6 Halaman", pro: "10+ Halaman" },
+        { feature: "Desain UI/UX", basic: "Clean & Professional", standard: "Custom Brand Identity", pro: "Premium Exclusive" },
+        { feature: "Halaman Portofolio", basic: false, standard: "Max 10 Project", pro: "Unlimited + Filter" },
+        { feature: "Fitur Blog / Artikel", basic: false, standard: true, pro: true },
+        { feature: "Halaman Karir/Rekrutmen", basic: false, standard: false, pro: true },
+        { feature: "Multi Bahasa", basic: false, standard: false, pro: "Opsional" },
+        { feature: "SEO Optimization", basic: "Basic", standard: "Standard", pro: "Advanced" },
+        { feature: "Analitik Pengunjung", basic: false, standard: true, pro: true },
+        { feature: "Form Kontak / Leads", basic: "Standard", standard: "Custom + WA", pro: "Terintegrasi CRM" },
+        { feature: "CMS (Admin Panel)", basic: false, standard: true, pro: true },
+        { feature: "Revisi Desain", basic: "2x Revisi", standard: "4x Revisi", pro: "6x Revisi" },
+        { feature: "Garansi & Maintenance", basic: "15 Hari", standard: "30 Hari", pro: "45 Hari" }
       ]
     }
   }

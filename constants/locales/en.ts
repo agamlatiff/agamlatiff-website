@@ -2,10 +2,10 @@ export const en = {
   hero: {
     badge: "E-Commerce Specialist",
     headline: {
-      part1: "Tired of Price Wars",
-      part2: "in Marketplaces?"
+      part1: "Tired of Battling",
+      part2: "Price Wars?"
     },
-    subheadline: "It's time to have <strong>Your Own Online Store</strong>. Build a more professional brand, secure customer database, and maximize profit without admin fees.",
+    subheadline: "Don't let marketplaces dictate your value. Build **Your Own Professional Store** to control your pricing, eliminate admin fees, and secure your customer data.",
     cta: {
       consult: "Free Consultation",
       processing: "Processing...",
@@ -2033,6 +2033,23 @@ export const en = {
         { feature: "Owner Dashboard", basic: "Simple", standard: "Real-time", pro: "Real-time + Mobile" },
         { feature: "Revision", basic: "2x Revisions", standard: "4x Revisions", pro: "6x Revisions" },
         { feature: "Maintenance", basic: "15 Days", standard: "30 Days", pro: "45 Days" }
+      ]
+    },
+    'company-profile': {
+      title: 'Company Profile Feature Comparison',
+      rows: [
+        { feature: "Number of Pages", basic: "4 Pages", standard: "6 Pages", pro: "10+ Pages" },
+        { feature: "UI/UX Design", basic: "Clean & Professional", standard: "Custom Brand Identity", pro: "Premium Exclusive" },
+        { feature: "Portfolio Page", basic: false, standard: "Max 10 Projects", pro: "Unlimited + Filter" },
+        { feature: "Blog / Article Feature", basic: false, standard: true, pro: true },
+        { feature: "Career / Recruitment Page", basic: false, standard: false, pro: true },
+        { feature: "Multi Language", basic: false, standard: false, pro: "Optional" },
+        { feature: "SEO Optimization", basic: "Basic", standard: "Standard", pro: "Advanced" },
+        { feature: "Visitor Analytics", basic: false, standard: true, pro: true },
+        { feature: "Contact Form / Leads", basic: "Standard", standard: "Custom + WA", pro: "CRM Integrated" },
+        { feature: "CMS (Admin Panel)", basic: false, standard: true, pro: true },
+        { feature: "Design Revision", basic: "2x Revisions", standard: "4x Revisions", pro: "6x Revisions" },
+        { feature: "Warranty & Maintenance", basic: "15 Days", standard: "30 Days", pro: "45 Days" }
       ]
     }
   }

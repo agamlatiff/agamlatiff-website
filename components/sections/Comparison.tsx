@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react';
-import { Check, Star, ShieldCheck, ShoppingBag, MessageCircle, User, Store } from 'lucide-react';
+import { Check, Star, ShieldCheck, ShoppingBag, MessageCircle, User, Store, X } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Comparison: React.FC = () => {
   const { t, translations } = useLanguage();
   const [competitorMode, setCompetitorMode] = useState('marketplace');
-  const [activeTab, setActiveTab] = useState('custom');
+
 
   const competitors = [
     { id: 'manual', icon: User, label: 'Manual' },
@@ -29,8 +29,9 @@ const Comparison: React.FC = () => {
         </div>
 
         {/* Competitor Selector (Desktop & Mobile) */}
-        <div className="flex justify-center mb-10">
-          <div className="bg-white dark:bg-slate-950 p-1.5 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 inline-flex flex-wrap justify-center gap-1">
+        {/* Competitor Selector (Desktop & Mobile) - Scrollable on mobile */}
+        <div className="flex justify-center mb-10 px-4">
+          <div className="bg-white dark:bg-slate-950 p-1.5 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 inline-flex flex-nowrap overflow-x-auto max-w-full justify-start md:justify-center gap-1 no-scrollbar space-x-1 snap-x">
             {competitors.map((comp) => {
               const Icon = comp.icon;
               const isSelected = competitorMode === comp.id;
@@ -108,102 +109,61 @@ const Comparison: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile View Cards (Tabbed Filter) */}
-        <div className="md:hidden">
-          {/* Mobile Tabs */}
-          <div className="bg-white dark:bg-slate-900 p-1.5 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-800 mb-8 flex relative z-10">
-            {[competitorMode, 'custom'].map((tab) => {
-              const isSelected = activeTab === tab;
-              const isCustom = tab === 'custom';
-              // Find icon for the current tab
-              const CompIcon = competitors.find(c => c.id === tab)?.icon || Star;
+        {/* Mobile View Cards (Direct Comparison - Vertical Stack) */}
+        <div className="md:hidden space-y-6">
+          {translations.comparison.list.map((row: any, idx: number) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.05 }}
+              className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm"
+            >
+              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 border-b border-slate-100 dark:border-slate-800 pb-3">
+                {row.criteria}
+              </h3>
 
-              return (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`flex-1 py-3 px-2 rounded-xl transition-all duration-300 relative flex flex-col items-center gap-1.5 ${isSelected
-                    ? 'bg-primary/5 text-primary'
-                    : 'text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300'
-                    }`}
-                >
-                  {isSelected && (
-                    <motion.div
-                      layoutId="activeTabBg"
-                      className="absolute inset-0 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
-                  )}
-                  <div className="relative z-10 flex flex-col items-center gap-1">
-                    <CompIcon size={18} className={isSelected ? 'fill-primary/20' : ''} />
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-center leading-tight">
-                      {isCustom ? 'Agam' : t(`comparison.headers.${tab}`).split(' ')[0]}
-                    </span>
+              <div className="space-y-4">
+                {/* Agam (Hero) */}
+                <div className="relative overflow-hidden rounded-xl bg-primary/5 border border-primary/20 p-4">
+                  <div className="absolute top-0 right-0 px-2 py-1 bg-primary text-[10px] font-bold text-white rounded-bl-lg">
+                    WINNER
                   </div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Mobile Content */}
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab + competitorMode}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.2 }}
-                className={`bg-white dark:bg-slate-900 rounded-[2rem] border-2 shadow-2xl overflow-hidden ${activeTab === 'custom'
-                  ? 'border-primary/50 shadow-primary/10'
-                  : 'border-slate-100 dark:border-slate-800'
-                  }`}
-              >
-                {/* Header Banner */}
-                <div className={`py-6 px-6 text-center rounded-t-[1.8rem] ${activeTab === 'custom'
-                  ? 'bg-primary/5'
-                  : 'bg-slate-50 dark:bg-slate-800/50'
-                  }`}>
-                  <h3 className={`text-xl font-bold mb-1 ${activeTab === 'custom' ? 'text-primary' : 'text-slate-900 dark:text-white'}`}>
-                    {activeTab === 'custom' ? 'Agam E-Commerce' : t(`comparison.headers.${activeTab}`)}
-                  </h3>
-                  <p className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-widest">
-                    {activeTab === 'custom' ? t('comparison.mobile.winner') : 'Alternative Option'}
-                  </p>
-                </div>
-
-                {/* List Items */}
-                <div className="divide-y divide-slate-100 dark:divide-slate-800">
-                  {translations.comparison.list.map((row: any, idx: number) => (
-                    <div key={idx} className="p-6 flex flex-col gap-3">
-                      <div className="flex items-center gap-2">
-                        <div className={`w-1.5 h-1.5 rounded-full ${activeTab === 'custom' ? 'bg-primary' : 'bg-slate-300 dark:bg-slate-600'}`}></div>
-                        <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                          {row.criteria}
-                        </span>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5 bg-primary rounded-full p-1 shadow-sm shrink-0">
+                      <Check size={14} className="text-white" strokeWidth={3} />
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-bold text-primary mb-1 uppercase tracking-wide">
+                        {t('comparison.headers.custom')}
                       </div>
-                      <div className={`text-lg leading-snug ${activeTab === 'custom'
-                        ? 'font-bold text-primary'
-                        : 'font-medium text-slate-700 dark:text-slate-300'
-                        }`}>
-                        {row[activeTab]}
+                      <div className="font-bold text-slate-900 dark:text-white text-base leading-snug">
+                        {row.custom}
                       </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
 
-                {/* Bottom CTA if Custom */}
-                {activeTab === 'custom' && (
-                  <div className="p-6 bg-primary/5 border-t border-primary/10">
-                    <div className="flex items-center justify-center gap-2 text-primary font-bold text-sm">
-                      <ShieldCheck size={16} />
-                      <span>{t('comparison.headers.bestValue')}</span>
+                {/* Competitor (Comparison) */}
+                <div className="relative pl-1">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5 bg-slate-200 dark:bg-slate-800 rounded-full p-1 shrink-0">
+                      <X size={14} className="text-slate-500" strokeWidth={3} />
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-wide">
+                        {t(`comparison.headers.${competitorMode}`)}
+                      </div>
+                      <div className="font-medium text-slate-600 dark:text-slate-400 text-sm leading-snug">
+                        {row[competitorMode]}
+                      </div>
                     </div>
                   </div>
-                )}
-              </motion.div>
-            </AnimatePresence>
-          </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
