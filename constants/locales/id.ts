@@ -1170,14 +1170,6 @@ export const id = {
               "Basic SEO on-page: meta tag dasar, URL friendly."
             ]
           },
-          {
-            title: "📄 Dokumentasi & Handover",
-            items: [
-              "Handover full source code & aset.",
-              "Panduan singkat update konten dasar.",
-              "2x revisi."
-            ]
-          }
         ],
         valueProps: {
           title: "🎯 Untuk Siapa Paket Starter Ini Cocok",
@@ -1241,7 +1233,6 @@ export const id = {
               "Full source code & aset + akses penuh.",
               "Deployment + konfigurasi hosting + domain + SSL.",
               "Dokumentasi panduan ubah konten dasar.",
-              "4x revisi."
             ]
           }
         ],
@@ -1480,14 +1471,6 @@ export const id = {
               "Setup hosting + domain (shared/ringan) sesuai kesepakatan.",
               "Struktur kode sederhana & ringan (React + Laravel).",
               "Keamanan dasar: validasi input, proteksi standar."
-            ]
-          },
-          {
-            title: "🎁 Layanan Tambahan",
-            items: [
-              "Full source code + database (Hak Milik Penuh).",
-              "Dokumentasi dasar penggunaan admin panel.",
-              "1x revisi minor sebelum final delivery."
             ]
           }
         ],

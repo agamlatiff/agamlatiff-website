@@ -477,14 +477,6 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
               "Basic SEO on-page: meta tag dasar, URL friendly."
             ]
           },
-          {
-            title: "📄 Dokumentasi & Handover",
-            items: [
-              "Handover full source code & aset.",
-              "Panduan singkat update konten dasar.",
-              "2x revisi."
-            ]
-          }
         ],
         valueProps: {
           title: "🎯 Untuk Siapa Paket Starter Ini Cocok",
@@ -553,7 +545,6 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
               "Full source code & aset + akses penuh.",
               "Deployment + konfigurasi hosting + domain + SSL.",
               "Dokumentasi panduan ubah konten dasar.",
-              "4x revisi."
             ]
           }
         ],
@@ -694,7 +685,6 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
             items: [
               "Full source code + akses admin/data (Handover).",
               "Panduan singkat update konten dasar.",
-              "2x revisi."
             ]
           }
         ],
@@ -762,7 +752,6 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
             items: [
               "Full source code + aset + akses lengkap.",
               "Panduan update konten mandiri.",
-              "4x revisi minor & Maintenance 30 Hari."
             ]
           }
         ],
@@ -831,7 +820,7 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
             items: [
               "Dokumentasi lengkap & full handover.",
               "Prioritas support & maintenance.",
-              "6x Revisi & Maintenance 45 Hari."
+              
             ]
           }
         ],
@@ -904,15 +893,6 @@ export const SERVICE_PRICING: Record<string, PricingPlan[]> = {
               "Setup hosting + domain (shared/ringan) sesuai kesepakatan.",
               "Struktur kode sederhana & ringan (React + Laravel).",
               "Keamanan dasar: validasi input, proteksi standar."
-            ]
-          },
-          {
-            title: "🎁 Layanan Tambahan",
-            items: [
-              "Full source code + database (Hak Milik Penuh).",
-              "Dokumentasi dasar penggunaan admin panel.",
-              "Dokumentasi dasar penggunaan admin panel.",
-              "2x Revisi."
             ]
           }
         ],

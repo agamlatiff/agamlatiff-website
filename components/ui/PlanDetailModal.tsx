@@ -213,15 +213,12 @@ const PlanDetailModal: React.FC<PlanDetailModalProps> = ({ plan, isOpen, onClose
                       </div>
 
                       <div className="space-y-3 mb-8">
-                        {planFeatures.slice(0, 8).map((feat: string, idx: number) => (
+                        {planFeatures.map((feat: string, idx: number) => (
                           <div key={idx} className="flex items-start gap-2">
                             <Check size={16} className="text-primary mt-0.5 shrink-0" />
                             <span className="text-sm text-slate-600 dark:text-slate-300">{feat}</span>
                           </div>
                         ))}
-                        {planFeatures.length > 8 && (
-                          <div className="text-xs text-slate-400 pl-6 italic">+ {planFeatures.length - 8} fitur lainnya...</div>
-                        )}
                       </div>
 
                       <a

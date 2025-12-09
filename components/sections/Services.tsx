@@ -122,6 +122,7 @@ const Services: React.FC = () => {
   const activePricingPlans = SERVICE_PRICING[activeTabId] || [];
   const activeServiceInfo = SERVICES.find(s => s.id === activeTabId) || null;
 
+
   const { translations, t } = useLanguage();
   const tService = translations.services[activeTabId as keyof typeof translations.services];
 
@@ -316,125 +317,128 @@ const Services: React.FC = () => {
                 const isActiveMobile = mobilePlanIndex === index;
 
                 return (
-                  <motion.div
+                  <div
                     key={plan.id}
-                    initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`h-full ${isActiveMobile ? 'block' : 'hidden md:block'}`}
+                    className={`h-full ${isActiveMobile ? 'block' : 'hidden'} md:block`}
                   >
-                    <SpotlightCard
-                      isPopular={plan.isPopular}
-                      className="flex flex-col h-full"
+                    <motion.div
+                      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="h-full"
                     >
-                      <div className="p-6 sm:p-8 flex flex-col h-full relative overflow-hidden rounded-3xl">
+                      <SpotlightCard
+                        isPopular={plan.isPopular}
+                        className="flex flex-col h-full"
+                      >
+                        <div className="p-6 sm:p-8 flex flex-col h-full relative overflow-hidden rounded-3xl">
 
-                        {/* Popular Badge Ribbon */}
-                        {plan.isPopular && (
-                          <div className="absolute top-0 right-0">
-                            <div className="bg-gradient-to-l from-primary to-indigo-600 text-white text-[10px] font-extrabold px-4 py-1.5 rounded-bl-2xl shadow-lg flex items-center gap-1.5 tracking-wide uppercase">
-                              <Zap size={10} fill="currentColor" /> {translations.services.general.bestChoice}
-                            </div>
-                          </div>
-                        )}
-
-                        {/* Header & Price */}
-                        <div className="mb-6">
-                          <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-colors ${plan.isPopular
-                            ? 'bg-primary/10 text-primary'
-                            : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
-                            }`}>
-                            <PlanIcon size={24} />
-                          </div>
-
-                          <h3 className={`text-lg font-bold mb-2 ${plan.isPopular ? 'text-primary' : 'text-slate-900 dark:text-white'}`}>
-                            {planName}
-                          </h3>
-
-                          <div className="flex flex-col mb-4">
-                            {/* Discount Strikethrough Logic */}
-                            {plan.originalPrice && (
-                              <div className="flex items-center gap-2 mb-1">
-                                <span className="text-sm text-slate-400 decoration-slate-400/80 line-through decoration-1">
-                                  {plan.originalPrice}
-                                </span>
-                                <span className="bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-[10px] font-bold px-1.5 py-0.5 rounded">
-                                  {translations.services.general.promo}
-                                </span>
+                          {/* Popular Badge Ribbon */}
+                          {plan.isPopular && (
+                            <div className="absolute top-0 right-0">
+                              <div className="bg-gradient-to-l from-primary to-indigo-600 text-white text-[10px] font-extrabold px-4 py-1.5 rounded-bl-2xl shadow-lg flex items-center gap-1.5 tracking-wide uppercase">
+                                <Zap size={10} fill="currentColor" /> {translations.services.general.bestChoice}
                               </div>
-                            )}
-                            <span className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                              {plan.price}
-                            </span>
-                            <span className="text-xs font-medium text-slate-400 dark:text-slate-500 mt-1 uppercase tracking-wide">
-                              {translations.services.general.oneTimePayment}
-                            </span>
-                          </div>
-
-                          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed min-h-[3rem]">
-                            {planDesc}
-                          </p>
-                        </div>
-
-                        {/* Divider */}
-                        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent mb-6"></div>
-
-                        {/* Features List */}
-                        <div className="flex-1 space-y-3 mb-8">
-                          {planFeatures.slice(0, 5).map((feat: string, idx: number) => (
-                            <div key={idx} className="flex items-start gap-3 group/feat">
-                              <div className={`flex-shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center transition-colors ${plan.isPopular
-                                ? 'bg-green-500 text-white shadow-sm shadow-green-500/30'
-                                : 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 group-hover/feat:text-green-500 group-hover/feat:bg-green-50 dark:group-hover/feat:bg-green-900/20'
-                                }`}>
-                                <Check size={12} strokeWidth={3} />
-                              </div>
-                              <span className={`text-sm font-medium transition-colors ${plan.isPopular ? 'text-slate-700 dark:text-slate-200' : 'text-slate-600 dark:text-slate-400'
-                                }`}>
-                                {feat}
-                              </span>
-                            </div>
-                          ))}
-                          {planFeatures.length > 5 && (
-                            <div
-                              onClick={() => setSelectedPlan(plan)}
-                              className="pl-8 text-xs font-medium text-slate-400 dark:text-slate-500 italic cursor-pointer hover:text-primary dark:hover:text-primary transition-colors"
-                            >
-                              + {planFeatures.length - 5} {translations.services.general.viewFeatures || "fitur lainnya..."}
                             </div>
                           )}
-                        </div>
 
-                        {/* CTA Buttons */}
-                        <div className="mt-auto space-y-3">
-                          <a
-                            href={createWhatsAppLink(t('whatsappMessages.pricing').replace('{plan}', planName))}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`relative w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-sm transition-all duration-300 overflow-hidden group/btn ${plan.isPopular
-                              ? 'bg-primary text-white shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 hover:bg-primary-hover'
-                              : 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white hover:border-primary dark:hover:bg-primary dark:hover:text-white dark:hover:border-primary'
-                              }`}
-                          >
-                            {plan.isPopular && (
-                              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:animate-[shimmer_1.5s_infinite]"></div>
+                          {/* Header & Price */}
+                          <div className="mb-6">
+                            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-colors ${plan.isPopular
+                              ? 'bg-primary/10 text-primary'
+                              : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+                              }`}>
+                              <PlanIcon size={24} />
+                            </div>
+
+                            <h3 className={`text-lg font-bold mb-2 ${plan.isPopular ? 'text-primary' : 'text-slate-900 dark:text-white'}`}>
+                              {planName}
+                            </h3>
+
+                            <div className="flex flex-col mb-4">
+                              {/* Discount Strikethrough Logic */}
+                              {plan.originalPrice && (
+                                <div className="flex items-center gap-2 mb-1">
+                                  <span className="text-sm text-slate-400 decoration-slate-400/80 line-through decoration-1">
+                                    {plan.originalPrice}
+                                  </span>
+                                  <span className="bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-[10px] font-bold px-1.5 py-0.5 rounded">
+                                    {translations.services.general.promo}
+                                  </span>
+                                </div>
+                              )}
+                              <span className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                                {plan.price}
+                              </span>
+                              <span className="text-xs font-medium text-slate-400 dark:text-slate-500 mt-1 uppercase tracking-wide">
+                                {translations.services.general.oneTimePayment}
+                              </span>
+                            </div>
+
+                            <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed min-h-[3rem]">
+                              {planDesc}
+                            </p>
+                          </div>
+
+                          {/* Divider */}
+                          <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent mb-6"></div>
+
+                          {/* Features List */}
+                          <div className="flex-1 space-y-3 mb-8">
+                            {planFeatures.slice(0, 5).map((feat: string, idx: number) => (
+                              <div key={idx} className="flex items-start gap-3 group/feat">
+                                <div className={`flex-shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center transition-colors ${plan.isPopular
+                                  ? 'bg-green-500 text-white shadow-sm shadow-green-500/30'
+                                  : 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 group-hover/feat:text-green-500 group-hover/feat:bg-green-50 dark:group-hover/feat:bg-green-900/20'
+                                  }`}>
+                                  <Check size={12} strokeWidth={3} />
+                                </div>
+                                <span className={`text-sm font-medium transition-colors ${plan.isPopular ? 'text-slate-700 dark:text-slate-200' : 'text-slate-600 dark:text-slate-400'
+                                  }`}>
+                                  {feat}
+                                </span>
+                              </div>
+                            ))}
+                            {planFeatures.length > 5 && (
+                              <div
+                                onClick={() => setSelectedPlan(plan)}
+                                className="pl-8 text-xs font-medium text-slate-400 dark:text-slate-500 italic cursor-pointer hover:text-primary dark:hover:text-primary transition-colors"
+                              >
+                                + {planFeatures.length - 5} {translations.services.general.viewFeatures || "fitur lainnya..."}
+                              </div>
                             )}
-                            <span>{planCta}</span>
-                          </a>
+                          </div>
 
-                          <button
-                            onClick={() => setSelectedPlan(plan)}
-                            className="w-full flex items-center justify-center gap-2 py-2 rounded-xl font-medium text-xs text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors group/eye"
-                          >
-                            <Eye size={14} className="group-hover/eye:scale-110 transition-transform" />
-                            {translations.services.general.viewFeatures}
-                          </button>
+                          {/* CTA Buttons */}
+                          <div className="mt-auto space-y-3">
+                            <a
+                              href={createWhatsAppLink(t('whatsappMessages.pricing').replace('{plan}', planName))}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={`relative w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-sm transition-all duration-300 overflow-hidden group/btn ${plan.isPopular
+                                ? 'bg-primary text-white shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 hover:bg-primary-hover'
+                                : 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white hover:border-primary dark:hover:bg-primary dark:hover:text-white dark:hover:border-primary'
+                                }`}
+                            >
+                              {plan.isPopular && (
+                                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:animate-[shimmer_1.5s_infinite]"></div>
+                              )}
+                              <span>{planCta}</span>
+                            </a>
+
+                            <button
+                              onClick={() => setSelectedPlan(plan)}
+                              className="w-full flex items-center justify-center gap-2 py-2 rounded-xl font-medium text-xs text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors group/eye"
+                            >
+                              <Eye size={14} className="group-hover/eye:scale-110 transition-transform" />
+                              {translations.services.general.viewFeatures}
+                            </button>
+                          </div>
+
                         </div>
-
-                      </div>
-                    </SpotlightCard>
-                  </motion.div>
+                      </SpotlightCard>
+                    </motion.div>
+                  </div>
                 );
               })}
             </AnimatePresence>

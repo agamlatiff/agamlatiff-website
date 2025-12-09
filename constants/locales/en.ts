@@ -1170,14 +1170,6 @@ export const en = {
               "Simple & light code structure.",
               "Basic SEO on-page: basic meta tags, friendly URL."
             ]
-          },
-          {
-            title: "📄 Documentation & Handover",
-            items: [
-              "Full source code & assets handover.",
-              "Brief guide for basic content updates.",
-              "2x revisi."
-            ]
           }
         ],
         valueProps: {
@@ -1242,7 +1234,6 @@ export const en = {
               "Full source code & assets + full access.",
               "Deployment + hosting configuration + domain + SSL.",
               "Documentation guide for basic content changes.",
-              "2x revisi."
             ]
           }
         ],
