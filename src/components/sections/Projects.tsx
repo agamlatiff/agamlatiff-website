@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import { ArrowUpRight, PlayCircle, Star, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import ProjectModal from '../ui/ProjectModal';
+import ProjectModal from '@/components/ui/ProjectModal';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 import type { Project } from '@/types/project';
 import { PROJECTS } from '@/constants/projects';
 

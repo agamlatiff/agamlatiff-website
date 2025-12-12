@@ -1,14 +1,14 @@
 
 import React from 'react';
-import Hero from '../components/sections/Hero';
-import PainPoints from '../components/sections/PainPoints';
-import RoiCalculator from '../components/sections/RoiCalculator';
-import TrustFactors from '../components/sections/TrustFactors';
-import Testimonials from '../components/sections/Testimonials';
-import SeoObserver from '../components/utils/SeoObserver';
+import Hero from '@/components/sections/Hero';
+import PainPoints from '@/components/sections/PainPoints';
+import RoiCalculator from '@/components/sections/RoiCalculator';
+import TrustFactors from '@/components/sections/TrustFactors';
+import Testimonials from '@/components/sections/Testimonials';
+import SeoObserver from '@/components/utils/SeoObserver';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface HomeProps {
   onOpenChat: () => void;

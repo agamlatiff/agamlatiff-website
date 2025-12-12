@@ -309,8 +309,8 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, setIsOpen }) => {
                 >
                   <div
                     className={`max-w-[85%] p-3.5 text-sm leading-relaxed shadow-sm whitespace-pre-line ${msg.role === 'user'
-                        ? 'bg-primary text-white rounded-t-2xl rounded-bl-2xl rounded-br-none'
-                        : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-t-2xl rounded-br-2xl rounded-bl-none border border-slate-200 dark:border-slate-700'
+                      ? 'bg-primary text-white rounded-t-2xl rounded-bl-2xl rounded-br-none'
+                      : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-t-2xl rounded-br-2xl rounded-bl-none border border-slate-200 dark:border-slate-700'
                       }`}
                   >
                     {renderMessageContent(msg.text)}

@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { SERVICE_PRICING, PricingPlan } from '../../constants/pricing';
+import { SERVICE_PRICING, PricingPlan } from '@/constants/pricing';
 import { Code, Layout, Smartphone, Check, Zap, Sparkles, MousePointer2, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence, useMotionTemplate, useMotionValue } from 'framer-motion';
-import PlanDetailModal from '../ui/PlanDetailModal';
-import { useLanguage } from '../../context/LanguageContext';
+import PlanDetailModal from '@/components/ui/PlanDetailModal';
+import { useLanguage } from '@/context/LanguageContext';
 import { SERVICES } from '@/constants/services';
 import { createWhatsAppLink } from '@/constants/whatsapp';
-import ComparisonTable from '../ui/ComparisonTable';
+import ComparisonTable from '@/components/ui/ComparisonTable';
 
 const iconMap = {
   code: Code,

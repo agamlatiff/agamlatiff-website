@@ -12,11 +12,11 @@ import {
   Plane,
   RefreshCw
 } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
-import { SERVICE_PRICING, PricingPlan } from '../../constants/pricing';
+import { useLanguage } from '@/context/LanguageContext';
+import { SERVICE_PRICING, PricingPlan } from '@/constants/pricing';
 import { createWhatsAppLink } from '@/constants/whatsapp';
-import ComparisonTable from '../ui/ComparisonTable';
-import PlanDetailModal from '../ui/PlanDetailModal';
+import ComparisonTable from '@/components/ui/ComparisonTable';
+import PlanDetailModal from '@/components/ui/PlanDetailModal';
 
 const CATEGORIES = [
   { id: 'e-commerce', label: 'E-Commerce', icon: ShoppingCart },

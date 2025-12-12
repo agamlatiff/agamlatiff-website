@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { PROCESS_STEPS } from '@/constants/process';
 import { createWhatsAppLink } from '@/constants/whatsapp';
 

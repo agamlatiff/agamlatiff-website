@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { id } from '../constants/locales/id';
-import { en } from '../constants/locales/en';
+import { id } from '@/constants/locales/id';
+import { en } from '@/constants/locales/en';
 
 type Language = 'id' | 'en';
 type Translations = typeof id;

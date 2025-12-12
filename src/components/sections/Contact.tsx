@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { Mail, Calendar, Send, Check, Loader2, AlertCircle, Sparkles, Phone, ChevronDown } from 'lucide-react';
 import { FaInstagram, FaTiktok, FaLinkedinIn, FaGithub, FaYoutube } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import Toast from '../ui/Toast';
-import { useLanguage } from '../../context/LanguageContext';
+import Toast from '@/components/ui/Toast';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface ContactProps {
   onOpenChat: () => void;

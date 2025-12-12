@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Hexagon, Sun, Moon } from 'lucide-react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { NAV_LINKS } from '@/constants/nav';
 import { createWhatsAppLink } from '@/constants/whatsapp';
 

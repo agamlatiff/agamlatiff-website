@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion, useReducedMotion, Variants } from 'framer-motion';
 import { CheckCircle2, Zap, Layout, ShieldCheck, BarChart } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 
 const About: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();

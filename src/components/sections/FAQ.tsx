@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Minus, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -31,8 +31,8 @@ const FAQ: React.FC = () => {
               <div
                 key={index}
                 className={`bg-white dark:bg-slate-900 rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen
-                    ? 'border-primary/30 shadow-lg shadow-primary/5'
-                    : 'border-slate-200 dark:border-slate-800 hover:border-primary/20'
+                  ? 'border-primary/30 shadow-lg shadow-primary/5'
+                  : 'border-slate-200 dark:border-slate-800 hover:border-primary/20'
                   }`}
               >
                 <button

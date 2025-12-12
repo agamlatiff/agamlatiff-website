@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Check, Star, ShieldCheck, ShoppingBag, MessageCircle, User, Store, X } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Comparison: React.FC = () => {

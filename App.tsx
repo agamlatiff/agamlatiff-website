@@ -3,22 +3,22 @@ import React, { useState, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 // Lazy load pages for better performance
-const Home = lazy(() => import('./pages/Home'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
-const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
-const AboutPage = lazy(() => import('./pages/AboutPage'));
-const ContactPage = lazy(() => import('./pages/ContactPage'));
+const Home = lazy(() => import('@/pages/Home'));
+const ServicesPage = lazy(() => import('@/pages/ServicesPage'));
+const ProjectsPage = lazy(() => import('@/pages/ProjectsPage'));
+const AboutPage = lazy(() => import('@/pages/AboutPage'));
+const ContactPage = lazy(() => import('@/pages/ContactPage'));
 
 // UI Utils
-import BackToTop from './components/ui/BackToTop';
-import FloatingContact from './components/ui/FloatingContact';
-import ChatWidget from './components/ui/ChatWidget';
-import ScrollToTop from './components/utils/ScrollToTop';
-import { LanguageProvider } from './context/LanguageContext';
+import BackToTop from '@/components/ui/BackToTop';
+import FloatingContact from '@/components/ui/FloatingContact';
+import ChatWidget from '@/components/ui/ChatWidget';
+import ScrollToTop from '@/components/utils/ScrollToTop';
+import { LanguageProvider } from '@/context/LanguageContext';
 
 const App: React.FC = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);

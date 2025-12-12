@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Loader2, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { createWhatsAppLink } from '@/constants/whatsapp';
 
 const Hero: React.FC = () => {

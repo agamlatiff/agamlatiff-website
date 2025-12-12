@@ -4,7 +4,7 @@ import { Hexagon, ArrowRight, Mail, MapPin } from 'lucide-react';
 import { FaInstagram, FaTiktok, FaLinkedinIn, FaGithub, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { createWhatsAppLink } from '@/constants/whatsapp';
 import { SERVICES } from '@/constants/services';
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import { ShieldCheck, BookOpen, Server, MonitorPlay, Lock, Code2, CheckCircle, FileJson, Database } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 
 const TrustFactors: React.FC = () => {
   const { t, translations } = useLanguage();

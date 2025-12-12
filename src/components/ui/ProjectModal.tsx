@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState, useMemo } from 'react';
 import { X, ExternalLink, Github, Youtube, ChevronLeft, ChevronRight, ImageIcon, PlayCircle, Link2 } from 'lucide-react';
-import { Project } from '../../types';
+import { Project } from '@/types';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ProjectModalProps {
@@ -199,8 +199,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                             key={idx}
                             onClick={() => setCurrentIndex(idx)}
                             className={`relative aspect-video rounded-lg overflow-hidden cursor-pointer border-2 transition-all group ${idx === currentIndex
-                                ? 'border-primary ring-2 ring-primary/20'
-                                : 'border-transparent opacity-60 hover:opacity-100 hover:border-slate-300 dark:hover:border-slate-600'
+                              ? 'border-primary ring-2 ring-primary/20'
+                              : 'border-transparent opacity-60 hover:opacity-100 hover:border-slate-300 dark:hover:border-slate-600'
                               }`}
                           >
                             <img

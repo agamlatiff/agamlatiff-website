@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Calculator, ArrowRight, XCircle, CheckCircle, RefreshCcw, TrendingUp, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { createWhatsAppLink } from '@/constants/whatsapp';
 
 const RoiCalculator: React.FC = () => {
