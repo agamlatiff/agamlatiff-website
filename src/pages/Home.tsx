@@ -26,7 +26,6 @@ const Home: React.FC<HomeProps> = ({ onOpenChat }) => {
         <PainPoints />
         <RoiCalculator />
         <TrustFactors />
-        <Testimonials />
 
         {/* Simple CTA Section for Home */}
         <section className="py-20 bg-primary dark:bg-indigo-900/50">
