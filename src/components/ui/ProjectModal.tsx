@@ -187,6 +187,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">{project.title}</h2>
                   </div>
 
+                  {/* Project Description */}
+                  <div className="prose prose-slate dark:prose-invert max-w-none mb-8 text-slate-600 dark:text-slate-300">
+                    <div dangerouslySetInnerHTML={{ __html: project.fullDescription || project.shortDescription }} />
+                  </div>
+
                   {/* Thumbnails Gallery - Controls the top slider */}
                   {mediaItems.length > 1 && (
                     <div className="space-y-3">

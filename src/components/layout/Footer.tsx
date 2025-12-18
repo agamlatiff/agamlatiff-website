@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 import { useLanguage } from '@/context/LanguageContext';
 import { createWhatsAppLink } from '@/constants/whatsapp';
-import { SERVICES } from '@/constants/services';
 
 // Social media links with modern icons
 const SOCIALS = [
@@ -78,81 +77,35 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-slate-900 dark:text-white mb-6">{t('footer.menus.main')}</h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/"
-                  className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-2 text-sm group"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors"></span>
-                  {t('nav.home')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-2 text-sm group"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors"></span>
-                  {t('nav.services')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/projects"
-                  className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-2 text-sm group"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors"></span>
-                  {t('nav.projects')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-2 text-sm group"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors"></span>
-                  {t('nav.about')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-2 text-sm group"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors"></span>
-                  {t('nav.contact')}
-                </Link>
-              </li>
+              {[
+                { name: t('nav.home') || 'Beranda', href: '#hero' },
+                { name: t('nav.about') || 'Tentang', href: '#about' },
+                { name: t('nav.projects') || 'Proyek', href: '#projects' },
+                { name: t('process.title') || 'Proses', href: '#process' },
+                { name: t('nav.contact') || 'Kontak', href: '#contact' },
+              ].map((link) => (
+                <li key={link.href}>
+                  <button
+                    onClick={() => {
+                      const elementId = link.href.replace('#', '');
+                      const element = document.getElementById(elementId);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      } else if (link.href === '#hero') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }
+                    }}
+                    className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-2 text-sm group text-left"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors"></span>
+                    {link.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Services - Updated with Query Params */}
-          <div>
-            <h4 className="font-bold text-slate-900 dark:text-white mb-6">{t('footer.menus.services')}</h4>
-            <ul className="space-y-3">
-              {SERVICES.slice(0, 5).map((service) => {
-                const tService = translations.services[service.id as keyof typeof translations.services];
-                // Type guard: check if tService has shortTitle property
-                const displayTitle = (tService && 'shortTitle' in tService && tService.shortTitle)
-                  || (tService && 'title' in tService && tService.title)
-                  || service.shortTitle
-                  || service.title;
-
-                return (
-                  <li key={service.id}>
-                    <Link
-                      to={`/services?tab=${service.id}`}
-                      className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors text-sm hover:underline decoration-primary/30 underline-offset-4"
-                    >
-                      {displayTitle}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          {/* Contact Info - Updated */}
+          {/* Contact Info */}
           <div>
             <h4 className="font-bold text-slate-900 dark:text-white mb-6">{t('footer.menus.contact')}</h4>
             <ul className="space-y-4 text-sm">

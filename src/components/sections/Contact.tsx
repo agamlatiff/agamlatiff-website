@@ -20,7 +20,6 @@ const Contact: React.FC<ContactProps> = ({ onOpenChat }) => {
     name: '',
     phone: '',
     email: '',
-    type: translations.contact.form.service.options[0],
     message: ''
   });
 
@@ -126,8 +125,7 @@ const Contact: React.FC<ContactProps> = ({ onOpenChat }) => {
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
-          service_type: formData.type,
-          _subject: `New Lead: ${formData.type} - ${formData.name}`,
+          _subject: `New Lead: ${formData.name}`,
           _template: "table",
           _captcha: "false"
         })
@@ -138,7 +136,7 @@ const Contact: React.FC<ContactProps> = ({ onOpenChat }) => {
         setShowToast(true);
 
         // Reset form
-        setFormData({ name: '', phone: '', email: '', type: translations.contact.form.service.options[0], message: '' });
+        setFormData({ name: '', phone: '', email: '', message: '' });
         setTouched({ name: false, phone: false, email: false, message: false });
 
         setTimeout(() => setStatus('idle'), 3000);
@@ -328,25 +326,6 @@ const Contact: React.FC<ContactProps> = ({ onOpenChat }) => {
                     <AlertCircle size={12} /> {errors.email}
                   </div>
                 )}
-              </div>
-
-              <div>
-                <label htmlFor="type" className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 transition-colors">{t('contact.form.service.label')}</label>
-                <div className="relative">
-                  <select
-                    id="type"
-                    value={formData.type}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all cursor-pointer appearance-none pr-10 shadow-sm"
-                  >
-                    {translations.contact.form.service.options.map((option: string, idx: number) => (
-                      <option key={idx} value={option} className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">{option}</option>
-                    ))}
-                  </select>
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-400 pointer-events-none">
-                    <ChevronDown size={18} />
-                  </div>
-                </div>
               </div>
 
               <div>

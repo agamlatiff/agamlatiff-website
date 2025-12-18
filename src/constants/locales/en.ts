@@ -1,426 +1,321 @@
 export const en = {
   hero: {
-    badge: "E-Commerce Specialist",
+    badge: "Full-Stack Web Developer",
     headline: {
-      part1: "Tired of Battling",
-      part2: "Price Wars?"
+      part1: "Building Digital Products",
+      part2: "that Drive Business Growth"
     },
-    subheadline: "Don't let marketplaces dictate your value. Build **Your Own Professional Store** to control your pricing, eliminate admin fees, and secure your customer data.",
+    subheadline: "I help businesses turn complex challenges into <strong>profitable and efficient</strong> web applications. My focus goes beyond code—I deliver <strong>measurable results</strong> for your business.",
     cta: {
-      consult: "Free Consultation",
+      consult: "Hire Me",
       processing: "Processing...",
-      roi: "Check Loss Simulation"
+      roi: "Free Consultation"
     }
   },
-  services: {
-    general: {
-      categoryLabel: "Service Category",
-      mainTitle: "Business & Website Solutions",
-      mainSubtitle: "Complete package choices for business operations, branding, and online marketing.",
-      bestChoice: "Best Choice",
-      promo: "PROMO",
-      oneTimePayment: "One-time Payment (No Subscription)",
-      viewFeatures: "View Feature Details"
-    },
-    'landing-page': {
-      title: 'Professional Landing Page Services',
-      shortTitle: 'Landing Page',
-      description: 'Single-page website focused on conversion. Premium design, fast, and ready to use with Domain & Hosting.',
-      deliverables: [
-        'Free .com Domain & Hosting',
-        'Premium & Mobile Friendly Design',
-        'High Conversion Copywriting',
-        'WhatsApp & Maps Integration',
-        'Business Email Setup'
-      ],
-      timeline: 'Est. 1-7 Days',
-      priceRange: 'Promo IDR 1.5m',
-      modalContent: {
-        title: "Landing Page Creation Service",
-        description: "Own a professional website that works 24/7 to bring in customers. Choose a package:",
-        points: [
-          { title: "Basic Package (IDR 1.5m)", desc: "Fast & professional landing page. Includes Domain & Hosting for 6 months. Suitable for validating new businesses." },
-          { title: "Premium Package (IDR 2.7m)", desc: "High-Conversion design. Complete features, analytics, and sales copywriting to maximize leads." },
-          { title: "Pro Package (IDR 3.5m)", desc: "Branding Strategy & Cinematic Design. High performance for Ads, SEO, and long-term Brand Awareness." }
-        ]
-      }
-    },
-    'company-profile': {
-      title: 'Company Profile Website',
-      shortTitle: 'Company Profile',
-      description: 'Increase business credibility with a professional profile website. Look bona fide, informative, and easy to find on Google.',
-      deliverables: [
-        'Clean & Modern Design',
-        'Complete Pages (Home, About, Services)',
-        'Basic SEO & Google Maps',
-        'Portfolio & Gallery',
-        'Free Domain & Hosting 6 Months'
-      ],
-      timeline: 'Est. 2-10 Days',
-      priceRange: 'Starts from IDR 2.2m',
-      modalContent: {
-        title: "Company Profile Website Service",
-        description: "Build customer trust with a strong digital identity. Choose a package according to business scale:",
-        points: [
-          { title: "Basic Package (IDR 2.2m)", desc: "Start looking professional. 4 Main pages, clean design, mobile friendly. Suitable for Bussiness/Freelancers." },
-          { title: "Premium Package (IDR 3.2m)", desc: "Increase credibility. 6 Pages, premium design, smooth animations, & copywriting. Suitable for growing businesses." },
-          { title: "Pro Package (IDR 5.5m)", desc: "Maximum branding. Up to 10 pages, exclusive design, blog features, advanced SEO. Long-term marketing asset." }
-        ]
-      }
-    },
-    'booking-system': {
-      title: 'Booking / Reservation System',
-      shortTitle: 'Booking System',
-      description: 'Automatic scheduling solution for clinics, salons, or rentals. Customers book themselves 24/7 without admin hassle.',
-      deliverables: [
-        '24/7 Online Booking Form',
-        'Automatic Time Slot Management',
-        'Email & WhatsApp Notifications',
-        'Admin Dashboard & Reports',
-        'Free Domain & Hosting 6 Months'
-      ],
-      timeline: 'Est. 3-10 Days',
-      priceRange: 'Starts from IDR 2.9m',
-      modalContent: {
-        title: "Booking & Reservation System",
-        description: "Eliminate 'double booking' drama and overwhelmed admins. Choose a package:",
-        points: [
-          { title: "Basic - Starter (IDR 2.9m)", desc: "Simple booking form, date calendar, WA/Email notifications. Suitable for barbershops/small clinics." },
-          { title: "Standard - Smart (IDR 4.5m)", desc: "Select service & price, automatic duration slots, complete admin filters. Suitable for salons & photo studios." },
-          { title: "Premium - Automation (IDR 6.5m)", desc: "Online DP payment, WA automation, self reschedule/cancel, multi-staff. Full automation." }
-        ]
-      }
-    },
-    'e-commerce': {
-      title: 'E-Commerce Website / Online Store',
-      shortTitle: 'E-Commerce',
-      description: 'Have your own online store without marketplace admin fees. Unlimited product catalog, checkout via WhatsApp or Payment Gateway.',
-      deliverables: [
-        'Product Catalog & Shopping Cart',
-        'WhatsApp / Automatic Checkout',
-        'Product Management Admin Dashboard',
-        'Sales & Stock Reports',
-        'Free Domain & Hosting'
-      ],
-      timeline: 'Est. 4-14 Days',
-      priceRange: 'Starts from IDR 2.4m',
-      modalContent: {
-        title: "Online Store Creation Service",
-        description: "Sell online more professionally with your own e-commerce website. Choose a package:",
-        points: [
-          { title: "Basic - Entry / Start-up (IDR 4.0m)", desc: "Simple online store, product catalog, checkout form to WA. Suitable for new Bussiness." },
-          { title: "Standard - Balanced (IDR 7.5m)", desc: "Auto checkout, payment gateway, stock & variation management. For growing stores." },
-          { title: "Pro - Premium (IDR 12.5m)", desc: "Full custom UI/UX, complete features (wishlist, review, promo), analytics, priority support. Large scale." }
-        ]
-      }
-    },
-    'travel-website': {
-      title: 'Tour & Travel Website',
-      shortTitle: 'Tour & Travel',
-      description: 'Website specifically for travel agents. Display attractive tour packages, complete itineraries, and automatic online booking.',
-      deliverables: [
-        'Attractive Tour Package Catalog',
-        'Detailed Itinerary & Facilities',
-        'Booking Form / WhatsApp',
-        'Premium Destination Gallery',
-        'Free Domain & Hosting'
-      ],
-      timeline: 'Est. 3-7 Days',
-      priceRange: 'Starts from IDR 2.5m',
-      modalContent: {
-        title: "Tour & Travel Website Service",
-        description: "Make customers crave a vacation with an aesthetic & professional travel website. Choose a package:",
-        points: [
-          { title: "Basic - Start Traveling (IDR 2.5m)", desc: "Travel landing page, max 6 tour packages, WA booking button. Suitable for new online travel agents." },
-          { title: "Premium - Experience (IDR 4.5m)", desc: "Unlimited packages, complete itinerary details, premium gallery, professional booking form. Focus on sales." },
-          { title: "Pro - Travel Store (IDR 7.5m)", desc: "Checkout system (select date & quantity), automatic invoice, payment gateway, package upsell features." }
-        ]
-      }
-    },
-    'pos-system': {
-      title: 'POS System & Inventory',
-      shortTitle: 'Point of Sale',
-      description: 'Store operational solution. Record transactions, stock, and financial reports automatically. No loss, no hassle.',
-      deliverables: [
-        'Cashier Application (Web/Android)',
-        'Real-time Stock Management',
-        'Profit & Loss Reports',
-        'Thermal Printer Support',
-        'Source Code Ownership'
-      ],
-      timeline: 'Est. 3-14 Days',
-      priceRange: 'Starts from IDR 4.5m',
-      modalContent: {
-        title: "Cashier & Inventory System",
-        description: "Streamline business operations with a system custom-built for your workflow.",
-        points: [
-          { title: "Basic POS (IDR 4.5m)", desc: "Simple digital cashier, record transactions & receipts. Suitable for small F&B/Retail beginners." },
-          { title: "Standard POS (IDR 8.5m)", desc: "Complete stock management, recipes/variants, & gross profit reports. Suitable for growing Resto/Shops." },
-          { title: "Premium POS (IDR 14.9m)", desc: "Multi-branch, supplier management, automatic PO, & real-time owner access. Enterprise scale." }
-        ]
-      }
-    },
-    'revamp-website': {
-      title: 'Website Revamp / Redesign Service',
-      shortTitle: 'Revamp Web',
-      description: 'Have a website but it\'s old/slow? I will overhaul the look and structure to be more modern, fast, and selling.',
-      deliverables: [
-        'Modern Look Redesign',
-        'Structure & Navigation Improvement',
-        'Speed Optimization (Loading)',
-        'SEO On-Page Optimization',
-        'New Feature Integration'
-      ],
-      timeline: 'Est. 2-12 Days',
-      priceRange: 'Starts from IDR 1.7m',
-      modalContent: {
-        title: "Website Revamp & Redesign Service",
-        description: "Turn an old 'dormant' website into a fresh, high-performance sales machine. Choose a package:",
-        points: [
-          { title: "Basic - Fresh Look (IDR 1.7m)", desc: "Main page redesign & structure improvement for tidiness. Suitable for Bussiness with 'outdated' websites." },
-          { title: "Premium - Boost (IDR 2.9m)", desc: "Redesign 5-6 pages, navigation improvement, conversion copywriting, & on-page SEO. Focus on performance." },
-          { title: "Pro - Total Makeover (IDR 4.5m)", desc: "Total overhaul, high-level speed optimization (Core Web Vitals), advanced SEO, & modern features." }
-        ]
-      }
-    }
+  nav: {
+    home: "Home",
+    about: "About",
+    projects: "Projects",
+    contact: "Contact"
+  },
+  techStack: {
+    title: "Technology Stack I Use"
   },
   projects: {
     section: {
-      title: 'System Portfolio',
-      subtitle: 'Case studies of POS, Inventory, and Website system implementations across various industries.',
+      title: "Featured Projects",
+      subtitle: "Some of the best works I've delivered for clients across various industries.",
       loading: {
-        text1: 'Loading projects',
+        text1: 'Loading project',
         text2: 'Fetching portfolio',
         text3: 'Preparing showcase',
         text4: 'Almost ready',
-        subtitle: 'Curating our best work for you'
+        subtitle: 'Curating the best work for you'
       },
-      learnMore: 'Learn About This Project',
+      learnMore: 'Explore Project',
       featured: 'Featured',
       watchDemo: 'Watch Demo',
-      viewDetail: 'View Details'
+      viewDetail: 'View Detail'
     },
     '1': {
-      title: 'Upskills - Learning Management System (LMS)',
-      shortDescription: 'Integrated E-Learning solution for people who want to learn new skills. Managing learning materials and multi-role admin, mentor, and student.',
+      title: 'UpSkills - E-Learning Management System',
+      shortDescription: 'A comprehensive web-based e-learning platform designed to help users improve their abilities through structured online learning.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
-        This project was developed for anyone who wants to develop skills outside of formal education. The main challenge is handling <strong>users who want to learn new skills</strong> for the future they desire.
+        UpSkills is a comprehensive web-based e-learning platform designed to help users improve their abilities through structured online learning. The platform provides a modern environment for course browsing, progress tracking, skill development, and subscription-based access to premium content.
       </p>
-      
+
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features:</h4>
-        <ul class="space-y-3">
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Users can read learning materials:</strong> learning materials must be easy to understand so users can learn on their own.</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Users can subscribe:</strong> to learn new skills at an affordable price.</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Class & Material Management:</strong> Teachers can upload materials (PDF/Video), assign tasks, and monitor student progress in real-time.</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Report Card & Grade Analytics:</strong> Exam scores come out instantly. Teachers get analysis graphs of student understanding per subject.</span>
-            </li>
-        </ul>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Technology Stack:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>React 19 with TypeScript</li>
+              <li>Vite & React Router DOM</li>
+              <li>Zustand for State Management</li>
+              <li>Axios & @google/genai</li>
+              <li>Zod for Runtime Validation</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Laravel (PHP Framework)</li>
+              <li>MySQL/PostgreSQL/SQLite</li>
+              <li>Laravel Sanctum for Authentication</li>
+              <li>Eloquent ORM</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        "This system successfully cut teacher exam grading time by 90% and completely saved on exam paper printing costs."
-      </p>
-    `,
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Impact:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+            <span><strong>Democratizing Education:</strong> Providing a structured, accessible learning environment for skill development.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Enhanced Engagement:</strong> Features like progress tracking and AI chatbot assistance boost user retention.</span>
+          </li>
+           <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Mentor Empowerment:</strong> Dedicated dashboard for efficient course content management.</span>
+          </li>
+        </ul>
+      </div>
+      `,
       industry: 'Education & EdTech',
-      date: 'January 2024'
+      date: 'Full-Stack Developer'
     },
     '2': {
-      title: 'Saturday - Warehouse Management System (WMS)',
-      shortDescription: 'Centralized warehouse management system for distributors. In/out stock control, inter-branch transfer, and real-time digital stock opname.',
+      title: 'Saturday - Warehouse & Merchant Management System',
+      shortDescription: 'A full-stack inventory and transaction management system designed for managing warehouses and merchants.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
-        Developed for distributor companies facing classic problems: <strong>stock discrepancies (shrinkage) and lost goods</strong>. This system digitizes the entire flow of goods from reception (Inbound) to shipment (Outbound).
+        A full-stack inventory and transaction management system <strong>designed for managing warehouses and merchants</strong>. Enables product tracking, stock management, and sales transactions with automated 12% PPN (Indonesian VAT) tax calculation.
       </p>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Operational Solutions:</h4>
-        <ul class="space-y-3">
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Realtime Multi-Warehouse:</strong> Owners can monitor stock at the Central Warehouse and 5 other Branches in one dashboard without calling admins.</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Digital Stock Opname:</strong> Warehouse staff perform opname using barcode scanners/phones. Results are recorded instantly and stock discrepancies calculated automatically.</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Inter-Branch Stock Transfer:</strong> Feature for requesting goods mutation between warehouses with approval system (Digital Delivery Order).</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Minimum Stock Alert:</strong> Automatic notification if fast-moving stock runs low, preventing lost sales.</span>
-            </li>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>React 19 with TypeScript</li>
+              <li>Vite & Tailwind CSS 4</li>
+              <li>React Router DOM & TanStack Query</li>
+              <li>React Hook Form + Zod</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Laravel 12 (PHP 8.2+)</li>
+              <li>Laravel Sanctum & Spatie Permission</li>
+              <li>MySQL / PostgreSQL</li>
+              <li>Repository - Service Pattern</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Core Features:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Role-based Access Control:</strong> Manager (Admin) & Keeper (Merchant Staff) roles.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Stock Management:</strong> Tracking at warehouse and merchant levels with real-time validation.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Transactions:</strong> Multi-step processing with cart functionality and automatic 12% PPN.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Responsive Design:</strong> Optimized for desktop, tablet, and mobile usage.</span>
+          </li>
         </ul>
       </div>
-    `,
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <ul class="space-y-2">
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Operational Efficiency:</strong> Centralized stock tracking eliminates manual work.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Accuracy & Transparency:</strong> Automated validation prevents overselling and ensures tax compliance.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Better Decisions:</strong> Dashboard provides revenue and sales insights.</span>
+           </li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+         "Status: **Production-ready**. Fully functional CRUD, complete transaction flow, and operational stock management."
+      </p>
+      `,
       industry: 'Logistics & Supply Chain',
-      date: 'December 2023'
+      date: 'Full-Stack Developer'
     },
     '3': {
-      title: 'Custom Brand E-Commerce & Membership Platform',
-      shortDescription: 'Exclusive online store platform with strong brand identity. Tiered membership features, complex product variant management, and automatic logistics integration.',
+      title: 'Alizon Store - Full-Stack E-Commerce',
+      shortDescription: 'A full-stack e-commerce web application designed to provide a complete online shopping experience.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
-        The client wanted to break free from marketplace dependence and price wars. This website was built to build a <strong>Direct-to-Consumer (DTC) brand</strong> with a premium and personalized shopping experience.
+        A full-stack e-commerce web application designed to provide a complete online shopping experience. The platform enables users to browse products, manage shopping carts, wishlists, and complete purchases through secure Stripe payment integration.
       </p>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Features:</h4>
-        <ul class="space-y-3">
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Complex Variant Management:</strong> Supports fashion products with many variations (Color, Size, Material) and separate stock for each SKU.</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Membership & Loyalty Point:</strong> Customers get points for every transaction that can be exchanged for discounts, increasing repeat orders.</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Automated Logistics:</strong> RajaOngkir Pro API integration to calculate shipping costs automatically for JNE, J&T, SiCepat, and print shipping labels automatically.</span>
-            </li>
-            <li class="flex gap-3">
-                <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-                <span><strong>Full Payment Gateway:</strong> Accepts payments via Virtual Account, E-Wallet (OVO/Gopay), and Credit Card automatically (Instant Verification).</span>
-            </li>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Next.js 15 (App Router) & React 19</li>
+              <li>TypeScript & Tailwind CSS 4</li>
+              <li>Zustand for State Management</li>
+              <li>Radix UI & Lucide React</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>NextAuth v5 (Auth.js)</li>
+              <li>Prisma ORM & PostgreSQL</li>
+              <li>Stripe Payment Integration</li>
+              <li>TanStack Query & Zod</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Full E-Commerce Flow:</strong> Product browsing, cart management, wishlist, and secure checkout.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Seller Dashboard:</strong> Dedicated interface for managing products and tracking orders.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Secure Payments:</strong> Integrated Stripe Checkout with webhook handling for real-time order updates.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Authentication:</strong> Secure login and registration with NextAuth v5 session management.</span>
+          </li>
         </ul>
       </div>
-      
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <ul class="space-y-2">
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Production-Ready Template:</strong> Scalable foundation for launching real e-commerce businesses.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Secure Transactions:</strong> PCI-compliant payment processing via Stripe.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>SEO Optimization:</strong> Server-side rendering improves search engine visibility and performance.</span>
+           </li>
+        </ul>
+      </div>
+
       <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        "This website helps the brand build its own customer database (First Party Data) which is very valuable for long-term marketing."
+        "A modern, secure, and scalable e-commerce solution built with the latest web technologies."
       </p>
-    `,
-      industry: 'Retail & Fashion',
-      date: 'October 2023'
+      `,
+      industry: 'E-Commerce & Retail',
+      date: 'Full-Stack Developer'
     }
   },
   process: {
-    title: "Professional Work Standard",
-    description: "I apply a structured workflow (SDLC) to ensure the system you receive is **stable, secure, and meets business needs**. Transparent from contract to handover.",
+    title: "Project Workflow",
+    description: "How I turn your ideas into a **high-quality** digital product.",
     steps: [
       {
-        id: 1,
-        title: 'Initial Consultation (Free)',
-        description: 'Understanding business problems and needs. I analyze the problem, provide solutions, and determine the suitable package (Basic/Premium/Pro).',
-        deliverables: [
-          'Problem Analysis & Solution',
-          'Package Determination',
-          'Project Overview'
-        ]
+        title: "Discovery & Planning",
+        description: "We discuss ideas, target users, and key features. I'll create a clear technical plan so we are on the same page.",
+        deliverables: ["Requirement Doc", "Technical Plan", "Timeline"]
       },
       {
-        id: 2,
-        title: 'Feature Determination & Agreement',
-        description: 'Setting complete features, scope of work, estimated duration, and cost. Client pays DP (Down Payment) to start production.',
-        deliverables: [
-          'Feature List Document',
-          'Timeline & Cost',
-          'DP Invoice'
-        ]
+        title: "Design & Prototyping",
+        description: "Creating wireframes and UI designs. You can see the app visuals before I start writing code.",
+        deliverables: ["UI Design (Figma)", "User Flow"]
       },
       {
-        id: 3,
-        title: 'Data Collection',
-        description: 'Collecting assets such as Logo, Product Photos, Menu, and Business Info. If content is missing, I help organize it to be ready for use.',
-        deliverables: [
-          'Logo & Photo Assets',
-          'Menu/Product Data',
-          'Complete Website Content'
-        ]
+        title: "Development",
+        description: "Coding phase begins. I build the Frontend and Backend systems in parallel with regular weekly updates.",
+        deliverables: ["Weekly Update", "Staging Link"]
       },
       {
-        id: 4,
-        title: 'Initial Design (Mockup)',
-        description: 'I create layout designs, colors, and user flows so you know the system appearance before coding begins.',
-        deliverables: [
-          'Draft Layout/Appearance',
-          'System Flow Validation',
-          'Design Revision'
-        ]
-      },
-      {
-        id: 5,
-        title: 'System Development',
-        description: 'Core coding stage. I build Frontend (Appearance), Backend (System), Database Integration, and Admin Dashboard.',
-        deliverables: [
-          'System Coding & API',
-          'Database Integration',
-          'Owner Dashboard'
-        ]
-      },
-      {
-        id: 6,
-        title: 'Testing with Client',
-        description: 'System trial. You try features one by one to ensure the flow is easy to use and there are no errors (bugs).',
-        deliverables: [
-          'Feature Trial',
-          'Bug Fixes (QC)',
-          'Minor Adjustments'
-        ]
-      },
-      {
-        id: 7,
-        title: 'Payment & Handover',
-        description: 'After the system is OK, final payment is made. I hand over Full Source Code, Dashboard Access, and Project Assets to you.',
-        deliverables: [
-          'Project Payoff',
-          'Source Code Handover',
-          'Full Admin Access'
-        ]
-      },
-      {
-        id: 8,
-        title: 'Launching / Go-Live',
-        description: 'System goes online to your business domain. Server setup, business email, and initial monitoring to be ready for customer use.',
-        deliverables: [
-          'Deploy to Server',
-          'Active Domain',
-          'System 100% Online'
-        ]
-      },
-      {
-        id: 9,
-        title: 'Maintenance & Support',
-        description: 'After-sales service. Free bug fix warranty, secure data backup, and assistance if there are usage issues.',
-        deliverables: [
-          'Free Bug Fixes',
-          'Periodic Data Backup',
-          'WhatsApp Support'
-        ]
+        title: "Testing & Launch",
+        description: "Thorough testing to ensure no bugs. Deploy to production server and the app is ready for users.",
+        deliverables: ["Bug Free App", "Deployment", "Documentation"]
       }
     ],
     cta: {
-      ready: "System ready to use in",
-      time: "1 - 4 Weeks",
-      condition: "(Depending on Complexity)",
-      button: "Start Project Discussion"
+      ready: "Understand the workflow?",
+      time: "Now it's time",
+      condition: "to execute your idea.",
+      button: "Start Project"
     }
+  },
+  cta: {
+    title: "Need a Developer for Your Team?",
+    subtitle: "I am open for freelance projects or long-term collaboration opportunities.",
+    button: "Contact Me"
+  },
+  about: {
+    title: "Who Am I?",
+    subtitle: "Agam Latifullah — Full-Stack Web Developer",
+    quote: "I don't just write code; I deliver business solutions.",
+    whyChooseMe: "Why Choose Me?",
+    description1: "Many developers write code that 'works', but often leave behind expensive 'technical debt'. I position myself as your <strong>Technical Partner</strong>.",
+    description2: "I build systems that are not only technologically advanced (React, Node.js, Laravel) but also <strong>maintainable, secure, and commercially scalable</strong>. Your tech investment should generate ROI, not headaches.",
+    values: [
+      { title: "Business First", desc: "Every line of code must have a positive impact on your business goals." },
+      { title: "Long-term Asset", desc: "Building software as a long-term asset, not a cost center." },
+      { title: "Transparent", desc: "Honest communication about risks, estimates, and progress." },
+      { title: "Reliable", desc: "On-time delivery with tested production quality." }
+    ]
   },
   footer: {
     cta: {
-      title: "Have a Project Idea?",
-      description: "Consult your business system needs today. Free initial discussion to find the best solution.",
+      title: "Have an Interesting Project?",
+      description: "Let's discuss your ideas. I'm ready to help realize them into quality digital products.",
       button: "Contact Me"
     },
-    brandDescription: "E-Commerce Specialist. Helping UMKM build modern online stores ready to sell.",
+    brandDescription: "Full-Stack Developer. Helping businesses transform digitally with the right technology solutions.",
     menus: {
-      main: "Main Menu",
+      main: "Navigation",
       services: "Services",
-      contact: "Contact Us"
+      contact: "Contact",
+      home: "Home",
+      about: "About",
+      projects: "Projects",
+      process: "Workflow"
     },
     location: "Bogor, Indonesia.<br/>(Remote Available Worldwide)",
     rights: "All Rights Reserved.",
@@ -428,1620 +323,50 @@ export const en = {
     terms: "Terms of Service"
   },
   modal: {
-    popular: "Popular",
-    featureBreakdown: "Complete Feature Breakdown:",
-    problem: "Problem:",
-    solution: "System Solution:",
-    benefit: "Business Benefit:",
-    detailsPreparing: "Complete feature details are being prepared.",
-    getPromo: "Get Promo Now",
+    popular: "Featured",
+    featureBreakdown: "Technical Details:",
+    problem: "Challenge:",
+    solution: "Solution:",
+    benefit: "Impact:",
+    detailsPreparing: "Details are being prepared.",
+    getPromo: "View Live Demo",
     bugWarranty: "Bug Warranty & Support",
-    sourceCode: "Source Code Ownership"
+    sourceCode: "Include Source Code"
   },
-  pricingSection: {
-    title: "E-Commerce & Business System Packages",
-    subtitle: "Choose the system solution that fits your current business stage. All packages are <strong>One-time Payment</strong> with Source Code ownership.",
-    popular: "Most Popular",
-    viewDetails: "View Details & Benefits",
-    customApp: "Need a <strong>Custom App</strong> or <strong>Payment Gateway Integration</strong>?",
-    contactMe: "Contact me for technical discussion & special offer"
-  },
-  about: {
-    title: "Who is Agam?",
-    subtitle: "E-Commerce Specialist.",
-    quote: "I'm Agam, an E-Commerce Specialist focused on helping UMKM build modern online stores and increase sales through neat, fast, and easy-to-use digital systems.",
-    description1: "Many UMKM have good products, but the selling process is still manual—ordering via DM, messy stock. I believe this problem can be solved with the right system.",
-    description2: "I build modern online stores that are not only beautiful, but also strong, secure, and easy to manage. So your business can level up: more efficient, more trusted, and more profitable.",
-    whyChooseMe: "Why Bussiness Choose Agam?",
-    values: [
-      { title: "Simple & Practical", desc: "System ready to use by staff, minimal training." },
-      { title: "Fast Completion", desc: "Work in days, not months." },
-      { title: "100% Ownership", desc: "Not renting, system becomes your asset forever." },
-      { title: "Transparent Price", desc: "Clear package upfront, no hidden fees." },
-      { title: "Real Solution", desc: "Focus on fixing problems, not just advanced features." }
-    ]
-  },
-  testimonials: {
-    title: "What They Say?",
-    subtitle: "Trust is the main currency in freelance business.",
-    list: [
-      {
-        id: 't1',
-        name: 'Mr. Budi Santoso',
-        role: 'Owner',
-        company: 'Sejahtera Building Store',
-        quote: "Initially doubted using personal programmer services, but Agam is different. The system is neat, taught until understood, and errors are fixed immediately. My cement stock never mismatches anymore.",
-        rating: 5
-      },
-      {
-        id: 't2',
-        name: 'Dr. Amanda',
-        role: 'Owner',
-        company: 'Amanda Dental Care',
-        quote: "The booking system created is very helpful. Patients don't need to queue long, and my admin is no longer dizzy arranging schedules via WA. Highly recommended!",
-        rating: 5
-      },
-      {
-        id: 't3',
-        name: 'Rian Pratama',
-        role: 'Marketing Manager',
-        company: 'Logistik Express',
-        quote: "Ordering a Landing Page at agamlatiff yielded satisfying results. Premium design, fast loading. Our ad conversion increased drastically because the website looks professional.",
-        rating: 5
-      }
-    ]
-  },
-  faq: {
-    title: "Frequently Asked Questions",
-    subtitle: "Things clients often ask before starting collaboration.",
-    list: [
-      {
-        question: "How much does it cost to build a system/website?",
-        answer: "Price depends on the system type and package (<strong>Basic, Premium, Pro</strong>). Each package has clear features so clients can choose according to needs and budget. Price is always transparent — <strong>no hidden fees</strong>."
-      },
-      {
-        question: "How long is the process?",
-        answer: "Average <strong>1-2 weeks</strong>, depending on system type and data completeness from client. The more complete the data sent, the faster the process finishes."
-      },
-      {
-        question: "Do I need to understand technology to use this system?",
-        answer: "<strong>No need</strong>. The system is made simple and <em>user-friendly</em>. I also provide documentation, video tutorials, and usage guides."
-      },
-      {
-        question: "After completion, is there support or warranty?",
-        answer: "<strong>Yes</strong>. Each package has a different warranty period (<strong>2 weeks – 2 months</strong>). Minor bug fixes within the warranty period are free."
-      },
-      {
-        question: "How is the payment process?",
-        answer: "All processes are clear, neat, and professional:<ul class='list-disc pl-5 mt-2 space-y-1'><li><strong>40% Down Payment</strong> before work</li><li>Progress updates during process</li><li><strong>Final Payment</strong> before final handover</li></ul>"
-      }
-    ]
-  },
-  trustFactors: {
-    header: {
-      badge: "Security & Legality Guarantee",
-      title: "Safe Investment, <br /> <span class='text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-900 dark:from-slate-200 dark:to-slate-500'>Business Peaceful Forever.</span>",
-      subtitle: "I understand your concern hiring a freelance programmer. This is the security standard I apply so you can sleep soundly."
-    },
-    cards: {
-      sourceCode: {
-        tag: "Best Value",
-        title: "100% Ownership (Source Code)",
-        description: "Digital assets are fully yours. No monthly rent, no code encryption, and free to be developed by other teams in the future.",
-        badges: ["Full Access", "No Vendor Lock-in", "Database Included"]
-      },
-      warranty: {
-        title: "1-4 weeks Bug Warranty",
-        description: "I don't run away after project completion. Any error? Feature not working? I fix it FREE until the system runs smoothly as agreed.",
-        support: "Priority Support via WhatsApp"
-      },
-      demo: {
-        title: "Live Online Store Demo",
-        description: "Don't buy a cat in a sack. Try the website first, click buy buttons, experience the checkout flow before paying DP."
-      },
-      server: {
-        title: "Free Server Setup",
-        description: "Receive it done. I handle Domain .com, VPS, SSL Security, to business email. You just use it."
-      },
-      tutorial: {
-        title: "Video Tutorial Assets",
-        description: "Employee training is easier with a library of system usage guide videos that can be watched repeatedly."
-      }
-    },
-    bottomBadges: [
-      "Clear Cooperation Agreement (MOU)",
-      "Official Invoice",
-      "Verified Developer Identity"
-    ]
-  },
-  painPoints: {
-    title: "Manual Selling vs<br/>Automated Online Store",
-    subtitle: "Turn operational constraints into competitive advantages. See how an E-Commerce Website solves your daily problems.",
-    currentChallenge: "Old Way (Manual)",
-    mySolution: "E-Commerce Solution",
-    list: [
-      {
-        problem: "Replying Chats One-by-One is Exhausting",
-        impact: "Buyers leave because of slow response. Time wasted just answering repeated questions like 'Is this available?'.",
-        solution: "Automated Catalog & Checkout",
-        solutionDescription: "Customers can check stock, product details & shop themselves 24/7 without chatting admin."
-      },
-      {
-        problem: "Price War in Marketplaces",
-        impact: "Hard to compete because products are displayed next to cheaper competitors. Margins get thinner.",
-        solution: "Exclusive Online Store Website",
-        solutionDescription: "Build a premium brand image. Customers focus on your product value, not the neighbor's price."
-      },
-      {
-        problem: "Manual Order Recap Prone to Errors",
-        impact: "Wrong address, wrong item sent, or forgot to input receipt number makes customers angry and stop buying.",
-        solution: "Centralized Order Management",
-        solutionDescription: "Order comes in, stock decreases, and shipping label generated automatically. Minimal human error."
-      },
-      {
-        problem: "No Customer Data Ownership",
-        impact: "In marketplaces, buyer data is hidden. You cannot contact them again for promotion (Retargeting).",
-        solution: "Own Customer Database",
-        solutionDescription: "Save buyer email/WA data. Send promos anytime to increase repeat orders (CLV)."
-      }
-    ]
-  },
-  comparison: {
-    title: "Online Store Platform Comparison",
-    subtitle: "Don't get trapped in monthly subscription fees. Compare how <strong>Custom E-Commerce</strong> gives the best ROI for the long term.",
-    headers: {
-      criteria: "Criteria",
-      manual: "Manual Selling",
-      marketplace: "Marketplace",
-      agency: "General Web Agency",
-      custom: "Agam E-Commerce",
-      bestValue: "Best Value"
-    },
-    mobile: {
-      winner: "WINNER",
-      description: "Best choice for brands wanting independence without admin fee deductions and feature limits.",
-      agency: "General Web Agency"
-    },
-    list: [
-      {
-        criteria: "Ownership System",
-        manual: "None (Chat Only)",
-        marketplace: "Platform Dependent",
-
-        agency: "Limited License",
-        custom: "100% Ownership (Source Code)"
-      },
-      {
-        criteria: "Cost & Deductions",
-        manual: "Time & Energy",
-        marketplace: "Admin Fees (5-10%)",
-
-        agency: "Annual Maintenance Fee",
-        custom: "One-Time Payment (No Deductions)"
-      },
-      {
-        criteria: "Selling Features",
-        manual: "Manual Reply",
-        marketplace: "Standard Template",
-
-        agency: "Standard Company Profile",
-        custom: "Custom (Promo, Bundling, Wholesale)"
-      },
-      {
-        criteria: "Data Ownership",
-        manual: "Scattered in Chat",
-        marketplace: "Hidden by Platform",
-
-        agency: "Shared Server",
-        custom: "Private Database (Secure)"
-      },
-      {
-        criteria: "Brand Scalability",
-        manual: "Hard to Scale",
-        marketplace: "Price War Trap",
-
-        agency: "Hard to Develop",
-        custom: "Unlimited Products & Transactions"
-      },
-      {
-        criteria: "Data Security",
-        manual: "None (Risky)",
-        marketplace: "Safe (Platform Dependent)",
-
-        agency: "Standard",
-        custom: "SSL Security (HTTPS)"
-      }
-    ]
-  },
-  roiCalculator: {
-    badge: "Simulation & Case Study",
-    title: "Regular Seller vs Modern Brand Owner",
-    subtitle: "See the difference in fate between businesses trapped in price wars vs businesses building long-term digital assets.",
-    cases: {
-      manual: {
-        title: "Type A: 'Marketplace / Chat Seller'",
-        description: "Dependent on algorithms, competitor price wars, and customer database not owned.",
-        effect: "• Effect: Unstable sales, Thin margins."
-      },
-      digital: {
-        title: "Type B: 'E-Commerce Brand Owner'",
-        description: "Owns website, secure customer database, strong & premium brand image.",
-        effect: "• Effect: High loyalty, Max profit."
-      }
-    },
-    calculator: {
-      checkPotentialLoss: "Check Potential Loss",
-      manualRisk: "Manual Risk",
-      digitalPotential: "E-Commerce Potential",
-      switchMode: "Switch Mode",
-      averageRevenue: "Average Revenue / Month",
-      smallBusiness: "Small Business",
-      growingBusiness: "Growing Business",
-      moneyLost: "Potential Loss / Year",
-      potentialProfit: "Potential Extra Profit / Year",
-      manualNote: "(Due to price wars, admin fees, & lost sales)",
-      digitalNote: "(From efficiency, no admin fees, & repeat orders)",
-      ctaManual: "I Want to Stop This Leak",
-      ctaDigital: "I Want to Build This Brand"
-    }
-  },
-  cta: {
-    title: "Ready to Have Your Own Online Store?",
-    subtitle: "Leave manual selling behind. Build your brand now with a professional e-commerce website.",
-    button: "Contact Me"
-  },
-  seo: {
-    hero: {
-      title: "Agam Latifullah | E-Commerce Specialist",
-      desc: "Agam Latifullah (agamlatiff) is an E-Commerce Specialist focused on helping UMKM build modern online stores to increase sales."
-    },
-    'roi-calculator': {
-      title: "Prevent Stock & Financial Leaks | agamlatiff",
-      desc: "Calculate how much money is lost from your business due to manual bookkeeping. E-Commerce & Business System Solutions for maximum efficiency."
-    },
-    services: {
-      title: "Online Store & Website Development Services | agamlatiff",
-      desc: "Providing E-Commerce Website, Online Store, Business Landing Page, and Custom Business System development."
-    },
-    'pain-points': {
-      title: "Stock & Bookkeeping Problems? | agamlatiff",
-      desc: "Overcome stock discrepancies, complicated manual reports, and slow websites. Digital transformation for neater business operations."
-    },
-    'trust-factors': {
-      title: "Warranty & Support | agamlatiff",
-      desc: "Collaboration security with Agam Latifullah: 30 Days Bug Warranty, Free Training, and Source Code Handover."
-    },
-    comparison: {
-      title: "Why Choose Agam Latifullah? | agamlatiff",
-      desc: "Compare my custom Laravel & React solution with ready-made software. Long-term investment for scalable and maintainable systems."
-    },
-    pricing: {
-      title: "Website & System Development Pricing | agamlatiff",
-      desc: "Transparent pricing packages for Online Store, Company Profile Website, and Custom System development. One-time payment without monthly subscription fees."
-    },
-    process: {
-      title: "Custom System Workflow | agamlatiff",
-      desc: "Transparent development process from problem analysis, database design, development, to staff training."
-    },
-    projects: {
-      title: "E-Commerce & Website Portfolio | agamlatiff",
-      desc: "See case studies of Fashion E-Commerce Website, Warehouse Management System, and Landing Page implementation."
-    },
-    testimonials: {
-      title: "Business Client Reviews | agamlatiff",
-      desc: "What business owners say about the online stores and systems I built. Focus on efficiency and ease of use."
-    },
-    about: {
-      title: "About Agam Latifullah | agamlatiff",
-      desc: "E-Commerce Specialist with expertise in building modern online stores, stock management systems, and digital payment integrations."
-    },
-    faq: {
-      title: "FAQ System & Website | agamlatiff",
-      desc: "Questions about cashier application development, costs, maintenance, and other website services."
-    },
-    contact: {
-      title: "Contact Agam Latifullah | agamlatiff",
-      desc: "Ready to streamline your business system? Contact me for Online Store, Website, or Custom System development consultation."
-    }
+  whatsappMessages: {
+    consultation: "Hi Agam, I would like a free consultation regarding website/app development for my business.",
+    general: "Hi Agam, I'm interested in your services and would like to discuss a potential project."
   },
   contact: {
-    title: "Let's Collaborate",
-    subtitle: "Consult your business system or website needs. Free initial discussion.",
+    title: "Let's Connect",
+    subtitle: "Start Project",
+    headline: "Ready to Start Your Digital Project?",
+    subheadline: "Consult your ideas for free.",
     info: {
-      title: "Contact Information",
-      description: "Need an Online Store Website, Landing Page, or Business System? Contact me now.",
+      title: "Contact Info",
+      description: "Available for Freelance & Remote Work.",
       email: "Email",
       status: "Status",
       open: "Open for Projects",
       ai: "AI Assistant",
-      chat: "Chat Now",
-      findMe: "Find me on:"
+      chat: "Chat WhatsApp",
+      findMe: "Social Media:"
     },
     form: {
-      name: { label: "Full Name", placeholder: "John Doe", error: { required: "Name is required", min: "Name minimum 2 characters" } },
-      phone: { label: "WhatsApp Number", placeholder: "0812-3456-7890", error: { required: "WhatsApp Number is required", format: "Invalid number format (min 9 digits)" } },
-      email: { label: "Email Address", placeholder: "john@email.com", error: { required: "Email is required", format: "Invalid email format" } },
-      service: {
-        label: "Service Type",
-        options: [
-          "Online Store / E-Commerce",
-          "Promotional Landing Page",
-          "Company Profile Website (CMS)",
-          "POS System & Inventory (Cashier)",
-          "Online Booking / Reservation System",
-          "Custom Admin Dashboard",
-          "Other / Custom Request"
-        ]
-      },
-      message: { label: "Your Message", placeholder: "Hello Agam, I need a POS system for [Business Type]...", error: { required: "Message is required", min: "Message too short (min. 10 characters)" } },
+      name: { label: "Name", placeholder: "Your Name", error: { required: "Required", min: "Min 2 chars" } },
+      phone: { label: "WhatsApp", placeholder: "0812...", error: { required: "Required", format: "Invalid format" } },
+      email: { label: "Email", placeholder: "email@example.com", error: { required: "Required", format: "Invalid format" } },
+      message: { label: "Message", placeholder: "Tell me about your project...", error: { required: "Required", min: "Min 10 chars" } },
       submit: {
-        idle: "Send Message",
-        sending: "Sending Email...",
-        success: "Message Sent!",
-        error: "Failed to Send"
+        idle: "Send Key",
+        sending: "Sending...",
+        success: "Sent!",
+        error: "Failed"
       },
       toast: {
-        success: { title: "Message Sent!", message: "Your email has been received. I will reply shortly." },
-        error: { title: "Failed to Send", message: "Please check your connection or contact via WhatsApp." }
+        success: { title: "Sent", message: "Your message has been received." },
+        error: { title: "Error", message: "Failed to send message." }
       }
-    }
-  },
-  pricing: {
-    'pos-basic': {
-      name: 'BASIC Package',
-      description: 'Suitable for: Small Bussiness, kiosks, barbershops, beverage stalls.',
-      features: [
-        'Basic Point of Sale (Cashier)',
-        'Product Management (CRUD)',
-        'Product Categories',
-        'Discount per item / per transaction',
-        'Thermal Receipt Printing (USB/Bluetooth)',
-        'Transaction History',
-        'Daily Sales Report',
-        'Multi User (Admin + Cashier)',
-        'Simple Dashboard',
-        'Manual Data Backup & Restore',
-        '2x Revisions',
-        '15 Days Maintenance',
-        'Free Tutorial Video'
-      ],
-      cta: 'Get Basic Package',
-      details: [
-        {
-          feature: "Prevent Leakage",
-          problem: "Manual notes/Excel are prone to calculation errors, input errors, or manipulation.",
-          solution: "Transactions are automatically recorded, transparent, and cannot be changed arbitrarily.",
-          benefit: "Finances are safer and more accurate."
-        },
-        {
-          feature: "Service Speed",
-          problem: "Manual counting causes long queues during busy hours.",
-          solution: "Just click product, calculate automatically, print receipt instantly.",
-          benefit: "Faster service = happier customers."
-        },
-        {
-          feature: "Save Operational Costs",
-          problem: "Manual report recap every night takes time.",
-          solution: "Automatic recap, just open the report, no need for additional admin.",
-          benefit: "Save time & costs for the long term."
-        }
-      ]
-    },
-    'pos-standard': {
-      name: 'STANDARD Package',
-      description: 'Suitable for: restaurants, clothing stores, grocery stores, medium retail.',
-      features: [
-        'All BASIC features',
-        'Stock / Inventory Management',
-        'Low Stock Notification',
-        'Modifiers (extra topping, size)',
-        'Multiple Payment (QRIS + Cash)',
-        'User Security (Role Detail)',
-        'Complete Report (Gross Profit)',
-        'Custom Receipt (Logo)',
-        'Export Report (PDF/Excel)',
-        'Real-time Dashboard',
-        '4x Revisions',
-        '30 Days Maintenance',
-        'Free Tutorial Video'
-      ],
-      cta: 'Get Standard Package',
-      details: [
-        {
-          feature: "Neat Stock Control",
-          problem: "Lost items, late reorder, or piling up unsold stock.",
-          solution: "Low stock notification, in/out history, best-selling items report.",
-          benefit: "Stop stock losses & make better purchasing decisions."
-        },
-        {
-          feature: "Monitor From Anywhere",
-          problem: "Owner has to hang out at the store all day.",
-          solution: "Sales reports, cashier performance can be viewed from HP/Laptop.",
-          benefit: "Time freedom for business owners."
-        },
-        {
-          feature: "Data-Based Decisions",
-          problem: "Making decisions just using feelings.",
-          solution: "Sales trend data, busy hours, and best-selling categories recorded automatically.",
-          benefit: "Business grows faster and measurably."
-        }
-      ]
-    },
-    'pos-premium': {
-      name: 'PREMIUM Package',
-      description: 'Suitable for: large restaurants, chain stores, minimarkets, multi-device.',
-      features: [
-        'All STANDARD features',
-        'Multi Branch + Multi Cashier',
-        'Multi Device (Mobile/Tablet/Laptop)',
-        'Supplier Management',
-        'Purchase Order (PO) & Auto Refill',
-        'Complete COGS Report',
-        'Advanced Access Rights Management',
-        'QRIS Gateway Integration (Midtrans)',
-        'Kitchen / Bar Printer (Optional)',
-        'Offline Mode (Auto Sync)',
-        'Light Custom Features',
-        '6x Revisions',
-        '45 Days Maintenance',
-        'Free Tutorial Video'
-      ],
-      cta: 'Get Premium Package',
-      details: [
-        {
-          feature: "Ready to Scale Up",
-          problem: "Manual system is chaotic when adding branches/products.",
-          solution: "Support multi branch, multi cashier, and stock transfer between branches.",
-          benefit: "Scalability is easier & more professional."
-        },
-        {
-          feature: "Supply Chain",
-          problem: "Complicated managing suppliers and restocking.",
-          solution: "Supplier management, PO, and Auto Stock Refill.",
-          benefit: "Warehouse operations are more efficient."
-        },
-        {
-          feature: "Payment Integration",
-          problem: "Non-cash payments are not automatically verified.",
-          solution: "QRIS Gateway Integration (Midtrans/Xendit) for automatic paid status.",
-          benefit: "Financial bookkeeping is neater."
-        }
-      ]
-    },
-    'queue-basic': {
-      name: 'BASIC QUEUE',
-      description: 'Single Counter Queue. Basic but neat queue for Bussiness, Small Clinics, or Service Centers.',
-      features: [
-        'Simple queue system (1 Service/Counter)',
-        'Print queue number (Thermal Bluetooth)',
-        'Simple queue display (Web Based)',
-        'Manual number call (Click to Call)',
-        'Next/Hold/Recall Dashboard',
-        'Daily Statistics',
-        'Responsive Mode (TV/Tablet)',
-        'Branding colors according to business',
-        '2x Revisions',
-        '15 Days Maintenance'
-      ],
-      cta: 'Get Basic Queue',
-      details: [
-        {
-          feature: "Eliminate Crowding",
-          problem: "Customers pile up in front of the counter, looking unprofessional.",
-          solution: "Customers take a number, sit back, number runs automatically.",
-          benefit: "Good first impression, orderly and neat room."
-        },
-        {
-          feature: "Reduce Customer Emotion",
-          problem: "Cutting in line, forgetting order, wrong call makes customers angry.",
-          solution: "Digital system is fair, orderly, and transparent.",
-          benefit: "Conflict reduced, customers calmer."
-        },
-        {
-          feature: "Efficient & Modern",
-          problem: "Manual queue, shouting names, minimal contact.",
-          solution: "Digital/thermal ticket, system call.",
-          benefit: "More hygienic, safe, and modern post-pandemic."
-        }
-      ]
-    },
-    'queue-standard': {
-      name: 'STANDARD QUEUE',
-      description: 'Multi Service + Voice Call. Ideal solution for Health Centers, Workshops, or Service Offices.',
-      features: [
-        'All BASIC features',
-        'Multi Service (CS/Cashier/Pharmacy)',
-        'Multi Counter',
-        'Automatic Voice Call (Google Voice)',
-        'Custom Prefix (A-001, B-001)',
-        'Real-time Dashboard Display TV',
-        'Weekly/Monthly Statistics',
-        'Staff Activity Log',
-        '4x Revisions',
-        '30 Days Maintenance'
-      ],
-      cta: 'Get Standard Queue',
-      details: [
-        {
-          feature: "Staff Efficiency",
-          problem: "Staff tired of shouting numbers, confused about order.",
-          solution: "Automatic voice call, queue monitor dashboard.",
-          benefit: "Productivity up, service time shorter."
-        },
-        {
-          feature: "Professional Experience",
-          problem: "Business seems messy and manual.",
-          solution: "Digital queue system gives a trusted and 'corporate' impression.",
-          benefit: "Small business looks medium-premium level."
-        },
-        {
-          feature: "Data for Management",
-          problem: "Don't know busy hours or favorite services.",
-          solution: "Daily visit statistics, most services, counter performance.",
-          benefit: "Owner can calculate staff needs & operational hours accurately."
-        }
-      ]
-    },
-    'queue-premium': {
-      name: 'PREMIUM QUEUE',
-      description: 'Advanced Queue + Monitoring. For Hospitals, Banks, or Agencies with complex needs.',
-      features: [
-        'All STANDARD features',
-        'Multi Branch Management',
-        'Premium Display (Full Animation)',
-        'Custom Voice (Male/Female)',
-        'Auto Distribute to Available Counter',
-        'Staff Performance Report (KPI)',
-        'Offline Sync Mode',
-        'Service Hour Scheduling',
-        '6x Revisions',
-        '45 Days Maintenance'
-      ],
-      cta: 'Consult Premium',
-      details: [
-        {
-          feature: "Reduce Admin Burden",
-          problem: "Wrong call, mixed services, lost queue.",
-          solution: "Automatic system regulates queue distribution.",
-          benefit: "Staff calm, human error minimized."
-        },
-        {
-          feature: "Scale Up Ready",
-          problem: "Growing business has many services/branches.",
-          solution: "System ready for multi-branch and multi-service.",
-          benefit: "Long-term asset ready to grow."
-        },
-        {
-          feature: "Centralized Monitoring",
-          problem: "Hard to monitor queues in many branches.",
-          solution: "Monitoring center to see real-time queue density.",
-          benefit: "Full control from headquarters."
-        }
-      ]
-    },
-    'attendance-basic': {
-      name: 'BASIC ATTENDANCE',
-      description: 'QR Attendance Starter. Economical digital attendance solution to eliminate buddy punching.',
-      features: [
-        'QR Check-in & Check-out Attendance',
-        'Automatic daily & monthly recap',
-        'Basic CSV/Excel Export',
-        'User role admin & staff',
-        'Work hour settings',
-        'Simple Dashboard',
-        '2x Revisions',
-        '15 Days Maintenance'
-      ],
-      cta: 'Get Basic Attendance',
-      details: [
-        {
-          feature: "Eliminate Cheating",
-          problem: "Buddy punching, clocking back time, manual data deletion.",
-          solution: "QR + Digital System eliminates manipulation loopholes.",
-          benefit: "Data is much more honest and accurate."
-        },
-        {
-          feature: "Secure Data",
-          problem: "Attendance book damaged, lost, or spilled coffee.",
-          solution: "All data stored neatly in cloud database.",
-          benefit: "No risk of losing attendance data."
-        },
-        {
-          feature: "Save Admin",
-          problem: "One admin specifically for manual attendance recap.",
-          solution: "Automatic recap process by system.",
-          benefit: "Reduce admin costs or divert to other tasks."
-        }
-      ]
-    },
-    'attendance-standard': {
-      name: 'STANDARD ATTENDANCE',
-      description: 'Smart Attendance + GPS Lock. Best seller for businesses with mobile/field teams.',
-      features: [
-        'All BASIC features',
-        'GPS Lock (Anti attendance outside area)',
-        'Selfie Validation (Photo proof)',
-        'Multi Shift Support',
-        'Leave System (Permission, Sick, WFH)',
-        'Attendance Location Map',
-        'Late / Early Leave Notification',
-        'Complete Dashboard',
-        '4x Revisions',
-        '30 Days Maintenance'
-      ],
-      cta: 'Get Standard Attendance',
-      details: [
-        {
-          feature: "Real-time Monitoring",
-          problem: "Owner doesn't know who is late or skipping without asking admin.",
-          solution: "Real-time dashboard of employee attendance status.",
-          benefit: "Monitor discipline directly from HP."
-        },
-        {
-          feature: "Fast Payroll Recap",
-          problem: "Calculating late, overtime, leave takes days.",
-          solution: "Automatic attendance recap connected to salary data.",
-          benefit: "Save payroll recap time every month."
-        },
-        {
-          feature: "Professional Business",
-          problem: "Employees relaxed because supervision is loose.",
-          solution: "Strict system (GPS + Selfie) disciplines employees.",
-          benefit: "Discipline up, work productivity increases."
-        }
-      ]
-    },
-    'attendance-premium': {
-      name: 'PREMIUM ATTENDANCE',
-      description: 'Enterprise Performance. For multi-branch companies with automatic payroll needs.',
-      features: [
-        'All STANDARD features',
-        'Multi Branch Management',
-        'Face Recognition (Webcam)',
-        'High Accuracy GPS',
-        'Auto Payroll (Calculate Work Hours)',
-        'Performance Tracking',
-        'Multi-level Leave Approval',
-        'Other System Integration (API)',
-        '6x Revisions',
-        '45 Days Maintenance'
-      ],
-      cta: 'Consult Premium',
-      details: [
-        {
-          feature: "Multi Branch",
-          problem: "Hard to monitor employees in many branches manually.",
-          solution: "One dashboard for all branches, data not mixed.",
-          benefit: "Owner fully controls entire branch operations."
-        },
-        {
-          feature: "Neat Audit & HRD",
-          problem: "Salary or work hour complaints, messy data.",
-          solution: "Complete and transparent activity log.",
-          benefit: "Easy to audit and minimize employee disputes."
-        },
-        {
-          feature: "Advanced Technology",
-          problem: "Selfie can still be tricked (rare but possible).",
-          solution: "Face Recognition and High Accuracy GPS.",
-          benefit: "Enterprise level attendance data security."
-        }
-      ]
-    },
-    'lp-starter': {
-      name: 'STARTER',
-      description: 'Single Page / Simple Landing Page. Fast & economical solution for online presence.',
-      features: [
-        'Single Page Layout (Neat & Simple)',
-        'Responsive Design (Mobile Friendly)',
-        'Basic Content (Hero, Product, Benefit)',
-        'CTA Button (WA/Contact/Order)',
-        'Simple Contact Form (Optional)',
-        'Basic Domain & Hosting Setup',
-        'Basic SEO On-Page',
-        'Full Source Code (Handover)',
-        'Basic Content Update Guide',
-        '2x Revisions',
-        '15 Days Maintenance'
-      ],
-      cta: 'Get STARTER Package',
-      modalDetails: {
-        sections: [
-          {
-            title: "🌐 Layout & Structure",
-            items: [
-              "Single-page layout, neat & simple.",
-              "Hero/banner, headline, value proposition, and CTA.",
-              "Responsive design: optimal on desktop, tablet, and mobile."
-            ]
-          },
-          {
-            title: "📄 Content & Basic Functions",
-            items: [
-              "Basic elements: product photos, description, benefits.",
-              "Direct CTA to WhatsApp/Contact/Order.",
-              "Simple contact/lead capture form (optional)."
-            ]
-          },
-          {
-            title: "🛠️ Setup & Deployment",
-            items: [
-              "Basic domain + hosting setup & configuration.",
-              "Simple & light code structure.",
-              "Basic SEO on-page: basic meta tags, friendly URL."
-            ]
-          }
-        ],
-        valueProps: {
-          title: "🎯 Who is this Starter Package Suitable For",
-          items: [
-            "Small businesses / UMKM / freelancers wanting to go online quickly.",
-            "Businesses focusing on 1-2 products/services only.",
-            "Special campaigns: promotions, pre-orders, product launches.",
-            "Limited budget but want professional online presence."
-          ]
-        }
-      }
-    },
-    'lp-growth': {
-      name: 'GROWTH',
-      description: 'Landing Page + Optimization & Conversion. Professional design for real results.',
-      features: [
-        'Professional & Conversion-Friendly Design',
-        'Organized Content Structure',
-        'Persuasive & Clear CTA',
-        'Simple Lead / Order Form',
-        'Social Proof (Testimonials/Badges)',
-        'Speed & Performance Optimization',
-        'Basic SEO & On-Page Optimization',
-        'Tracking / Analytics Integration',
-        'Full Source Code & Assets',
-        '4x Revisions',
-        '30 Days Maintenance'
-      ],
-      cta: 'Get GROWTH Package',
-      modalDetails: {
-        sections: [
-          {
-            title: "🌐 Layout & Structure — Conversion-Friendly",
-            items: [
-              "Clean, modern design, arranged for conversion.",
-              "Attractive hero, clear value proposition, supporting visuals.",
-              "Organized content structure (headings, bullets, icons).",
-              "Optimal responsive & mobile-friendly."
-            ]
-          },
-          {
-            title: "🛠️ Conversion & Optimization",
-            items: [
-              "Persuasive & prominent CTA.",
-              "Simple lead/contact/order form.",
-              "Social proof: testimonials, trust badges.",
-              "Speed optimization & light loading."
-            ]
-          },
-          {
-            title: "📈 Tracking & Analytics",
-            items: [
-              "Analytics tool integration (Google Analytics/Pixel).",
-              "Monitor performance: visitors, conversions, traffic sources.",
-              "Basic conversion rate optimization (CRO) support."
-            ]
-          },
-          {
-            title: "🧰 Deployment & Ownership",
-            items: [
-              "Full source code & assets + full access.",
-              "Deployment + hosting configuration + domain + SSL.",
-              "Documentation guide for basic content changes.",
-            ]
-          }
-        ],
-        valueProps: {
-          title: "🎯 Who is this Growth Package Suitable For",
-          items: [
-            "Businesses/startups needing conversion tools (not just a showcase).",
-            "Business owners wanting visitor data & real results.",
-            "Brands needing professionalism & scaling opportunities.",
-            "Serious medium/long-term intent with digital assets."
-          ]
-        }
-      }
-    },
-    'lp-ultimate': {
-      name: 'ULTIMATE',
-      description: 'Premium / High-End Landing Page. Full Custom, Conversion-Ready & Complete Service.',
-      features: [
-        'Full Custom Design & Branding',
-        'Comprehensive Structure (Many Sections)',
-        'Persuasive & Conversion Copywriting',
-        'Advanced Lead Capture & Funnel',
-        'Complete Tracking & Analytics Integration',
-        'High Performance & Speed Optimization',
-        'On-Page & Technical SEO',
-        'Premium Hosting, Domain, SSL Setup',
-        'Complete Documentation & Full Ownership',
-        '6x Revisions',
-        '45 Days Maintenance'
-      ],
-      cta: 'Get ULTIMATE Package',
-      modalDetails: {
-        sections: [
-          {
-            title: "🌐 Layout, Structure & Complete Branding",
-            items: [
-              "Full custom design matching brand identity.",
-              "Comprehensive structure: hero, features, gallery, testimonials, FAQ, pricing.",
-              "Optimal responsive & mobile-first design."
-            ]
-          },
-          {
-            title: "📈 Conversion Optimization & Advanced UX",
-            items: [
-              "Persuasive & conversion-oriented copywriting.",
-              "Lead capture / form & funnel integration (Email/CRM/WA).",
-              "Complete tracking & analytics integration (Event tracking).",
-              "Performance optimization: lazy loading, minification, speed."
-            ]
-          },
-          {
-            title: "🧰 Professional Features & Services",
-            items: [
-              "Deployment + hosting/server setup + premium SSL.",
-              "Basic backup & security, spam protection.",
-              "Complete documentation & full ownership.",
-              "Custom additional services (API integration, multi-language, etc)."
-            ]
-          },
-          {
-            title: "🚀 Value & Long-Term Orientation",
-            items: [
-              "Ready for intensive ad/marketing campaigns.",
-              "Scalable structure: can be developed into a full website.",
-              "Focus on conversion, branding, speed, & security."
-            ]
-          }
-        ],
-        valueProps: {
-          title: "🎯 Who is this Ultimate Package Suitable For",
-          items: [
-            "Professional brands / premium products needing high trust.",
-            "Big campaigns: launching, pre-order, large-scale ads.",
-            "Companies wanting serious & long-term digital assets.",
-            "Clients wanting maximum results & all-in-one service."
-          ]
-        }
-      }
-    },
-    'cp-basic': {
-      name: 'BASIC',
-      description: 'Start Looking Professional. Fast and neat website for Bussiness & Freelancers.',
-      features: [
-        '1 Main Landing Page',
-        '3 Additional Pages (Home/About/Service)',
-        'Free .com Domain + Hosting 6 Months',
-        'Clean & Modern Design',
-        'Contact + WhatsApp Button',
-        'Google Maps Integration',
-        'Content Update Video Tutorial',
-        '2x Revisions',
-        '15 Days Maintenance'
-      ],
-      cta: 'Get Basic Promo',
-      details: [
-        {
-          feature: "Instant Credibility",
-          problem: "Without a website, potential customers doubt if your business is real or not.",
-          solution: "Professional website becomes valid proof of digital existence.",
-          benefit: "Customers immediately trust when seeing your official website."
-        },
-        {
-          feature: "Info Always Up-to-Date",
-          problem: "Tired of answering repeated questions about address, opening hours, or prices.",
-          solution: "Website becomes accurate information center accessible 24 hours.",
-          benefit: "Save admin time and make it easier for customers to find info."
-        },
-        {
-          feature: "Easy to Find (Basic SEO)",
-          problem: "Business doesn't appear when people search on Google around location.",
-          solution: "Basic optimization so business appears in local search & Maps.",
-          benefit: "Potential new customers come directly from Google."
-        }
-      ]
-    },
-    'cp-premium': {
-      name: 'PREMIUM',
-      description: 'Increase Business Credibility. Premium design + Portfolio for growing businesses.',
-      features: [
-        '5-6 Complete Pages',
-        'Free .com Domain + Hosting 6 Months',
-        'Premium Design + Smooth Animation',
-        'Copywriting Increases Trust',
-        'Portfolio Page (Max 10 items)',
-        'Website Visitor Analytics',
-        'Admin Video Tutorial',
-        '4x Revisions',
-        '30 Days Maintenance'
-      ],
-      cta: 'Get Premium Promo',
-      details: [
-        {
-          feature: "Turn Visitors Into Prospects",
-          problem: "Many look but then leave without contact.",
-          solution: "Strategic CTA (Call to Action) button placement & persuasive copywriting.",
-          benefit: "More visitors finally chat WA or fill form."
-        },
-        {
-          feature: "Save Marketing Costs",
-          problem: "Dependence on paid ads whose costs keep rising.",
-          solution: "Website works as a 'salesman' 24 hours with one-time payment.",
-          benefit: "Long-term asset investment much cheaper than sales salary."
-        },
-        {
-          feature: "Control Brand Narrative",
-          problem: "Hard to tell business advantages completely on social media.",
-          solution: "'About Us' & 'Services' pages that tell your business value.",
-          benefit: "Brand awareness increases, customers understand why they should choose you."
-        }
-      ]
-    },
-    'cp-pro': {
-      name: 'PRO',
-      description: 'Maximum Branding & Trust Level. Exclusive website for long-term marketing assets.',
-      features: [
-        'Up to 10 Custom Pages',
-        'Free .com Domain + Hosting 6 Months',
-        'Exclusive Design + Micro-interactions',
-        'Blog / Article Feature',
-        'Dynamic Testimonial Page',
-        'Advanced SEO (Indexing & Keyword)',
-        'Website Performance Report',
-        '6x Revisions',
-        '45 Days Maintenance'
-      ],
-      cta: 'Get Pro Promo',
-      details: [
-        {
-          feature: "Reduce Transaction Barriers",
-          problem: "Customers need a long time to decide to buy.",
-          solution: "Super complete information & convincing dynamic testimonials.",
-          benefit: "Accelerate customer decision-making process."
-        },
-        {
-          feature: "Competitive Advantage",
-          problem: "Other competitors starting to have websites too.",
-          solution: "Exclusive design & blog features make you look like a market leader.",
-          benefit: "Win competition with a much more bonafide image."
-        },
-        {
-          feature: "Safe & Independent",
-          problem: "Afraid social media/marketplace account gets banned or algorithm changes.",
-          solution: "Website is 100% your asset. Full control.",
-          benefit: "Business not vulnerable, organic traffic remains safe."
-        }
-      ]
-    },
-    'ec-basic': {
-      name: 'BASIC',
-      description: 'E-Commerce Fullstack “Entry / Start-up”. Minimal & Entry-Level Version.',
-      features: [
-        'Simple Frontend & Landing Page',
-        'Product Catalog (Grid/List View)',
-        'Product Detail (Main Photo, Desc)',
-        'Shopping Cart & Simple Checkout',
-        'Manual Order (Transfer/WA)',
-        'Basic Admin Panel (Product & Order)',
-        'Mobile Friendly & Responsive',
-        'Basic Hosting & Domain Setup',
-        'Full Source Code & Database',
-        'Admin Usage Documentation',
-        '2x Revisions',
-        '15 Days Maintenance'
-      ],
-      cta: 'Get BASIC Package',
-      modalDetails: {
-        sections: [
-          {
-            title: "📦 Frontend & User Experience",
-            items: [
-              "Simple homepage: banner + store info + catalog link.",
-              "Product catalog page: grid/list layout, simple categories.",
-              "Product detail page: one main image, description, price.",
-              "Responsive / mobile-friendly display on all devices."
-            ]
-          },
-          {
-            title: "🛒 Shopping Features: Cart + Simple Checkout",
-            items: [
-              "Shopping cart: add, modify quantity, remove products.",
-              "Simple checkout: customer data form (name, address, contact).",
-              "Manual payment method: bank transfer / WA confirmation (no auto gateway)."
-            ]
-          },
-          {
-            title: "⚙️ Backend / Basic Admin Panel",
-            items: [
-              "Simple admin login panel.",
-              "Product management: add/edit/delete, set basic price/stock, upload image.",
-              "Simple order management: view incoming order list & order details."
-            ]
-          },
-          {
-            title: "🛠️ Technical & Infrastructure",
-            items: [
-              "Hosting + domain setup (shared/light) as agreed.",
-              "Simple & light code structure (React + Laravel).",
-              "Basic security: input validation, standard protection."
-            ]
-          },
-          {
-            title: "🎁 Additional Services",
-            items: [
-              "Full source code + database (Full Ownership).",
-              "Basic admin panel usage documentation.",
-              "2x minor revision before final delivery."
-            ]
-          }
-        ],
-        valueProps: {
-          title: "🎯 Who is this Basic Package Suitable For",
-          items: [
-            "Small UMKM / home businesses wanting to start selling online.",
-            "Businesses with few products & don't need complex features.",
-            "Business owners wanting to 'test the market' with minimal cost.",
-            "Limited budget but want their own website (not marketplace)."
-          ]
-        }
-      }
-    },
-    'ec-standard': {
-      name: 'STANDARD',
-      description: 'E-Commerce Fullstack “Balanced”. Medium & More Complete Version.',
-      features: [
-        'Professional Frontend & Complete Categories',
-        'Product Detail (Multi-Image, Variations)',
-        'Product Search & Filter',
-        'Checkout & Online Payment Gateway',
-        'Order Management & Shipping Status',
-        'Category & Option Management Admin',
-        'Customer Account Management (Login/Register)',
-        'Maintainable Code Structure',
-        'Hosting, Domain, SSL Setup',
-        'Basic Security & Optimization',
-        '4x Revisions',
-        '30 Days Maintenance'
-      ],
-      cta: 'Get STANDARD Package',
-      modalDetails: {
-        sections: [
-          {
-            title: "🌐 Frontend & User Experience (Medium)",
-            items: [
-              "Homepage + categories + catalog with more professional look.",
-              "Product detail: multi-image, description, variations (color/size).",
-              "Search, filter, & sorting features.",
-              "Good navigation & menu structure for comfortable browsing."
-            ]
-          },
-          {
-            title: "🛒 Shopping & Transaction Features (Semi-Auto)",
-            items: [
-              "Functional shopping cart.",
-              "Checkout & Payment Gateway: secure online payment (Virtual Account, E-Wallet).",
-              "Backend order system: admin manages payment/shipping status."
-            ]
-          },
-          {
-            title: "🧑‍💼 Backend / Medium Admin Panel",
-            items: [
-              "Complete product management: variations, stock, multi-image.",
-              "Structured category & product option management.",
-              "Order management: payment confirmation, update receipt/status.",
-              "User management: customers can register/login."
-            ]
-          },
-          {
-            title: "🔧 Infrastructure & Professionalism",
-            items: [
-              "Hosting + domain + SSL setup for secure transactions.",
-              "Better & maintainable code structure for development.",
-              "Standard e-commerce security (data encryption)."
-            ]
-          }
-        ],
-        valueProps: {
-          title: "🎯 Who is this Standard Package Suitable For",
-          items: [
-            "Growing online stores needing a more professional system.",
-            "Businesses with medium catalogs & product variations.",
-            "Store owners wanting easy order management & online payment.",
-            "Ready to scale up but don't need enterprise features yet."
-          ]
-        }
-      }
-    },
-    'ec-pro': {
-      name: 'PRO',
-      description: 'E-Commerce Fullstack “Premium”. Full-Features, Scalable & Secure.',
-      features: [
-        'Premium Frontend & Custom Branding',
-        'Complete Product Detail (Gallery, Stock, Variants)',
-        'Complete & Auto Payment Gateway',
-        'User Management, Wishlist & Review',
-        'Comprehensive Admin Panel & Analytics',
-        'Promotion Features (Discount, Voucher)',
-        'High Performance & Security Optimization',
-        'Logistics / Shipping Integration (Optional)',
-        'Priority Support & Maintenance',
-        'High Scalability (Ready for Big Traffic)',
-        '6x Revisions',
-        '45 Days Maintenance'
-      ],
-      cta: 'Get PRO Package',
-      modalDetails: {
-        sections: [
-          {
-            title: "💎 Frontend & User Experience (Premium)",
-            items: [
-              "Professional design & strong branding matching business identity.",
-              "Complete product detail: gallery, real-time stock, complex variants.",
-              "Advanced features: Wishlist, Review & Rating, Product Recommendations.",
-              "Optimal UX: clear navigation, breadcrumbs, mobile-first design."
-            ]
-          },
-          {
-            title: "💳 Complete Transaction & Automation",
-            items: [
-              "Complete Checkout & Payment Gateway (VA, E-Wallet, QRIS).",
-              "Login / Guest Checkout options.",
-              "Customer account management: order history, easy repeat order.",
-              "Automated order & payment management system."
-            ]
-          },
-          {
-            title: "📊 Backend / Admin Panel & Analytics",
-            items: [
-              "Comprehensive admin panel: complete CRUD, custom fields.",
-              "Analytics Dashboard & Reports: sales data, revenue, best sellers.",
-              "Promotion features: discounts, coupons/vouchers, flash sale.",
-              "Detailed customer & order data management."
-            ]
-          },
-          {
-            title: "🔒 Infrastructure & Scalability",
-            items: [
-              "Server setup (VPS/Cloud) + Domain + Premium SSL.",
-              "Performance optimization (caching, speed) & high security.",
-              "Scalable architecture: ready for high traffic & future feature development."
-            ]
-          }
-        ],
-        valueProps: {
-          title: "🎯 Who is this Pro Package Suitable For",
-          items: [
-            "Big brands / serious online stores ready to scale up.",
-            "Need complete system: payment, stock, user, analytics, promo.",
-            "Want full control & maximum flexibility for long term.",
-            "Prioritize security, performance, and best customer experience."
-          ]
-        }
-      }
-    },
-    'book-basic': {
-      name: 'BASIC',
-      description: 'Booking Starter. Initial solution for barbershops, clinics, or small studios.',
-      features: [
-        'Simple Booking Form',
-        'Date Selection Calendar',
-        'Confirmation via Email/WA',
-        'Mini Admin (Check Booking)',
-        'WhatsApp Follow-up Integration',
-        'Free Domain & Hosting 6 Months',
-        'Free Video Tutorial',
-        '2x Revisions',
-        'Maintenance 15 Days'
-      ],
-      cta: 'Get Basic Package',
-      details: [
-        {
-          feature: "Customers Lazy to Chat Manually",
-          problem: "Potential customers often cancel booking because lazy to chat admin or slow response.",
-          solution: "Self-service feature where customers can directly choose empty slots themselves.",
-          benefit: "Reduce risk of lost lead due to complicated process."
-        },
-        {
-          feature: "Reduce Miss-communication",
-          problem: "Double-booking often happens, wrong time, or forgot to write name in book.",
-          solution: "System automatically records all booking data neatly and accurately.",
-          benefit: "Stress-free operations, human error risk minimized."
-        },
-        {
-          feature: "Save Admin Time",
-          problem: "Time wasted just to answer questions 'is this hour empty?'.",
-          solution: "Booking comes in automatically, owner/admin just check notification.",
-          benefit: "Can focus more on serving customers on location or business development."
-        }
-      ]
-    },
-    'book-standard': {
-      name: 'STANDARD',
-      description: 'Smart Booking System. Automatic service duration feature and staff management.',
-      features: [
-        'All Basic Features',
-        'Service & Duration Selection',
-        'Staff/Therapist Management',
-        'Block Break/Holiday Hours',
-        'Self Reschedule',
-        'Monthly Booking Report',
-        'Custom Form Field',
-        '4x Revisions',
-        'Maintenance 30 Days'
-      ],
-      cta: 'Get Standard Package',
-      details: [
-        {
-          feature: "Automatic Duration Management",
-          problem: "Schedule messy because service duration estimation is inaccurate.",
-          solution: "System automatically blocks time slots according to selected service duration.",
-          benefit: "Schedule more precise, no overlap between customers."
-        },
-        {
-          feature: "Choose Favorite Staff",
-          problem: "Customers want to be served by certain staff but hard to arrange schedule.",
-          solution: "Staff selection feature when booking, automatically check staff availability.",
-          benefit: "Customer satisfaction increases, loyalty to staff maintained."
-        },
-        {
-          feature: "Self Reschedule",
-          problem: "Admin bothered dealing with customer schedule changes.",
-          solution: "Reschedule link accessible by customers to change schedule themselves (D-1).",
-          benefit: "Admin burden reduced, customers more flexible."
-        }
-      ]
-    },
-    'book-premium': {
-      name: 'PREMIUM',
-      description: 'Full Automation. Automatic DP payment and advanced reminder features.',
-      features: [
-        'All Standard Features',
-        'Payment Gateway Integration (DP)',
-        'WhatsApp Automation (Reminder D-1)',
-        'Membership / Discount System',
-        'Multi-Branch Support',
-        'Sync Google Calendar',
-        'Complete Customer Analytics',
-        '6x Revisions',
-        'Maintenance 45 Days'
-      ],
-      cta: 'Get Premium Package',
-      details: [
-        {
-          feature: "Prevent No-Show",
-          problem: "Customers book but don't come (ghosting).",
-          solution: "Mandatory DP when booking & Automatic Reminder via WhatsApp D-1.",
-          benefit: "Attendance rate up drastically, turnover more guaranteed."
-        },
-        {
-          feature: "Customer Database",
-          problem: "Customer treatment history data not recorded.",
-          solution: "Medical record/booking history stored neatly for service personalization.",
-          benefit: "Can offer specific promos according to customer habits (Retention)."
-        },
-        {
-          feature: "Multi-Location",
-          problem: "Have several branches but booking system separated.",
-          solution: "One central system to manage schedules of all branches.",
-          benefit: "Business monitoring easier, service standards uniform."
-        }
-      ]
-    },
-    'travel-basic': {
-      name: 'BASIC',
-      description: 'Travel Website Starter. Display tour packages and destination gallery.',
-      features: [
-        'Travel Landing Page',
-        'Catalog 6 Tour Packages',
-        'Itinerary & Price Detail',
-        'WhatsApp Booking Button',
-        'Destination Photo Gallery',
-        'Free Domain & Hosting',
-        'Mobile Friendly',
-        '2x Revisions',
-        'Maintenance 15 Days'
-      ],
-      cta: 'Get Basic Package',
-      details: [
-        {
-          feature: "Neat Digital Catalog",
-          problem: "Tired of sending PDF/Photo tour packages repeatedly to potential guests.",
-          solution: "Website becomes digital catalog accessible anytime.",
-          benefit: "Complete info available 24 hours, save CS time."
-        },
-        {
-          feature: "Destination Visual",
-          problem: "Photos in WA chat broken/less convincing.",
-          solution: "HD photo gallery and attractive layout on website.",
-          benefit: "Increase customer desire for vacation."
-        },
-        {
-          feature: "Travel Agent Trust",
-          problem: "Many travel scams, customers careful.",
-          solution: "Official website with .com domain increases trust.",
-          benefit: "Closing easier because credibility maintained."
-        }
-      ]
-    },
-    'travel-premium': {
-      name: 'PREMIUM',
-      description: 'Professional Travel Agent. Unlimited packages & complete booking form.',
-      features: [
-        'Unlimited Tour Packages',
-        'Destination / Category Filter',
-        'Custom Booking Form',
-        'Travel Tips Blog',
-        'Customer Testimonials',
-        'Google Maps Integration',
-        'Basic SEO for Tourism',
-        '4x Revisions',
-        'Maintenance 30 Days'
-      ],
-      cta: 'Get Premium Package',
-      details: [
-        {
-          feature: "Easy Package Search",
-          problem: "Customers confused looking for suitable packages.",
-          solution: "Filter feature based on location, price, or day duration.",
-          benefit: "Good user experience, customers quickly find what they look for."
-        },
-        {
-          feature: "Tourism SEO",
-          problem: "Want to be found by tourists searching 'Bali Tour Package' on Google.",
-          solution: "SEO friendly web structure and blog feature for tourism articles.",
-          benefit: "Free traffic from Google (Organic Search)."
-        },
-        {
-          feature: "Complete Guest Data",
-          problem: "Booking data in WA often incomplete.",
-          solution: "Website booking form asks for complete details (Passport/ID/Date).",
-          benefit: "Tour administration neater from the start."
-        }
-      ]
-    },
-    'travel-pro': {
-      name: 'PRO',
-      description: 'Online Travel Agent (OTA) System. Online payment & automatic invoice.',
-      features: [
-        'Booking Engine System',
-        'Select Date & Pax Realtime',
-        'Payment Gateway (CC/VA)',
-        'Automatic Email Invoice',
-        'Seat/Quota Management',
-        'Sales Report Dashboard',
-        'Member Area (Trip History)',
-        '6x Revisions',
-        'Maintenance 45 Days'
-      ],
-      cta: 'Get Pro Package',
-      details: [
-        {
-          feature: "Instant Transaction",
-          problem: "Manual transfer process and payment proof confirmation complicated.",
-          solution: "Pay using QRIS/VA, automatically paid off and ticket issued.",
-          benefit: "Cashflow faster, work system like Traveloka/Tiket.com."
-        },
-        {
-          feature: "Quota Management",
-          problem: "Afraid of overbooked on high season dates.",
-          solution: "System locks quota automatically when someone books.",
-          benefit: "Prevent losses due to seat administration errors."
-        },
-        {
-          feature: "Member Database",
-          problem: "Hard to maintain old customers.",
-          solution: "Member area to view trip history and reward points.",
-          benefit: "Repeat order higher with loyalty program."
-        }
-      ]
-    },
-    'revamp-basic': {
-      name: 'BASIC',
-      description: 'Refresh Main Appearance. Focus on Homepage to be more modern.',
-      features: [
-        'Redesign Homepage (Front Page)',
-        'Menu Navigation Improvement',
-        'Mobile Responsiveness Fix',
-        'Update Banner & Images',
-        'Broken Link Repair',
-        'Basic Loading Optimization',
-        'Old Web Backup',
-        '2x Revisions',
-        'Maintenance 15 Days'
-      ],
-      cta: 'Revamp Basic',
-      details: [
-        {
-          feature: "First Impression",
-          problem: "Old website looks outdated, visitors immediately close tab.",
-          solution: "Modern homepage with latest UI/UX.",
-          benefit: "Bounce rate down, visitors stay browsing."
-        },
-        {
-          feature: "Mobile Friendly",
-          problem: "Display messy when opened on HP.",
-          solution: "Layout improvement to be responsive on all screen sizes.",
-          benefit: "Reach 80% internet users who use HP."
-        },
-        {
-          feature: "Neat Structure",
-          problem: "Menu confusing, visitors lost.",
-          solution: "Navigation simplified and clarified.",
-          benefit: "Better User Experience (UX)."
-        }
-      ]
-    },
-    'revamp-premium': {
-      name: 'PREMIUM',
-      description: 'Total Redesign & Performance. Upgrade website appearance and speed.',
-      features: [
-        'Redesign 5-6 Main Pages',
-        'Core Web Vitals Optimization (Speed)',
-        'SEO On-Page Optimization',
-        'Copywriting Refresh',
-        'New WhatsApp CTA Integration',
-        'Security Patch / Update Plugin',
-        'Latest Analytics Setup',
-        '4x Revisions',
-        'Maintenance 30 Days'
-      ],
-      cta: 'Revamp Premium',
-      details: [
-        {
-          feature: "Fast Loading (Speed)",
-          problem: "Website slow, left by visitors.",
-          solution: "Code, image, and cache optimization for loading < 3 seconds.",
-          benefit: "Google ranking up, user happy."
-        },
-        {
-          feature: "SEO Boost",
-          problem: "Organic traffic keeps going down.",
-          solution: "Heading structure, meta tags, and sitemap improvement.",
-          benefit: "Website easier to find on Google."
-        },
-        {
-          feature: "Conversion Focus",
-          problem: "Lots of traffic but few contacts.",
-          solution: "CTA rearrangement and selling copywriting.",
-          benefit: "More leads coming from the same visitors."
-        }
-      ]
-    },
-    'revamp-pro': {
-      name: 'PRO',
-      description: 'Platform Migration / Rebuild. Move platform or rebuild with new technology.',
-      features: [
-        'Rebuild (e.g., WP to React/NextJS)',
-        'Migrate All Content/Articles',
-        'Full Custom UI/UX Redesign',
-        'Add New Custom Features',
-        'Advanced Security Setup',
-        'Server Optimization / Move Hosting',
-        'SEO Retention Strategy',
-        '6x Revisions',
-        'Maintenance 45 Days'
-      ],
-      cta: 'Revamp Pro',
-      details: [
-        {
-          feature: "Modern Technology",
-          problem: "Old website uses obsolete technology vulnerable to hacks.",
-          solution: "Rebuild with modern stack (Next.js/Laravel) which is safe & fast.",
-          benefit: "Website future-proof, safe, and scalable."
-        },
-        {
-          feature: "Custom Features",
-          problem: "Old website features limited, can't add this and that.",
-          solution: "Recoding allows adding any feature according to request.",
-          benefit: "System follows business development."
-        },
-        {
-          feature: "SEO Retention",
-          problem: "Afraid changing web makes Google ranking lost.",
-          solution: "301 redirect strategy and careful URL migration.",
-          benefit: "Ranking safe, even up because performance is better."
-        }
-      ]
-    }
-  },
-  nav: {
-    home: "Home",
-    services: "Services & Pricing",
-    projects: "Projects",
-    about: "About",
-    contact: "Contact",
-    contactMe: "Contact Me"
-  },
-  common: {
-    loading: "Loading...",
-    error: "An error occurred",
-    swipeHint: "Swipe left to see details →"
-  },
-  whatsappMessages: {
-    general: "Hello Agam, I would like to ask about system/website development services.",
-    consultation: "Hello Agam, I would like a free consultation regarding my business system needs.",
-    roi: "Hello Agam, I have checked the ROI simulation and I am interested in securing my business profit. Can we discuss?",
-    pricing: "Hello Agam, I am interested in the {plan} package. Can you explain the details?",
-    product: "Hello Agam, I am interested in the {service} service. Please provide info."
-  },
-  pricingFeatures: {
-    'e-commerce': {
-      title: 'Online Store Feature Comparison',
-      rows: [
-        { feature: "Website Design", basic: "Template Pro", standard: "Custom Brand", pro: "Premium Exclusive" },
-        { feature: "Number of Products", basic: "Max 50", standard: "Max 500", pro: "Unlimited" },
-        { feature: "Payment Gateway", basic: "Manual (Transfer)", standard: "Automatic (VA/QRIS)", pro: "Automatic (VA/QRIS)" },
-        { feature: "Shipping Calculation", basic: "Manual / Flat", standard: "Automatic (RajaOngkir)", pro: "Automatic + Custom" },
-        { feature: "Stock Management", basic: true, standard: true, pro: true },
-        { feature: "Product Variants", basic: "Simple (1 variant)", standard: "Multi (Color/Size)", pro: "Complex" },
-        { feature: "Customer Account", basic: false, standard: true, pro: true },
-        { feature: "Wishlist & Review", basic: false, standard: true, pro: true },
-        { feature: "Promo/Coupon Features", basic: false, standard: "Basic", pro: "Advanced" },
-        { feature: "Sales Reports", basic: "Simple", standard: "Complete", pro: "Detailed Analytics" },
-        { feature: "Domain (.com)", basic: true, standard: true, pro: true },
-        { feature: "Hosting / Server", basic: "Shared Hosting", standard: "VPS Hosting", pro: "VPS Hosting" },
-        { feature: "SSL Security", basic: "Standard", standard: "Premium", pro: "Enterprise" },
-        { feature: "Design Revision", basic: "2x Revisions", standard: "4x Revisions", pro: "6x Revisions" },
-        { feature: "Warranty", basic: "15 Days", standard: "30 Days", pro: "45 Days" }
-      ]
-    },
-    'landing-page': {
-      title: 'Landing Page Feature Comparison',
-      rows: [
-        { feature: "Number of Sections", basic: "3-5 Sections", standard: "5-8 Sections", pro: "8-12 Sections" },
-        { feature: "UI/UX Design", basic: "Clean & Simple", standard: "Professional", pro: "High-End Custom" },
-        { feature: "Copywriting", basic: "Headline & CTA", standard: "Persuasive", pro: "Storytelling" },
-        { feature: "Mobile Responsive", basic: true, standard: true, pro: true },
-        { feature: "Contact Form / Lead", basic: "Simple", standard: "Custom Fields", pro: "CRM/Email Integration" },
-        { feature: "WhatsApp Button", basic: true, standard: true, pro: true },
-        { feature: "SEO Optimization", basic: "Basic Meta", standard: "On-Page SEO", pro: "Advanced Technical" },
-        { feature: "Analytics (Google/Pixel)", basic: false, standard: true, pro: true },
-        { feature: "Loading Speed", basic: "Standard", standard: "Optimized", pro: "Ultra Fast (90+)" },
-        { feature: "Domain (.com)", basic: true, standard: true, pro: true },
-        { feature: "Design Revision", basic: "2x Revisions", standard: "4x Revisions", pro: "6x Revisions" },
-        { feature: "Warranty & Maintenance", basic: "15 Days", standard: "30 Days", pro: "45 Days" }
-      ]
-    },
-    'pos-system': {
-      title: 'POS System Feature Comparison',
-      rows: [
-        { feature: "Product Management", basic: "Basic (CRUD)", standard: "Advanced (Modifiers)", pro: "Unlimited + Supplier" },
-        { feature: "Sales Reports", basic: "Daily", standard: "Complete (Gross Profit)", pro: "Analytics (COGS)" },
-        { feature: "Stock Management", basic: false, standard: true, pro: true },
-        { feature: "Multi User", basic: "Admin + Cashier", standard: "Role Detail", pro: "Custom Roles" },
-        { feature: "Receipt Printing", basic: true, standard: "Custom Logo", pro: "Custom Logo + Kitchen" },
-        { feature: "Payment Methods", basic: "Cash", standard: "Cash + QRIS", pro: "Integrated Gateway" },
-        { feature: "Multi Branch", basic: false, standard: false, pro: true },
-        { feature: "Offline Mode", basic: false, standard: false, pro: true },
-        { feature: "Owner Dashboard", basic: "Simple", standard: "Real-time", pro: "Real-time + Mobile" },
-        { feature: "Revision", basic: "2x Revisions", standard: "4x Revisions", pro: "6x Revisions" },
-        { feature: "Maintenance", basic: "15 Days", standard: "30 Days", pro: "45 Days" }
-      ]
-    },
-    'company-profile': {
-      title: 'Company Profile Feature Comparison',
-      rows: [
-        { feature: "Number of Pages", basic: "4 Pages", standard: "6 Pages", pro: "10+ Pages" },
-        { feature: "UI/UX Design", basic: "Clean & Professional", standard: "Custom Brand Identity", pro: "Premium Exclusive" },
-        { feature: "Portfolio Page", basic: false, standard: "Max 10 Projects", pro: "Unlimited + Filter" },
-        { feature: "Blog / Article Feature", basic: false, standard: true, pro: true },
-        { feature: "Career / Recruitment Page", basic: false, standard: false, pro: true },
-        { feature: "Multi Language", basic: false, standard: false, pro: "Optional" },
-        { feature: "SEO Optimization", basic: "Basic", standard: "Standard", pro: "Advanced" },
-        { feature: "Visitor Analytics", basic: false, standard: true, pro: true },
-        { feature: "Contact Form / Leads", basic: "Standard", standard: "Custom + WA", pro: "CRM Integrated" },
-        { feature: "CMS (Admin Panel)", basic: false, standard: true, pro: true },
-        { feature: "Design Revision", basic: "2x Revisions", standard: "4x Revisions", pro: "6x Revisions" },
-        { feature: "Warranty & Maintenance", basic: "15 Days", standard: "30 Days", pro: "45 Days" }
-      ]
     }
   }
 };
