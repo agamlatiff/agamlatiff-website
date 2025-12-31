@@ -37,6 +37,162 @@ export const en = {
       watchDemo: 'Watch Demo',
       viewDetail: 'View Detail'
     },
+    '5': {
+      title: 'Fly Higher - Modern Flight Booking Platform',
+      shortDescription: 'An end-to-end flight booking platform designed to provide a seamless and efficient flight reservation experience.',
+      fullDescription: `
+      <p class="mb-6 text-lg leading-relaxed">
+        An end-to-end flight booking platform designed to provide a seamless and efficient flight reservation experience. This system handles the entire user journey, from flight search and interactive seat selection to secure payment and electronic ticket issuance.
+      </p>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Next.js 14 (App Router) & React 18</li>
+              <li>TypeScript & Tailwind CSS 3</li>
+              <li>Radix UI & Shadcn UI</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Lucia Auth v3</li>
+              <li>Prisma ORM & PostgreSQL</li>
+              <li>Midtrans Payment Gateway</li>
+              <li>TanStack Query & Server Actions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Smart Reservation System:</strong> Real-time flight search with filters for routes, dates, and seat classes.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Interactive Seat Selection:</strong> Interactive flight seat map visualization for choosing seats (Economy, Business, First Class).</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>E-Ticket Management:</strong> Automated digital ticket generation with QR Code and full flight details.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Role-Based Dashboard:</strong> User history/wishlist and Admin management for aircraft/routes/users.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <ul class="space-y-2">
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>High Scalability:</strong> Serverless-ready architecture (Vercel) capable of handling traffic spikes during holidays.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Transaction Security:</strong> Trusted payment gateway integration and industry-standard password hashing (bcryptjs).</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Operational Efficiency:</strong> Ticketing process automation reduces manual workload and minimizes human error.</span>
+           </li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+         "Fast, secure, and intuitive flight booking solution for the modern travel era."
+      </p>
+      `,
+      industry: 'Travel & Tourism',
+      date: 'Full-Stack Developer'
+    },
+    '4': {
+      title: 'Suka Baca - Intelligent Library Management System',
+      shortDescription: 'A comprehensive library operation platform designed to modernize the borrowing experience. The system streamlines the entire book lending lifecycle.',
+      fullDescription: `
+      <p class="mb-6 text-lg leading-relaxed">
+        A comprehensive library operation platform designed to modernize the borrowing experience. The system streamlines the entire book lending lifecycle, from catalog browsing and multi-step borrowing requests to automated fine calculations and admin oversight.
+      </p>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Laravel Blade & Livewire</li>
+              <li>Tailwind CSS 3</li>
+              <li>Alpine.js for Interactivity</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Laravel 11 Framework</li>
+              <li>FilamentPHP Admin Panel</li>
+              <li>MySQL / SQLite Database</li>
+              <li>OpenLibrary API Integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Smart Borrowing Flow:</strong> Guided multi-step wizards for borrowing books and requesting loan extensions.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Admin Command Center:</strong> Powerful Filament dashboard to manage catalogs, memberships, and circulation.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Automated Cataloging:</strong> Integration with OpenLibrary API to automatically fetch book covers and metadata by ISBN.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Fine Management:</strong> Specialized system for tracking overdue items and processing fine payments.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <ul class="space-y-2">
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Operational Efficiency:</strong> Automates manual tasks like due date tracking and fine calculation.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Data Accuracy:</strong> Centralized management ensures inventory and borrower data remains consistent.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>User Engagement:</strong> Seamless, self-service digital experience for library members to explore resources.</span>
+           </li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+         "Modernizing library operations with a seamless, automated, and user-friendly experience."
+      </p>
+      `,
+      industry: 'Education & Public Sector',
+      date: 'Full-Stack Developer'
+    },
     '1': {
       title: 'UpSkills - E-Learning Management System',
       shortDescription: 'A comprehensive web-based e-learning platform designed to help users improve their abilities through structured online learning.',
@@ -273,6 +429,31 @@ export const en = {
         title: "Testing & Launch",
         description: "Thorough testing to ensure no bugs. Deploy to production server and the app is ready for users.",
         deliverables: ["Bug Free App", "Deployment", "Documentation"]
+      },
+      {
+        title: "System Development",
+        description: "The core coding phase. I build the Frontend (UI), Backend (System), Database Integration, and Admin Dashboard.",
+        deliverables: ["System & API Coding", "Database Integration", "Owner Dashboard"]
+      },
+      {
+        title: "Testing with Client",
+        description: "System trial. You test the features one by one to ensure the flow is easy to use and there are no bugs.",
+        deliverables: ["Feature Testing", "Bug Fixes (QC)", "Minor Adjustments"]
+      },
+      {
+        title: "Payment & Handover",
+        description: "Once the system is approved, final payment is made. I hand over the Full Source Code, Dashboard Access, and Project Assets to you.",
+        deliverables: ["Project Payment", "Source Code Handover", "Full Admin Access"]
+      },
+      {
+        title: "Launching / Go-Live",
+        description: "The system goes online on your business domain. Server setup, business email, and initial monitoring to ensure it's ready for customers.",
+        deliverables: ["Deploy to Server", "Active Domain", "System 100% Online"]
+      },
+      {
+        title: "Maintenance & Support",
+        description: "After-sales service. Free bug repair warranty, secure data backup, and assistance if there are usage issues.",
+        deliverables: ["Free Bug Repair", "Periodic Data Backup", "WhatsApp Support"]
       }
     ],
     cta: {

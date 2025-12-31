@@ -2,6 +2,62 @@ import type { Project } from "@/types/project";
 
 export const PROJECTS: Project[] = [
   {
+    id: '5',
+    title: 'Fly Higher - Modern Flight Booking Platform',
+    slug: 'fly-higher',
+    shortDescription: 'Platform pemesanan tiket pesawat end-to-end yang dirancang untuk memberikan pengalaman reservasi penerbangan yang mulus dan efisien.', // Fallback
+    fullDescription: '', // Will be handled by locale files
+    heroImage: '/flyhigher/1.png',
+    gallery: [
+      '/flyhigher/1.png',
+      '/flyhigher/2.png',
+      '/flyhigher/3.png',
+      '/flyhigher/4.png',
+      '/flyhigher/5.png',
+      '/flyhigher/6.png',
+      '/flyhigher/7.png',
+      '/flyhigher/8.png',
+      '/flyhigher/9.png',
+      '/flyhigher/10.png',
+      '/flyhigher/11.png',
+      '/flyhigher/12.png',
+      '/flyhigher/13.png',
+      '/flyhigher/14.png',
+    ],
+    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Midtrans'],
+    industry: 'Travel & Tourism',
+    date: 'Full-Stack Developer',
+    isFeatured: true,
+  },
+  {
+    id: '4',
+    title: 'Suka Baca - Intelligent Library Management System',
+    slug: 'suka-baca',
+    shortDescription: 'Platform operasional perpustakaan komprehensif yang dirancang untuk memodernisasi pengalaman peminjaman. Sistem ini menyederhanakan seluruh siklus peminjaman buku.', // Fallback/Basic description
+    fullDescription: '', // Will be handled by locale files
+    heroImage: '/sukabaca/1.png',
+    gallery: [
+      '/sukabaca/1.png',
+      '/sukabaca/2.png',
+      '/sukabaca/3.png',
+      '/sukabaca/4.png',
+      '/sukabaca/5.png',
+      '/sukabaca/6.png',
+      '/sukabaca/7.png',
+      '/sukabaca/8.png',
+      '/sukabaca/9.png',
+      '/sukabaca/10.png',
+      '/sukabaca/11.png',
+      '/sukabaca/12.png',
+      '/sukabaca/13.png',
+    ],
+    techStack: ['Laravel 11', 'Filament', 'Livewire', 'Alpine.js', 'MySQL'],
+    industry: 'Education & Public Sector',
+    date: 'December 2024',
+    isFeatured: true,
+    // Add repo link if available or leave undefined
+  },
+  {
     id: '3',
     title: 'Custom Brand E-Commerce & Membership Platform',
     slug: 'ecommerce-fashion',

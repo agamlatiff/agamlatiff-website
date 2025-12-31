@@ -37,6 +37,162 @@ export const id = {
       watchDemo: 'Tonton Demo',
       viewDetail: 'Lihat Detail'
     },
+    '5': {
+      title: 'Fly Higher - Modern Flight Booking Platform',
+      shortDescription: 'Platform pemesanan tiket pesawat end-to-end yang dirancang untuk memberikan pengalaman reservasi penerbangan yang mulus dan efisien.',
+      fullDescription: `
+      <p class="mb-6 text-lg leading-relaxed">
+        Platform pemesanan tiket pesawat end-to-end yang dirancang untuk memberikan pengalaman reservasi penerbangan yang mulus dan efisien. Sistem ini menangani seluruh alur perjalanan pengguna, mulai dari pencarian penerbangan, pemilihan kursi interaktif, hingga pembayaran aman dan penerbitan tiket elektronik.
+      </p>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Next.js 14 (App Router) & React 18</li>
+              <li>TypeScript & Tailwind CSS 3</li>
+              <li>Radix UI & Shadcn UI</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Lucia Auth v3</li>
+              <li>Prisma ORM & PostgreSQL</li>
+              <li>Midtrans Payment Gateway</li>
+              <li>TanStack Query & Server Actions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Fitur Utama:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Sistem Reservasi Cerdas:</strong> Pencarian penerbangan real-time dengan filter rute, tanggal, dan kelas kursi.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Interactive Seat Selection:</strong> Visualisasi denah kursi pesawat yang interaktif untuk memilih kursi (Economy, Business, First Class).</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>E-Ticket Management:</strong> Pembuatan tiket digital otomatis dengan QR Code dan detail penerbangan lengkap.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Role-Based Dashboard:</strong> Riwayat pemesanan/wishlist User dan manajemen data/rute/user untuk Admin.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Dampak Bisnis:</h4>
+        <ul class="space-y-2">
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Skallabilitas Tinggi:</strong> Arsitektur serverless-ready (Vercel) yang mampu menangani lonjakan trafik saat musim liburan.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Keamanan Transaksi:</strong> Integrasi payment gateway terpercaya dan password hashing standar industri (bcryptjs).</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Efisiensi Operasional:</strong> Automasi proses ticketing mengurangi beban kerja manual dan meminimalisir human error.</span>
+           </li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+         "Solusi pemesanan tiket penerbangan yang cepat, aman, dan intuitif untuk era perjalanan modern."
+      </p>
+      `,
+      industry: 'Travel & Tourism',
+      date: 'Full-Stack Developer'
+    },
+    '4': {
+      title: 'Suka Baca - Intelligent Library Management System',
+      shortDescription: 'Platform operasional perpustakaan komprehensif yang dirancang untuk memodernisasi pengalaman peminjaman. Sistem ini menyederhanakan seluruh siklus peminjaman buku.',
+      fullDescription: `
+      <p class="mb-6 text-lg leading-relaxed">
+        Platform operasional perpustakaan komprehensif yang dirancang untuk memodernisasi pengalaman peminjaman. Sistem ini menyederhanakan seluruh siklus peminjaman buku, mulai dari penelusuran katalog dan permintaan peminjaman multi-langkah hingga perhitungan denda otomatis dan pengawasan admin.
+      </p>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Laravel Blade & Livewire</li>
+              <li>Tailwind CSS 3</li>
+              <li>Alpine.js untuk Interaktivitas</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Laravel 11 Framework</li>
+              <li>FilamentPHP Admin Panel</li>
+              <li>MySQL / SQLite Database</li>
+              <li>OpenLibrary API Integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Fitur Utama:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Alur Peminjaman Cerdas:</strong> Wizard multi-langkah yang dipandu untuk meminjam buku dan mengajukan perpanjangan pinjaman.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Pusat Komando Admin:</strong> Dashboard berbasis Filament yang canggih untuk mengelola katalog, keanggotaan, dan sirkulasi.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Katalogisasi Otomatis:</strong> Integrasi dengan OpenLibrary API untuk mengambil sampul buku dan metadata otomatis via ISBN.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Manajemen Denda:</strong> Sistem khusus untuk melacak item yang terlambat dan memproses pembayaran denda.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Dampak Bisnis:</h4>
+        <ul class="space-y-2">
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Efisiensi Operasional:</strong> Mengotomatiskan tugas manual seperti pelacakan jatuh tempo dan hitung denda.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Akurasi Data:</strong> Manajemen terpusat memastikan inventaris dan data peminjam tetap konsisten.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Keterlibatan Pengguna:</strong> Pengalaman digital mandiri yang mulus bagi anggota untuk akses sumber daya.</span>
+           </li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+         "Memodernisasi operasional perpustakaan dengan pengalaman yang mulus, otomatis, dan ramah pengguna."
+      </p>
+      `,
+      industry: 'Education & Public Sector',
+      date: 'Full-Stack Developer'
+    },
     '1': {
       title: 'UpSkills - E-Learning Management System',
       shortDescription: 'Platform e-learning berbasis web yang komprehensif untuk membantu pengguna meningkatkan kemampuan melalui pembelajaran online terstruktur.',
@@ -273,6 +429,31 @@ export const id = {
         title: "Testing & Launch",
         description: "Uji coba menyeluruh untuk memastikan tidak ada bug. Deploy ke server produksi dan aplikasi siap digunakan user.",
         deliverables: ["Bug Free App", "Deployment", "Documentation"]
+      },
+      {
+        title: "Pembuatan Sistem",
+        description: "Tahap inti coding. Saya membangun Frontend (Tampilan), Backend (Sistem), Integrasi Database, dan Dashboard Admin.",
+        deliverables: ["Coding Sistem & API", "Integrasi Database", "Dashboard Owner"]
+      },
+      {
+        title: "Testing Bersama Client",
+        description: "Uji coba sistem. Anda mencoba fitur satu per satu untuk memastikan alur mudah dipakai dan tidak ada error (bug).",
+        deliverables: ["Uji Coba Fitur", "Perbaikan Bug (QC)", "Penyesuaian Minor"]
+      },
+      {
+        title: "Pelunasan & Serah Terima",
+        description: "Setelah sistem OK, dilakukan pelunasan. Saya serahkan Full Source Code, Akses Dashboard, dan Aset Project kepada Anda.",
+        deliverables: ["Pelunasan Project", "Serah Terima Source Code", "Akses Admin Penuh"]
+      },
+      {
+        title: "Launching / Go-Live",
+        description: "Sistem di-online-kan ke domain bisnis Anda. Setup server, email bisnis, dan monitoring awal agar siap digunakan pelanggan.",
+        deliverables: ["Deploy ke Server", "Domain Aktif", "Sistem 100% Online"]
+      },
+      {
+        title: "Maintenance & Support",
+        description: "Layanan purna jual. Garansi perbaikan bug gratis, backup data aman, dan bantuan jika ada kendala penggunaan.",
+        deliverables: ["Perbaikan Bug Gratis", "Backup Data Berkala", "Support WhatsApp"]
       }
     ],
     cta: {
