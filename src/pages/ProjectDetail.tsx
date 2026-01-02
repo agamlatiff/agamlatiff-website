@@ -228,6 +228,13 @@ const ProjectDetail: React.FC = () => {
   // Reset loading state when image source changes
   useEffect(() => {
     setIsImageLoading(true);
+
+    // Failsafe: Force loading to false after 3 seconds
+    const timer = setTimeout(() => {
+      setIsImageLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
   }, [currentImageIndex, allImages]);
 
   // Navigation handlers
@@ -359,7 +366,7 @@ const ProjectDetail: React.FC = () => {
                   key={allImages[currentImageIndex]}
                   src={allImages[currentImageIndex]}
                   alt={title}
-                  className={`transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                  className="transition-opacity duration-300"
                   style={{ maxWidth: '100%', minHeight: '300px' }}
                   onLoad={() => setIsImageLoading(false)}
                   onError={() => setIsImageLoading(false)}
