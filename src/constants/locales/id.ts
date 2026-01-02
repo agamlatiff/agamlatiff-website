@@ -1,15 +1,15 @@
 export const id = {
   hero: {
-    badge: "Full-Stack Web Developer",
+    badge: "Automation & Business Systems Expert",
     headline: {
-      part1: "Membangun Produk Digital",
-      part2: "untuk Pertumbuhan Bisnis"
+      part1: "Hilangkan Drama No-Show,",
+      part2: "Tingkatkan Profit Bisnis"
     },
-    subheadline: "Saya membantu bisnis mengubah masalah kompleks menjadi aplikasi web yang <strong>untung dan efisien</strong>. Fokus saya bukan sekadar kode, tapi <strong>hasil nyata</strong> untuk bisnis Anda.",
+    subheadline: "Saya membantu pemilik bisnis <strong>mengotomasi operasional</strong> agar tidak perlu lagi pusing mikirin admin yang overload atau pelanggan yang ghosting. Fokus pada <strong>Income</strong>, biarkan sistem yang bekerja.",
     cta: {
-      consult: "Hire Me",
+      consult: "Konsultasi Gratis",
       processing: "Memproses...",
-      roi: "Konsultasi Gratis"
+      roi: "Lihat Demo Sistem"
     }
   },
   nav: {
@@ -23,23 +23,165 @@ export const id = {
   },
   projects: {
     section: {
-      title: "Featured Projects",
-      subtitle: "Beberapa hasil karya terbaik yang telah saya kerjakan untuk klien berbagai industri.",
+      title: "Proven Results",
+      subtitle: "Studi kasus bagaimana sistem kustom membantu bisnis berjalan lebih efisien dan profitable.",
       loading: {
-        text1: 'Memuat proyek',
-        text2: 'Mengambil portofolio',
+        text1: 'Memuat data...',
+        text2: 'Mengambil portfolio',
         text3: 'Menyiapkan showcase',
         text4: 'Hampir siap',
-        subtitle: 'Menyusun karya terbaik untuk Anda'
+        subtitle: 'Menyiapkan solusi terbaik untuk Anda'
       },
-      learnMore: 'Pelajari Project Ini',
-      featured: 'Unggulan',
-      watchDemo: 'Tonton Demo',
-      viewDetail: 'Lihat Detail'
+      learnMore: 'Pelajari Case Study',
+      featured: 'Best Seller',
+      watchDemo: 'Lihat Video Demo',
+      viewDetail: 'Detail Project'
+    },
+    '7': {
+      title: 'Hired.io - Portal Rekrutmen Modern',
+      shortDescription: 'Platform rekrutmen end-to-end yang dirancang untuk menjembatani talenta profesional dengan perusahaan inovatif.',
+      fullDescription: `
+      <p class="mb-6 text-lg leading-relaxed">
+        Platform rekrutmen end-to-end yang dirancang untuk menjembatani talenta profesional dengan perusahaan inovatif. Sistem ini menyederhanakan seluruh proses rekrutmen, mulai dari pencarian lowongan dan lamaran hingga penjadwalan interview dan manajemen kandidat.
+      </p>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Next.js 14 (App Router) & React 18</li>
+              <li>TypeScript & Tailwind CSS 3</li>
+              <li>Radix UI & Shadcn UI</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>NextAuth.js (Credentials Provider)</li>
+              <li>Prisma ORM & PostgreSQL (Supabase)</li>
+              <li>Supabase Storage (File Upload)</li>
+              <li>React Hook Form & Zod Validation</li>
+              <li>SWR (Data Fetching)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Fitur Utama:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Smart Job Discovery:</strong> Pencarian lowongan real-time dengan filter kategori, lokasi, tipe pekerjaan, dan rentang gaji.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Multi-Step Application:</strong> Alur lamaran yang efisien dengan upload resume, cover letter, dan integrasi profil profesional.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Applicant Pipeline Management:</strong> Sistem pelacakan kandidat visual (New → Screening → Interview → Hired) dengan catatan dan rating.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Real-Time Messaging:</strong> Komunikasi langsung dalam aplikasi antara rekruter dan kandidat dengan tanda baca.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Role-Based Dashboards:</strong> Interface khusus untuk Job Seeker (lamaran, simpan lowongan, alert) dan Employer (analitik, kelola lowongan, pengaturan tim).</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Dampak Bisnis:</h4>
+        <ul class="space-y-2">
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Percepat Time-to-Hire:</strong> Pipeline yang efisien dan notifikasi real-time mempercepat proses rekrutmen hingga 40%.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Pengalaman Kandidat Premium:</strong> UI dark-mode intuitif dengan desain glassmorphism meningkatkan engagement dan mengurangi drop-off.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Keputusan Berbasis Data:</strong> Dashboard analitik komprehensif menyediakan insight tentang job views, application rates, dan conversion funnels.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Arsitektur Skalabel:</strong> Deployment serverless-ready di Vercel dengan backend Supabase menangani lonjakan trafik dengan mulus.</span>
+           </li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+         "Menghubungkan talenta dengan peluang — cepat, intuitif, dan dibangun untuk lanskap rekrutmen modern."
+      </p>
+      `,
+      industry: 'Recruitment & HR Tech',
+      date: 'Full-Stack Developer'
+    },
+    '6': {
+      title: 'Sistem Booking Otomatis - Anti No-Show',
+      shortDescription: 'Sistem reservasi full-otomatis dengan pembayaran DP di awal & notifikasi WhatsApp. Solusi ampuh cegah kerugian akibat pembatalan sepihak.',
+      fullDescription: `
+      <p class="mb-6 text-lg leading-relaxed">
+        Masalah klasik bisnis jasa (Klinik, Salon, Studio, Lapangan Olahraga) adalah <strong>"Janji Datang, Tapi Hilang"</strong>. Sistem ini dibuat untuk mengunci komitmen pelanggan dengan DP Otomatis dan Pengingat WhatsApp tanpa perlu admin standby 24 jam.
+      </p>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Solusi Bisnis:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Smart Booking Engine:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Cek slot kosong real-time</li>
+              <li>Pilih layanan & staf favorit</li>
+              <li>Reschedule mandiri (S&K berlaku)</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Automated Operation:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Auto-DP via Midtrans (QRIS/VA)</li>
+              <li>WhatsApp Reminder H-1 & H-1 Jam</li>
+              <li>Laporan Omzet Harian Otomatis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">ROI untuk Owner:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Zero No-Show:</strong> DP hangus jika batal mendadak, omzet tetap aman.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Efisiensi SDM:</strong> Tidak perlu admin khusus balas chat "kak jam ini kosong gak?". Sistem bekerja 24/7.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Database Rapi:</strong> Data pelanggan tersimpan aman untuk promosi (CRM) di kemudian hari.</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+         "Investasi sekali, profit berkali-kali. Sistem ini adalah aset yang bekerja saat Anda tidur."
+      </p>
+      `,
+      industry: 'Service Business (B2B)',
+      date: 'Automation System'
     },
     '5': {
-      title: 'Fly Higher - Modern Flight Booking Platform',
-      shortDescription: 'Platform pemesanan tiket pesawat end-to-end yang dirancang untuk memberikan pengalaman reservasi penerbangan yang mulus dan efisien.',
+      title: 'Fly Higher - Enterprise Flight & Travel System',
+      shortDescription: 'Platform travel agent modern dengan kemampuan handling ribuan transaksi. Cocok untuk scale-up bisnis tour & travel.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
         Platform pemesanan tiket pesawat end-to-end yang dirancang untuk memberikan pengalaman reservasi penerbangan yang mulus dan efisien. Sistem ini menangani seluruh alur perjalanan pengguna, mulai dari pencarian penerbangan, pemilihan kursi interaktif, hingga pembayaran aman dan penerbitan tiket elektronik.
@@ -407,79 +549,59 @@ export const id = {
     }
   },
   process: {
-    title: "Project Workflow",
-    description: "Bagaimana saya bekerja mengubah ide Anda menjadi produk digital yang **berkualitas tinggi**.",
+    title: "Workflow Profesional",
+    description: "Alur kerja transparan dan terstruktur. Dari konsultasi gratis hingga sistem bisnis Anda <strong>live dan menghasilkan profit</strong>.",
     steps: [
       {
-        title: "Discovery & Planning",
-        description: "Kita diskusikan ide, target user, dan fitur kunci. Saya akan buatkan technical plan yang jelas agar kita satu visi.",
-        deliverables: ["Requirement Doc", "Technical Plan", "Timeline"]
+        title: "Free Discovery Call",
+        description: "Sesi bedah bisnis 30 menit. Kita petakan masalah operasional Anda (no-show, admin overload) dan saya demo-kan solusinya.",
+        deliverables: ["Audit Masalah", "Demo Solusi", "Estimasi ROI"]
       },
       {
-        title: "Design & Prototyping",
-        description: "Membuat wireframe dan UI design. Anda bisa melihat visual aplikasi sebelum saya mulai menulis kode.",
-        deliverables: ["UI Design (Figma)", "User Flow"]
+        title: "Deal & Agreement",
+        description: "Anda setuju dengan solusi & investasi. Kita tanda tangan kontrak kerja sama agar kedua pihak aman (Partner Bisnis).",
+        deliverables: ["Kontrak Kerja", "Invoice DP", "Project Timeline"]
       },
       {
-        title: "Development",
-        description: "Fase coding dimulai. Saya membangun sistem Frontend dan Backend secara paralel dengan update rutin setiap minggu.",
-        deliverables: ["Weekly Update", "Staging Link"]
+        title: "System Setup",
+        description: "Proses instalasi dan kustomisasi sistem. Saya sesuaikan fitur booking, pembayaran, dan notifikasi dengan brand Anda.",
+        deliverables: ["Setup Server", "Integrasi Payment", "Setup WhatsApp"]
       },
       {
-        title: "Testing & Launch",
-        description: "Uji coba menyeluruh untuk memastikan tidak ada bug. Deploy ke server produksi dan aplikasi siap digunakan user.",
-        deliverables: ["Bug Free App", "Deployment", "Documentation"]
+        title: "Admin Training",
+        description: "Sistem canggih percuma kalau tidak bisa pakai. Saya latih admin Anda atau Anda sendiri sampai lancar mengoperasikan dashboard.",
+        deliverables: ["Zoom Training", "Video Tutorial", "Buku Panduan"]
       },
       {
-        title: "Pembuatan Sistem",
-        description: "Tahap inti coding. Saya membangun Frontend (Tampilan), Backend (Sistem), Integrasi Database, dan Dashboard Admin.",
-        deliverables: ["Coding Sistem & API", "Integrasi Database", "Dashboard Owner"]
-      },
-      {
-        title: "Testing Bersama Client",
-        description: "Uji coba sistem. Anda mencoba fitur satu per satu untuk memastikan alur mudah dipakai dan tidak ada error (bug).",
-        deliverables: ["Uji Coba Fitur", "Perbaikan Bug (QC)", "Penyesuaian Minor"]
-      },
-      {
-        title: "Pelunasan & Serah Terima",
-        description: "Setelah sistem OK, dilakukan pelunasan. Saya serahkan Full Source Code, Akses Dashboard, dan Aset Project kepada Anda.",
-        deliverables: ["Pelunasan Project", "Serah Terima Source Code", "Akses Admin Penuh"]
-      },
-      {
-        title: "Launching / Go-Live",
-        description: "Sistem di-online-kan ke domain bisnis Anda. Setup server, email bisnis, dan monitoring awal agar siap digunakan pelanggan.",
-        deliverables: ["Deploy ke Server", "Domain Aktif", "Sistem 100% Online"]
-      },
-      {
-        title: "Maintenance & Support",
-        description: "Layanan purna jual. Garansi perbaikan bug gratis, backup data aman, dan bantuan jika ada kendala penggunaan.",
-        deliverables: ["Perbaikan Bug Gratis", "Backup Data Berkala", "Support WhatsApp"]
+        title: "Go-Live & Support",
+        description: "Sistem luncur, pelanggan mulai booking! Saya pantau 2 minggu pertama untuk memastikan semua berjalan mulus (Zero Downtime).",
+        deliverables: ["Link Booking Live", "Monitoring 24/7", "Laporan Mingguan"]
       }
     ],
     cta: {
-      ready: "Sudah paham workflow-nya?",
-      time: "Sekarang saatnya",
-      condition: "eksekusi ide Anda.",
-      button: "Mulai Project"
+      ready: "Masih ragu sistemnya cocok?",
+      time: "Konsultasikan Dulu",
+      condition: "gratis 100%.",
+      button: "Jadwalkan Demo"
     }
   },
   cta: {
-    title: "Butuh Developer untuk Tim Anda?",
-    subtitle: "Saya terbuka untuk kesempatan freelance project atau kontrak kerjasama jangka panjang.",
-    button: "Hubungi Saya"
+    title: "Hanya Menerima 3 Project/Bulan",
+    subtitle: "Saya fokus memberikan kualitas premium untuk setiap klien. Amankan slot Anda sebelum diambil kompetitor.",
+    button: "Amankan Slot Project"
   },
   about: {
-    title: "Who Am I?",
-    subtitle: "Agam Latifullah — Full-Stack Web Developer",
-    quote: "Saya tidak hanya menulis kode, saya memberikan solusi bisnis.",
-    whyChooseMe: "Mengapa Memilih Saya?",
-    description1: "Banyak developer bisa membuat kode yang 'jalan', tapi tidak sedikit yang meninggalkan 'utang teknis' yang mahal di kemudian hari. Saya memposisikan diri sebagai <strong>Technical Partner</strong> Anda.",
-    description2: "Saya membangun sistem yang tidak hanya canggih secara teknologi (React, Node.js, Laravel), tapi juga <strong>mudah dirawat, aman, dan siap untuk skala besar</strong>. Investasi teknologi Anda harus menghasilkan ROI, bukan sakit kepala.",
+    title: "Mengapa Butuh Sistem?",
+    subtitle: "Solusi untuk Masalah Bisnis Anda",
+    quote: "Bisnis yang scale-up butuh sistem, bukan sekadar kerja keras.",
+    whyChooseMe: "Apa Bedanya?",
+    description1: "Kebanyakan bisnis stuck karena owner-nya masih 'terjebak' di operasional harian. Balas chat, cek transfer manual, rekap order di Excel. <strong>Itu bukan bisnis, itu pekerjaan.</strong>",
+    description2: "Saya membangun <strong>Sistem Otomatis</strong> yang menggantikan tugas-tugas repetitif itu. Sehingga Anda bisa fokus ke strategi dan pengembangan bisnis (atau liburan), sementara sistem yang bekerja mencari uang.",
     values: [
-      { title: "Business First", desc: "Setiap baris kode harus memiliki dampak positif terhadap tujuan bisnis Anda." },
-      { title: "Long-term Asset", desc: "Membangun software sebagai aset jangka panjang, bukan beban biaya." },
-      { title: "Transparent", desc: "Komunikasi yang jujur tentang risiko, estimasi, dan progres." },
-      { title: "Reliable", desc: "Pengiriman tepat waktu dengan kualitas yang sudah teruji." }
+      { title: "Profit Oriented", desc: "Fitur dibuat untuk meningkatkan omzet atau menekan biaya. Bukan sekadar gaya-gayaan." },
+      { title: "Terima Beres", desc: "Anda terima kunci. Server, domain, payment gateway, semua saya yang urus." },
+      { title: "Anti Ribet", desc: "Dashboard didesain sesimpel mungkin. Nenek-nenek pun bisa paham pakainya." },
+      { title: "Full Support", desc: "Ada masalah teknis? Chat saya, beres. Anda tidak perlu hire tim IT sendiri." }
     ]
   },
   footer: {

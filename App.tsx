@@ -1,5 +1,5 @@
-import React, { useState, lazy, Suspense } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout
 import Navbar from '@/components/layout/Navbar';
@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 
 // Pages
 import Home from '@/pages/Home';
+import ProjectDetail from '@/pages/ProjectDetail';
 
 // UI Utils
 import BackToTop from '@/components/ui/BackToTop';
@@ -25,7 +26,10 @@ const App: React.FC = () => {
         <div className="min-h-screen bg-gray-50 dark:bg-slate-950 font-sans selection:bg-primary/20 selection:text-primary-hover transition-colors duration-300 flex flex-col">
           <Navbar />
           <main className="flex-grow">
-            <Home onOpenChat={() => setIsChatOpen(true)} />
+            <Routes>
+              <Route path="/" element={<Home onOpenChat={() => setIsChatOpen(true)} />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
+            </Routes>
           </main>
           <Footer />
           <BackToTop />

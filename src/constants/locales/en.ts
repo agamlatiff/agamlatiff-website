@@ -2,10 +2,10 @@ export const en = {
   hero: {
     badge: "Full-Stack Web Developer",
     headline: {
-      part1: "Building Digital Products",
-      part2: "that Drive Business Growth"
+      part1: "Stop No-Shows,",
+      part2: "Maximize Profit"
     },
-    subheadline: "I help businesses turn complex challenges into <strong>profitable and efficient</strong> web applications. My focus goes beyond code—I deliver <strong>measurable results</strong> for your business.",
+    subheadline: "I help business owners <strong>automate operations</strong> to eliminate admin overload and ghosting customers. Focus on <strong>Revenue</strong>, let the system do the work.",
     cta: {
       consult: "Hire Me",
       processing: "Processing...",
@@ -23,8 +23,8 @@ export const en = {
   },
   projects: {
     section: {
-      title: "Featured Projects",
-      subtitle: "Some of the best works I've delivered for clients across various industries.",
+      title: "Proven Results",
+      subtitle: "Case studies on how custom systems help businesses run more efficiently and profitably.",
       loading: {
         text1: 'Loading project',
         text2: 'Fetching portfolio',
@@ -32,10 +32,152 @@ export const en = {
         text4: 'Almost ready',
         subtitle: 'Curating the best work for you'
       },
-      learnMore: 'Explore Project',
-      featured: 'Featured',
+      learnMore: 'Explore Case Study',
+      featured: 'Best Seller',
       watchDemo: 'Watch Demo',
       viewDetail: 'View Detail'
+    },
+    '7': {
+      title: 'Hired.io - Modern Job Portal Platform',
+      shortDescription: 'An end-to-end recruitment platform designed to bridge the gap between talented professionals and innovative companies.',
+      fullDescription: `
+      <p class="mb-6 text-lg leading-relaxed">
+        An end-to-end recruitment platform designed to bridge the gap between talented professionals and innovative companies. This system streamlines the entire hiring journey, from job discovery and application to interview scheduling and candidate management.
+      </p>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Next.js 14 (App Router) & React 18</li>
+              <li>TypeScript & Tailwind CSS 3</li>
+              <li>Radix UI & Shadcn UI</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>NextAuth.js (Credentials Provider)</li>
+              <li>Prisma ORM & PostgreSQL (Supabase)</li>
+              <li>Supabase Storage (File Upload)</li>
+              <li>React Hook Form & Zod Validation</li>
+              <li>SWR (Data Fetching)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Smart Job Discovery:</strong> Real-time job search with advanced filters for categories, locations, job types, and salary ranges.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Multi-Step Application:</strong> Streamlined application flow with resume upload, cover letter, and professional profile integration.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Applicant Pipeline Management:</strong> Visual candidate tracking system (New → Screening → Interview → Hired) with notes and rating.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Real-Time Messaging:</strong> Direct in-app communication between recruiters and candidates with read receipts.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Role-Based Dashboards:</strong> Dedicated interfaces for Job Seekers (applications, saved jobs, alerts) and Employers (analytics, job management, team settings).</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <ul class="space-y-2">
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Reduced Time-to-Hire:</strong> Streamlined pipeline and real-time notifications accelerate the recruitment process by up to 40%.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Enhanced Candidate Experience:</strong> Intuitive dark-mode UI with glassmorphism design increases engagement and reduces drop-off rates.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Data-Driven Decisions:</strong> Comprehensive analytics dashboard provides insights on job views, application rates, and conversion funnels.</span>
+           </li>
+           <li class="flex gap-3">
+              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+              <span><strong>Scalable Architecture:</strong> Serverless-ready deployment on Vercel with Supabase backend handles traffic spikes seamlessly.</span>
+           </li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+         "Connecting talent with opportunity — fast, intuitive, and built for the modern hiring landscape."
+      </p>
+      `,
+      industry: 'Recruitment & HR Tech',
+      date: 'Full-Stack Developer'
+    },
+    '6': {
+      title: 'Automatic Booking System - Anti No-Show',
+      shortDescription: 'Full-automatic reservation system with upfront DP payment & WhatsApp notifications. Powerful solution to prevent losses from last-minute cancellations.',
+      fullDescription: `
+      <p class="mb-6 text-lg leading-relaxed">
+        Classic problem for service businesses (Clinics, Salons, Studios, Courts) is <strong>"Promise to come, but disappear"</strong>. This system locks customer commitment with Automatic Down Payment and WhatsApp Reminders without needing admin standby 24/7.
+      </p>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Solution:</h4>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Smart Booking Engine:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Real-time slot check</li>
+              <li>Select service & favorite staff</li>
+              <li>Self-reschedule (Rules apply)</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Automated Operation:</strong>
+            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+              <li>Auto-DP via Midtrans (QRIS/VA)</li>
+              <li>WhatsApp Reminder H-1 & H-1 Hour</li>
+              <li>Automated Daily Revenue Report</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">ROI for Owner:</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Zero No-Show:</strong> DP forfeited if cancelled last minute, revenue secured.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>HR Efficiency:</strong> No need for dedicated admin just to reply "is this slot open?". System works 24/7.</span>
+          </li>
+          <li class="flex gap-3">
+             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
+             <span><strong>Clean Database:</strong> Customer data safely stored for future CRM promotions.</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+         "Invest once, profit repeatedly. This system is an asset that works while you sleep."
+      </p>
+      `,
+      industry: 'Service Business (B2B)',
+      date: 'Automation System'
     },
     '5': {
       title: 'Fly Higher - Modern Flight Booking Platform',
@@ -407,79 +549,59 @@ export const en = {
     }
   },
   process: {
-    title: "Project Workflow",
-    description: "How I turn your ideas into a **high-quality** digital product.",
+    title: "Professional Workflow",
+    description: "Transparent and structured workflow. From free consultation until your business system is <strong>live and generating profit</strong>.",
     steps: [
       {
-        title: "Discovery & Planning",
-        description: "We discuss ideas, target users, and key features. I'll create a clear technical plan so we are on the same page.",
-        deliverables: ["Requirement Doc", "Technical Plan", "Timeline"]
+        title: "Free Discovery Call",
+        description: "30-min business dissection. We map your operational problems (no-show, admin overload) and I demo the solution.",
+        deliverables: ["Problem Audit", "Solution Demo", "ROI Estimate"]
       },
       {
-        title: "Design & Prototyping",
-        description: "Creating wireframes and UI designs. You can see the app visuals before I start writing code.",
-        deliverables: ["UI Design (Figma)", "User Flow"]
+        title: "Deal & Agreement",
+        description: "You agree with the solution & investment. We sign a cooperation contract for mutual safety (Business Partner).",
+        deliverables: ["Contract", "DP Invoice", "Project Timeline"]
       },
       {
-        title: "Development",
-        description: "Coding phase begins. I build the Frontend and Backend systems in parallel with regular weekly updates.",
-        deliverables: ["Weekly Update", "Staging Link"]
+        title: "System Setup",
+        description: "Installation and customization process. I tailor booking, payment, and notification features to your brand.",
+        deliverables: ["Server Setup", "Payment Integration", "WhatsApp Setup"]
       },
       {
-        title: "Testing & Launch",
-        description: "Thorough testing to ensure no bugs. Deploy to production server and the app is ready for users.",
-        deliverables: ["Bug Free App", "Deployment", "Documentation"]
+        title: "Admin Training",
+        description: "A sophisticated system is useless if you can't use it. I train your admin or specific staff until fluent in operating the dashboard.",
+        deliverables: ["Zoom Training", "Video Tutorial", "Guidebook"]
       },
       {
-        title: "System Development",
-        description: "The core coding phase. I build the Frontend (UI), Backend (System), Database Integration, and Admin Dashboard.",
-        deliverables: ["System & API Coding", "Database Integration", "Owner Dashboard"]
-      },
-      {
-        title: "Testing with Client",
-        description: "System trial. You test the features one by one to ensure the flow is easy to use and there are no bugs.",
-        deliverables: ["Feature Testing", "Bug Fixes (QC)", "Minor Adjustments"]
-      },
-      {
-        title: "Payment & Handover",
-        description: "Once the system is approved, final payment is made. I hand over the Full Source Code, Dashboard Access, and Project Assets to you.",
-        deliverables: ["Project Payment", "Source Code Handover", "Full Admin Access"]
-      },
-      {
-        title: "Launching / Go-Live",
-        description: "The system goes online on your business domain. Server setup, business email, and initial monitoring to ensure it's ready for customers.",
-        deliverables: ["Deploy to Server", "Active Domain", "System 100% Online"]
-      },
-      {
-        title: "Maintenance & Support",
-        description: "After-sales service. Free bug repair warranty, secure data backup, and assistance if there are usage issues.",
-        deliverables: ["Free Bug Repair", "Periodic Data Backup", "WhatsApp Support"]
+        title: "Go-Live & Support",
+        description: "System launch, customers start booking! I monitor the first 2 weeks to ensure everything runs smoothly (Zero Downtime).",
+        deliverables: ["Live Booking Link", "24/7 Monitoring", "Weekly Report"]
       }
     ],
     cta: {
-      ready: "Understand the workflow?",
-      time: "Now it's time",
-      condition: "to execute your idea.",
-      button: "Start Project"
+      ready: "Still doubtful?",
+      time: "Consult First",
+      condition: "100% free.",
+      button: "Schedule Demo"
     }
   },
   cta: {
-    title: "Need a Developer for Your Team?",
-    subtitle: "I am open for freelance projects or long-term collaboration opportunities.",
-    button: "Contact Me"
+    title: "Only Accepting 3 Projects/Month",
+    subtitle: "I focus on providing premium quality for every client. Secure your slot before competitors take it.",
+    button: "Secure Project Slot"
   },
   about: {
-    title: "Who Am I?",
-    subtitle: "Agam Latifullah — Full-Stack Web Developer",
-    quote: "I don't just write code; I deliver business solutions.",
-    whyChooseMe: "Why Choose Me?",
-    description1: "Many developers write code that 'works', but often leave behind expensive 'technical debt'. I position myself as your <strong>Technical Partner</strong>.",
-    description2: "I build systems that are not only technologically advanced (React, Node.js, Laravel) but also <strong>maintainable, secure, and commercially scalable</strong>. Your tech investment should generate ROI, not headaches.",
+    title: "Why Need a System?",
+    subtitle: "Solution for Your Business Problems",
+    quote: "Scaling businesses need systems, not just hard work.",
+    whyChooseMe: "What's the Difference?",
+    description1: "Most businesses get stuck because the owner is 'trapped' in daily operations. Replying to chats, checking manual transfers, recap orders in Excel. <strong>That's not business, that's a job.</strong>",
+    description2: "I build <strong>Automated Systems</strong> that replace those repetitive tasks. So you can focus on strategy and business development (or vacation), while the system works to make money.",
     values: [
-      { title: "Business First", desc: "Every line of code must have a positive impact on your business goals." },
-      { title: "Long-term Asset", desc: "Building software as a long-term asset, not a cost center." },
-      { title: "Transparent", desc: "Honest communication about risks, estimates, and progress." },
-      { title: "Reliable", desc: "On-time delivery with tested production quality." }
+      { title: "Profit Oriented", desc: "Features built to increase revenue or cut costs. Not just for show." },
+      { title: "All-in Service", desc: "You get the keys. Server, domain, gateway, I handle everything." },
+      { title: "Hassle-Free", desc: "Dashboard designed as simple as possible. Even non-techies can understand." },
+      { title: "Full Support", desc: "Technical issue? Chat me, fixed. No need to hire your own IT team." }
     ]
   },
   footer: {

@@ -2,6 +2,32 @@ import type { Project } from "@/types/project";
 
 export const PROJECTS: Project[] = [
   {
+    id: '7',
+    title: 'Hired.io - Modern Job Portal Platform',
+    slug: 'hired-io',
+    shortDescription: 'An end-to-end recruitment platform designed to bridge the gap between talented professionals and innovative companies.',
+    fullDescription: '', // Will be handled by locale files
+    heroImage: '/hiredio/1.png',
+    gallery: [
+      '/hiredio/1.png',
+      '/hiredio/2.png',
+      '/hiredio/3.png',
+      '/hiredio/4.png',
+      '/hiredio/5.png',
+      '/hiredio/6.png',
+      '/hiredio/7.png',
+      '/hiredio/8.png',
+      '/hiredio/9.png',
+      '/hiredio/10.png',
+      '/hiredio/11.png',
+    ],
+    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'NextAuth.js', 'Supabase'],
+    industry: 'Recruitment & HR Tech',
+    date: 'Full-Stack Developer',
+    isFeatured: true,
+    liveLink: 'https://hired-io.vercel.app',
+  },
+  {
     id: '5',
     title: 'Fly Higher - Modern Flight Booking Platform',
     slug: 'fly-higher',
@@ -28,6 +54,7 @@ export const PROJECTS: Project[] = [
     industry: 'Travel & Tourism',
     date: 'Full-Stack Developer',
     isFeatured: true,
+    liveLink: 'https://fly-higher.vercel.app',
   },
   {
     id: '4',
@@ -93,7 +120,7 @@ export const PROJECTS: Project[] = [
         "Website ini membantu brand membangun database pelanggan sendiri (First Party Data) yang sangat berharga untuk marketing jangka panjang."
       </p>
     `,
-    heroImage: '/alizonstore/thumbnail-3.png',
+    heroImage: '/alizonstore/1.png',
     gallery: [
       '/alizonstore/1.png',
       '/alizonstore/2.png',
@@ -115,7 +142,6 @@ export const PROJECTS: Project[] = [
     date: 'Oktober 2023',
     isFeatured: true,
     liveLink: 'https://alizonstore.vercel.app',
-    repoLink: 'https://github.com/agamlatiff/alizon-store'
   },
   {
     id: '2',
@@ -149,7 +175,7 @@ export const PROJECTS: Project[] = [
         </ul>
       </div>
     `,
-    heroImage: '/saturday/thumbnail-2.png',
+    heroImage: '/saturday/1.png',
     gallery: [
       '/saturday/1.png',
       '/saturday/2.png',
@@ -165,7 +191,6 @@ export const PROJECTS: Project[] = [
     date: 'Desember 2023',
     isFeatured: true,
     youtubeId: 'Sba29tQRzyE', // Video Demo tersedia (Ganti ID jika ada yang baru)
-    repoLink: 'https://github.com/agamlatiff/saturday'
   },
   {
     id: '1',
@@ -203,7 +228,7 @@ export const PROJECTS: Project[] = [
         "Sistem ini berhasil memangkas waktu koreksi ujian guru hingga 90% dan menghemat biaya cetak kertas ujian sepenuhnya."
       </p>
     `,
-    heroImage: '/upskills/thumbnail-1.png',
+    heroImage: '/upskills/1.png',
     gallery: [
       '/upskills/1.png',
       '/upskills/2.png',
@@ -223,7 +248,6 @@ export const PROJECTS: Project[] = [
     date: 'Januari 2024',
     isFeatured: true,
     youtubeId: '-qq7Lu6KJ0o', // Video Demo tersedia
-    repoLink: 'https://github.com/agamlatiff/upskills'
   }
 ];
 
