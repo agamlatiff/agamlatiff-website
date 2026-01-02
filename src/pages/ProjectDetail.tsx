@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import Skeleton from '@/components/ui/Skeleton';
 import {
   ArrowLeft,
   ExternalLink,
@@ -182,6 +183,12 @@ const ProjectDetail: React.FC = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [isImageLoading, setIsImageLoading] = useState(true);
+
+  // Reset loading state when image index changes
+  useEffect(() => {
+    setIsImageLoading(true);
+  }, [currentImageIndex]);
 
   // Find project
   const project = useMemo(() => {
@@ -338,12 +345,20 @@ const ProjectDetail: React.FC = () => {
                 className="hero-image-container relative w-full rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/50 cursor-pointer shadow-xl border border-slate-200 dark:border-slate-700 select-none pb-0 mb-4"
                 onClick={() => setLightboxOpen(true)}
               >
+                {/* Skeleton Loader */}
+                {isImageLoading && (
+                  <div className="absolute inset-0 z-10 p-4">
+                    <Skeleton className="w-full h-full rounded-xl" />
+                  </div>
+                )}
+
                 <img
                   key={`img-${currentImageIndex}`}
                   src={allImages[currentImageIndex]}
                   alt={title}
-                
-                  style={{ maxWidth: '100%' }}
+                  className={`transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                  style={{ maxWidth: '100%', minHeight: '300px' }}
+                  onLoad={() => setIsImageLoading(false)}
                 />
 
                 {/* Overlay on hover */}

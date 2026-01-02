@@ -130,4 +130,4 @@
   - [x] Image lazy loading
   - [x] Skeleton loaders
   - [ ] Lighthouse audit (manual step)
-  - [ ] Optimize images to WebP (manual step)
+  - [x] Optimize images to WebP (automated script)
