@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout
@@ -11,32 +11,39 @@ import ProjectDetail from '@/pages/ProjectDetail';
 
 // UI Utils
 import BackToTop from '@/components/ui/BackToTop';
-import FloatingContact from '@/components/ui/FloatingContact';
+import ScrollProgress from '@/components/ui/ScrollProgress';
+import StickyCTA from '@/components/ui/StickyCTA';
 import ScrollToTop from '@/components/utils/ScrollToTop';
+import ErrorBoundary from '@/components/utils/ErrorBoundary';
+import KeyboardShortcuts from '@/components/utils/KeyboardShortcuts';
+import PageTransition from '@/components/utils/PageTransition';
 import { LanguageProvider } from '@/context/LanguageContext';
 
 const App: React.FC = () => {
-  // Chat state kept for prop compatibility if needed later, but widget removed
-  const [isChatOpen, setIsChatOpen] = useState(false);
-
   return (
-    <LanguageProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="min-h-screen bg-gray-50 dark:bg-slate-950 font-sans selection:bg-primary/20 selection:text-primary-hover transition-colors duration-300 flex flex-col">
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home onOpenChat={() => setIsChatOpen(true)} />} />
-              <Route path="/projects/:slug" element={<ProjectDetail />} />
-            </Routes>
-          </main>
-          <Footer />
-          <BackToTop />
-          <FloatingContact />
-        </div>
-      </Router>
-    </LanguageProvider>
+    <ErrorBoundary>
+      <LanguageProvider>
+        <Router>
+          <ScrollToTop />
+          <ScrollProgress />
+          <KeyboardShortcuts />
+          <div className="min-h-screen bg-gray-50 dark:bg-slate-950 font-sans selection:bg-primary/20 selection:text-primary-hover transition-colors duration-300 flex flex-col">
+            <Navbar />
+            <main className="flex-grow">
+              <PageTransition>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/projects/:slug" element={<ProjectDetail />} />
+                </Routes>
+              </PageTransition>
+            </main>
+            <Footer />
+            <BackToTop />
+            <StickyCTA />
+          </div>
+        </Router>
+      </LanguageProvider>
+    </ErrorBoundary>
   );
 };
 

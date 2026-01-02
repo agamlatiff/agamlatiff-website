@@ -7,11 +7,7 @@ import Process from '@/components/sections/Process';
 import Contact from '@/components/sections/Contact';
 import SeoObserver from '@/components/utils/SeoObserver';
 
-interface HomeProps {
-  onOpenChat: () => void;
-}
-
-const Home: React.FC<HomeProps> = () => {
+const Home: React.FC = () => {
   return (
     <>
       <SeoObserver />

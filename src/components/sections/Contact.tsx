@@ -1,16 +1,12 @@
 
 import React, { useState } from 'react';
-import { Mail, Calendar, Send, Check, Loader2, AlertCircle, Sparkles, Phone, ChevronDown } from 'lucide-react';
+import { Mail, Calendar, Send, Check, Loader2, AlertCircle, Phone } from 'lucide-react';
 import { FaInstagram, FaTiktok, FaLinkedinIn, FaGithub, FaYoutube } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import Toast from '@/components/ui/Toast';
 import { useLanguage } from '@/context/LanguageContext';
 
-interface ContactProps {
-  onOpenChat: () => void;
-}
-
-const Contact: React.FC<ContactProps> = ({ onOpenChat }) => {
+const Contact: React.FC = () => {
   const { t, translations } = useLanguage();
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [showToast, setShowToast] = useState(false);
@@ -229,18 +225,6 @@ const Contact: React.FC<ContactProps> = ({ onOpenChat }) => {
                     </div>
                   </div>
                 </div>
-
-                {/* Chat Widget Trigger */}
-                <button onClick={onOpenChat} className="flex items-center gap-4 group w-full text-left">
-                  <div className="w-12 h-12 bg-indigo-500/40 dark:bg-slate-700/50 rounded-xl flex items-center justify-center text-white dark:text-primary backdrop-blur-sm group-hover:scale-110 transition-transform relative">
-                    <Sparkles size={22} />
-                    <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-primary dark:border-slate-800 animate-pulse"></span>
-                  </div>
-                  <div>
-                    <div className="text-xs text-indigo-200 dark:text-slate-500 uppercase tracking-wider font-semibold mb-1">{t('contact.info.ai')}</div>
-                    <div className="text-lg font-medium hover:text-indigo-100 dark:hover:text-white transition-colors">{t('contact.info.chat')} &rarr;</div>
-                  </div>
-                </button>
 
               </div>
             </div>

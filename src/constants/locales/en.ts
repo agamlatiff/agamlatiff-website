@@ -86,10 +86,6 @@ export const en = {
           </li>
           <li class="flex gap-3">
              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Real-Time Messaging:</strong> Direct in-app communication between recruiters and candidates with read receipts.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
              <span><strong>Role-Based Dashboards:</strong> Dedicated interfaces for Job Seekers (applications, saved jobs, alerts) and Employers (analytics, job management, team settings).</span>
           </li>
         </ul>
