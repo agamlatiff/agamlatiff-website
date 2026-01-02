@@ -186,9 +186,7 @@ const ProjectDetail: React.FC = () => {
   const [isImageLoading, setIsImageLoading] = useState(true);
 
   // Reset loading state when image index changes
-  useEffect(() => {
-    setIsImageLoading(true);
-  }, [currentImageIndex]);
+
 
   // Find project
   const project = useMemo(() => {
@@ -226,6 +224,11 @@ const ProjectDetail: React.FC = () => {
     }
     return images;
   }, [project]);
+
+  // Reset loading state when image source changes
+  useEffect(() => {
+    setIsImageLoading(true);
+  }, [currentImageIndex, allImages]);
 
   // Navigation handlers
   const handleNext = useCallback(() => {
@@ -353,12 +356,13 @@ const ProjectDetail: React.FC = () => {
                 )}
 
                 <img
-                  key={`img-${currentImageIndex}`}
+                  key={allImages[currentImageIndex]}
                   src={allImages[currentImageIndex]}
                   alt={title}
                   className={`transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
                   style={{ maxWidth: '100%', minHeight: '300px' }}
                   onLoad={() => setIsImageLoading(false)}
+                  onError={() => setIsImageLoading(false)}
                 />
 
                 {/* Overlay on hover */}
