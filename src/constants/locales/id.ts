@@ -9,7 +9,7 @@ export const id = {
     cta: {
       consult: "Konsultasi Gratis",
       processing: "Memproses...",
-      roi: "Lihat Demo Booking"
+      roi: "Hired Me"
     }
   },
   nav: {
