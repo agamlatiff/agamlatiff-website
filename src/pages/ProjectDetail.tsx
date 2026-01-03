@@ -281,7 +281,7 @@ const ProjectDetail: React.FC = () => {
 
     // Cleanup - restore default title when leaving
     return () => {
-      document.title = 'Agam | Developer Solusi Bisnis UMKM';
+      document.title = 'Agam Latifullah';
     };
   }, [slug, project, localizedProject]);
 
