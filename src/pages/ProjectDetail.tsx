@@ -345,13 +345,12 @@ const ProjectDetail: React.FC = () => {
                 className="hero-image-container relative w-full rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/50 cursor-pointer shadow-xl border border-slate-200 dark:border-slate-700 select-none pb-0 mb-4"
                 onClick={() => setLightboxOpen(true)}
               >
-                {/* Skeleton Loader */}
+                {/* Main Image */}
                 <img
                   key={allImages[currentImageIndex]}
                   src={allImages[currentImageIndex]}
                   alt={title}
-                  className="transition-opacity duration-300"
-                  style={{ maxWidth: '100%', minHeight: '300px' }}
+                  className="w-full h-auto aspect-video object-cover transition-opacity duration-300"
                 />
 
                 {/* Overlay on hover */}
