@@ -85,19 +85,10 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto relative z-20"
           >
-            <a
-              href="https://www.upwork.com/freelancers/~01e490352a92e7beb8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-base transition-all shadow-xl shadow-primary/20 hover:-translate-y-1 hover:shadow-2xl"
-            >
-              {t('hero.cta.consult')} <ArrowRight size={18} />
-            </a>
-
             <button
               onClick={handleConsultationClick}
               disabled={isNavigating}
-              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-8 py-4 rounded-full font-bold text-base transition-all hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-300 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-base transition-all shadow-xl shadow-primary/20 hover:-translate-y-1 hover:shadow-2xl disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isNavigating ? (
                 <>
@@ -106,11 +97,19 @@ const Hero: React.FC = () => {
                 </>
               ) : (
                 <>
-                  {t('hero.cta.roi')}
-                  <TrendingUp size={18} className="text-green-500" />
+                  {t('hero.cta.consult')} <ArrowRight size={18} />
                 </>
               )}
             </button>
+
+            <a
+              href="https://www.upwork.com/freelancers/~01e490352a92e7beb8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-8 py-4 rounded-full font-bold text-base transition-all hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-300"
+            >
+              {t('hero.cta.roi')} <TrendingUp size={18} className="text-green-500" />
+            </a>
           </motion.div>
 
         </div>

@@ -1,15 +1,15 @@
 export const id = {
   hero: {
-    badge: "Automation & Business Systems Expert",
+    badge: "Spesialis Sistem Booking Online",
     headline: {
-      part1: "Hilangkan Drama No-Show,",
-      part2: "Tingkatkan Profit Bisnis"
+      part1: "Pelanggan Booking Sendiri,",
+      part2: "Bisnis Tetap Berjalan"
     },
-    subheadline: "Saya membantu pemilik bisnis <strong>mengotomasi operasional</strong> agar tidak perlu lagi pusing mikirin admin yang overload atau pelanggan yang ghosting. Fokus pada <strong>Income</strong>, biarkan sistem yang bekerja.",
+    subheadline: "Booking app yang dirancang khusus untuk membantu pemilik bisnis <strong>menerima reservasi secara otomatis</strong> — tanpa perlu standby 24 jam membalas chat. Pelanggan bisa memilih jadwal, membayar DP, dan mendapat <strong>konfirmasi dalam hitungan detik</strong>.",
     cta: {
       consult: "Konsultasi Gratis",
       processing: "Memproses...",
-      roi: "Lihat Demo Sistem"
+      roi: "Lihat Demo Booking"
     }
   },
   nav: {
@@ -20,6 +20,18 @@ export const id = {
   },
   techStack: {
     title: "Technology Stack yang Saya Gunakan"
+  },
+  bookingShowcase: {
+    badge: "Live Demo",
+    title: "Lihat Booking App Beraksi",
+    subtitle: "Contoh nyata sistem booking yang sudah berjalan dan digunakan oleh bisnis.",
+    projectDesc: "Platform pemesanan tiket pesawat dengan fitur lengkap: pencarian real-time, pemilihan kursi interaktif, pembayaran otomatis, dan e-ticket dengan QR Code.",
+    features: [
+      { title: "Reservasi 24/7", desc: "Pelanggan bisa booking kapan saja, sistem selalu tersedia." },
+      { title: "Pembayaran DP Otomatis", desc: "Integrasi payment gateway untuk menerima DP langsung." },
+      { title: "Riwayat Booking", desc: "Akses histori pemesanan kapan saja dengan mudah." },
+      { title: "Dashboard Lengkap", desc: "Pantau semua reservasi dari satu tempat." }
+    ]
   },
   projects: {
     section: {
@@ -545,40 +557,40 @@ export const id = {
     }
   },
   process: {
-    title: "Workflow Profesional",
-    description: "Alur kerja transparan dan terstruktur. Dari konsultasi gratis hingga sistem bisnis Anda <strong>live dan menghasilkan profit</strong>.",
+    title: "Proses Pembuatan Booking App",
+    description: "Langkah-langkah yang jelas dan transparan dari konsultasi awal hingga <strong>booking app Anda siap digunakan</strong> oleh pelanggan.",
     steps: [
       {
-        title: "Free Discovery Call",
-        description: "Sesi bedah bisnis 30 menit. Kita petakan masalah operasional Anda (no-show, admin overload) dan saya demo-kan solusinya.",
-        deliverables: ["Audit Masalah", "Demo Solusi", "Estimasi ROI"]
+        title: "Konsultasi Awal",
+        description: "Kami membahas kebutuhan spesifik bisnis Anda: jenis layanan, jadwal operasional, dan preferensi pembayaran yang sesuai.",
+        deliverables: ["Analisis Kebutuhan", "Rekomendasi Fitur", "Estimasi Timeline"]
       },
       {
-        title: "Deal & Agreement",
-        description: "Anda setuju dengan solusi & investasi. Kita tanda tangan kontrak kerja sama agar kedua pihak aman (Partner Bisnis).",
-        deliverables: ["Kontrak Kerja", "Invoice DP", "Project Timeline"]
+        title: "Kesepakatan & Kontrak",
+        description: "Setelah detail disepakati, kami menandatangani kontrak kerja sama yang melindungi kedua belah pihak secara profesional.",
+        deliverables: ["Kontrak Kerja", "Invoice DP", "Timeline Proyek"]
       },
       {
-        title: "System Setup",
-        description: "Proses instalasi dan kustomisasi sistem. Saya sesuaikan fitur booking, pembayaran, dan notifikasi dengan brand Anda.",
-        deliverables: ["Setup Server", "Integrasi Payment", "Setup WhatsApp"]
+        title: "Pengembangan Sistem",
+        description: "Tim kami membangun booking app sesuai kebutuhan Anda, termasuk integrasi pembayaran dan notifikasi WhatsApp otomatis.",
+        deliverables: ["Setup Server", "Integrasi Payment", "Konfigurasi WhatsApp"]
       },
       {
-        title: "Admin Training",
-        description: "Sistem canggih percuma kalau tidak bisa pakai. Saya latih admin Anda atau Anda sendiri sampai lancar mengoperasikan dashboard.",
-        deliverables: ["Zoom Training", "Video Tutorial", "Buku Panduan"]
+        title: "Pelatihan Penggunaan",
+        description: "Kami memastikan Anda dan tim memahami cara mengoperasikan dashboard dengan baik melalui sesi training yang komprehensif.",
+        deliverables: ["Sesi Training Online", "Video Panduan", "Dokumentasi Lengkap"]
       },
       {
-        title: "Go-Live & Support",
-        description: "Sistem luncur, pelanggan mulai booking! Saya pantau 2 minggu pertama untuk memastikan semua berjalan mulus (Zero Downtime).",
-        deliverables: ["Link Booking Live", "Monitoring 24/7", "Laporan Mingguan"]
+        title: "Peluncuran & Pendampingan",
+        description: "Booking app Anda resmi digunakan. Kami tetap mendampingi selama periode awal untuk memastikan semua berjalan lancar.",
+        deliverables: ["Link Booking Aktif", "Monitoring 2 Minggu", "Support Prioritas"]
       }
     ],
     cta: {
-      ready: "Masih ragu sistemnya cocok?",
+      ready: "Belum yakin booking app cocok untuk bisnis Anda?",
       time: "Konsultasikan Dulu",
-      condition: "gratis 100%.",
-      button: "Jadwalkan Demo"
+      condition: "— 100% gratis, tanpa komitmen.",
+      button: "Jadwalkan Konsultasi"
     }
   },
   cta: {
@@ -587,17 +599,17 @@ export const id = {
     button: "Amankan Slot Project"
   },
   about: {
-    title: "Mengapa Butuh Sistem?",
-    subtitle: "Solusi untuk Masalah Bisnis Anda",
-    quote: "Bisnis yang scale-up butuh sistem, bukan sekadar kerja keras.",
-    whyChooseMe: "Apa Bedanya?",
-    description1: "Kebanyakan bisnis stuck karena owner-nya masih 'terjebak' di operasional harian. Balas chat, cek transfer manual, rekap order di Excel. <strong>Itu bukan bisnis, itu pekerjaan.</strong>",
-    description2: "Saya membangun <strong>Sistem Otomatis</strong> yang menggantikan tugas-tugas repetitif itu. Sehingga Anda bisa fokus ke strategi dan pengembangan bisnis (atau liburan), sementara sistem yang bekerja mencari uang.",
+    title: "Mengapa Bisnis Anda",
+    subtitle: "Butuh Sistem Booking?",
+    quote: "Bisnis yang berkembang membutuhkan cara reservasi yang praktis dan profesional bagi pelanggan.",
+    whyChooseMe: "Apa yang Anda Dapatkan?",
+    description1: "Banyak pemilik bisnis masih mengandalkan cara manual untuk menerima booking: balas chat satu per satu, cek jadwal di buku, atau konfirmasi transfer lewat WhatsApp. Selain menyita waktu, cara ini <strong>rentan kesalahan dan membuat pelanggan menunggu terlalu lama</strong>.",
+    description2: "Booking app menghadirkan solusi yang lebih efisien. Pelanggan bisa <strong>melihat ketersediaan jadwal, memilih waktu, membayar DP, dan langsung mendapat konfirmasi</strong> — semua dalam satu platform yang bekerja otomatis untuk Anda.",
     values: [
-      { title: "Profit Oriented", desc: "Fitur dibuat untuk meningkatkan omzet atau menekan biaya. Bukan sekadar gaya-gayaan." },
-      { title: "Terima Beres", desc: "Anda terima kunci. Server, domain, payment gateway, semua saya yang urus." },
-      { title: "Anti Ribet", desc: "Dashboard didesain sesimpel mungkin. Nenek-nenek pun bisa paham pakainya." },
-      { title: "Full Support", desc: "Ada masalah teknis? Chat saya, beres. Anda tidak perlu hire tim IT sendiri." }
+      { title: "Reservasi Tanpa Hambatan", desc: "Pelanggan bisa booking kapan saja, bahkan di luar jam operasional. Tidak ada lagi pesan yang terlewat." },
+      { title: "Pembayaran DP Otomatis", desc: "Sistem terintegrasi dengan payment gateway untuk menerima DP secara langsung. Mengurangi risiko no-show." },
+      { title: "Dashboard Mudah Dipahami", desc: "Pantau semua reservasi dari satu tempat. Antarmuka yang sederhana, tidak memerlukan keahlian teknis." },
+      { title: "Pengingat Otomatis", desc: "Pelanggan mendapat notifikasi WhatsApp sebelum jadwal tiba. Meminimalkan pembatalan mendadak." }
     ]
   },
   footer: {

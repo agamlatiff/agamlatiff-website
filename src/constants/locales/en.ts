@@ -1,15 +1,15 @@
 export const en = {
   hero: {
-    badge: "Full-Stack Web Developer",
+    badge: "Online Booking System Specialist",
     headline: {
-      part1: "Stop No-Shows,",
-      part2: "Maximize Profit"
+      part1: "Customers Book Themselves,",
+      part2: "Your Business Keeps Running"
     },
-    subheadline: "I help business owners <strong>automate operations</strong> to eliminate admin overload and ghosting customers. Focus on <strong>Revenue</strong>, let the system do the work.",
+    subheadline: "A booking app designed specifically to help business owners <strong>receive reservations automatically</strong> — without needing to be available 24/7 to reply to messages. Customers can choose their schedule, pay a deposit, and get <strong>confirmation in seconds</strong>.",
     cta: {
       consult: "Hire Me",
       processing: "Processing...",
-      roi: "Free Consultation"
+      roi: "See Booking Demo"
     }
   },
   nav: {
@@ -20,6 +20,18 @@ export const en = {
   },
   techStack: {
     title: "Technology Stack I Use"
+  },
+  bookingShowcase: {
+    badge: "Live Demo",
+    title: "See the Booking App in Action",
+    subtitle: "A real example of a booking system that is running and used by businesses.",
+    projectDesc: "An end-to-end flight booking platform with complete features: real-time search, interactive seat selection, automatic payment, and e-ticket with QR Code.",
+    features: [
+      { title: "24/7 Reservations", desc: "Customers can book anytime, system is always available." },
+      { title: "Automatic DP Payment", desc: "Payment gateway integration to receive deposits directly." },
+      { title: "Booking History", desc: "Access booking records anytime with ease." },
+      { title: "Complete Dashboard", desc: "Monitor all reservations from one place." }
+    ]
   },
   projects: {
     section: {
@@ -545,40 +557,40 @@ export const en = {
     }
   },
   process: {
-    title: "Professional Workflow",
-    description: "Transparent and structured workflow. From free consultation until your business system is <strong>live and generating profit</strong>.",
+    title: "How Your Booking App Gets Built",
+    description: "Clear and transparent steps from initial consultation until your <strong>booking app is ready for customers</strong> to use.",
     steps: [
       {
-        title: "Free Discovery Call",
-        description: "30-min business dissection. We map your operational problems (no-show, admin overload) and I demo the solution.",
-        deliverables: ["Problem Audit", "Solution Demo", "ROI Estimate"]
+        title: "Initial Consultation",
+        description: "We discuss your specific business needs: service types, operating hours, and preferred payment methods.",
+        deliverables: ["Needs Analysis", "Feature Recommendations", "Timeline Estimate"]
       },
       {
-        title: "Deal & Agreement",
-        description: "You agree with the solution & investment. We sign a cooperation contract for mutual safety (Business Partner).",
-        deliverables: ["Contract", "DP Invoice", "Project Timeline"]
+        title: "Agreement & Contract",
+        description: "Once details are agreed upon, we sign a professional cooperation contract that protects both parties.",
+        deliverables: ["Contract", "Deposit Invoice", "Project Timeline"]
       },
       {
-        title: "System Setup",
-        description: "Installation and customization process. I tailor booking, payment, and notification features to your brand.",
-        deliverables: ["Server Setup", "Payment Integration", "WhatsApp Setup"]
+        title: "System Development",
+        description: "Our team builds your booking app according to your needs, including payment integration and automated WhatsApp notifications.",
+        deliverables: ["Server Setup", "Payment Integration", "WhatsApp Configuration"]
       },
       {
-        title: "Admin Training",
-        description: "A sophisticated system is useless if you can't use it. I train your admin or specific staff until fluent in operating the dashboard.",
-        deliverables: ["Zoom Training", "Video Tutorial", "Guidebook"]
+        title: "Usage Training",
+        description: "We ensure you and your team understand how to operate the dashboard properly through comprehensive training sessions.",
+        deliverables: ["Online Training Session", "Video Guide", "Complete Documentation"]
       },
       {
-        title: "Go-Live & Support",
-        description: "System launch, customers start booking! I monitor the first 2 weeks to ensure everything runs smoothly (Zero Downtime).",
-        deliverables: ["Live Booking Link", "24/7 Monitoring", "Weekly Report"]
+        title: "Launch & Support",
+        description: "Your booking app officially goes live. We continue to support you during the initial period to ensure everything runs smoothly.",
+        deliverables: ["Live Booking Link", "2-Week Monitoring", "Priority Support"]
       }
     ],
     cta: {
-      ready: "Still doubtful?",
+      ready: "Not sure if a booking app is right for your business?",
       time: "Consult First",
-      condition: "100% free.",
-      button: "Schedule Demo"
+      condition: "— 100% free, no commitment.",
+      button: "Schedule Consultation"
     }
   },
   cta: {
@@ -587,17 +599,17 @@ export const en = {
     button: "Secure Project Slot"
   },
   about: {
-    title: "Why Need a System?",
-    subtitle: "Solution for Your Business Problems",
-    quote: "Scaling businesses need systems, not just hard work.",
-    whyChooseMe: "What's the Difference?",
-    description1: "Most businesses get stuck because the owner is 'trapped' in daily operations. Replying to chats, checking manual transfers, recap orders in Excel. <strong>That's not business, that's a job.</strong>",
-    description2: "I build <strong>Automated Systems</strong> that replace those repetitive tasks. So you can focus on strategy and business development (or vacation), while the system works to make money.",
+    title: "Why Your Business",
+    subtitle: "Needs a Booking System?",
+    quote: "Growing businesses need a practical and professional way for customers to make reservations.",
+    whyChooseMe: "What You Get?",
+    description1: "Many business owners still rely on manual methods to receive bookings: replying to chats one by one, checking schedules in a notebook, or confirming transfers via WhatsApp. Besides being time-consuming, this approach is <strong>prone to errors and makes customers wait too long</strong>.",
+    description2: "A booking app provides a more efficient solution. Customers can <strong>view available schedules, choose their time, pay a deposit, and receive instant confirmation</strong> — all in one platform that works automatically for you.",
     values: [
-      { title: "Profit Oriented", desc: "Features built to increase revenue or cut costs. Not just for show." },
-      { title: "All-in Service", desc: "You get the keys. Server, domain, gateway, I handle everything." },
-      { title: "Hassle-Free", desc: "Dashboard designed as simple as possible. Even non-techies can understand." },
-      { title: "Full Support", desc: "Technical issue? Chat me, fixed. No need to hire your own IT team." }
+      { title: "Seamless Reservations", desc: "Customers can book anytime, even outside business hours. No more missed messages." },
+      { title: "Automatic Deposit Payments", desc: "System integrated with payment gateway to receive deposits directly. Reduces no-show risk." },
+      { title: "Easy-to-Use Dashboard", desc: "Monitor all reservations from one place. Simple interface, no technical expertise required." },
+      { title: "Automatic Reminders", desc: "Customers receive WhatsApp notifications before their scheduled time. Minimizes last-minute cancellations." }
     ]
   },
   footer: {

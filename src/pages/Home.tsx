@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '@/components/sections/Hero';
+import BookingShowcase from '@/components/sections/BookingShowcase';
 import TechStack from '@/components/sections/TechStack';
 import About from '@/components/sections/About';
 import Projects from '@/components/sections/Projects';
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
       <SeoObserver />
       <div className="w-full">
         <Hero />
+        <BookingShowcase />
         <TechStack />
         <About />
         <Projects />
