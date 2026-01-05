@@ -115,7 +115,7 @@ const About: React.FC = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-60 h-60 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-2xl overflow-hidden border-4 border-slate-50 dark:border-slate-800">
                   {/* Placeholder Avatar */}
-                  <img src="/agam.jpg" alt="Agam Image" className="w-full h-full object-cover object-top opacity-80" loading="lazy" />
+                  <img src="/agam-photo.jpg" alt="Agam Image" className="w-full h-full object-cover object-top opacity-80" loading="lazy" />
                 </div>
               </div>
 

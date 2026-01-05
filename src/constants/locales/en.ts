@@ -50,83 +50,65 @@ export const en = {
       viewDetail: 'View Detail'
     },
     '7': {
-      title: 'Hired.io - Modern Job Portal Platform',
-      shortDescription: 'An end-to-end recruitment platform designed to bridge the gap between talented professionals and innovative companies.',
+      title: 'Hired.io - Modern Job Portal',
+      shortDescription: 'A recruitment platform that connects job seekers with companies, streamlining the entire hiring process from application to onboarding.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
-        An end-to-end recruitment platform designed to bridge the gap between talented professionals and innovative companies. This system streamlines the entire hiring journey, from job discovery and application to interview scheduling and candidate management.
+        <strong>What is Hired.io?</strong><br/>
+        A recruitment platform that bridges talented professionals with innovative companies. It streamlines the entire hiring journey from job discovery to candidate management.
       </p>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Next.js 14 (App Router) & React 18</li>
-              <li>TypeScript & Tailwind CSS 3</li>
-              <li>Radix UI & Shadcn UI</li>
-            </ul>
-          </div>
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>NextAuth.js (Credentials Provider)</li>
-              <li>Prisma ORM & PostgreSQL (Supabase)</li>
-              <li>Supabase Storage (File Upload)</li>
-              <li>React Hook Form & Zod Validation</li>
-              <li>SWR (Data Fetching)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
+        <p class="font-semibold mb-2">For Job Seekers:</p>
+        <ul class="space-y-2 mb-4">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Search jobs with filters (category, location, salary)</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Apply with resume, cover letter, and profile</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track application status in real-time</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Save jobs and get alerts for new openings</span></li>
+        </ul>
+        <p class="font-semibold mb-2">For Employers:</p>
         <ul class="space-y-2">
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Smart Job Discovery:</strong> Real-time job search with advanced filters for categories, locations, job types, and salary ranges.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Multi-Step Application:</strong> Streamlined application flow with resume upload, cover letter, and professional profile integration.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Applicant Pipeline Management:</strong> Visual candidate tracking system (New → Screening → Interview → Hired) with notes and rating.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Role-Based Dashboards:</strong> Dedicated interfaces for Job Seekers (applications, saved jobs, alerts) and Employers (analytics, job management, team settings).</span>
-          </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Post jobs and manage listings</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Review applications in visual pipeline</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Move candidates through stages (Screening → Interview → Hired)</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>View analytics on job performance</span></li>
         </ul>
       </div>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
         <ul class="space-y-2">
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Reduced Time-to-Hire:</strong> Streamlined pipeline and real-time notifications accelerate the recruitment process by up to 40%.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Enhanced Candidate Experience:</strong> Intuitive dark-mode UI with glassmorphism design increases engagement and reduces drop-off rates.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Data-Driven Decisions:</strong> Comprehensive analytics dashboard provides insights on job views, application rates, and conversion funnels.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Scalable Architecture:</strong> Serverless-ready deployment on Vercel with Supabase backend handles traffic spikes seamlessly.</span>
-           </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Slow hiring process → <strong>Now streamlined pipeline with real-time notifications</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Messy application tracking → <strong>Now visual Kanban-style candidate management</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No visibility on hiring metrics → <strong>Now analytics dashboard with conversion data</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Job seekers don't know status → <strong>Now real-time application tracking</strong></span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reduce Time-to-Hire</strong> — Streamlined process can cut hiring time by 40%</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Better Candidate Experience</strong> — Professional portal increases quality applicants</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Data-Driven Decisions</strong> — Analytics show what works and what doesn't</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Scale Your Team</strong> — Handle more applicants without more HR staff</span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Smart Job Search</strong> — Filter by category, location, salary, job type</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Application Pipeline</strong> — Visual tracking from New to Hired</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Role-Based Dashboard</strong> — Different views for seekers and employers</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Analytics</strong> — Track views, applications, and conversion rates</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Job Alerts</strong> — Get notified for matching opportunities</span></li>
         </ul>
       </div>
 
       <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-         "Connecting talent with opportunity — fast, intuitive, and built for the modern hiring landscape."
+        <strong>Summary:</strong> Hired.io modernizes recruitment by making hiring faster, more organized, and data-driven. Connect the right talent with the right opportunity.
       </p>
       `,
       industry: 'Recruitment & HR Tech',
@@ -188,289 +170,264 @@ export const en = {
       date: 'Automation System'
     },
     '5': {
-      title: 'Fly Higher - Modern Flight Booking Platform',
-      shortDescription: 'An end-to-end flight booking platform designed to provide a seamless and efficient flight reservation experience.',
+      title: 'Fly Higher - Flight Booking Platform',
+      shortDescription: 'A complete flight reservation system that allows travelers to search, select seats, book flights, and manage e-tickets with QR codes.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
-        An end-to-end flight booking platform designed to provide a seamless and efficient flight reservation experience. This system handles the entire user journey, from flight search and interactive seat selection to secure payment and electronic ticket issuance.
+        <strong>What is Fly Higher?</strong><br/>
+        An end-to-end flight booking platform that revolutionizes how people book travel. From searching flights to scanning boarding passes, everything happens in one seamless experience.
       </p>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Next.js 14 (App Router) & React 18</li>
-              <li>TypeScript & Tailwind CSS 3</li>
-              <li>Radix UI & Shadcn UI</li>
-            </ul>
-          </div>
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Lucia Auth v3</li>
-              <li>Prisma ORM & PostgreSQL</li>
-              <li>Midtrans Payment Gateway</li>
-              <li>TanStack Query & Server Actions</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
+        <p class="font-semibold mb-2">For Travelers:</p>
+        <ul class="space-y-2 mb-4">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Search flights by destination, date, and passengers</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>View real-time availability and pricing</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Select seats with interactive seat map</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pay securely via Midtrans payment gateway</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Receive e-ticket with QR code for boarding</span></li>
+        </ul>
+        <p class="font-semibold mb-2">For Airline Admin:</p>
         <ul class="space-y-2">
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Smart Reservation System:</strong> Real-time flight search with filters for routes, dates, and seat classes.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Interactive Seat Selection:</strong> Interactive flight seat map visualization for choosing seats (Economy, Business, First Class).</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>E-Ticket Management:</strong> Automated digital ticket generation with QR Code and full flight details.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Role-Based Dashboard:</strong> User history/wishlist and Admin management for aircraft/routes/users.</span>
-          </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manage flight schedules and pricing</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track bookings and revenue</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Configure seat layouts per aircraft</span></li>
         </ul>
       </div>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
         <ul class="space-y-2">
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>High Scalability:</strong> Serverless-ready architecture (Vercel) capable of handling traffic spikes during holidays.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Transaction Security:</strong> Trusted payment gateway integration and industry-standard password hashing (bcryptjs).</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Operational Efficiency:</strong> Ticketing process automation reduces manual workload and minimizes human error.</span>
-           </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Complicated booking process → <strong>Now simple 4-step flow</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No visibility of seat availability → <strong>Now interactive seat selection</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Paper tickets get lost → <strong>Now digital e-ticket with QR code</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Payment uncertainty → <strong>Now secure real-time payment confirmation</strong></span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Increase Conversions</strong> — Streamlined booking reduces cart abandonment</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Upsell Premium Seats</strong> — Visual seat map encourages upgrades</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reduce Support Costs</strong> — Self-service e-tickets eliminate manual processes</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Secure Transactions</strong> — Midtrans integration ensures payment reliability</span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Real-time Flight Search</strong> — Live availability and pricing</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Interactive Seat Selection</strong> — Choose your preferred seat visually</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Secure Payments</strong> — Multi-method payment via Midtrans</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>E-Ticket with QR</strong> — Digital boarding pass on your phone</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Admin Dashboard</strong> — Full control of flights, bookings, and users</span></li>
         </ul>
       </div>
 
       <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-         "Fast, secure, and intuitive flight booking solution for the modern travel era."
+        <strong>Summary:</strong> Fly Higher transforms flight booking into a seamless digital experience. From search to boarding pass, every step is designed for simplicity and efficiency.
       </p>
       `,
       industry: 'Travel & Tourism',
       date: 'Full-Stack Developer'
     },
     '4': {
-      title: 'Suka Baca - Intelligent Library Management System',
-      shortDescription: 'A comprehensive library operation platform designed to modernize the borrowing experience. The system streamlines the entire book lending lifecycle.',
+      title: 'Suka Baca - Library Management System',
+      shortDescription: 'A library system that modernizes book lending with digital catalogs, automated fines, and self-service borrowing for members.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
-        A comprehensive library operation platform designed to modernize the borrowing experience. The system streamlines the entire book lending lifecycle, from catalog browsing and multi-step borrowing requests to automated fine calculations and admin oversight.
+        <strong>What is Suka Baca?</strong><br/>
+        A comprehensive library management system that transforms how libraries operate. From browsing catalogs to returning books, everything is digitized for efficiency.
       </p>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Laravel Blade & Livewire</li>
-              <li>Tailwind CSS 3</li>
-              <li>Alpine.js for Interactivity</li>
-            </ul>
-          </div>
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Laravel 11 Framework</li>
-              <li>FilamentPHP Admin Panel</li>
-              <li>MySQL / SQLite Database</li>
-              <li>OpenLibrary API Integration</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
+        <p class="font-semibold mb-2">For Library Members:</p>
+        <ul class="space-y-2 mb-4">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Browse book catalog with search and filters</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Request books for borrowing</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track active loans and due dates</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Request extensions if needed</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pay fines online for late returns</span></li>
+        </ul>
+        <p class="font-semibold mb-2">For Library Staff:</p>
         <ul class="space-y-2">
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Smart Borrowing Flow:</strong> Guided multi-step wizards for borrowing books and requesting loan extensions.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Admin Command Center:</strong> Powerful Filament dashboard to manage catalogs, memberships, and circulation.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Automated Cataloging:</strong> Integration with OpenLibrary API to automatically fetch book covers and metadata by ISBN.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Fine Management:</strong> Specialized system for tracking overdue items and processing fine payments.</span>
-          </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manage book inventory and catalog</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Process borrowing requests</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track overdue books and fines automatically</span></li>
         </ul>
       </div>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
         <ul class="space-y-2">
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Operational Efficiency:</strong> Automates manual tasks like due date tracking and fine calculation.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Data Accuracy:</strong> Centralized management ensures inventory and borrower data remains consistent.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>User Engagement:</strong> Seamless, self-service digital experience for library members to explore resources.</span>
-           </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Paper-based records → <strong>Now digital catalog with auto-fetch metadata</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manual fine calculation → <strong>Now automatic overdue tracking</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Long borrowing queues → <strong>Now self-service online requests</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lost book records → <strong>Now centralized inventory tracking</strong></span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reduce Workload</strong> — Automation replaces manual record-keeping</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Accurate Inventory</strong> — Real-time tracking prevents book loss</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Better Member Experience</strong> — Self-service saves time for everyone</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Increase Revenue</strong> — Automated fine collection improves compliance</span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Digital Catalog</strong> — Auto-fetch book info via OpenLibrary API</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Smart Borrowing</strong> — Multi-step wizard for loan requests</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Fine Management</strong> — Auto-calculate and track overdue fines</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Admin Dashboard</strong> — Full control via Filament admin panel</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Member Portal</strong> — Self-service for browsing and borrowing</span></li>
         </ul>
       </div>
 
       <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-         "Modernizing library operations with a seamless, automated, and user-friendly experience."
+        <strong>Summary:</strong> Suka Baca brings libraries into the digital age. Less paperwork, more reading. Automated operations, happy members.
       </p>
       `,
-      industry: 'Education & Public Sector',
+      industry: 'Education & Library',
       date: 'Full-Stack Developer'
     },
     '1': {
-      title: 'UpSkills - E-Learning Management System',
-      shortDescription: 'A comprehensive web-based e-learning platform designed to help users improve their abilities through structured online learning.',
+      title: 'UpSkills - E-Learning Platform',
+      shortDescription: 'An online learning platform that helps people develop new skills through structured courses, progress tracking, and subscription-based access.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
-        UpSkills is a comprehensive web-based e-learning platform designed to help users improve their abilities through structured online learning. The platform provides a modern environment for course browsing, progress tracking, skill development, and subscription-based access to premium content.
+        <strong>What is UpSkills?</strong><br/>
+        An e-learning platform that helps people develop new skills through structured online courses. With subscription-based access, users can learn at their own pace while mentors can share their expertise.
       </p>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Technology Stack:</h4>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>React 19 with TypeScript</li>
-              <li>Vite & React Router DOM</li>
-              <li>Zustand for State Management</li>
-              <li>Axios & @google/genai</li>
-              <li>Zod for Runtime Validation</li>
-            </ul>
-          </div>
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Laravel (PHP Framework)</li>
-              <li>MySQL/PostgreSQL/SQLite</li>
-              <li>Laravel Sanctum for Authentication</li>
-              <li>Eloquent ORM</li>
-            </ul>
-          </div>
-        </div>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
+        <p class="font-semibold mb-2">For Learners:</p>
+        <ul class="space-y-2 mb-4">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Browse and discover courses by category</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Subscribe to unlock premium content</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Learn with video, text, and interactive content</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track progress and complete courses</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Get AI-powered assistance for questions</span></li>
+        </ul>
+        <p class="font-semibold mb-2">For Mentors & Businesses:</p>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Create and publish courses easily</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Upload materials (video, PDF, text)</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Monitor student progress and engagement</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Earn from subscriptions</span></li>
+        </ul>
       </div>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Impact:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
         <ul class="space-y-2">
-          <li class="flex gap-3">
-            <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-            <span><strong>Democratizing Education:</strong> Providing a structured, accessible learning environment for skill development.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Enhanced Engagement:</strong> Features like progress tracking and AI chatbot assistance boost user retention.</span>
-          </li>
-           <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Mentor Empowerment:</strong> Dedicated dashboard for efficient course content management.</span>
-          </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Traditional learning is expensive → <strong>Now affordable subscription access</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Fixed schedules limit learning → <strong>Now learn anytime, anywhere</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Hard to track progress → <strong>Now automatic progress tracking</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No way to monetize expertise → <strong>Now earn from your knowledge</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Stuck without help → <strong>Now AI chatbot answers questions</strong></span></li>
         </ul>
       </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Recurring Revenue</strong> — Subscription model creates predictable income</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Scale Without Limits</strong> — Reach unlimited students with same content</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Easy Content Management</strong> — Dashboard to manage courses and students</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Engaged Users</strong> — Progress tracking keeps students motivated</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>AI Support</strong> — Chatbot reduces support burden</span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Course Catalog</strong> — Browse and search courses by category</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Subscription Plans</strong> — Multiple pricing tiers for different needs</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Progress Tracking</strong> — See completion status for every course</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Mentor Dashboard</strong> — Create and manage course content</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>AI Chatbot</strong> — Get help understanding course material</span></li>
+        </ul>
+      </div>
+
+      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
+        <strong>Summary:</strong> UpSkills democratizes education by making quality learning accessible to everyone. Build your knowledge empire with a platform that scales with your audience.
+      </p>
       `,
       industry: 'Education & EdTech',
       date: 'Full-Stack Developer'
     },
     '2': {
-      title: 'Saturday - Warehouse & Merchant Management System',
-      shortDescription: 'A full-stack inventory and transaction management system designed for managing warehouses and merchants.',
+      title: 'Saturday - Warehouse Management System',
+      shortDescription: 'A centralized warehouse system that helps distributors track inventory, manage multi-location stock, and prevent stock discrepancies.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
-        A full-stack inventory and transaction management system <strong>designed for managing warehouses and merchants</strong>. Enables product tracking, stock management, and sales transactions with automated 12% PPN (Indonesian VAT) tax calculation.
+        <strong>What is Saturday WMS?</strong><br/>
+        A warehouse management system that helps distributors and retailers track inventory across multiple locations, manage stock movements, and prevent shrinkage — all from one dashboard.
       </p>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>React 19 with TypeScript</li>
-              <li>Vite & Tailwind CSS 4</li>
-              <li>React Router DOM & TanStack Query</li>
-              <li>React Hook Form + Zod</li>
-            </ul>
-          </div>
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Laravel 12 (PHP 8.2+)</li>
-              <li>Laravel Sanctum & Spatie Permission</li>
-              <li>MySQL / PostgreSQL</li>
-              <li>Repository - Service Pattern</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Core Features:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
+        <p class="font-semibold mb-2">For Warehouse Staff:</p>
+        <ul class="space-y-2 mb-4">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Scan products using barcode/smartphone</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Record inbound/outbound stock movements</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Perform digital stock opname</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Request inter-branch transfers</span></li>
+        </ul>
+        <p class="font-semibold mb-2">For Business Owners:</p>
         <ul class="space-y-2">
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Role-based Access Control:</strong> Manager (Admin) & Keeper (Merchant Staff) roles.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Stock Management:</strong> Tracking at warehouse and merchant levels with real-time validation.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Transactions:</strong> Multi-step processing with cart functionality and automatic 12% PPN.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Responsive Design:</strong> Optimized for desktop, tablet, and mobile usage.</span>
-          </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Monitor stock across all warehouses in real-time</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Approve transfer requests digitally</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track revenue and sales from one dashboard</span></li>
         </ul>
       </div>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
         <ul class="space-y-2">
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Operational Efficiency:</strong> Centralized stock tracking eliminates manual work.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Accuracy & Transparency:</strong> Automated validation prevents overselling and ensures tax compliance.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Better Decisions:</strong> Dashboard provides revenue and sales insights.</span>
-           </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Stock discrepancies (shrinkage) → <strong>Now every movement is tracked digitally</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lost items in warehouse → <strong>Now barcode scanning for accuracy</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manual stock counting → <strong>Now digital opname with auto-calculation</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Out-of-stock situations → <strong>Now low-stock alerts before it happens</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No visibility across branches → <strong>Now see all locations in one view</strong></span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reduce Stock Loss</strong> — Every item is tracked, minimizing shrinkage</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Real-time Visibility</strong> — See stock levels across all locations instantly</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Faster Operations</strong> — Digital processes replace manual paperwork</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Prevent Lost Sales</strong> — Auto alerts for low stock on fast-moving items</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Automatic Tax Calculation</strong> — 12% PPN included in all transactions</span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Multi-Warehouse</strong> — Manage multiple locations from one system</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Barcode Scanning</strong> — Fast and accurate stock recording</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Digital Stock Opname</strong> — Auto-calculate discrepancies</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Transfer System</strong> — Digital approval for inter-branch moves</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Role-Based Access</strong> — Manager and Keeper roles with permissions</span></li>
         </ul>
       </div>
 
       <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-         "Status: **Production-ready**. Fully functional CRUD, complete transaction flow, and operational stock management."
+        <strong>Summary:</strong> Saturday WMS turns chaotic warehouse operations into organized, traceable processes. Know exactly what you have, where it is, and when to reorder.
       </p>
       `,
       industry: 'Logistics & Supply Chain',
@@ -478,78 +435,66 @@ export const en = {
     },
     '3': {
       title: 'Alizon Store - Full-Stack E-Commerce',
-      shortDescription: 'A full-stack e-commerce web application designed to provide a complete online shopping experience.',
+      shortDescription: 'An online store platform that allows businesses to sell products on the internet, accept payments, and manage orders from one place.',
       fullDescription: `
       <p class="mb-6 text-lg leading-relaxed">
-        A full-stack e-commerce web application designed to provide a complete online shopping experience. The platform enables users to browse products, manage shopping carts, wishlists, and complete purchases through secure Stripe payment integration.
+        <strong>What is Alizon Store?</strong><br/>
+        An online store platform that allows businesses to sell products on the internet, accept payments, and manage orders from one place.
       </p>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Tech Stack:</h4>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Frontend:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Next.js 15 (App Router) & React 19</li>
-              <li>TypeScript & Tailwind CSS 4</li>
-              <li>Zustand for State Management</li>
-              <li>Radix UI & Lucide React</li>
-            </ul>
-          </div>
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Backend & Tools:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>NextAuth v5 (Auth.js)</li>
-              <li>Prisma ORM & PostgreSQL</li>
-              <li>Stripe Payment Integration</li>
-              <li>TanStack Query & Zod</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
+        <p class="font-semibold mb-2">For Customers:</p>
+        <ul class="space-y-2 mb-4">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Visit your online store anytime</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Browse products by category and brand</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Add items to shopping cart</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pay securely with credit/debit card</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Receive order confirmation & track orders</span></li>
+        </ul>
+        <p class="font-semibold mb-2">For Business Owners:</p>
         <ul class="space-y-2">
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Full E-Commerce Flow:</strong> Product browsing, cart management, wishlist, and secure checkout.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Seller Dashboard:</strong> Dedicated interface for managing products and tracking orders.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Secure Payments:</strong> Integrated Stripe Checkout with webhook handling for real-time order updates.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Authentication:</strong> Secure login and registration with NextAuth v5 session management.</span>
-          </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Add and update products easily</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Organize products into categories and brands</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Receive, process orders & track all sales from one dashboard</span></li>
         </ul>
       </div>
 
       <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Impact:</h4>
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
         <ul class="space-y-2">
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Production-Ready Template:</strong> Scalable foundation for launching real e-commerce businesses.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>Secure Transactions:</strong> PCI-compliant payment processing via Stripe.</span>
-           </li>
-           <li class="flex gap-3">
-              <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-              <span><strong>SEO Optimization:</strong> Server-side rendering improves search engine visibility and performance.</span>
-           </li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Limited to local customers → <strong>Now sell to anyone, anywhere</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Store closes at night → <strong>Now open 24 hours, every day</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manual order tracking → <strong>Now automatic order management</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Cash payments only → <strong>Now accept cards online</strong></span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No customer data → <strong>Now have customer database for marketing</strong></span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Sell 24/7</strong> — Your store never closes, customers can buy anytime</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reach more customers</strong> — Sell beyond your local area</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Save money</strong> — No physical store rent or extra staff needed</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Secure payments</strong> — Customers trust safe online transactions</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Track everything</strong> — Orders, customers, products all in one place</span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
+        <ul class="space-y-2">
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Product Catalog</strong> — Show all your products beautifully</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Shopping Cart & Wishlist</strong> — Customers collect items before buying</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Online Payments</strong> — Accept cards safely via Stripe</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Order Management</strong> — See all orders and status</span></li>
+          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Admin Dashboard</strong> — Manage everything from one screen</span></li>
         </ul>
       </div>
 
       <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        "A modern, secure, and scalable e-commerce solution built with the latest web technologies."
+        <strong>Summary:</strong> Alizon Store turns your business into a 24/7 selling machine. No limits on when or where you can sell. All operations in one easy dashboard.
       </p>
       `,
       industry: 'E-Commerce & Retail',
@@ -561,29 +506,44 @@ export const en = {
     description: "Clear and transparent steps from initial consultation until your <strong>booking app is ready for customers</strong> to use.",
     steps: [
       {
-        title: "Initial Consultation",
-        description: "We discuss your specific business needs: service types, operating hours, and preferred payment methods.",
-        deliverables: ["Needs Analysis", "Feature Recommendations", "Timeline Estimate"]
+        title: "Consultation & Planning",
+        description: "I deeply understand your business needs: service types, operating hours, and how your customers make bookings.",
+        deliverables: ["Needs Analysis", "System Wireframe", "Timeline Estimate"]
       },
       {
-        title: "Agreement & Contract",
-        description: "Once details are agreed upon, we sign a professional cooperation contract that protects both parties.",
-        deliverables: ["Contract", "Deposit Invoice", "Project Timeline"]
+        title: "Agreement & Deposit",
+        description: "Once scope and timeline are agreed upon, we sign a contract and you pay a deposit to start the project.",
+        deliverables: ["Work Contract", "Deposit Invoice", "Milestone Schedule"]
       },
       {
-        title: "System Development",
-        description: "Our team builds your booking app according to your needs, including payment integration and automated WhatsApp notifications.",
-        deliverables: ["Server Setup", "Payment Integration", "WhatsApp Configuration"]
+        title: "Development",
+        description: "I build the entire system according to the agreed specifications: frontend, backend, database, and necessary integrations.",
+        deliverables: ["Source Code", "Complete Features", "Progress Update"]
+      },
+      {
+        title: "Testing with Client",
+        description: "Joint testing to verify all features and ensure everything is correct according to requirements.",
+        deliverables: ["Feature Review", "Client Feedback", "Revisions"]
+      },
+      {
+        title: "Final Payment",
+        description: "Once all features are correct and you're satisfied with the results, the remaining payment is settled as agreed.",
+        deliverables: ["Final Invoice", "Handover", "Full Access"]
+      },
+      {
+        title: "Deploy",
+        description: "The application is deployed to production server so it can be accessed by users.",
+        deliverables: ["Live Deployment", "Domain Setup", "SSL Certificate"]
       },
       {
         title: "Usage Training",
-        description: "We ensure you and your team understand how to operate the dashboard properly through comprehensive training sessions.",
-        deliverables: ["Online Training Session", "Video Guide", "Complete Documentation"]
+        description: "I provide complete tutorials and training for you and your team to operate the system smoothly.",
+        deliverables: ["Video Tutorial", "User Guide", "Training Session"]
       },
       {
-        title: "Launch & Support",
-        description: "Your booking app officially goes live. We continue to support you during the initial period to ensure everything runs smoothly.",
-        deliverables: ["Live Booking Link", "2-Week Monitoring", "Priority Support"]
+        title: "Maintenance & Support",
+        description: "Ongoing technical support to ensure the application runs optimally and receives updates when needed.",
+        deliverables: ["Technical Support", "Bug Fixing", "Minor Updates"]
       }
     ],
     cta: {

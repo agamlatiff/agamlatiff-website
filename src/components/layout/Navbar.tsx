@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
     // Remove transition class after animation
     setTimeout(() => {
       document.documentElement.classList.remove('theme-transition');
-    }, 300);
+    }, 700);
   };
 
   const handleNavClick = (href: string) => {
@@ -104,7 +104,7 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0 cursor-pointer" onClick={handleLogoClick}>
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary/30">
-                A
+                <img src="agam-photo.jpg" alt="Agam Image" className="w-full h-full object-cover object-top" loading="lazy" />
               </div>
               <span className="font-display font-bold text-xl text-slate-800 dark:text-white hidden sm:block">
                 agamlatiff

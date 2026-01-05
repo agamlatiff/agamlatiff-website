@@ -89,16 +89,5 @@ export const PROCESS_STEPS = [
       'Domain Aktif',
       'Sistem 100% Online'
     ]
-  },
-  {
-    id: 9,
-    title: 'Maintenance & Support',
-    description: 'Layanan purna jual. Garansi perbaikan bug gratis, backup data aman, dan bantuan jika ada kendala penggunaan.',
-    icon: ShieldCheck,
-    deliverables: [
-      'Perbaikan Bug Gratis',
-      'Backup Data Berkala',
-      'Support WhatsApp'
-    ]
   }
 ];
