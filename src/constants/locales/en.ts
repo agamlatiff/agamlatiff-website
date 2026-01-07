@@ -557,12 +557,23 @@ export const en = {
     badge: '⚠️ Common Problem',
     title: 'Still Taking Bookings via WhatsApp?',
     subtitle: 'This is what happens to businesses still using manual methods:',
+    compareText: 'Compare manual vs automated',
+    tabPain: 'Without App',
+    tabSolution: 'With App',
     painPoints: [
-      { title: 'Time Wasted', desc: 'Spend hours replying to "is this slot available?" messages one by one.' },
-      { title: 'Customer No-Shows', desc: 'Customers promise to come but disappear. Empty slots, lost revenue.' },
-      { title: 'Losing Customers', desc: 'Too slow to reply? Customers switch to more responsive competitors.' },
-      { title: 'Unmanaged Data', desc: 'No booking history, hard to follow-up, and promotions become untargeted.' }
+      { title: 'Time Wasted', desc: 'Hours replying to chats one by one' },
+      { title: 'Customer No-Shows', desc: 'Customers cancel without notice' },
+      { title: 'Losing Customers', desc: 'Switch to faster competitors' },
+      { title: 'Unmanaged Data', desc: 'Hard to follow-up and promote' }
     ],
+    painStats: ['3-5 hrs/day', '30% no-show', '-20% revenue', '0% retention'],
+    solutions: [
+      { title: 'Auto booking 24/7', desc: 'Accept bookings anytime' },
+      { title: 'Auto deposit, less no-shows', desc: 'Payment guaranteed upfront' },
+      { title: 'Auto WhatsApp reminders', desc: 'Reminder D-1 and 1 hour before' },
+      { title: 'Dashboard & CRM', desc: 'Customer data stored neatly' }
+    ],
+    solutionStats: ['24/7 active', '95% show up', 'Auto remind', '+40% repeat'],
     benefits: [
       'Automatic booking reception 24/7',
       'Automatic deposits, drastically reduced no-shows',
@@ -570,10 +581,17 @@ export const en = {
       'Dashboard to monitor all bookings',
       'Customer data stored neatly for CRM'
     ],
+    testimonial: {
+      quote: '"After using the booking app, customer no-shows dropped drastically. Revenue up 40% in the first 3 months!"',
+      name: 'Dr. Diana',
+      business: 'Healthy Dental Clinic',
+      initial: 'D'
+    },
     solutionBadge: '✅ The Solution',
     solutionTitle: 'With a Booking App, Everything Becomes Automatic',
     solutionSubtitle: 'Your business receives bookings 24 hours without you being on standby. Customers happy, revenue up.',
-    ctaNote: '100% free, no commitment'
+    cta: 'Upgrade Your Business Now',
+    ctaNote: '100% free consultation, no commitment'
   },
   pricing: {
     badge: '💰 Investment',

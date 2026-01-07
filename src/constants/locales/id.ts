@@ -557,12 +557,23 @@ export const id = {
     badge: '⚠️ Masalah Umum',
     title: 'Masih Terima Booking Lewat WhatsApp?',
     subtitle: 'Ini yang terjadi pada bisnis yang masih pakai cara manual:',
+    compareText: 'Bandingkan cara manual vs otomatis',
+    tabPain: 'Tanpa App',
+    tabSolution: 'Dengan App',
     painPoints: [
-      { title: 'Waktu Terbuang', desc: 'Habiskan waktu berjam-jam balas chat "kak, jam segini kosong gak?" satu per satu.' },
-      { title: 'No-Show Pelanggan', desc: 'Pelanggan janji datang tapi menghilang. Slot kosong, revenue hilang.' },
-      { title: 'Kehilangan Pelanggan', desc: 'Terlalu lama balas? Pelanggan pindah ke kompetitor yang lebih responsif.' },
-      { title: 'Data Tidak Terkelola', desc: 'Tidak ada histori booking, sulit follow-up, dan promosi jadi tidak terarah.' }
+      { title: 'Waktu Terbuang', desc: 'Berjam-jam balas chat satu per satu' },
+      { title: 'No-Show Pelanggan', desc: 'Pelanggan batal tanpa konfirmasi' },
+      { title: 'Kehilangan Pelanggan', desc: 'Pindah ke kompetitor yang lebih cepat' },
+      { title: 'Data Tidak Terkelola', desc: 'Sulit follow-up dan promosi' }
     ],
+    painStats: ['3-5 jam/hari', '30% no-show', '-20% revenue', '0% retention'],
+    solutions: [
+      { title: 'Booking otomatis 24/7', desc: 'Terima booking kapan saja' },
+      { title: 'DP otomatis, no-show turun', desc: 'Pembayaran langsung terjamin' },
+      { title: 'WhatsApp reminder otomatis', desc: 'Pengingat H-1 dan 1 jam sebelum' },
+      { title: 'Dashboard & CRM lengkap', desc: 'Data pelanggan tersimpan rapi' }
+    ],
+    solutionStats: ['24/7 aktif', '95% hadir', 'Auto remind', '+40% repeat'],
     benefits: [
       'Penerimaan booking otomatis 24/7',
       'DP otomatis, no-show berkurang drastis',
@@ -570,10 +581,17 @@ export const id = {
       'Dashboard untuk pantau semua booking',
       'Data pelanggan tersimpan rapi untuk CRM'
     ],
+    testimonial: {
+      quote: '"Setelah pakai booking app, no-show pelanggan turun drastis. Revenue naik 40% dalam 3 bulan pertama!"',
+      name: 'Dr. Diana',
+      business: 'Klinik Gigi Sehat',
+      initial: 'D'
+    },
     solutionBadge: '✅ Solusinya',
     solutionTitle: 'Dengan Booking App, Semua Jadi Otomatis',
     solutionSubtitle: 'Bisnis Anda terima booking 24 jam tanpa perlu Anda standby. Pelanggan happy, revenue naik.',
-    ctaNote: '100% gratis, tanpa komitmen'
+    cta: 'Upgrade Bisnis Anda Sekarang',
+    ctaNote: '100% gratis konsultasi, tanpa komitmen'
   },
   pricing: {
     badge: '💰 Investasi',
