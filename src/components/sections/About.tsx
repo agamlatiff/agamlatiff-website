@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion, useReducedMotion, Variants } from 'framer-motion';
-import { ArrowRight, Briefcase } from 'lucide-react';
-import { PiRocketBold, PiShieldCheckBold, PiHeadsetBold, PiChartLineUpBold } from 'react-icons/pi';
+import { ArrowRight, Code2, Users, Zap, Award, CheckCircle2, TrendingUp } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
 
@@ -13,185 +12,190 @@ const About: React.FC = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
+      transition: { staggerChildren: 0.1, delayChildren: 0.1 }
     }
   };
 
   const fadeInUpVariants: Variants = {
     hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
-    }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
   };
 
-  const cardVariants: Variants = {
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4, ease: "easeOut" }
-    }
+  const scaleVariants: Variants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } }
   };
 
-  // Phosphor icons with different accent colors per card
-  const VALUE_CARDS = [
+  const STATS_CARDS = [
     {
-      icon: PiRocketBold,
-      gradient: 'from-violet-500 to-purple-600',
-      bgGlow: 'group-hover:shadow-violet-500/20',
-      iconBg: 'bg-violet-500/10 group-hover:bg-gradient-to-br group-hover:from-violet-500 group-hover:to-purple-600'
+      label: 'Projects Delivered',
+      value: '6+',
+      desc: 'Booking & E-commerce Systems',
+      icon: Code2,
+      accent: 'text-emerald-400',
+      border: 'border-emerald-500/20',
+      bg: 'bg-emerald-500/5'
     },
     {
-      icon: PiShieldCheckBold,
-      gradient: 'from-emerald-500 to-teal-600',
-      bgGlow: 'group-hover:shadow-emerald-500/20',
-      iconBg: 'bg-emerald-500/10 group-hover:bg-gradient-to-br group-hover:from-emerald-500 group-hover:to-teal-600'
+      label: 'Client Satisfaction',
+      value: '100%',
+      desc: '5-Star Reviews & Repeat Orders',
+      icon: Users,
+      accent: 'text-violet-400',
+      border: 'border-violet-500/20',
+      bg: 'bg-violet-500/5'
     },
     {
-      icon: PiHeadsetBold,
-      gradient: 'from-blue-500 to-cyan-600',
-      bgGlow: 'group-hover:shadow-blue-500/20',
-      iconBg: 'bg-blue-500/10 group-hover:bg-gradient-to-br group-hover:from-blue-500 group-hover:to-cyan-600'
-    },
-    {
-      icon: PiChartLineUpBold,
-      gradient: 'from-amber-500 to-orange-600',
-      bgGlow: 'group-hover:shadow-amber-500/20',
-      iconBg: 'bg-amber-500/10 group-hover:bg-gradient-to-br group-hover:from-amber-500 group-hover:to-orange-600'
-    },
+      label: 'Support Guarantee',
+      value: '1 Bln',
+      desc: 'Free Maintenance & Bug Fixes',
+      icon: Award,
+      accent: 'text-amber-400',
+      border: 'border-amber-500/20',
+      bg: 'bg-amber-500/5'
+    }
   ];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300 overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-[#0a0a0a] overflow-hidden relative">
+      {/* Background Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-        {/* Top Section: Photo + Intro */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        {/* Profile Section Centered */}
         <motion.div
-          className="flex flex-col md:flex-row gap-8 md:gap-12 items-center mb-16"
+          className="flex flex-col items-center text-center mb-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true }}
         >
-          {/* Profile Photo */}
-          <motion.div
-            variants={fadeInUpVariants}
-            className="flex-shrink-0"
-          >
-            <div className="relative">
-              {/* Photo Container */}
-              <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border-4 border-slate-100 dark:border-slate-800 shadow-xl">
-                <img
-                  src="/agam-photo.jpg"
-                  alt="Agam Latifullah"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-              {/* Decorative Badge */}
-              <motion.div
-                className="absolute -bottom-3 -right-3 bg-primary text-white p-2.5 rounded-xl shadow-lg"
-                animate={shouldReduceMotion ? {} : { scale: [1, 1.05, 1] }}
-                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-              >
-                <Briefcase size={20} />
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Intro Content */}
-          <motion.div variants={fadeInUpVariants} className="flex-1 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2">
-              {t('about.title')}
-            </h2>
-            <p className="text-lg md:text-xl font-semibold text-primary mb-4">
-              {t('about.subtitle')}
-            </p>
-            <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed mb-6 max-w-2xl">
-              {t('about.quote')}
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              <a
-                href="https://wa.me/6285888050785?text=Hi%20Agam%2C%20saya%20tertarik%20untuk%20konsultasi%20tentang%20booking%20app."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-xl shadow-lg shadow-primary/25 hover:-translate-y-0.5 hover:shadow-xl transition-all"
-              >
-                Konsultasi Gratis <ArrowRight size={18} />
-              </a>
-              <Link
-                to="/#projects"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-              >
-                Lihat Portfolio
-              </Link>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Divider */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent mb-12" />
-
-        {/* Bottom Section: What You Get */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          <motion.div variants={fadeInUpVariants} className="text-center mb-10">
-            <span className="inline-block px-4 py-1.5 mb-3 text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full">
-              {t('about.whyChooseMe')}
+          {/* Tagline */}
+          <motion.div variants={fadeInUpVariants} className="mb-8">
+            <span className="inline-block px-4 py-1.5 text-sm font-bold tracking-widest uppercase text-primary border border-primary/30 rounded-full bg-primary/10">
+              WHO IS BEHIND THIS?
             </span>
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: t('about.description1') }} />
           </motion.div>
 
-          {/* Value Cards Grid - 2x2 on desktop, stack on mobile */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-            {translations.about.values.map((item: any, idx: number) => {
-              const cardConfig = VALUE_CARDS[idx];
-              const Icon = cardConfig.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  variants={cardVariants}
-                  className={`group relative p-5 md:p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 hover:border-transparent hover:shadow-2xl ${cardConfig.bgGlow} transition-all duration-300 overflow-hidden`}
-                >
-                  {/* Gradient border on hover */}
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${cardConfig.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`} />
-                  <div className="absolute inset-[1px] rounded-2xl bg-slate-50 dark:bg-slate-800 -z-[5]" />
+          {/* Profile Photo with Growth Graph Decoration */}
+          <div className="relative mb-10">
+            {/* Growth Graph SVG Decoration Behind */}
+            <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[150px] -z-10 opacity-80" viewBox="0 0 300 150">
+              <path d="M0,150 Q50,150 75,100 T150,80 T225,40 T300,0" fill="none" stroke="#10b981" strokeWidth="4" className="drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
+              <circle cx="0" cy="150" r="4" fill="#10b981" />
+              <circle cx="75" cy="100" r="4" fill="#10b981" />
+              <circle cx="150" cy="80" r="4" fill="#10b981" />
+              <circle cx="225" cy="40" r="4" fill="#10b981" />
+              <circle cx="300" cy="0" r="4" fill="#10b981" />
+            </svg>
 
-                  <div className="flex items-start gap-4 relative z-10">
-                    <div className={`w-14 h-14 rounded-xl ${cardConfig.iconBg} flex items-center justify-center flex-shrink-0 transition-all duration-300`}>
-                      <Icon className="w-7 h-7 text-current group-hover:text-white transition-colors" />
-                    </div>
-                    <div className="flex-1 pt-1">
-                      <h4 className="font-bold text-slate-900 dark:text-white mb-1.5 text-lg">
-                        {item.title}
-                      </h4>
-                      <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+            <motion.div
+              variants={scaleVariants}
+              className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-[#1a1a1a] shadow-2xl overflow-hidden relative z-10 mx-auto"
+            >
+              <img
+                src="/agam-photo.jpg"
+                alt="Agam Latifullah"
+                className="w-full h-full object-cover object-top"
+              />
+            </motion.div>
+
+            {/* Floating Badge */}
+            <motion.div
+              className="absolute -bottom-4 right-0 md:right-10 bg-[#1a1a1a] border border-slate-800 p-3 rounded-2xl shadow-xl flex items-center gap-3 z-20"
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                <TrendingUp size={20} className="text-emerald-500" />
+              </div>
+              <div className="text-left">
+                <p className="text-xs text-slate-400">Impact</p>
+                <p className="text-sm font-bold text-white">Revenue ++</p>
+              </div>
+            </motion.div>
           </div>
 
-          {/* Additional Note */}
-          <motion.p
-            variants={fadeInUpVariants}
-            className="text-center text-slate-500 dark:text-slate-400 text-sm mt-8 max-w-xl mx-auto"
-            dangerouslySetInnerHTML={{ __html: t('about.description2') }}
-          />
+          {/* Name & Role */}
+          <motion.h2 variants={fadeInUpVariants} className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight">
+            AGAM LATIFULLAH
+          </motion.h2>
+          <motion.p variants={fadeInUpVariants} className="text-xl md:text-2xl font-medium bg-gradient-to-r from-primary to-violet-500 bg-clip-text text-transparent mb-6">
+            Revenue System Engineer
+          </motion.p>
+          <motion.p variants={fadeInUpVariants} className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            {t('about.quote')}
+          </motion.p>
+        </motion.div>
+
+        {/* 3 Value Cards (Reference Style) */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {STATS_CARDS.map((card, idx) => {
+            const Icon = card.icon;
+            return (
+              <motion.div
+                key={idx}
+                variants={fadeInUpVariants}
+                className={`group relative p-8 rounded-3xl bg-[#111] border ${card.border} hover:bg-[#161616] transition-all duration-300`}
+              >
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 rounded-3xl" />
+
+                <div className="relative z-10">
+                  <div className={`w-14 h-14 rounded-2xl ${card.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon size={28} className={card.accent} />
+                  </div>
+
+                  <div className={`text-4xl font-bold ${card.accent} mb-2`}>
+                    {card.value}
+                  </div>
+                  <h3 className="text-white font-bold text-lg mb-2">
+                    {card.label}
+                  </h3>
+                  <p className="text-slate-500 text-sm">
+                    {card.desc}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* Tech Stack Marquee (Upgrade from plain list) */}
+        <motion.div
+          className="mt-20 pt-10 border-t border-slate-800"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <p className="text-center text-slate-500 text-sm font-bold uppercase tracking-widest mb-8">Powering Your Apps With</p>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {['React', 'Next.js', 'TypeScript', 'Node.js', 'Prisma', 'PostgreSQL', 'Tailwind', 'Midtrans'].map((tech, idx) => (
+              <div key={idx} className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 text-sm font-medium hover:text-white hover:border-slate-700 transition-colors cursor-default">
+                {tech}
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center mt-12 gap-4">
+            <a
+              href="https://wa.me/6285888050785?text=Hi%20Agam%2C%20saya%20tertarik%20untuk%20konsultasi."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-violet-600 text-white font-bold rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1 transition-all text-lg"
+            >
+              Konsultasi Gratis <ArrowRight size={20} />
+            </a>
+          </div>
         </motion.div>
 
       </div>
