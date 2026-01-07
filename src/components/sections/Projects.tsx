@@ -1,11 +1,25 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, PlayCircle, Star, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import type { Project } from '@/types/project';
 import { PROJECTS } from '@/constants/projects';
+
+// Custom hook to detect mobile viewport
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+};
 
 // Separate Card Component to handle individual state
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
@@ -127,6 +141,34 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
 const Projects: React.FC = () => {
   const { translations } = useLanguage();
+  const isMobile = useIsMobile();
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  // Prepare merged projects data
+  const mergedProjects = PROJECTS.map((project) => {
+    const tProject = translations.projects[project.id as keyof typeof translations.projects];
+    return { ...project, ...tProject };
+  });
+
+  const totalSlides = mergedProjects.length;
+
+  const handlePrevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+  };
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  };
+
+  const handleDragEnd = (_: any, info: { offset: { x: number } }) => {
+    const threshold = 50;
+    if (info.offset.x > threshold) {
+      handlePrevSlide();
+    } else if (info.offset.x < -threshold) {
+      handleNextSlide();
+    }
+  };
 
   return (
     <section id="projects" className="py-24 bg-slate-50 dark:bg-slate-950/50 transition-colors duration-300">
@@ -165,20 +207,70 @@ const Projects: React.FC = () => {
           </div>
         </div>
 
-        {/* Grid Layout: 1 Col Mobile -> 2 Col Tablet -> 3 Col Desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {PROJECTS.map((project) => {
-            const tProject = translations.projects[project.id as keyof typeof translations.projects];
-            const mergedProject = { ...project, ...tProject };
+        {/* Mobile Slider */}
+        {isMobile ? (
+          <div className="relative">
+            {/* Slider Container */}
+            <div ref={sliderRef} className="overflow-hidden">
+              <motion.div
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.2}
+                onDragEnd={handleDragEnd}
+                animate={{ x: `-${currentSlide * 100}%` }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                className="flex cursor-grab active:cursor-grabbing"
+              >
+                {mergedProjects.map((project) => (
+                  <div key={project.id} className="w-full flex-shrink-0 px-2">
+                    <ProjectCard project={project} />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
 
-            return (
+            {/* Navigation Arrows */}
+            <button
+              onClick={handlePrevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 z-20 p-2 rounded-full bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+              aria-label="Previous project"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              onClick={handleNextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 z-20 p-2 rounded-full bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+              aria-label="Next project"
+            >
+              <ChevronRight size={20} />
+            </button>
+
+            {/* Dot Indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+              {mergedProjects.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentSlide === index
+                      ? 'bg-primary w-8'
+                      : 'bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500'
+                    }`}
+                  aria-label={`Go to project ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        ) : (
+          /* Desktop/Tablet Grid Layout */
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            {mergedProjects.map((project) => (
               <ProjectCard
                 key={project.id}
-                project={mergedProject}
+                project={project}
               />
-            );
-          })}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

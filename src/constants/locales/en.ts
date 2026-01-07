@@ -553,23 +553,189 @@ export const en = {
       button: "Schedule Consultation"
     }
   },
+  whyBooking: {
+    badge: '⚠️ Common Problem',
+    title: 'Still Taking Bookings via WhatsApp?',
+    subtitle: 'This is what happens to businesses still using manual methods:',
+    painPoints: [
+      { title: 'Time Wasted', desc: 'Spend hours replying to "is this slot available?" messages one by one.' },
+      { title: 'Customer No-Shows', desc: 'Customers promise to come but disappear. Empty slots, lost revenue.' },
+      { title: 'Losing Customers', desc: 'Too slow to reply? Customers switch to more responsive competitors.' },
+      { title: 'Unmanaged Data', desc: 'No booking history, hard to follow-up, and promotions become untargeted.' }
+    ],
+    benefits: [
+      'Automatic booking reception 24/7',
+      'Automatic deposits, drastically reduced no-shows',
+      'Automatic WhatsApp reminders',
+      'Dashboard to monitor all bookings',
+      'Customer data stored neatly for CRM'
+    ],
+    solutionBadge: '✅ The Solution',
+    solutionTitle: 'With a Booking App, Everything Becomes Automatic',
+    solutionSubtitle: 'Your business receives bookings 24 hours without you being on standby. Customers happy, revenue up.',
+    ctaNote: '100% free, no commitment'
+  },
+  pricing: {
+    badge: '💰 Investment',
+    title: 'Choose Your Package',
+    subtitle: 'Transparent pricing, no hidden fees. Installment payment available.',
+    popular: 'Most Popular',
+    priceNote: 'Depends on complexity',
+    cta: 'Free Consultation',
+    note: '* Pricing can be adjusted to your specific business needs. Free consultation for a more accurate estimate.',
+    packages: [
+      {
+        name: 'Package 1',
+        tagline: 'Perfect for businesses just starting out',
+        price: '$200-350',
+        delivery: '1-2 weeks',
+        revisions: '2x revisions',
+        idealFor: ['Barbershop', 'Small salon', 'Freelancer', 'Personal services'],
+        capacity: 'Max 200 bookings/month',
+        payment: '50% deposit, balance on completion',
+        guarantee: '7-day free revision',
+        supportHours: 'Mon-Fri, 09:00-17:00',
+        features: [
+          'Professional landing page',
+          'Simple booking form',
+          'WhatsApp notification integration',
+          'Basic admin dashboard',
+          'Responsive mobile & tablet',
+          'SEO-friendly',
+          'SSL Certificate (HTTPS)',
+          '1 month free maintenance'
+        ],
+        notIncluded: [
+          'Payment gateway',
+          'Auto WhatsApp reminders',
+          'Analytics dashboard',
+          'Multi-location support'
+        ],
+        extras: [
+          'Free .com domain 1 year',
+          'Free hosting 1 year',
+          'Source code 100% yours',
+          'User guide (PDF + Video)',
+          'Support via WhatsApp'
+        ],
+        excludes: ['Payment gateway fees']
+      },
+      {
+        name: 'Package 2',
+        tagline: 'Most popular for growing businesses',
+        price: '$500-800',
+        delivery: '2-4 weeks',
+        revisions: '3x revisions',
+        idealFor: ['Clinic', 'Photo studio', 'Sports venue', 'Coworking space'],
+        capacity: 'Max 1,000 bookings/month',
+        payment: '50% deposit, balance on completion',
+        guarantee: '14-day free revision',
+        supportHours: 'Mon-Sat, 09:00-21:00',
+        features: [
+          'All Package 1 features',
+          'Complete booking system (schedule & staff selection)',
+          'Midtrans payment gateway (QRIS, VA)',
+          'Automatic deposit payments',
+          'WhatsApp reminder D-1 & 1 hour before',
+          'Analytics dashboard & reports',
+          'Customer database/CRM',
+          'Schedule & availability management',
+          'Email notifications',
+          '1 month free maintenance'
+        ],
+        notIncluded: [
+          'Multi-location support',
+          'Custom integrations'
+        ],
+        extras: [
+          'Free .com domain 1 year',
+          'Free hosting 1 year',
+          'Source code 100% yours',
+          'Complete video tutorials',
+          'Training session 1x (online)',
+          'Priority support via WhatsApp'
+        ],
+        excludes: ['Midtrans fees (client responsibility)']
+      },
+      {
+        name: 'Package 3',
+        tagline: 'Complete solution for large businesses',
+        price: '$1000-1700',
+        delivery: '4-8 weeks',
+        revisions: 'Unlimited revisions',
+        idealFor: ['Clinic chain', 'Franchise', 'Hotel', 'Resort'],
+        capacity: 'Unlimited bookings',
+        payment: 'Milestone-based terms',
+        guarantee: 'Full maintenance guarantee',
+        supportHours: '24/7 Priority Support',
+        features: [
+          'All Package 2 features',
+          'Multi-location/branch support',
+          'Multi-admin with different roles',
+          'Custom integrations (POS, Accounting)',
+          'API development',
+          'Loyalty program & vouchers',
+          'Automatic financial reports',
+          'Priority support 24/7',
+          'Extended maintenance 3 months',
+          'Training for your team'
+        ],
+        extras: [
+          'Free .com domain 1 year',
+          'Free hosting 1 year',
+          'Source code 100% yours',
+          'Complete technical documentation',
+          'Unlimited training sessions',
+          'Dedicated account manager',
+          'SLA guarantee'
+        ],
+        excludes: ['Additional cloud infrastructure costs']
+      }
+    ]
+  },
   cta: {
     title: "Only Accepting 3 Projects/Month",
     subtitle: "I focus on providing premium quality for every client. Secure your slot before competitors take it.",
     button: "Secure Project Slot"
   },
   about: {
-    title: "Why Your Business",
-    subtitle: "Needs a Booking System?",
-    quote: "Growing businesses need a practical and professional way for customers to make reservations.",
-    whyChooseMe: "What You Get?",
-    description1: "Many business owners still rely on manual methods to receive bookings: replying to chats one by one, checking schedules in a notebook, or confirming transfers via WhatsApp. Besides being time-consuming, this approach is <strong>prone to errors and makes customers wait too long</strong>.",
-    description2: "A booking app provides a more efficient solution. Customers can <strong>view available schedules, choose their time, pay a deposit, and receive instant confirmation</strong> — all in one platform that works automatically for you.",
+    title: "Agam Latifullah",
+    subtitle: "Revenue System Engineer",
+    quote: "I help service and product businesses still relying on manual booking to transition to automated systems, reducing losses and increasing profit.",
+    whyChooseMe: "What You Get",
+    description1: "My current focus is building <strong>booking apps</strong> for service or product businesses that need reservation systems. Manual processes prone to errors and time-consuming will be transformed into automated systems working 24/7.",
+    description2: "I don't just build apps, I <strong>accompany you from start until the app is ready to use</strong>. Development progress will be shared transparently, so you always know what's being worked on.",
     values: [
-      { title: "Seamless Reservations", desc: "Customers can book anytime, even outside business hours. No more missed messages." },
-      { title: "Automatic Deposit Payments", desc: "System integrated with payment gateway to receive deposits directly. Reduces no-show risk." },
-      { title: "Easy-to-Use Dashboard", desc: "Monitor all reservations from one place. Simple interface, no technical expertise required." },
-      { title: "Automatic Reminders", desc: "Customers receive WhatsApp notifications before their scheduled time. Minimizes last-minute cancellations." }
+      { title: "Fast & Guided Process", desc: "Rapid development with guidance until the app is complete and ready to use." },
+      { title: "1 Month Free Maintenance", desc: "If there are issues or bugs after launch, I'll help fix them at no extra cost." },
+      { title: "Responsive & Consultative", desc: "Easy to reach and always ready to discuss your business needs." },
+      { title: "Progress Transparency", desc: "Development progress shared in real-time. You know exactly what's being worked on." }
+    ]
+  },
+  faq: {
+    title: "Frequently Asked Questions",
+    subtitle: "Answers to common questions about booking app services",
+    list: [
+      {
+        question: "What are the benefits of having a booking app for my business?",
+        answer: "A booking app allows customers to make reservations independently <strong>anytime, including outside business hours</strong>. This reduces admin workload, minimizes recording errors, and provides a more professional experience for your customers."
+      },
+      {
+        question: "How long does it take to build a booking app?",
+        answer: "Typically it takes <strong>2-4 weeks</strong>, depending on the complexity of features required. The more complete the information provided upfront, the faster the development process."
+      },
+      {
+        question: "Do I need technical skills to use this system?",
+        answer: "<strong>No need</strong>. The dashboard is designed to be simple and easy to understand. I also provide training and video guides to ensure you're comfortable operating it."
+      },
+      {
+        question: "How do payments from customers work?",
+        answer: "The system integrates with trusted payment gateways like <strong>Midtrans</strong>. Customers can pay deposits using QRIS, bank transfer, or virtual account — all automatically recorded in the system."
+      },
+      {
+        question: "Is there a warranty after the booking app is completed?",
+        answer: "<strong>Yes</strong>. Every project includes 1 month free maintenance for bug fixes. Technical support is also available if you experience any issues with usage."
+      }
     ]
   },
   footer: {

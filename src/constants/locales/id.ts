@@ -553,23 +553,189 @@ export const id = {
       button: "Jadwalkan Konsultasi"
     }
   },
+  whyBooking: {
+    badge: '⚠️ Masalah Umum',
+    title: 'Masih Terima Booking Lewat WhatsApp?',
+    subtitle: 'Ini yang terjadi pada bisnis yang masih pakai cara manual:',
+    painPoints: [
+      { title: 'Waktu Terbuang', desc: 'Habiskan waktu berjam-jam balas chat "kak, jam segini kosong gak?" satu per satu.' },
+      { title: 'No-Show Pelanggan', desc: 'Pelanggan janji datang tapi menghilang. Slot kosong, revenue hilang.' },
+      { title: 'Kehilangan Pelanggan', desc: 'Terlalu lama balas? Pelanggan pindah ke kompetitor yang lebih responsif.' },
+      { title: 'Data Tidak Terkelola', desc: 'Tidak ada histori booking, sulit follow-up, dan promosi jadi tidak terarah.' }
+    ],
+    benefits: [
+      'Penerimaan booking otomatis 24/7',
+      'DP otomatis, no-show berkurang drastis',
+      'WhatsApp reminder otomatis',
+      'Dashboard untuk pantau semua booking',
+      'Data pelanggan tersimpan rapi untuk CRM'
+    ],
+    solutionBadge: '✅ Solusinya',
+    solutionTitle: 'Dengan Booking App, Semua Jadi Otomatis',
+    solutionSubtitle: 'Bisnis Anda terima booking 24 jam tanpa perlu Anda standby. Pelanggan happy, revenue naik.',
+    ctaNote: '100% gratis, tanpa komitmen'
+  },
+  pricing: {
+    badge: '💰 Investasi',
+    title: 'Pilih Paket yang Sesuai',
+    subtitle: 'Harga transparan, tanpa biaya tersembunyi. Pembayaran bisa dicicil.',
+    popular: 'Paling Populer',
+    priceNote: 'Tergantung kompleksitas',
+    cta: 'Konsultasi Gratis',
+    note: '* Harga bisa disesuaikan dengan kebutuhan spesifik bisnis Anda. Konsultasi gratis untuk estimasi yang lebih akurat.',
+    packages: [
+      {
+        name: 'Paket 1',
+        tagline: 'Cocok untuk bisnis yang baru mulai',
+        price: '3-5 Juta',
+        delivery: '1-2 minggu',
+        revisions: '2x revisi',
+        idealFor: ['Barbershop', 'Salon kecil', 'Freelancer', 'Jasa pribadi'],
+        capacity: 'Maks 200 booking/bulan',
+        payment: 'DP 50%, pelunasan setelah selesai',
+        guarantee: 'Revisi gratis 7 hari',
+        supportHours: 'Senin-Jumat, 09:00-17:00',
+        features: [
+          'Landing page profesional',
+          'Form booking sederhana',
+          'Integrasi WhatsApp notifikasi',
+          'Dashboard admin basic',
+          'Responsive mobile & tablet',
+          'SEO-friendly',
+          'SSL Certificate (HTTPS)',
+          'Free maintenance 1 bulan'
+        ],
+        notIncluded: [
+          'Payment gateway',
+          'WhatsApp reminder otomatis',
+          'Dashboard analytics',
+          'Multi-location support'
+        ],
+        extras: [
+          'Free domain .com 1 tahun',
+          'Free hosting 1 tahun',
+          'Source code 100% milik Anda',
+          'Panduan penggunaan (PDF + Video)',
+          'Support via WhatsApp'
+        ],
+        excludes: ['Payment gateway fee']
+      },
+      {
+        name: 'Paket 2',
+        tagline: 'Paling populer untuk bisnis berkembang',
+        price: '7-12 Juta',
+        delivery: '2-4 minggu',
+        revisions: '3x revisi',
+        idealFor: ['Klinik', 'Studio foto', 'Lapangan futsal', 'Coworking space'],
+        capacity: 'Maks 1.000 booking/bulan',
+        payment: 'DP 50%, pelunasan setelah selesai',
+        guarantee: 'Revisi gratis 14 hari',
+        supportHours: 'Senin-Sabtu, 09:00-21:00',
+        features: [
+          'Semua fitur Paket 1',
+          'Sistem booking lengkap (pilih jadwal & staff)',
+          'Payment gateway Midtrans (QRIS, VA)',
+          'Pembayaran DP otomatis',
+          'WhatsApp reminder H-1 & H-1 jam',
+          'Dashboard analytics & laporan',
+          'Customer database/CRM',
+          'Manajemen jadwal & ketersediaan',
+          'Email notifikasi',
+          'Free maintenance 1 bulan'
+        ],
+        notIncluded: [
+          'Multi-location support',
+          'Custom integrations'
+        ],
+        extras: [
+          'Free domain .com 1 tahun',
+          'Free hosting 1 tahun',
+          'Source code 100% milik Anda',
+          'Video tutorial lengkap',
+          'Training session 1x (online)',
+          'Priority support via WhatsApp'
+        ],
+        excludes: ['Midtrans fee (ditanggung klien)']
+      },
+      {
+        name: 'Paket 3',
+        tagline: 'Solusi lengkap untuk bisnis besar',
+        price: '15-25 Juta',
+        delivery: '4-8 minggu',
+        revisions: 'Unlimited revisi',
+        idealFor: ['Jaringan klinik', 'Franchise', 'Hotel', 'Resort'],
+        capacity: 'Unlimited booking',
+        payment: 'Termin sesuai milestone',
+        guarantee: 'Garansi penuh selama maintenance',
+        supportHours: '24/7 Priority Support',
+        features: [
+          'Semua fitur Paket 2',
+          'Multi-location/branch support',
+          'Multi-admin dengan role berbeda',
+          'Custom integrations (POS, Accounting)',
+          'API development',
+          'Loyalty program & voucher',
+          'Laporan keuangan otomatis',
+          'Priority support 24/7',
+          'Extended maintenance 3 bulan',
+          'Training untuk tim Anda'
+        ],
+        extras: [
+          'Free domain .com 1 tahun',
+          'Free hosting 1 tahun',
+          'Source code 100% milik Anda',
+          'Dokumentasi teknis lengkap',
+          'Training session unlimited',
+          'Dedicated account manager',
+          'SLA guarantee'
+        ],
+        excludes: ['Biaya infrastruktur cloud tambahan']
+      }
+    ]
+  },
   cta: {
     title: "Hanya Menerima 3 Project/Bulan",
     subtitle: "Saya fokus memberikan kualitas premium untuk setiap klien. Amankan slot Anda sebelum diambil kompetitor.",
     button: "Amankan Slot Project"
   },
   about: {
-    title: "Mengapa Bisnis Anda",
-    subtitle: "Butuh Sistem Booking?",
-    quote: "Bisnis yang berkembang membutuhkan cara reservasi yang praktis dan profesional bagi pelanggan.",
-    whyChooseMe: "Apa yang Anda Dapatkan?",
-    description1: "Banyak pemilik bisnis masih mengandalkan cara manual untuk menerima booking: balas chat satu per satu, cek jadwal di buku, atau konfirmasi transfer lewat WhatsApp. Selain menyita waktu, cara ini <strong>rentan kesalahan dan membuat pelanggan menunggu terlalu lama</strong>.",
-    description2: "Booking app menghadirkan solusi yang lebih efisien. Pelanggan bisa <strong>melihat ketersediaan jadwal, memilih waktu, membayar DP, dan langsung mendapat konfirmasi</strong> — semua dalam satu platform yang bekerja otomatis untuk Anda.",
+    title: "Agam Latifullah",
+    subtitle: "Revenue System Engineer",
+    quote: "Saya membantu bisnis jasa dan produk yang masih mengandalkan booking manual untuk beralih ke sistem otomatis, mengurangi kerugian dan meningkatkan profit.",
+    whyChooseMe: "Yang Anda Dapatkan",
+    description1: "Fokus saya saat ini adalah membangun <strong>booking app</strong> untuk bisnis jasa atau produk yang memerlukan sistem reservasi. Proses manual yang rentan kesalahan dan memakan waktu akan diubah menjadi sistem otomatis yang bekerja 24/7.",
+    description2: "Saya bukan hanya sekadar membuat aplikasi, tapi <strong>menemani Anda dari awal hingga aplikasi siap digunakan</strong>. Progress pengembangan akan di-share secara transparan, sehingga Anda selalu tahu apa yang sedang dikerjakan.",
     values: [
-      { title: "Reservasi Tanpa Hambatan", desc: "Pelanggan bisa booking kapan saja, bahkan di luar jam operasional. Tidak ada lagi pesan yang terlewat." },
-      { title: "Pembayaran DP Otomatis", desc: "Sistem terintegrasi dengan payment gateway untuk menerima DP secara langsung. Mengurangi risiko no-show." },
-      { title: "Dashboard Mudah Dipahami", desc: "Pantau semua reservasi dari satu tempat. Antarmuka yang sederhana, tidak memerlukan keahlian teknis." },
-      { title: "Pengingat Otomatis", desc: "Pelanggan mendapat notifikasi WhatsApp sebelum jadwal tiba. Meminimalkan pembatalan mendadak." }
+      { title: "Proses Cepat & Dibimbing", desc: "Pengembangan cepat dengan pendampingan sampai aplikasi jadi dan siap pakai." },
+      { title: "Maintenance 1 Bulan Gratis", desc: "Jika ada kendala atau bug setelah launch, saya bantu perbaiki tanpa biaya tambahan." },
+      { title: "Responsive & Bisa Konsultasi", desc: "Mudah dihubungi dan selalu siap diskusi untuk kebutuhan bisnis Anda." },
+      { title: "Transparansi Progress", desc: "Progress pengembangan di-share real-time. Anda tahu persis apa yang sedang dikerjakan." }
+    ]
+  },
+  faq: {
+    title: "Pertanyaan yang Sering Diajukan",
+    subtitle: "Jawaban untuk pertanyaan umum tentang layanan booking app",
+    list: [
+      {
+        question: "Apa keuntungan memiliki booking app untuk bisnis saya?",
+        answer: "Booking app memungkinkan pelanggan melakukan reservasi secara mandiri <strong>kapan saja, termasuk di luar jam operasional</strong>. Ini mengurangi beban kerja admin, meminimalkan risiko kesalahan pencatatan, dan memberikan pengalaman yang lebih profesional kepada pelanggan Anda."
+      },
+      {
+        question: "Berapa lama proses pembuatan booking app?",
+        answer: "Umumnya membutuhkan waktu <strong>2-4 minggu</strong>, tergantung kompleksitas fitur yang dibutuhkan. Semakin lengkap informasi yang diberikan di awal, semakin cepat proses pengerjaannya."
+      },
+      {
+        question: "Apakah saya perlu keahlian teknis untuk menggunakan sistem ini?",
+        answer: "<strong>Tidak perlu</strong>. Dashboard dirancang dengan tampilan yang sederhana dan mudah dipahami. Saya juga menyediakan pelatihan dan video panduan untuk memastikan Anda nyaman mengoperasikannya."
+      },
+      {
+        question: "Bagaimana dengan pembayaran dari pelanggan?",
+        answer: "Sistem terintegrasi dengan payment gateway terpercaya seperti <strong>Midtrans</strong>. Pelanggan bisa membayar DP menggunakan QRIS, transfer bank, atau virtual account — semuanya otomatis tercatat dalam sistem."
+      },
+      {
+        question: "Apakah ada garansi setelah booking app selesai?",
+        answer: "<strong>Ada</strong>. Setiap proyek dilengkapi masa maintenance gratis 1 bulan untuk perbaikan bug. Support teknis juga tersedia jika Anda mengalami kendala dalam penggunaan."
+      }
     ]
   },
   footer: {
