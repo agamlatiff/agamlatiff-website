@@ -1,280 +1,140 @@
-
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowUpRight, PlayCircle, Star, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import type { Project } from '@/types/project';
-import { PROJECTS } from '@/constants/projects';
+import { ExternalLink, PlayCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-// Custom hook to detect mobile viewport
-const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  return isMobile;
+// Example project data structure - you can replace this with API calls or more detailed data
+const PROJECT_IMAGES: Record<string, string> = {
+  '1': '/upskills/1.webp',
+  '2': '/saturday/1.webp',
+  '3': '/alizonstore/1.webp',
+  '4': '/sukabaca/1.webp',
+  '5': '/flyhigher/1.webp',
+  '6': '/flyhigher/1.webp', // Booking system uses flyhigher as demo
+  '7': '/hiredio/1.webp',
 };
 
-// Separate Card Component to handle individual state
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0);
-  const { translations } = useLanguage();
-  const allImages = [project.heroImage, ...(project.gallery || [])];
-
-  const handlePrev = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setCurrentImgIndex((prev) => (prev === 0 ? allImages.length - 1 : prev - 1));
-  };
-
-  const handleNext = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setCurrentImgIndex((prev) => (prev === allImages.length - 1 ? 0 : prev + 1));
-  };
-
-  return (
-    <Link to={`/projects/${project.slug}`}>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        className="group relative bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 cursor-pointer flex flex-col h-full hover:-translate-y-2"
-      >
-        {/* Badge Featured */}
-        <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2">
-          {project.isFeatured && (
-            <div className="flex items-center gap-1.5 bg-gradient-to-r from-yellow-400 to-amber-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg border-2 border-white/20 backdrop-blur-md">
-              <Star size={12} fill="currentColor" />
-              <span>Featured</span>
-            </div>
-          )}
-        </div>
-
-
-        {/* Image Container - Aspect Ratio 4:3 for better visibility */}
-        <div className="relative aspect-[4/3] bg-slate-100 dark:bg-slate-800 overflow-hidden group-hover:first:scale-105 transition-transform duration-700">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={currentImgIndex}
-              src={allImages[currentImgIndex]}
-              alt={project.title}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </AnimatePresence>
-
-          {/* Overlay Gradient on Hover */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-          {/* Video Icon if exists */}
-          {project.youtubeId && (
-            <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none group-hover:scale-110 transition-transform duration-500">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 shadow-xl">
-                <PlayCircle size={32} className="text-white fill-white/20" />
-              </div>
-            </div>
-          )}
-
-          {/* Navigation Arrows for Gallery */}
-          {!project.youtubeId && allImages.length > 1 && (
-            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              <button
-                onClick={handlePrev}
-                className="p-2 rounded-full bg-white/90 dark:bg-slate-900/90 text-slate-900 dark:text-white shadow-lg pointer-events-auto hover:scale-110 transition-transform"
-              >
-                <ChevronLeft size={18} />
-              </button>
-              <button
-                onClick={handleNext}
-                className="p-2 rounded-full bg-white/90 dark:bg-slate-900/90 text-slate-900 dark:text-white shadow-lg pointer-events-auto hover:scale-110 transition-transform"
-              >
-                <ChevronRight size={18} />
-              </button>
-            </div>
-          )}
-        </div>
-
-        <div className="p-8 flex flex-col flex-1 relative bg-white dark:bg-slate-900">
-          {/* Floating Action Button */}
-          <div className="absolute -top-6 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-30">
-            <ArrowUpRight size={20} />
-          </div>
-
-          <div className="mb-4">
-            <span className="text-xs font-bold text-primary uppercase tracking-widest bg-primary/5 px-3 py-1 rounded-lg">
-              {project.industry}
-            </span>
-          </div>
-
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
-            {project.title}
-          </h3>
-
-          <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">
-            {project.shortDescription}
-          </p>
-
-          <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <span className="text-sm font-semibold text-slate-500 dark:text-slate-500 group-hover:text-primary transition-colors">
-              {project.date}
-            </span>
-            <span className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 group-hover:gap-3 transition-all">
-              {translations.projects.section.viewDetail} <ArrowRight size={16} />
-            </span>
-          </div>
-        </div>
-      </motion.div>
-    </Link>
-  );
+const PROJECT_SLUGS: Record<string, string> = {
+  '1': 'upskills',
+  '2': 'saturday',
+  '3': 'alizon-store',
+  '4': 'suka-baca',
+  '5': 'fly-higher',
+  '6': 'booking-system',
+  '7': 'hired-io',
 };
 
 const Projects: React.FC = () => {
-  const { translations } = useLanguage();
-  const isMobile = useIsMobile();
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const { t, translations } = useLanguage();
 
-  // Prepare merged projects data
-  const mergedProjects = PROJECTS.map((project) => {
-    const tProject = translations.projects[project.id as keyof typeof translations.projects];
-    return { ...project, ...tProject };
-  });
-
-  const totalSlides = mergedProjects.length;
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  };
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-  };
-
-  const handleDragEnd = (_: any, info: { offset: { x: number } }) => {
-    const threshold = 50;
-    if (info.offset.x > threshold) {
-      handlePrevSlide();
-    } else if (info.offset.x < -threshold) {
-      handleNextSlide();
-    }
-  };
+  // Get project keys from translations
+  const projectKeys = Object.keys(translations.projects).filter(
+    (key) => !isNaN(Number(key))
+  );
 
   return (
-    <section id="projects" className="py-24 bg-slate-50 dark:bg-slate-950/50 transition-colors duration-300">
+    <section
+      id="projects"
+      className="py-20 md:py-28 bg-white dark:bg-slate-900 transition-colors duration-300"
+    >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-widest mb-4"
-            >
-              <Star size={12} />
-              <span>Portfolio</span>
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6"
-            >
-              {translations.projects.section.title}
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed"
-            >
-              {translations.projects.section.subtitle}
-            </motion.p>
-          </div>
+        {/* Section Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-semibold text-sm rounded-full mb-4">
+            {t('projects.section.title')}
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-4">
+            {t('projects.section.heading')}
+          </h2>
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+            {t('projects.section.subtitle')}
+          </p>
         </div>
 
-        {/* Mobile Slider */}
-        {isMobile ? (
-          <div className="relative">
-            {/* Slider Container */}
-            <div ref={sliderRef} className="overflow-hidden">
-              <motion.div
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.2}
-                onDragEnd={handleDragEnd}
-                animate={{ x: `-${currentSlide * 100}%` }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="flex cursor-grab active:cursor-grabbing"
+        {/* Slider Controls */}
+        <div className="flex justify-end gap-3 mb-6">
+          <button
+            onClick={() => {
+              document.getElementById('projects-slider')?.scrollBy({ left: -400, behavior: 'smooth' });
+            }}
+            className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            aria-label="Previous project"
+          >
+            <ArrowRight size={20} className="rotate-180" />
+          </button>
+          <button
+            onClick={() => {
+              document.getElementById('projects-slider')?.scrollBy({ left: 400, behavior: 'smooth' });
+            }}
+            className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-hover transition-colors"
+            aria-label="Next project"
+          >
+            <ArrowRight size={20} />
+          </button>
+        </div>
+
+        {/* Projects Slider */}
+        <div
+          id="projects-slider"
+          className="flex gap-6 md:gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {projectKeys.map((key) => {
+            const project = (translations.projects as any)[key];
+            if (!project || typeof project !== 'object') return null;
+
+            return (
+              <div
+                key={key}
+                className="group flex-shrink-0 w-[85vw] md:w-[450px] snap-center bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
-                {mergedProjects.map((project) => (
-                  <div key={project.id} className="w-full flex-shrink-0 px-2">
-                    <ProjectCard project={project} />
+                {/* Project Image */}
+                <div className="relative aspect-video bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                  <img
+                    src={PROJECT_IMAGES[key] || '/projects/placeholder.png'}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://via.placeholder.com/600x400?text=Project';
+                    }}
+                  />
+                  {/* Featured Badge */}
+                  {key === '6' && (
+                    <span className="absolute top-4 left-4 px-3 py-1 bg-primary text-white text-xs font-bold rounded-full shadow-lg">
+                      {t('projects.section.featured')}
+                    </span>
+                  )}
+                </div>
+
+                {/* Project Content */}
+                <div className="p-6 md:p-8 flex flex-col h-[220px]">
+                  <div className="text-xs font-bold tracking-wider text-primary uppercase mb-3">
+                    {project.industry}
                   </div>
-                ))}
-              </motion.div>
-            </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3 line-clamp-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2 flex-grow">
+                    {project.shortDescription}
+                  </p>
 
-            {/* Navigation Arrows */}
-            <button
-              onClick={handlePrevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 z-20 p-2 rounded-full bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
-              aria-label="Previous project"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={handleNextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 z-20 p-2 rounded-full bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
-              aria-label="Next project"
-            >
-              <ChevronRight size={20} />
-            </button>
-
-            {/* Dot Indicators */}
-            <div className="flex justify-center gap-2 mt-6">
-              {mergedProjects.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentSlide === index
-                      ? 'bg-primary w-8'
-                      : 'bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500'
-                    }`}
-                  aria-label={`Go to project ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        ) : (
-          /* Desktop/Tablet Grid Layout */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {mergedProjects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-              />
-            ))}
-          </div>
-        )}
+                  <div className="flex items-center justify-between mt-auto">
+                    <Link
+                      to={`/projects/${PROJECT_SLUGS[key] || key}`}
+                      className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all"
+                    >
+                      {t('projects.section.viewDetail')}
+                      <ArrowRight size={18} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
 };
 
 export default Projects;
-

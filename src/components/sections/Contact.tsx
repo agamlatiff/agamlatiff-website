@@ -219,8 +219,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <div className="text-xs text-indigo-200 dark:text-slate-500 uppercase tracking-wider font-semibold mb-1">{t('contact.info.status')}</div>
-                    <div className="inline-flex items-center gap-2 bg-white/20 dark:bg-green-500/20 px-3 py-1 rounded-full">
-                      <span className="w-2 h-2 bg-green-400 dark:bg-green-500 rounded-full animate-pulse"></span>
+                    <div className="inline-flex items-center gap-2 bg-white/20 dark:bg-blue-500/20 px-3 py-1 rounded-full">
+                      <span className="w-2 h-2 bg-blue-400 dark:bg-blue-500 rounded-full animate-pulse"></span>
                       <span className="text-sm font-medium">{t('contact.info.open')}</span>
                     </div>
                   </div>
@@ -333,7 +333,7 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={status === 'submitting' || status === 'success'}
-                className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-white transition-all relative overflow-hidden shadow-lg shadow-primary/20 ${status === 'success' ? 'bg-green-500 hover:bg-green-600' : 'bg-primary hover:bg-primary-hover'
+                className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-white transition-all relative overflow-hidden shadow-lg shadow-primary/20 ${status === 'success' ? 'bg-blue-500 hover:bg-blue-600' : 'bg-primary hover:bg-primary-hover'
                   } ${status === 'submitting' ? 'opacity-80 cursor-wait' : ''}`}
               >
                 <AnimatePresence mode="wait">

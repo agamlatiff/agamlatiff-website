@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, Variants, useReducedMotion, AnimatePresence } from 'framer-motion';
-import { AlertTriangle, TrendingDown, Clock, UserX, CheckCircle2, ArrowRight, XCircle, Zap } from 'lucide-react';
+import { AlertTriangle, TrendingDown, Clock, UserX, CheckCircle2, ArrowRight, XCircle, Zap, Smartphone, Tablet, Monitor } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const WhyBooking: React.FC = () => {
@@ -84,46 +84,49 @@ const WhyBooking: React.FC = () => {
   const PainCard = ({ point, idx }: { point: typeof painPoints[0]; idx: number }) => {
     const Icon = point.icon;
     return (
-      <div className="group flex items-start gap-4 p-4 rounded-2xl bg-white/60 dark:bg-slate-900/60 border border-red-100 dark:border-red-900/30 hover:bg-white dark:hover:bg-slate-900 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-lg flex-shrink-0">
-          <Icon size={24} className="text-white" />
+      <div className="group flex items-start gap-4 p-5 rounded-3xl bg-[#111] border border-red-500/20 hover:border-red-500/40 hover:bg-[#161111] transition-all duration-300">
+        <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <Icon size={24} className="text-red-500" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <XCircle size={16} className="text-red-500 flex-shrink-0" />
-            <span className="font-bold text-slate-900 dark:text-white">{point.text}</span>
+            <h4 className="font-bold text-white text-lg">{point.text}</h4>
           </div>
-          <p className="text-sm text-slate-500 dark:text-slate-400">{point.desc}</p>
+          <p className="text-sm text-slate-400 leading-relaxed">{point.desc}</p>
         </div>
-        <span className="inline-block px-2 py-1 text-xs font-bold text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-900/50 rounded-lg flex-shrink-0">
-          {point.stat}
-        </span>
+        <div className="inline-flex flex-col items-end justify-center min-w-[80px]">
+          <span className="text-xs font-bold text-red-400 uppercase tracking-wider mb-1">Loss</span>
+          <span className="inline-block px-2.5 py-1 text-xs font-bold text-red-400 bg-red-500/10 rounded-lg border border-red-500/20">
+            {point.stat}
+          </span>
+        </div>
       </div>
     );
   };
 
-  const SolutionCard = ({ solution, idx }: { solution: typeof solutions[0]; idx: number }) => (
-    <div className="group flex items-start gap-4 p-4 rounded-2xl bg-white/60 dark:bg-slate-900/60 border border-emerald-100 dark:border-emerald-900/30 hover:bg-white dark:hover:bg-slate-900 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg flex-shrink-0">
-        <CheckCircle2 size={24} className="text-white" />
-      </div>
-      <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2 mb-1">
-          <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" />
-          <span className="font-bold text-slate-900 dark:text-white">{solution.text}</span>
+  const SolutionCard = ({ sol, idx }: { sol: typeof solutions[0]; idx: number }) => {
+    return (
+      <div className="group flex items-start gap-4 p-5 rounded-3xl bg-[#111] border border-blue-500/20 hover:border-blue-500/40 hover:bg-[#111611] transition-all duration-300">
+        <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <CheckCircle2 size={24} className="text-blue-500" />
         </div>
-        <p className="text-sm text-slate-500 dark:text-slate-400">{solution.desc}</p>
+        <div className="flex-1 min-w-0">
+          <h4 className="font-bold text-white text-lg mb-1">{sol.text}</h4>
+          <p className="text-sm text-slate-400 leading-relaxed">{sol.desc}</p>
+        </div>
+        <div className="inline-flex flex-col items-end justify-center min-w-[80px]">
+          <span className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Gain</span>
+          <span className="inline-block px-2.5 py-1 text-xs font-bold text-blue-400 bg-blue-500/10 rounded-lg border border-blue-500/20 shadow-[0_0_10px_rgba(59,130,246,0.2)] animate-pulse">
+            {sol.stat}
+          </span>
+        </div>
       </div>
-      <span className="inline-block px-2 py-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/50 rounded-lg flex-shrink-0">
-        {solution.stat}
-      </span>
-    </div>
-  );
-
+    );
+  };
   return (
     <section className="py-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-red-500/5 to-transparent" />
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-emerald-500/5 to-transparent" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-500/5 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -142,10 +145,24 @@ const WhyBooking: React.FC = () => {
           </motion.h2>
           <motion.p
             variants={fadeInUpVariants}
-            className="text-slate-600 dark:text-slate-400 text-lg"
+            className="text-slate-600 dark:text-slate-400 text-lg mb-8"
           >
             {translations.whyBooking?.compareText || 'Bandingkan cara manual vs otomatis'}
           </motion.p>
+
+          <motion.div
+            variants={fadeInUpVariants}
+            className="inline-flex items-center gap-3 px-4 py-2 bg-slate-100 dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-800"
+          >
+            <span className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+              <Smartphone size={16} />
+              <Tablet size={16} />
+              <Monitor size={16} />
+            </span>
+            <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+              Tersedia di Semua Device
+            </span>
+          </motion.div>
         </motion.div>
 
         {/* Mobile Tab Switcher */}
@@ -161,7 +178,7 @@ const WhyBooking: React.FC = () => {
             <motion.div
               className={`absolute top-1.5 bottom-1.5 rounded-xl ${activeTab === 'pain'
                 ? 'bg-gradient-to-r from-red-500 to-rose-500'
-                : 'bg-gradient-to-r from-emerald-500 to-teal-500'
+                : 'bg-gradient-to-r from-blue-500 to-cyan-500'
                 }`}
               layoutId="tabBg"
               style={{ width: 'calc(50% - 6px)' }}
@@ -194,7 +211,7 @@ const WhyBooking: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="p-6 rounded-3xl bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/30 border border-red-200 dark:border-red-900/50"
               >
                 <div className="space-y-4">
@@ -209,12 +226,12 @@ const WhyBooking: React.FC = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
-                className="p-6 rounded-3xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200 dark:border-emerald-900/50"
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="p-6 rounded-3xl bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 border border-blue-200 dark:border-blue-900/50"
               >
                 <div className="space-y-4">
                   {solutions.map((solution, idx) => (
-                    <SolutionCard key={idx} solution={solution} idx={idx} />
+                    <SolutionCard key={idx} sol={solution} idx={idx} />
                   ))}
                 </div>
               </motion.div>
@@ -234,7 +251,7 @@ const WhyBooking: React.FC = () => {
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             <div className="relative">
               <div className="absolute top-1/2 -left-8 w-8 h-0.5 bg-gradient-to-r from-red-400 to-transparent" />
-              <div className="absolute top-1/2 -right-8 w-8 h-0.5 bg-gradient-to-l from-emerald-400 to-transparent" />
+              <div className="absolute top-1/2 -right-8 w-8 h-0.5 bg-gradient-to-l from-blue-400 to-transparent" />
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center shadow-xl border-4 border-white dark:border-slate-600">
                 <span className="text-white font-bold text-lg">VS</span>
               </div>
@@ -260,15 +277,15 @@ const WhyBooking: React.FC = () => {
           {/* Solutions */}
           <motion.div
             variants={fadeInRightVariants}
-            className="relative p-8 rounded-3xl rounded-l-none bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200 dark:border-emerald-900/50 border-l-0"
+            className="relative p-8 rounded-3xl rounded-l-none bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 border border-blue-200 dark:border-blue-900/50 border-l-0"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-900/50 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/50 rounded-full">
               <Zap size={14} className="animate-pulse" />
               {translations.whyBooking?.tabSolution || 'Dengan Booking App'}
             </div>
             <div className="space-y-4">
               {solutions.map((solution, idx) => (
-                <SolutionCard key={idx} solution={solution} idx={idx} />
+                <SolutionCard key={idx} sol={solution} idx={idx} />
               ))}
             </div>
           </motion.div>

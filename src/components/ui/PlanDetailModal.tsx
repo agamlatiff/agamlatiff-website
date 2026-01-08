@@ -115,7 +115,7 @@ const PlanDetailModal: React.FC<PlanDetailModalProps> = ({ plan, isOpen, onClose
                               {idx === 0 ? <Lightbulb size={20} className="text-yellow-500" /> :
                                 idx === 1 ? <Zap size={20} className="text-blue-500" /> :
                                   idx === 2 ? <Code2 size={20} className="text-purple-500" /> :
-                                    <Check size={20} className="text-green-500" />
+                                    <Check size={20} className="text-primary" />
                               }
                               {section.title}
                             </h4>
@@ -123,7 +123,7 @@ const PlanDetailModal: React.FC<PlanDetailModalProps> = ({ plan, isOpen, onClose
                               <ul className="space-y-3">
                                 {section.items.map((item: string, i: number) => (
                                   <li key={i} className="flex items-start gap-3">
-                                    <Check size={16} className="text-green-500 mt-1 shrink-0" />
+                                    <Check size={16} className="text-primary mt-1 shrink-0" />
                                     <span className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{item}</span>
                                   </li>
                                 ))}
@@ -175,9 +175,9 @@ const PlanDetailModal: React.FC<PlanDetailModalProps> = ({ plan, isOpen, onClose
                                     </div>
                                   </div>
                                   <div className="flex items-start gap-3">
-                                    <Check size={18} className="text-green-500 mt-0.5 shrink-0" />
+                                    <Check size={18} className="text-primary mt-0.5 shrink-0" />
                                     <div>
-                                      <span className="text-xs font-bold text-green-600 uppercase tracking-wider block mb-0.5">{t('modal.solution')}</span>
+                                      <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-0.5">{t('modal.solution')}</span>
                                       <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{detail.solution}</p>
                                     </div>
                                   </div>
@@ -232,7 +232,7 @@ const PlanDetailModal: React.FC<PlanDetailModalProps> = ({ plan, isOpen, onClose
 
                       <div className="space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800">
                         <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
-                          <ShieldCheck size={14} className="text-green-500" />
+                          <ShieldCheck size={14} className="text-primary" />
                           <span>{t('modal.bugWarranty')}</span>
                         </div>
                         <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">

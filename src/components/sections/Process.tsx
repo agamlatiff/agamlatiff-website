@@ -72,7 +72,7 @@ const Process: React.FC = () => {
                           <div className={`flex flex-col gap-2.5 ${isLeft ? 'md:items-end' : 'md:items-start'}`}>
                             {(tStep?.deliverables || step.deliverables).map((item, idx) => (
                               <div key={idx} className={`flex items-center gap-2 text-sm text-slate-700 dark:text-slate-300 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
-                                <CheckCircle2 size={16} className="text-green-500 flex-shrink-0" />
+                                <CheckCircle2 size={16} className="text-primary flex-shrink-0" />
                                 <span className="text-left md:text-inherit">{item}</span>
                               </div>
                             ))}

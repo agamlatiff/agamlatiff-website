@@ -19,7 +19,7 @@ const StickyCTA: React.FC = () => {
       <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
         <button
           onClick={handleClick}
-          className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white py-3.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-green-500/25 border border-white/10 backdrop-blur-sm"
+          className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white py-3.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-primary/25 border border-white/10 backdrop-blur-sm"
         >
           <MessageCircle size={18} />
           {t('hero.cta.consult') || 'Konsultasi Gratis'}
@@ -29,7 +29,7 @@ const StickyCTA: React.FC = () => {
       {/* Floating CTA Button - Desktop */}
       <motion.button
         onClick={handleClick}
-        className="hidden md:flex fixed bottom-8 right-8 z-50 items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-full font-bold shadow-2xl shadow-green-500/30 transition-all hover:scale-105"
+        className="hidden md:flex fixed bottom-8 right-8 z-50 items-center gap-3 bg-primary hover:bg-primary-hover text-white px-6 py-4 rounded-full font-bold shadow-2xl shadow-primary/30 transition-all hover:scale-105"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 20 }}

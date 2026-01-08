@@ -8,18 +8,14 @@ import { createWhatsAppLink } from '@/constants/whatsapp';
 const Hero: React.FC = () => {
   const [isNavigating, setIsNavigating] = useState(false);
   const navigate = useNavigate();
-
   const { t } = useLanguage();
 
   const handleConsultationClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (isNavigating) return;
     setIsNavigating(true);
-
-    // Use dynamic message from translations
     const message = t('whatsappMessages.consultation');
     const waLink = createWhatsAppLink(message);
-
     setTimeout(() => {
       window.open(waLink, '_blank');
       setIsNavigating(false);
@@ -27,15 +23,45 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[85vh] flex items-center justify-center pt-32 pb-32 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-32 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
 
-      {/* Background Grid & Glow */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] dark:bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)]"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[500px] bg-primary/10 dark:bg-primary/20 blur-[100px] rounded-full"></div>
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Subtle Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:60px_60px] opacity-20 dark:opacity-10"></div>
+
+        {/* Floating Blobs */}
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-[100px] animate-blob"></div>
+        <div className="absolute top-0 -right-20 w-80 h-80 bg-violet-500/20 rounded-full blur-[100px] animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-32 left-1/2 w-80 h-80 bg-blue-400/20 rounded-full blur-[100px] animate-blob animation-delay-4000"></div>
+
+        {/* Particles */}
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-primary/30 rounded-full"
+              initial={{
+                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+                y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)
+              }}
+              animate={{
+                y: [0, -100, 0],
+                opacity: [0.2, 0.8, 0.2],
+                scale: [1, 1.5, 1]
+              }}
+              transition={{
+                duration: 5 + Math.random() * 5,
+                repeat: Infinity,
+                ease: "linear",
+                delay: Math.random() * 5
+              }}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col items-center text-center">
 
           {/* Badge */}
@@ -43,29 +69,25 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-bold tracking-wide text-indigo-600 dark:text-indigo-300 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md rounded-full border border-indigo-100 dark:border-slate-800 shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-bold tracking-wide text-blue-500 bg-blue-500/10 backdrop-blur-md rounded-full border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-shadow cursor-default"
           >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
             <span className="uppercase tracking-widest">{t('hero.badge')}</span>
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline with Reference Style Gradient */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-7xl font-display font-extrabold text-slate-900 dark:text-white leading-[1.1] mb-8 tracking-tight"
+            className="text-5xl sm:text-7xl md:text-8xl font-black text-slate-900 dark:text-white leading-[1.05] mb-8 tracking-tight"
           >
             {t('hero.headline.part1')}<br />
-            <span className="relative inline-block text-primary">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#9333EA] animate-gradient-x bg-[length:200%_auto]">
               {t('hero.headline.part2')}
-              {/* Creative Underline */}
-              <svg className="absolute w-full h-3 -bottom-2 left-0 text-blue-300 dark:text-blue-800 opacity-60" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.00025 6.99997C25.7501 2.49994 132.5 -1.49996 198 3.99996" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-              </svg>
             </span>
           </motion.h1>
 
@@ -78,26 +100,30 @@ const Hero: React.FC = () => {
             dangerouslySetInnerHTML={{ __html: t('hero.subheadline').replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-900 dark:text-white">$1</strong>') }}
           />
 
-          {/* Buttons */}
+          {/* Buttons with Floating Animation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto relative z-20"
+            animate={{ opacity: 1, y: [0, -10, 0] }} // Float effect
+            transition={{
+              opacity: { duration: 0.5, delay: 0.3 },
+              y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 } // Continuous float
+            }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto relative z-20"
           >
             <button
               onClick={handleConsultationClick}
               disabled={isNavigating}
-              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-base transition-all shadow-xl shadow-primary/20 hover:-translate-y-1 hover:shadow-2xl disabled:opacity-70 disabled:cursor-not-allowed"
+              className="group relative w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-[#2563EB] text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(37,99,235,0.6)] disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden"
             >
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
               {isNavigating ? (
                 <>
-                  <Loader2 size={18} className="animate-spin" />
+                  <Loader2 size={24} className="animate-spin" />
                   {t('hero.cta.processing')}
                 </>
               ) : (
                 <>
-                  {t('hero.cta.consult')} <ArrowRight size={18} />
+                  {t('hero.cta.consult')} <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
                 </>
               )}
             </button>
@@ -106,9 +132,12 @@ const Hero: React.FC = () => {
               href="https://www.upwork.com/freelancers/~01e490352a92e7beb8"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-8 py-4 rounded-full font-bold text-base transition-all hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-300"
+              className="group w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-slate-900/5 dark:bg-slate-800/50 backdrop-blur border border-slate-700/50 text-slate-600 dark:text-slate-300 px-8 py-4 rounded-full font-bold text-lg transition-all hover:bg-slate-900 hover:text-white hover:border-slate-900 dark:hover:bg-slate-700"
             >
-              {t('hero.cta.roi')} <TrendingUp size={18} className="text-green-500" />
+              {t('hero.cta.roi')}
+              <span className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                <TrendingUp size={18} className="text-blue-500 group-hover:text-white" />
+              </span>
             </a>
           </motion.div>
 

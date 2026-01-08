@@ -16,6 +16,7 @@ import StickyCTA from '@/components/ui/StickyCTA';
 import ScrollToTop from '@/components/utils/ScrollToTop';
 import ErrorBoundary from '@/components/utils/ErrorBoundary';
 import KeyboardShortcuts from '@/components/utils/KeyboardShortcuts';
+import CustomCursor from '@/components/ui/CustomCursor';
 import PageTransition from '@/components/utils/PageTransition';
 import { LanguageProvider } from '@/context/LanguageContext';
 
@@ -27,6 +28,7 @@ const App: React.FC = () => {
           <ScrollToTop />
           <ScrollProgress />
           <KeyboardShortcuts />
+          <CustomCursor />
           <div className="min-h-screen bg-gray-50 dark:bg-slate-950 font-sans selection:bg-primary/20 selection:text-primary-hover transition-colors duration-300 flex flex-col">
             <Navbar />
             <main className="flex-grow">

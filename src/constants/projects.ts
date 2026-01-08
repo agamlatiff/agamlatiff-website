@@ -26,6 +26,11 @@ export const PROJECTS: Project[] = [
     date: 'Full-Stack Developer',
     isFeatured: true,
     liveLink: 'https://hired-io.vercel.app',
+    tags: ['SaaS', 'Recruitment', 'B2B'],
+    desc: {
+      id: 'Platform rekrutmen end-to-end yang menjembatani profesional berbakat dengan perusahaan inovatif.',
+      en: 'An end-to-end recruitment platform designed to bridge the gap between talented professionals and innovative companies.'
+    }
   },
   {
     id: '5',
@@ -55,6 +60,11 @@ export const PROJECTS: Project[] = [
     date: 'Full-Stack Developer',
     isFeatured: true,
     liveLink: 'https://fly-higher.vercel.app',
+    tags: ['Booking System', 'Travel', 'Architecture'],
+    desc: {
+      id: 'Platform pemesanan tiket pesawat end-to-end yang dirancang untuk memberikan pengalaman reservasi penerbangan yang mulus dan efisien.',
+      en: 'End-to-end flight booking platform designed to provide a seamless and efficient flight reservation experience.'
+    }
   },
   {
     id: '4',
@@ -82,6 +92,11 @@ export const PROJECTS: Project[] = [
     industry: 'Education & Public Sector',
     date: 'December 2024',
     isFeatured: true,
+    tags: ['Management System', 'Education', 'Public Sector'],
+    desc: {
+      id: 'Platform operasional perpustakaan komprehensif yang memodernisasi pengalaman peminjaman buku.',
+      en: 'Comprehensive library operational platform designed to modernize the book lending experience.'
+    }
     // Add repo link if available or leave undefined
   },
   {
@@ -112,6 +127,11 @@ export const PROJECTS: Project[] = [
     date: 'Oktober 2023',
     isFeatured: true,
     liveLink: 'https://alizonstore.vercel.app',
+    tags: ['E-Commerce', 'Retail', 'Payment Gateway'],
+    desc: {
+      id: 'Platform toko online yang memungkinkan bisnis menjual produk, menerima pembayaran, dan mengelola pesanan dalam satu tempat.',
+      en: 'An online store platform that allows businesses to sell products, accept payments, and manage orders from one place.'
+    }
   },
   {
     id: '2',
@@ -134,7 +154,12 @@ export const PROJECTS: Project[] = [
     industry: 'Logistik & Supply Chain',
     date: 'Desember 2023',
     isFeatured: true,
-    youtubeId: 'Sba29tQRzyE', // Video Demo tersedia (Ganti ID jika ada yang baru)
+    youtubeId: 'Sba29tQRzyE',
+    tags: ['WMS', 'Logistics', 'Inventory'],
+    desc: {
+      id: 'Sistem manajemen gudang untuk melacak inventaris, mengelola stok multi-lokasi, dan mencegah selisih stok.',
+      en: 'Warehouse management system that helps distributors track inventory, manage multi-location stock, and prevent stock discrepancies.'
+    }
   },
   {
     id: '1',
@@ -161,7 +186,12 @@ export const PROJECTS: Project[] = [
     industry: 'Education & EdTech',
     date: 'Januari 2024',
     isFeatured: true,
-    youtubeId: '-qq7Lu6KJ0o', // Video Demo tersedia
+    youtubeId: '-qq7Lu6KJ0o',
+    tags: ['LMS', 'Education', 'Calculus'],
+    desc: {
+      id: 'Platform E-Learning yang membantu orang belajar skill baru dengan kursus terstruktur dan tracking progress.',
+      en: 'E-Learning platform that helps people learn new skills online with structured courses, progress tracking, and subscription-based access.'
+    }
   }
 ];
 

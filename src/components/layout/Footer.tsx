@@ -20,41 +20,49 @@ const Footer: React.FC = () => {
   const { t, translations } = useLanguage();
 
   return (
-    <footer className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 pt-20 pb-10 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
+    <footer className="bg-[#0a0a0a] text-slate-400 pt-24 pb-12 border-t border-slate-900 overflow-hidden relative">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-[size:40px_40px] opacity-[0.03] pointer-events-none" />
 
       {/* Top Banner CTA */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="bg-gradient-to-r from-primary to-indigo-600 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl shadow-primary/20">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{t('footer.cta.title')}</h3>
-              <p className="text-indigo-100 max-w-lg">{t('footer.cta.description')}</p>
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-20 relative z-10">
+        <div className="bg-[#0f0f0f] border border-slate-800 rounded-[2rem] p-8 md:p-14 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 group-hover:bg-primary/20 transition-colors duration-700" />
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
+            <div className="text-center md:text-left max-w-2xl">
+              <h3 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
+                {t('footer.cta.title')}
+              </h3>
+              <p className="text-slate-400 text-lg leading-relaxed">
+                {t('footer.cta.description')}
+              </p>
             </div>
             <a
               href={createWhatsAppLink(t('whatsappMessages.general'))}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-primary px-8 py-3.5 rounded-xl font-bold text-base hover:bg-indigo-50 transition-all shadow-lg transform hover:-translate-y-1 flex items-center gap-2 whitespace-nowrap"
+              className="whitespace-nowrap bg-white text-black px-10 py-5 rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-1 transition-all duration-300"
             >
-              {t('footer.cta.button')} <ArrowRight size={18} />
+              {t('footer.cta.button')} <ArrowRight size={20} className="inline ml-2" />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 border-b border-slate-900 pb-16">
 
           {/* Brand Column */}
-          <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2 group w-fit">
-              <div className="bg-primary text-white p-2 rounded-xl transition-transform group-hover:rotate-12 shadow-lg shadow-primary/20">
-                <Hexagon size={24} fill="currentColor" />
+          <div className="lg:col-span-5 space-y-8">
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary to-violet-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/25">
+                <Hexagon size={20} fill="currentColor" />
               </div>
-              <span className="font-bold text-2xl text-slate-900 dark:text-white tracking-tight">agamlatiff</span>
+              <span className="font-black text-2xl text-white tracking-tight">agamlatiff</span>
             </Link>
-            <p className="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">
+            <p className="text-slate-400 leading-relaxed max-w-md text-base">
               {t('footer.brandDescription')}
             </p>
             <div className="flex gap-3">
@@ -64,8 +72,7 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:from-primary hover:to-primary-hover hover:text-white dark:hover:from-primary dark:hover:to-primary-hover dark:hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-primary/30"
+                  className="w-12 h-12 rounded-2xl bg-[#111] border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
                 >
                   <social.icon size={20} />
                 </a>
@@ -73,49 +80,44 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
+          {/* Spacer */}
+          <div className="lg:col-span-1 hidden lg:block" />
+
           {/* Quick Links */}
-          <div>
-            <h4 className="font-bold text-slate-900 dark:text-white mb-6">{t('footer.menus.main')}</h4>
-            <ul className="space-y-3">
+          <div className="lg:col-span-3">
+            <h4 className="font-bold text-white mb-8 text-lg">{t('footer.menus.main')}</h4>
+            <ul className="space-y-4">
               {[
-                { name: t('nav.home') || 'Beranda', href: '#hero' },
-                { name: t('nav.about') || 'Tentang', href: '#about' },
-                { name: t('nav.projects') || 'Proyek', href: '#projects' },
-                { name: t('process.title') || 'Proses', href: '#process' },
-                { name: t('nav.contact') || 'Kontak', href: '#contact' },
+                { name: t('nav.home'), href: '#hero' },
+                { name: t('nav.about'), href: '#about' },
+                { name: t('nav.projects'), href: '#projects' },
+                { name: t('nav.services'), href: '#services' }, // Added for spacing balance
+                { name: t('nav.contact'), href: '#contact' },
               ].map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => {
-                      const elementId = link.href.replace('#', '');
-                      const element = document.getElementById(elementId);
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      } else if (link.href === '#hero') {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                      }
-                    }}
-                    className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-2 text-sm group text-left"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors"></span>
+                  <a href={link.href} className="text-slate-400 hover:text-primary transition-colors inline-block py-1">
                     {link.name}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="font-bold text-slate-900 dark:text-white mb-6">{t('footer.menus.contact')}</h4>
-            <ul className="space-y-4 text-sm">
-              <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-primary mt-0.5" />
-                <span className="text-slate-500 dark:text-slate-400" dangerouslySetInnerHTML={{ __html: t('footer.location') }} />
+          <div className="lg:col-span-3">
+            <h4 className="font-bold text-white mb-8 text-lg">{t('footer.menus.contact')}</h4>
+            <ul className="space-y-6">
+              <li className="flex items-start gap-4 group cursor-pointer">
+                <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors flex-shrink-0">
+                  <MapPin size={18} />
+                </div>
+                <span className="text-slate-400 leading-relaxed mt-2" dangerouslySetInnerHTML={{ __html: t('footer.location') }} />
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={20} className="text-primary" />
-                <a href="mailto:agam.latiff@gmail.com" className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors">agam.latiff@gmail.com</a>
+              <li className="flex items-center gap-4 group">
+                <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-500 group-hover:bg-primary/20 group-hover:text-primary transition-colors flex-shrink-0">
+                  <Mail size={18} />
+                </div>
+                <a href="mailto:agam.latiff@gmail.com" className="text-slate-400 group-hover:text-white transition-colors">agam.latiff@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -123,11 +125,11 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Agam Latifullah. {t('footer.rights')}</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-primary dark:hover:text-white transition-colors">{t('footer.privacy')}</a>
-            <a href="#" className="hover:text-primary dark:hover:text-white transition-colors">{t('footer.terms')}</a>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500 font-medium">
+          <p>&copy; {new Date().getFullYear()} Agam Latifullah. All rights reserved.</p>
+          <div className="flex gap-8">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

@@ -28,14 +28,16 @@ export const id = {
     projectDesc: "Platform pemesanan tiket pesawat dengan fitur lengkap: pencarian real-time, pemilihan kursi interaktif, pembayaran otomatis, dan e-ticket dengan QR Code.",
     features: [
       { title: "Reservasi 24/7", desc: "Pelanggan bisa booking kapan saja, sistem selalu tersedia." },
-      { title: "Pembayaran DP Otomatis", desc: "Integrasi payment gateway untuk menerima DP langsung." },
+      { title: "Bayar di Aplikasi", desc: "Integrasi payment gateway untuk menerima pembayaran langsung." },
       { title: "Riwayat Booking", desc: "Akses histori pemesanan kapan saja dengan mudah." },
       { title: "Dashboard Lengkap", desc: "Pantau semua reservasi dari satu tempat." }
-    ]
+    ],
+    visitDemo: "Kunjungi Live Demo"
   },
   projects: {
     section: {
-      title: "Proven Results",
+      title: "Hasil Terbukti",
+      heading: "Studi Kasus & Portfolio",
       subtitle: "Studi kasus bagaimana sistem kustom membantu bisnis berjalan lebih efisien dan profitable.",
       loading: {
         text1: 'Memuat data...',
@@ -612,7 +614,7 @@ export const id = {
         capacity: 'Maks 200 booking/bulan',
         payment: 'DP 50%, pelunasan setelah selesai',
         guarantee: 'Revisi gratis 7 hari',
-        supportHours: 'Senin-Jumat, 09:00-17:00',
+
         features: [
           'Landing page profesional',
           'Form booking sederhana',
@@ -648,11 +650,11 @@ export const id = {
         capacity: 'Maks 1.000 booking/bulan',
         payment: 'DP 50%, pelunasan setelah selesai',
         guarantee: 'Revisi gratis 14 hari',
-        supportHours: 'Senin-Sabtu, 09:00-21:00',
+
         features: [
           'Semua fitur Paket 1',
           'Sistem booking lengkap (pilih jadwal & staff)',
-          'Payment gateway Midtrans (QRIS, VA)',
+          'Payment gateway Midtrans ()',
           'Pembayaran DP otomatis',
           'WhatsApp reminder H-1 & H-1 jam',
           'Dashboard analytics & laporan',
@@ -676,38 +678,33 @@ export const id = {
         excludes: ['Midtrans fee (ditanggung klien)']
       },
       {
-        name: 'Paket 3',
-        tagline: 'Solusi lengkap untuk bisnis besar',
-        price: '15-25 Juta',
-        delivery: '4-8 minggu',
-        revisions: 'Unlimited revisi',
-        idealFor: ['Jaringan klinik', 'Franchise', 'Hotel', 'Resort'],
-        capacity: 'Unlimited booking',
-        payment: 'Termin sesuai milestone',
-        guarantee: 'Garansi penuh selama maintenance',
-        supportHours: '24/7 Priority Support',
+        name: 'Jasa Lainnya',
+        tagline: 'Solusi digital custom sesuai kebutuhan bisnis',
+        price: 'Custom Price',
+        delivery: 'Sesuai Project',
+        revisions: 'Full Support',
+        idealFor: ['Company Profile', 'E-Commerce', 'Landing Page', 'Custom App'],
+        capacity: 'Unlimited',
+        payment: 'Termin / Project based',
+        guarantee: 'Garansi maintenance',
+
         features: [
-          'Semua fitur Paket 2',
-          'Multi-location/branch support',
-          'Multi-admin dengan role berbeda',
-          'Custom integrations (POS, Accounting)',
-          'API development',
-          'Loyalty program & voucher',
-          'Laporan keuangan otomatis',
-          'Priority support 24/7',
-          'Extended maintenance 3 bulan',
-          'Training untuk tim Anda'
+          'Landing Page / Website Company Profile',
+          'E-Commerce / Toko Online',
+          'Custom Web Application (SaaS)',
+          'Integrasi API & Payment Gateway',
+          'Redesign Website Lama',
+          'Optimasi Speed & SEO Website',
+          'Maintenance & Bug Fixing',
+
         ],
         extras: [
-          'Free domain .com 1 tahun',
-          'Free hosting 1 tahun',
-          'Source code 100% milik Anda',
-          'Dokumentasi teknis lengkap',
-          'Training session unlimited',
-          'Dedicated account manager',
-          'SLA guarantee'
+          'Gratis konsultasi awal',
+          'Technical roadmap planning',
+          'Rekomendasi teknologi terbaik',
+          'Estimasi biaya & waktu transparan'
         ],
-        excludes: ['Biaya infrastruktur cloud tambahan']
+        excludes: []
       }
     ]
   },
@@ -717,17 +714,29 @@ export const id = {
     button: "Amankan Slot Project"
   },
   about: {
-    title: "Agam Latifullah",
-    subtitle: "Revenue System Engineer",
-    quote: "Saya membantu bisnis jasa dan produk yang masih mengandalkan booking manual untuk beralih ke sistem otomatis, mengurangi kerugian dan meningkatkan profit.",
-    whyChooseMe: "Yang Anda Dapatkan",
-    description1: "Fokus saya saat ini adalah membangun <strong>booking app</strong> untuk bisnis jasa atau produk yang memerlukan sistem reservasi. Proses manual yang rentan kesalahan dan memakan waktu akan diubah menjadi sistem otomatis yang bekerja 24/7.",
-    description2: "Saya bukan hanya sekadar membuat aplikasi, tapi <strong>menemani Anda dari awal hingga aplikasi siap digunakan</strong>. Progress pengembangan akan di-share secara transparan, sehingga Anda selalu tahu apa yang sedang dikerjakan.",
+    title: 'SIAPA SAYA?',
+    subtitle: 'Revenue System Engineer',
+    quote: 'Saya pengembang Otodidak yang percaya bahwa setiap baris kode harus menghasilkan profit untuk bisnis Anda.',
+    description1: '',
+    description2: '',
+    whyChooseMe: 'WHY WORK WITH ME?',
     values: [
-      { title: "Proses Cepat & Dibimbing", desc: "Pengembangan cepat dengan pendampingan sampai aplikasi jadi dan siap pakai." },
-      { title: "Maintenance 1 Bulan Gratis", desc: "Jika ada kendala atau bug setelah launch, saya bantu perbaiki tanpa biaya tambahan." },
-      { title: "Responsive & Bisa Konsultasi", desc: "Mudah dihubungi dan selalu siap diskusi untuk kebutuhan bisnis Anda." },
-      { title: "Transparansi Progress", desc: "Progress pengembangan di-share real-time. Anda tahu persis apa yang sedang dikerjakan." }
+      {
+        title: 'Business Mindset',
+        desc: 'Saya mengerti coding DAN bisnis. Fokus saya adalah ROI & efisiensi Anda.'
+      },
+      {
+        title: 'Automation Expert',
+        desc: 'Spesialis mengubah proses manual yang ribet jadi sistem otomatis.'
+      },
+      {
+        title: 'Partner, Not Vendor',
+        desc: 'Saya temani dari ide awal sampai sistem menghasilkan uang.'
+      },
+      {
+        title: 'Transparent',
+        desc: 'Update progress real-time. Anda tahu persis apa yang saya kerjakan.'
+      }
     ]
   },
   faq: {
@@ -791,6 +800,36 @@ export const id = {
   whatsappMessages: {
     consultation: "Hi Agam, I would like a free consultation regarding website/app development for my business.",
     general: "Hi Agam, I'm interested in your services and would like to discuss a potential project."
+  },
+  testimonials: {
+    title: "Apa Kata Klien",
+    subtitle: "Testimoni dari bisnis yang sudah menggunakan jasa saya",
+    list: [
+      {
+        id: 't1',
+        name: 'Pak Budi Santoso',
+        role: 'Owner',
+        company: 'Toko Bangunan Sejahtera',
+        quote: "Awalnya ragu pakai jasa programmer personal, tapi mas Agam beda. Sistemnya rapi, diajarin sampai bisa, dan kalau ada error langsung diperbaiki. Stok semen saya sekarang gak pernah selisih lagi.",
+        rating: 5
+      },
+      {
+        id: 't2',
+        name: 'Drg. Amanda',
+        role: 'Pemilik',
+        company: 'Amanda Dental Care',
+        quote: "Sistem booking yang dibuatkan sangat membantu. Pasien tidak perlu antri lama, dan admin saya tidak pusing lagi atur jadwal via WA. Sangat recommended!",
+        rating: 5
+      },
+      {
+        id: 't3',
+        name: 'Rian Pratama',
+        role: 'Marketing Manager',
+        company: 'Logistik Express',
+        quote: "Pesan Landing Page di agamlatiff hasilnya memuaskan. Desainnya premium, loadingnya cepet. Konversi iklan kami naik drastis karena website terlihat profesional.",
+        rating: 5
+      }
+    ]
   },
   contact: {
     title: "Let's Connect",

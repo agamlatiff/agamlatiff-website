@@ -14,4 +14,6 @@ export interface Project {
   liveLink?: string;
   date: string;
   isFeatured?: boolean;
+  tags?: string[];
+  desc?: Record<string, string>;
 }

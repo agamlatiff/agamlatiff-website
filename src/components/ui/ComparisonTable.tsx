@@ -33,8 +33,8 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ title, plans, rows, a
     if (typeof value === 'boolean') {
       return value ? (
         <div className="flex justify-center">
-          <div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full">
-            <Check size={18} className="text-green-600 dark:text-green-400" strokeWidth={3} />
+          <div className="bg-primary/10 dark:bg-primary/30 p-1 rounded-full">
+            <Check size={18} className="text-primary dark:text-primary" strokeWidth={3} />
           </div>
         </div>
       ) : (

@@ -28,14 +28,16 @@ export const en = {
     projectDesc: "An end-to-end flight booking platform with complete features: real-time search, interactive seat selection, automatic payment, and e-ticket with QR Code.",
     features: [
       { title: "24/7 Reservations", desc: "Customers can book anytime, system is always available." },
-      { title: "Automatic DP Payment", desc: "Payment gateway integration to receive deposits directly." },
+      { title: "In-App Payment", desc: "Payment gateway integration to receive direct payments." },
       { title: "Booking History", desc: "Access booking records anytime with ease." },
       { title: "Complete Dashboard", desc: "Monitor all reservations from one place." }
-    ]
+    ],
+    visitDemo: "Visit Live Demo"
   },
   projects: {
     section: {
       title: "Proven Results",
+      heading: "Case Studies & Portfolio",
       subtitle: "Case studies on how custom systems help businesses run more efficiently and profitably.",
       loading: {
         text1: 'Loading project',
@@ -612,7 +614,7 @@ export const en = {
         capacity: 'Max 200 bookings/month',
         payment: '50% deposit, balance on completion',
         guarantee: '7-day free revision',
-        supportHours: 'Mon-Fri, 09:00-17:00',
+
         features: [
           'Professional landing page',
           'Simple booking form',
@@ -648,7 +650,7 @@ export const en = {
         capacity: 'Max 1,000 bookings/month',
         payment: '50% deposit, balance on completion',
         guarantee: '14-day free revision',
-        supportHours: 'Mon-Sat, 09:00-21:00',
+
         features: [
           'All Package 1 features',
           'Complete booking system (schedule & staff selection)',
@@ -676,38 +678,33 @@ export const en = {
         excludes: ['Midtrans fees (client responsibility)']
       },
       {
-        name: 'Package 3',
-        tagline: 'Complete solution for large businesses',
-        price: '$1000-1700',
-        delivery: '4-8 weeks',
-        revisions: 'Unlimited revisions',
-        idealFor: ['Clinic chain', 'Franchise', 'Hotel', 'Resort'],
-        capacity: 'Unlimited bookings',
-        payment: 'Milestone-based terms',
-        guarantee: 'Full maintenance guarantee',
-        supportHours: '24/7 Priority Support',
+        name: 'Other Services',
+        tagline: 'Custom digital solutions for specific needs',
+        price: 'Custom Price',
+        delivery: 'Per Project',
+        revisions: 'Full Support',
+        idealFor: ['Company Profile', 'E-Commerce', 'Landing Page', 'Custom App'],
+        capacity: 'Unlimited',
+        payment: 'Term / Project based',
+        guarantee: 'Maintenance guarantee',
+
         features: [
-          'All Package 2 features',
-          'Multi-location/branch support',
-          'Multi-admin with different roles',
-          'Custom integrations (POS, Accounting)',
-          'API development',
-          'Loyalty program & vouchers',
-          'Automatic financial reports',
-          'Priority support 24/7',
-          'Extended maintenance 3 months',
-          'Training for your team'
+          'Landing Page / Company Profile Website',
+          'E-Commerce / Online Store',
+          'Custom Web Application (SaaS)',
+          'API Integration & Payment Gateway',
+          'Website Redesign',
+          'Speed & SEO Optimization',
+          'Maintenance & Bug Fixing',
+
         ],
         extras: [
-          'Free .com domain 1 year',
-          'Free hosting 1 year',
-          'Source code 100% yours',
-          'Complete technical documentation',
-          'Unlimited training sessions',
-          'Dedicated account manager',
-          'SLA guarantee'
+          'Free initial consultation',
+          'Technical roadmap planning',
+          'Best tech stack recommendation',
+          'Transparent cost & time estimation'
         ],
-        excludes: ['Additional cloud infrastructure costs']
+        excludes: []
       }
     ]
   },
@@ -717,17 +714,29 @@ export const en = {
     button: "Secure Project Slot"
   },
   about: {
-    title: "Agam Latifullah",
-    subtitle: "Revenue System Engineer",
-    quote: "I help service and product businesses still relying on manual booking to transition to automated systems, reducing losses and increasing profit.",
-    whyChooseMe: "What You Get",
-    description1: "My current focus is building <strong>booking apps</strong> for service or product businesses that need reservation systems. Manual processes prone to errors and time-consuming will be transformed into automated systems working 24/7.",
-    description2: "I don't just build apps, I <strong>accompany you from start until the app is ready to use</strong>. Development progress will be shared transparently, so you always know what's being worked on.",
+    title: 'WHO AM I?',
+    subtitle: 'Revenue System Engineer',
+    quote: 'Self-taught developer who believes every line of code must generate profit for your business.',
+    description1: '',
+    description2: '',
+    whyChooseMe: 'WHY WORK WITH ME?',
     values: [
-      { title: "Fast & Guided Process", desc: "Rapid development with guidance until the app is complete and ready to use." },
-      { title: "1 Month Free Maintenance", desc: "If there are issues or bugs after launch, I'll help fix them at no extra cost." },
-      { title: "Responsive & Consultative", desc: "Easy to reach and always ready to discuss your business needs." },
-      { title: "Progress Transparency", desc: "Development progress shared in real-time. You know exactly what's being worked on." }
+      {
+        title: 'Business Mindset',
+        desc: 'I understand coding AND business. My focus is your ROI & efficiency.'
+      },
+      {
+        title: 'Automation Expert',
+        desc: 'Specialist in turning complicated manual processes into automated systems.'
+      },
+      {
+        title: 'Partner, Not Vendor',
+        desc: 'I accompany you from the initial idea until the system generates money.'
+      },
+      {
+        title: 'Transparent',
+        desc: 'Real-time progress updates. You know exactly what I am working on.'
+      }
     ]
   },
   faq: {
@@ -791,6 +800,36 @@ export const en = {
   whatsappMessages: {
     consultation: "Hi Agam, I would like a free consultation regarding website/app development for my business.",
     general: "Hi Agam, I'm interested in your services and would like to discuss a potential project."
+  },
+  testimonials: {
+    title: "What Clients Say",
+    subtitle: "Testimonials from businesses that have used my services",
+    list: [
+      {
+        id: 't1',
+        name: 'Mr. Budi Santoso',
+        role: 'Owner',
+        company: 'Sejahtera Building Supply',
+        quote: "I was skeptical about using a personal programmer, but Agam was different. System is neat, trained me until I could use it, and fixed bugs immediately. My cement stock never has discrepancies anymore.",
+        rating: 5
+      },
+      {
+        id: 't2',
+        name: 'Dr. Amanda',
+        role: 'Owner',
+        company: 'Amanda Dental Care',
+        quote: "The booking system made is very helpful. Patients don't have to wait long, and my admin doesn't have to stress managing schedules via WhatsApp anymore. Highly recommended!",
+        rating: 5
+      },
+      {
+        id: 't3',
+        name: 'Rian Pratama',
+        role: 'Marketing Manager',
+        company: 'Logistik Express',
+        quote: "Ordered a Landing Page from agamlatiff and the result was satisfying. Premium design, fast loading. Our ad conversion increased drastically because the website looks professional.",
+        rating: 5
+      }
+    ]
   },
   contact: {
     title: "Let's Connect",
