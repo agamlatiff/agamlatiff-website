@@ -84,19 +84,28 @@ const WhyBooking: React.FC = () => {
   const PainCard = ({ point, idx }: { point: typeof painPoints[0]; idx: number }) => {
     const Icon = point.icon;
     return (
-      <div className="group flex items-start gap-4 p-5 rounded-3xl bg-[#111] border border-red-500/20 hover:border-red-500/40 hover:bg-[#161111] transition-all duration-300">
-        <div className="w-12 h-12 rounded-2xl bg-red-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-          <Icon size={24} className="text-red-500" />
+      <div className="group flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-3xl bg-white dark:bg-[#111] border border-red-200 dark:border-red-500/20 hover:border-red-400 dark:hover:border-red-500/40 hover:bg-red-50 dark:hover:bg-[#161111] transition-all duration-300 shadow-sm dark:shadow-none">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-red-100 dark:bg-red-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <Icon size={20} className="text-red-500 sm:w-6 sm:h-6" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <h4 className="font-bold text-white text-lg">{point.text}</h4>
+            <h4 className="font-bold text-slate-900 dark:text-white text-base sm:text-lg">{point.text}</h4>
           </div>
-          <p className="text-sm text-slate-400 leading-relaxed">{point.desc}</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{point.desc}</p>
+
+          {/* Mobile Stat */}
+          <div className="mt-3 flex sm:hidden items-center gap-2">
+            <span className="text-[10px] font-bold text-red-500 uppercase tracking-wider">LOSS</span>
+            <span className="px-2 py-0.5 text-[10px] font-bold text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-500/10 rounded-md border border-red-200 dark:border-red-500/20">
+              {point.stat}
+            </span>
+          </div>
         </div>
-        <div className="inline-flex flex-col items-end justify-center min-w-[80px]">
+        {/* Desktop Stat */}
+        <div className="hidden sm:inline-flex flex-col items-end justify-center min-w-[80px]">
           <span className="text-xs font-bold text-red-400 uppercase tracking-wider mb-1">Loss</span>
-          <span className="inline-block px-2.5 py-1 text-xs font-bold text-red-400 bg-red-500/10 rounded-lg border border-red-500/20">
+          <span className="inline-block px-2.5 py-1 text-xs font-bold text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-500/10 rounded-lg border border-red-200 dark:border-red-500/20">
             {point.stat}
           </span>
         </div>
@@ -106,17 +115,26 @@ const WhyBooking: React.FC = () => {
 
   const SolutionCard = ({ sol, idx }: { sol: typeof solutions[0]; idx: number }) => {
     return (
-      <div className="group flex items-start gap-4 p-5 rounded-3xl bg-[#111] border border-blue-500/20 hover:border-blue-500/40 hover:bg-[#111611] transition-all duration-300">
-        <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-          <CheckCircle2 size={24} className="text-blue-500" />
+      <div className="group flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-3xl bg-white dark:bg-[#111] border border-blue-200 dark:border-blue-500/20 hover:border-blue-400 dark:hover:border-blue-500/40 hover:bg-blue-50 dark:hover:bg-[#111611] transition-all duration-300 shadow-sm dark:shadow-none">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-blue-100 dark:bg-blue-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <CheckCircle2 size={20} className="text-blue-500 sm:w-6 sm:h-6" />
         </div>
         <div className="flex-1 min-w-0">
-          <h4 className="font-bold text-white text-lg mb-1">{sol.text}</h4>
-          <p className="text-sm text-slate-400 leading-relaxed">{sol.desc}</p>
+          <h4 className="font-bold text-slate-900 dark:text-white text-base sm:text-lg mb-1">{sol.text}</h4>
+          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{sol.desc}</p>
+
+          {/* Mobile Stat */}
+          <div className="mt-3 flex sm:hidden items-center gap-2">
+            <span className="text-[10px] font-bold text-blue-500 uppercase tracking-wider">GAIN</span>
+            <span className="px-2 py-0.5 text-[10px] font-bold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-500/10 rounded-md border border-blue-200 dark:border-blue-500/20">
+              {sol.stat}
+            </span>
+          </div>
         </div>
-        <div className="inline-flex flex-col items-end justify-center min-w-[80px]">
+        {/* Desktop Stat */}
+        <div className="hidden sm:inline-flex flex-col items-end justify-center min-w-[80px]">
           <span className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Gain</span>
-          <span className="inline-block px-2.5 py-1 text-xs font-bold text-blue-400 bg-blue-500/10 rounded-lg border border-blue-500/20 shadow-[0_0_10px_rgba(59,130,246,0.2)] animate-pulse">
+          <span className="inline-block px-2.5 py-1 text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-500/10 rounded-lg border border-blue-200 dark:border-blue-500/20 shadow-[0_0_10px_rgba(59,130,246,0.2)] animate-pulse">
             {sol.stat}
           </span>
         </div>

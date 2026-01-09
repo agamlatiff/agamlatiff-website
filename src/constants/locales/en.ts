@@ -2,14 +2,14 @@ export const en = {
   hero: {
     badge: "Online Booking System Specialist",
     headline: {
-      part1: "Customers Book Themselves,",
-      part2: "Your Business Keeps Running"
+      part1: "Increase your business",
+      part2: "revenue with our online booking system"
     },
     subheadline: "A booking app designed specifically to help business owners <strong>receive reservations automatically</strong> — without needing to be available 24/7 to reply to messages. Customers can choose their schedule, pay a deposit, and get <strong>confirmation in seconds</strong>.",
     cta: {
-      consult: "Hire Me",
+      consult: "Consultation For Free",
       processing: "Processing...",
-      roi: "See Booking Demo"
+      roi: "Hired Me"
     }
   },
   nav: {
@@ -47,7 +47,7 @@ export const en = {
         subtitle: 'Curating the best work for you'
       },
       learnMore: 'Explore Case Study',
-      featured: 'Best Seller',
+
       watchDemo: 'Watch Demo',
       viewDetail: 'View Detail'
     },
@@ -116,61 +116,7 @@ export const en = {
       industry: 'Recruitment & HR Tech',
       date: 'Full-Stack Developer'
     },
-    '6': {
-      title: 'Automatic Booking System - Anti No-Show',
-      shortDescription: 'Full-automatic reservation system with upfront DP payment & WhatsApp notifications. Powerful solution to prevent losses from last-minute cancellations.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        Classic problem for service businesses (Clinics, Salons, Studios, Courts) is <strong>"Promise to come, but disappear"</strong>. This system locks customer commitment with Automatic Down Payment and WhatsApp Reminders without needing admin standby 24/7.
-      </p>
 
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Solution:</h4>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Smart Booking Engine:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Real-time slot check</li>
-              <li>Select service & favorite staff</li>
-              <li>Self-reschedule (Rules apply)</li>
-            </ul>
-          </div>
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Automated Operation:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Auto-DP via Midtrans (QRIS/VA)</li>
-              <li>WhatsApp Reminder H-1 & H-1 Hour</li>
-              <li>Automated Daily Revenue Report</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">ROI for Owner:</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Zero No-Show:</strong> DP forfeited if cancelled last minute, revenue secured.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>HR Efficiency:</strong> No need for dedicated admin just to reply "is this slot open?". System works 24/7.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Clean Database:</strong> Customer data safely stored for future CRM promotions.</span>
-          </li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-         "Invest once, profit repeatedly. This system is an asset that works while you sleep."
-      </p>
-      `,
-      industry: 'Service Business (B2B)',
-      date: 'Automation System'
-    },
     '5': {
       title: 'Fly Higher - Flight Booking Platform',
       shortDescription: 'A complete flight reservation system that allows travelers to search, select seats, book flights, and manage e-tickets with QR codes.',

@@ -2,8 +2,8 @@ export const id = {
   hero: {
     badge: "Spesialis Sistem Booking Online",
     headline: {
-      part1: "Pelanggan Booking Sendiri,",
-      part2: "Bisnis Tetap Berjalan"
+      part1: "Naikkin Omset Bisnis",
+      part2: "Dengan Sistem Booking"
     },
     subheadline: "Booking app yang dirancang khusus untuk membantu pemilik bisnis <strong>menerima reservasi secara otomatis</strong> — tanpa perlu standby 24 jam membalas chat. Pelanggan bisa memilih jadwal, membayar DP, dan mendapat <strong>konfirmasi dalam hitungan detik</strong>.",
     cta: {
@@ -47,7 +47,6 @@ export const id = {
         subtitle: 'Menyiapkan solusi terbaik untuk Anda'
       },
       learnMore: 'Pelajari Case Study',
-      featured: 'Best Seller',
       watchDemo: 'Lihat Video Demo',
       viewDetail: 'Detail Project'
     },
@@ -116,61 +115,7 @@ export const id = {
       industry: 'Recruitment & HR Tech',
       date: 'Full-Stack Developer'
     },
-    '6': {
-      title: 'Sistem Booking Otomatis - Anti No-Show',
-      shortDescription: 'Sistem reservasi full-otomatis dengan pembayaran DP di awal & notifikasi WhatsApp. Solusi ampuh cegah kerugian akibat pembatalan sepihak.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        Masalah klasik bisnis jasa (Klinik, Salon, Studio, Lapangan Olahraga) adalah <strong>"Janji Datang, Tapi Hilang"</strong>. Sistem ini dibuat untuk mengunci komitmen pelanggan dengan DP Otomatis dan Pengingat WhatsApp tanpa perlu admin standby 24 jam.
-      </p>
 
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Solusi Bisnis:</h4>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Smart Booking Engine:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Cek slot kosong real-time</li>
-              <li>Pilih layanan & staf favorit</li>
-              <li>Reschedule mandiri (S&K berlaku)</li>
-            </ul>
-          </div>
-          <div>
-            <strong className="block mb-1 text-slate-700 dark:text-slate-300">Automated Operation:</strong>
-            <ul className="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-              <li>Auto-DP via Midtrans (QRIS/VA)</li>
-              <li>WhatsApp Reminder H-1 & H-1 Jam</li>
-              <li>Laporan Omzet Harian Otomatis</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">ROI untuk Owner:</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Zero No-Show:</strong> DP hangus jika batal mendadak, omzet tetap aman.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Efisiensi SDM:</strong> Tidak perlu admin khusus balas chat "kak jam ini kosong gak?". Sistem bekerja 24/7.</span>
-          </li>
-          <li class="flex gap-3">
-             <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span>
-             <span><strong>Database Rapi:</strong> Data pelanggan tersimpan aman untuk promosi (CRM) di kemudian hari.</span>
-          </li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-         "Investasi sekali, profit berkali-kali. Sistem ini adalah aset yang bekerja saat Anda tidur."
-      </p>
-      `,
-      industry: 'Service Business (B2B)',
-      date: 'Automation System'
-    },
     '5': {
       title: 'Fly Higher - Platform Booking Penerbangan',
       shortDescription: 'Sistem reservasi penerbangan lengkap yang memungkinkan traveler mencari, memilih kursi, memesan tiket, dan mengelola e-tiket dengan QR code.',

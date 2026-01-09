@@ -57,7 +57,7 @@ const BookingShowcase: React.FC = () => {
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
                   <a
-                    href="https://booking-demo.vercel.app"
+                    href="https://fly-higher.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-xl shadow-primary/20"

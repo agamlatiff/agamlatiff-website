@@ -10,7 +10,6 @@ const PROJECT_IMAGES: Record<string, string> = {
   '3': '/alizonstore/1.webp',
   '4': '/sukabaca/1.webp',
   '5': '/flyhigher/1.webp',
-  '6': '/flyhigher/1.webp', // Booking system uses flyhigher as demo
   '7': '/hiredio/1.webp',
 };
 
@@ -20,7 +19,6 @@ const PROJECT_SLUGS: Record<string, string> = {
   '3': 'alizon-store',
   '4': 'suka-baca',
   '5': 'fly-higher',
-  '6': 'booking-system',
   '7': 'hired-io',
 };
 
@@ -99,7 +97,7 @@ const Projects: React.FC = () => {
                     }}
                   />
                   {/* Featured Badge */}
-                  {key === '6' && (
+                  {key === '5' && (
                     <span className="absolute top-4 left-4 px-3 py-1 bg-primary text-white text-xs font-bold rounded-full shadow-lg">
                       {t('projects.section.featured')}
                     </span>
