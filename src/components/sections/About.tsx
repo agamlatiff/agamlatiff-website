@@ -52,7 +52,11 @@ const About: React.FC = () => {
             <div className="relative rounded-[2.5rem] overflow-hidden border border-slate-800 shadow-2xl aspect-[4/5] group">
               <img
                 src="/agam-photo.jpg"
-                alt="Agam Latifullah"
+                alt="Agam Latifullah - Full-Stack Developer specializing in booking systems and business automation"
+                width={400}
+                height={500}
+                loading="eager"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />

@@ -34,6 +34,10 @@ const TechStack: React.FC = () => {
               <img
                 src={tech.logo}
                 alt={tech.name}
+                width={56}
+                height={56}
+                loading="lazy"
+                decoding="async"
                 className={`h-12 w-12 sm:h-14 sm:w-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 ${tech.darkCoords ? 'dark:invert' : ''}`}
               />
               <span className="text-sm sm:text-base font-bold text-slate-500 dark:text-slate-400">
@@ -49,6 +53,10 @@ const TechStack: React.FC = () => {
               <img
                 src={tech.logo}
                 alt={tech.name}
+                width={56}
+                height={56}
+                loading="lazy"
+                decoding="async"
                 className={`h-12 w-12 sm:h-14 sm:w-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 ${tech.darkCoords ? 'dark:invert' : ''}`}
               />
               <span className="text-sm sm:text-base font-bold text-slate-500 dark:text-slate-400">

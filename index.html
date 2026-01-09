@@ -3,160 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agam Latifullah</title>
+    <title>
+      Agam Latifullah - Full-Stack Developer & Booking System Specialist
+    </title>
     <meta
       name="description"
       content="Agam Latifullah - Developer Solusi Bisnis UMKM. Spesialis Sistem Kasir (POS), Inventory, dan Website yang merapikan operasional bisnis Anda. Simpel, Cepat, Tanpa Biaya Bulanan."
     />
 
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://agamlatiff.com/" />
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="author" content="Agam Latifullah" />
+    <meta
+      name="keywords"
+      content="developer, booking system, web developer, full-stack, UMKM, bisnis, website, aplikasi"
+    />
+
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://agamlatiff.com/" />
-    <meta property="og:title" content="Agam Latifullah" />
+    <meta
+      property="og:title"
+      content="Agam Latifullah - Full-Stack Developer"
+    />
     <meta
       property="og:description"
       content="Agam Latifullah - Developer Solusi Bisnis UMKM. Spesialis Sistem Kasir (POS), Inventory, dan Website yang merapikan operasional bisnis Anda. Simpel, Cepat, Tanpa Biaya Bulanan."
     />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content="https://agamlatiff.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Agam Latifullah" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://agamlatiff.com/" />
-    <meta property="twitter:title" content="Agam Latifullah" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://agamlatiff.com/" />
     <meta
-      property="twitter:description"
+      name="twitter:title"
+      content="Agam Latifullah - Full-Stack Developer"
+    />
+    <meta
+      name="twitter:description"
       content="Agam Latifullah - Developer Solusi Bisnis UMKM. Spesialis Sistem Kasir (POS), Inventory, dan Website yang merapikan operasional bisnis Anda. Simpel, Cepat, Tanpa Biaya Bulanan."
     />
+    <meta name="twitter:image" content="https://agamlatiff.com/og-image.png" />
 
-    <!-- Fonts -->
+    <!-- Fonts - Optimized loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Red+Hat+Display:wght@400;500;700;900&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Red+Hat+Display:wght@400;500;700;900&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Red+Hat+Display:wght@400;500;700;900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#6366f1" /* Indigo 500 */,
-              "primary-hover": "#4f46e5" /* Indigo 600 */,
-              accent: "#8b5cf6" /* Violet 500 */,
-              dark: "#0f172a",
-              light: "#f8fafc",
-              success: "#10b981",
-              error: "#ef4444",
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-              display: ['"Red Hat Display"', "sans-serif"],
-            },
-            animation: {
-              "fade-in-down": "fadeInDown 0.5s ease-out",
-              "scale-up": "scaleUp 0.3s ease-out forwards",
-              marquee: "marquee 40s linear infinite",
-              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-              shimmer: "shimmer 2s linear infinite",
-            },
-            keyframes: {
-              fadeInDown: {
-                "0%": { opacity: "0", transform: "translateY(-10px)" },
-                "100%": { opacity: "1", transform: "translateY(0)" },
-              },
-              scaleUp: {
-                "0%": { opacity: "0", transform: "scale(0.95)" },
-                "100%": { opacity: "1", transform: "scale(1)" },
-              },
-              marquee: {
-                "0%": { transform: "translateX(0)" },
-                "100%": { transform: "translateX(-50%)" },
-              },
-              shimmer: {
-                "0%": { backgroundPosition: "-200% 0" },
-                "100%": { backgroundPosition: "200% 0" },
-              },
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      /* Custom scrollbar for webkit */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-      .dark ::-webkit-scrollbar-track {
-        background: #0f172a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 4px;
-      }
-      .dark ::-webkit-scrollbar-thumb {
-        background: #4338ca; /* Indigo-800ish for thumb */
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-      }
-      .dark ::-webkit-scrollbar-thumb:hover {
-        background: #6366f1;
-      }
-
-      /* Smooth theme transition */
-      .theme-transition,
-      .theme-transition *,
-      .theme-transition *::before,
-      .theme-transition *::after {
-        transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
-      }
-
-      /* Exclude animations from theme transition */
-      .theme-transition [class*="animate-"],
-      .theme-transition .marquee {
-        transition: background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-          color 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
-      }
-
-      /* Utility for pausing marquee on hover */
-      .hover-pause:hover .animate-marquee {
-        animation-play-state: paused;
-      }
-
-      /* Hide scrollbar for tabs */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-
-      /* Smooth gradient mask */
-      .mask-linear-gradient {
-        mask-image: linear-gradient(
-          to right,
-          transparent,
-          black 10%,
-          black 90%,
-          transparent
-        );
-        -webkit-mask-image: linear-gradient(
-          to right,
-          transparent,
-          black 10%,
-          black 90%,
-          transparent
-        );
-      }
-    </style>
+    <!-- Import map for dependencies -->
     <script type="importmap">
       {
         "imports": {
@@ -171,11 +88,20 @@
         }
       }
     </script>
-    <link rel="stylesheet" href="/index.css" />
+
+    <!-- CSS - will be processed by Vite -->
   </head>
   <body
     class="bg-gray-50 dark:bg-slate-950 text-slate-800 dark:text-slate-50 antialiased transition-colors duration-300"
   >
+    <!-- Skip to main content for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg"
+    >
+      Skip to main content
+    </a>
+
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

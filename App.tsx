@@ -31,7 +31,7 @@ const App: React.FC = () => {
           <CustomCursor />
           <div className="min-h-screen bg-gray-50 dark:bg-slate-950 font-sans selection:bg-primary/20 selection:text-primary-hover transition-colors duration-300 flex flex-col">
             <Navbar />
-            <main className="flex-grow">
+            <main id="main-content" className="flex-grow">
               <PageTransition>
                 <React.Suspense fallback={
                   <div className="flex items-center justify-center min-h-[50vh]">

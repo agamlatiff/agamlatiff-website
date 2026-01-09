@@ -62,8 +62,8 @@ const Navbar: React.FC = () => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isOpen
-            ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800 py-4 shadow-sm'
-            : 'bg-transparent py-6'
+          ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800 py-4 shadow-sm'
+          : 'bg-transparent py-6'
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,9 +101,10 @@ const Navbar: React.FC = () => {
               <button
                 onClick={() => setLanguage(language === 'id' ? 'en' : 'id')}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-slate-800 text-sm font-medium hover:bg-gray-50 dark:hover:bg-slate-900 transition-colors"
+                aria-label={`Switch language to ${language === 'id' ? 'English' : 'Indonesian'}`}
               >
                 <span className={language === 'id' ? 'text-primary font-bold' : 'text-slate-400'}>ID</span>
-                <span className="text-slate-300">|</span>
+                <span className="text-slate-300" aria-hidden="true">|</span>
                 <span className={language === 'en' ? 'text-primary font-bold' : 'text-slate-400'}>EN</span>
               </button>
 
@@ -150,12 +151,14 @@ const Navbar: React.FC = () => {
             <div className="flex bg-gray-100 dark:bg-slate-900 p-1 rounded-lg">
               <button
                 onClick={() => setLanguage('id')}
+                aria-label="Switch to Indonesian"
                 className={`px-4 py-2 rounded-md text-sm font-bold transition-all ${language === 'id' ? 'bg-white dark:bg-slate-800 shadow-sm text-primary' : 'text-slate-400'}`}
               >
                 ID
               </button>
               <button
                 onClick={() => setLanguage('en')}
+                aria-label="Switch to English"
                 className={`px-4 py-2 rounded-md text-sm font-bold transition-all ${language === 'en' ? 'bg-white dark:bg-slate-800 shadow-sm text-primary' : 'text-slate-400'}`}
               >
                 EN

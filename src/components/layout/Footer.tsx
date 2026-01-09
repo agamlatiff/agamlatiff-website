@@ -72,9 +72,10 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Follow on ${social.label}`}
                   className="w-12 h-12 rounded-2xl bg-[#111] border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
                 >
-                  <social.icon size={20} />
+                  <social.icon size={20} aria-hidden="true" />
                 </a>
               ))}
             </div>

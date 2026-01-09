@@ -90,18 +90,16 @@ const Projects: React.FC = () => {
                 <div className="relative aspect-video bg-slate-200 dark:bg-slate-700 overflow-hidden">
                   <img
                     src={PROJECT_IMAGES[key] || '/projects/placeholder.png'}
-                    alt={project.title}
+                    alt={`${project.title} - ${project.industry} project screenshot`}
+                    width={450}
+                    height={253}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://via.placeholder.com/600x400?text=Project';
                     }}
                   />
-                  {/* Featured Badge */}
-                  {key === '5' && (
-                    <span className="absolute top-4 left-4 px-3 py-1 bg-primary text-white text-xs font-bold rounded-full shadow-lg">
-                      {t('projects.section.featured')}
-                    </span>
-                  )}
                 </div>
 
                 {/* Project Content */}

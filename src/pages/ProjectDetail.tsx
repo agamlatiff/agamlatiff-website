@@ -56,18 +56,20 @@ const Lightbox: React.FC<{
         {/* Close button */}
         <button
           onClick={onClose}
+          aria-label="Close lightbox"
           className="absolute top-4 right-4 z-50 p-3 rounded-full bg-black/50 hover:bg-white/20 text-white transition-all backdrop-blur-sm"
         >
-          <X size={24} />
+          <X size={24} aria-hidden="true" />
         </button>
 
         {/* Main Image */}
         <div className="flex-1 flex items-center justify-center p-4 md:p-8" onClick={(e) => e.stopPropagation()}>
           <button
             onClick={(e) => { e.stopPropagation(); onPrev(); }}
+            aria-label="Previous image"
             className="absolute left-4 md:left-8 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-20"
           >
-            <ChevronLeft size={32} />
+            <ChevronLeft size={32} aria-hidden="true" />
           </button>
 
           <motion.img
@@ -83,9 +85,10 @@ const Lightbox: React.FC<{
 
           <button
             onClick={(e) => { e.stopPropagation(); onNext(); }}
+            aria-label="Next image"
             className="absolute right-4 md:right-8 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-20"
           >
-            <ChevronRight size={32} />
+            <ChevronRight size={32} aria-hidden="true" />
           </button>
         </div>
 
@@ -101,7 +104,7 @@ const Lightbox: React.FC<{
                   : 'border-transparent opacity-50 hover:opacity-100'
                   }`}
               >
-                <img src={img} alt="" className="w-full h-full object-cover" />
+                <img src={img} alt="" width={80} height={48} loading="lazy" className="w-full h-full object-cover" />
               </button>
             ))}
           </div>
@@ -163,6 +166,9 @@ const RelatedProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           alt={project.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
+          width={400}
+          height={225}
+          decoding="async"
         />
       </div>
       <div className="p-4">
@@ -349,7 +355,11 @@ const ProjectDetail: React.FC = () => {
                 <img
                   key={allImages[currentImageIndex]}
                   src={allImages[currentImageIndex]}
-                  alt={title}
+                  alt={`${title} - Screenshot ${currentImageIndex + 1} of ${allImages.length}`}
+                  width={1200}
+                  height={675}
+                  loading={currentImageIndex === 0 ? "eager" : "lazy"}
+                  decoding="async"
                   className="w-full h-auto aspect-video object-cover transition-opacity duration-300"
                 />
 
@@ -408,7 +418,7 @@ const ProjectDetail: React.FC = () => {
                           : 'border-slate-300 dark:border-slate-700 opacity-60 hover:opacity-100 active:opacity-100'
                           }`}
                       >
-                        <img src={img} alt="" className="w-full h-full object-cover" loading="lazy" />
+                        <img src={img} alt="" width={80} height={56} loading="lazy" className="w-full h-full object-cover" />
                       </button>
                     ))}
                   </div>

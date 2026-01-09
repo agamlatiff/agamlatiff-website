@@ -49,7 +49,11 @@ const BookingShowcase: React.FC = () => {
               <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-violet-500/20 flex items-center justify-center">
                 <img
                   src="/flyhigher/1.webp"
-                  alt="Booking App Demo"
+                  alt="Fly Higher - Flight booking app demo showing seamless reservation interface with search, seat selection, and payment"
+                  width={600}
+                  height={450}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = 'none';
