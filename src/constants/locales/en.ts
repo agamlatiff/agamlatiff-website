@@ -54,65 +54,32 @@ export const en = {
     '7': {
       title: 'Hired.io - Modern Job Portal',
       shortDescription: 'A recruitment platform that connects job seekers with companies, streamlining the entire hiring process from application to onboarding.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>What is Hired.io?</strong><br/>
-        A recruitment platform that bridges talented professionals with innovative companies. It streamlines the entire hiring journey from job discovery to candidate management.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
-        <p class="font-semibold mb-2">For Job Seekers:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Search jobs with filters (category, location, salary)</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Apply with resume, cover letter, and profile</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track application status in real-time</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Save jobs and get alerts for new openings</span></li>
-        </ul>
-        <p class="font-semibold mb-2">For Employers:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Post jobs and manage listings</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Review applications in visual pipeline</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Move candidates through stages (Screening → Interview → Hired)</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>View analytics on job performance</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Slow hiring process → <strong>Now streamlined pipeline with real-time notifications</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Messy application tracking → <strong>Now visual Kanban-style candidate management</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No visibility on hiring metrics → <strong>Now analytics dashboard with conversion data</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Job seekers don't know status → <strong>Now real-time application tracking</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reduce Time-to-Hire</strong> — Streamlined process can cut hiring time by 40%</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Better Candidate Experience</strong> — Professional portal increases quality applicants</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Data-Driven Decisions</strong> — Analytics show what works and what doesn't</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Scale Your Team</strong> — Handle more applicants without more HR staff</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Smart Job Search</strong> — Filter by category, location, salary, job type</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Application Pipeline</strong> — Visual tracking from New to Hired</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Role-Based Dashboard</strong> — Different views for seekers and employers</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Analytics</strong> — Track views, applications, and conversion rates</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Job Alerts</strong> — Get notified for matching opportunities</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Summary:</strong> Hired.io modernizes recruitment by making hiring faster, more organized, and data-driven. Connect the right talent with the right opportunity.
-      </p>
-      `,
+      details: {
+        overview: "A recruitment platform that bridges talented professionals with innovative companies. It streamlines the entire hiring journey from job discovery to candidate management.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Traditional Recruitment Problems",
+        challenges: [
+          { title: "Slow Process", desc: "Manual screening takes weeks, leading to lost top candidates." },
+          { title: "Messy Tracking", desc: "Applications scattered across emails and spreadsheets, making status tracking difficult." },
+          { title: "Data Blindness", desc: "No visibility on recruitment channel effectiveness or team performance." },
+          { title: "Poor Experience", desc: "Applicants often ghosted due to overwhelmed HR staff." }
+        ],
+        solutionTitle: "The Hired.io Solution",
+        solutions: [
+          { title: "Visual Pipeline", desc: "Kanban-style candidate management with drag-and-drop status updates." },
+          { title: "Automated Tracking", desc: "Real-time status updates and notifications for applicants." },
+          { title: "Analytics Dashboard", desc: "Complete data on time-to-hire, sources, and conversion rates." },
+          { title: "Smart Filtering", desc: "Advanced filters to find relevant candidates instantly." }
+        ],
+        featuresTitle: "Key Features",
+        features: [
+          { title: "Smart Job Search", desc: "Search jobs with filters for category, location, salary, and type." },
+          { title: "Application Pipeline", desc: "Visual tracking of application status from 'New' to 'Hired'." },
+          { title: "Role-Based Access", desc: "Dedicated dashboards for Job Seekers (users) and Companies (recruiters)." },
+          { title: "Hiring Analytics", desc: "Recruitment performance metrics for data-driven decisions." },
+          { title: "Job Alerts", desc: "Automatic notifications for new openings matching preferences." }
+        ]
+      },
       industry: 'Recruitment & HR Tech',
       date: 'Full-Stack Developer'
     },
@@ -120,331 +87,160 @@ export const en = {
     '5': {
       title: 'Fly Higher - Flight Booking Platform',
       shortDescription: 'A complete flight reservation system that allows travelers to search, select seats, book flights, and manage e-tickets with QR codes.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>What is Fly Higher?</strong><br/>
-        An end-to-end flight booking platform that revolutionizes how people book travel. From searching flights to scanning boarding passes, everything happens in one seamless experience.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
-        <p class="font-semibold mb-2">For Travelers:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Search flights by destination, date, and passengers</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>View real-time availability and pricing</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Select seats with interactive seat map</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pay securely via Midtrans payment gateway</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Receive e-ticket with QR code for boarding</span></li>
-        </ul>
-        <p class="font-semibold mb-2">For Airline Admin:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manage flight schedules and pricing</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track bookings and revenue</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Configure seat layouts per aircraft</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Complicated booking process → <strong>Now simple 4-step flow</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No visibility of seat availability → <strong>Now interactive seat selection</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Paper tickets get lost → <strong>Now digital e-ticket with QR code</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Payment uncertainty → <strong>Now secure real-time payment confirmation</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Increase Conversions</strong> — Streamlined booking reduces cart abandonment</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Upsell Premium Seats</strong> — Visual seat map encourages upgrades</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reduce Support Costs</strong> — Self-service e-tickets eliminate manual processes</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Secure Transactions</strong> — Midtrans integration ensures payment reliability</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Real-time Flight Search</strong> — Live availability and pricing</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Interactive Seat Selection</strong> — Choose your preferred seat visually</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Secure Payments</strong> — Multi-method payment via Midtrans</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>E-Ticket with QR</strong> — Digital boarding pass on your phone</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Admin Dashboard</strong> — Full control of flights, bookings, and users</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Summary:</strong> Fly Higher transforms flight booking into a seamless digital experience. From search to boarding pass, every step is designed for simplicity and efficiency.
-      </p>
-      `,
+      details: {
+        overview: "An end-to-end flight booking platform that revolutionizes how people book travel. From searching flights to scanning boarding passes, everything happens in one seamless experience.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Legacy Travel System Issues",
+        challenges: [
+          { title: "Complex Booking", desc: "Users face confusing steps just to book a single ticket." },
+          { title: "Mystery Seats", desc: "Cannot choose specific seats, often causing groups to be separated." },
+          { title: "Physical Tickets", desc: "High risk of lost or damaged paper tickets." },
+          { title: "Manual Payment", desc: "Slow manual verification and frequent errors in transactions." }
+        ],
+        solutionTitle: "Fly Higher Innovation",
+        solutions: [
+          { title: "Streamlined Booking", desc: "Simplified 4-step booking flow for maximum conversion." },
+          { title: "Interactive Seat Map", desc: "Visual aircraft layout allowing users to pick favorite seats." },
+          { title: "E-Ticket System", desc: "Secure and practical digital tickets with QR Codes on mobile." },
+          { title: "Instant Payment", desc: "Payment gateway integration for immediate, secure verification." }
+        ],
+        featuresTitle: "Key Features",
+        features: [
+          { title: "Real-time Search", desc: "Live flight availability and pricing updates." },
+          { title: "Visual Seat Selection", desc: "Choose window or aisle seats visually on the plane map." },
+          { title: "Secure Payments", desc: "Support for multiple payment methods via Midtrans." },
+          { title: "QR Boarding Pass", desc: "Easy check-in with digital QR code scanning." },
+          { title: "Admin Flight Mgmt", desc: "Complete dashboard for airlines to manage schedules and pricing." }
+        ]
+      },
       industry: 'Travel & Tourism',
       date: 'Full-Stack Developer'
     },
     '4': {
       title: 'Suka Baca - Library Management System',
       shortDescription: 'A library system that modernizes book lending with digital catalogs, automated fines, and self-service borrowing for members.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>What is Suka Baca?</strong><br/>
-        A comprehensive library management system that transforms how libraries operate. From browsing catalogs to returning books, everything is digitized for efficiency.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
-        <p class="font-semibold mb-2">For Library Members:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Browse book catalog with search and filters</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Request books for borrowing</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track active loans and due dates</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Request extensions if needed</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pay fines online for late returns</span></li>
-        </ul>
-        <p class="font-semibold mb-2">For Library Staff:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manage book inventory and catalog</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Process borrowing requests</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track overdue books and fines automatically</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Paper-based records → <strong>Now digital catalog with auto-fetch metadata</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manual fine calculation → <strong>Now automatic overdue tracking</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Long borrowing queues → <strong>Now self-service online requests</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lost book records → <strong>Now centralized inventory tracking</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reduce Workload</strong> — Automation replaces manual record-keeping</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Accurate Inventory</strong> — Real-time tracking prevents book loss</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Better Member Experience</strong> — Self-service saves time for everyone</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Increase Revenue</strong> — Automated fine collection improves compliance</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Digital Catalog</strong> — Auto-fetch book info via OpenLibrary API</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Smart Borrowing</strong> — Multi-step wizard for loan requests</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Fine Management</strong> — Auto-calculate and track overdue fines</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Admin Dashboard</strong> — Full control via Filament admin panel</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Member Portal</strong> — Self-service for browsing and borrowing</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Summary:</strong> Suka Baca brings libraries into the digital age. Less paperwork, more reading. Automated operations, happy members.
-      </p>
-      `,
+      details: {
+        overview: "A comprehensive library management system that transforms how libraries operate. From browsing catalogs to returning books, everything is digitized for efficiency.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Common Library Pains",
+        challenges: [
+          { title: "Tedious Admin", desc: "Slow, error-prone manual recording of loans in ledger books." },
+          { title: "Missed Fines", desc: "Manual calculation of fines is often inaccurate or forgotten." },
+          { title: "Long Queues", desc: "Borrowing and returning processes cause line pile-ups." },
+          { title: "Chaotic Inventory", desc: "Hard to know real-time book availability or location." }
+        ],
+        solutionTitle: "Suka Baca Transformation",
+        solutions: [
+          { title: "Digital Catalog", desc: "Accessible digital book database for members anywhere." },
+          { title: "Auto Fine System", desc: "Automatic calculation of overdue days and fine amounts." },
+          { title: "Self-Service", desc: "Members can borrow and request renewals via the app." },
+          { title: "Smart Tracking", desc: "Accurate status tracking (Available, Borrowed, Lost, Damaged)." }
+        ],
+        featuresTitle: "Key Features",
+        features: [
+          { title: "Digital Catalog", desc: "Fast book search with OpenLibrary API integration." },
+          { title: "Smart Loan Wizard", desc: "Easy, guided multi-step process for borrowing." },
+          { title: "Fine Management", desc: "Automatic calculation and tracking of overdue fines." },
+          { title: "Admin Panel", desc: "Complete dashboard for librarians to manage books and members." },
+          { title: "Member Portal", desc: "Dedicated area for loan history and wishlists." }
+        ]
+      },
       industry: 'Education & Library',
       date: 'Full-Stack Developer'
     },
     '1': {
       title: 'UpSkills - E-Learning Platform',
       shortDescription: 'An online learning platform that helps people develop new skills through structured courses, progress tracking, and subscription-based access.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>What is UpSkills?</strong><br/>
-        An e-learning platform that helps people develop new skills through structured online courses. With subscription-based access, users can learn at their own pace while mentors can share their expertise.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
-        <p class="font-semibold mb-2">For Learners:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Browse and discover courses by category</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Subscribe to unlock premium content</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Learn with video, text, and interactive content</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track progress and complete courses</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Get AI-powered assistance for questions</span></li>
-        </ul>
-        <p class="font-semibold mb-2">For Mentors & Businesses:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Create and publish courses easily</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Upload materials (video, PDF, text)</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Monitor student progress and engagement</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Earn from subscriptions</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Traditional learning is expensive → <strong>Now affordable subscription access</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Fixed schedules limit learning → <strong>Now learn anytime, anywhere</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Hard to track progress → <strong>Now automatic progress tracking</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No way to monetize expertise → <strong>Now earn from your knowledge</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Stuck without help → <strong>Now AI chatbot answers questions</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Recurring Revenue</strong> — Subscription model creates predictable income</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Scale Without Limits</strong> — Reach unlimited students with same content</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Easy Content Management</strong> — Dashboard to manage courses and students</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Engaged Users</strong> — Progress tracking keeps students motivated</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>AI Support</strong> — Chatbot reduces support burden</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Course Catalog</strong> — Browse and search courses by category</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Subscription Plans</strong> — Multiple pricing tiers for different needs</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Progress Tracking</strong> — See completion status for every course</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Mentor Dashboard</strong> — Create and manage course content</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>AI Chatbot</strong> — Get help understanding course material</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Summary:</strong> UpSkills democratizes education by making quality learning accessible to everyone. Build your knowledge empire with a platform that scales with your audience.
-      </p>
-      `,
+      details: {
+        overview: "An e-learning platform that helps people develop new skills through structured online courses. With subscription-based access, users can learn at their own pace while mentors can share their expertise.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Traditional Learning Barriers",
+        challenges: [
+          { title: "High Costs", desc: "Offline courses or formal education are often unaffordable." },
+          { title: "Rigid Schedules", desc: "Must attend at specific times, making it hard for working professionals." },
+          { title: "Low Motivation", desc: "Learning alone without progress tracking often leads to boredom." },
+          { title: "Limited Content", desc: "Access to quality material is often geographically restricted." }
+        ],
+        solutionTitle: "UpSkills Ecosystem",
+        solutions: [
+          { title: "Subscription Model", desc: "Access hundreds of courses for one affordable monthly price." },
+          { title: "Flexible Learning", desc: "Learn anytime, anywhere, on-demand." },
+          { title: "Gamification", desc: "Progress tracking, certificates, and features to maintain motivation." },
+          { title: "Creator Economy", desc: "Platform for experts to monetize their knowledge effectively." }
+        ],
+        featuresTitle: "Key Features",
+        features: [
+          { title: "Course Catalog", desc: "Browse and discover courses across various categories." },
+          { title: "Subscription Plans", desc: "Multiple pricing tiers (Monthly/Yearly) for different needs." },
+          { title: "Progress Tracking", desc: "Automatically track completion status for every course." },
+          { title: "Mentor Dashboard", desc: "Complete tools to upload materials and manage students." },
+          { title: "AI Chatbot", desc: "Virtual assistant to answer questions about course material." }
+        ]
+      },
       industry: 'Education & EdTech',
       date: 'Full-Stack Developer'
     },
     '2': {
       title: 'Saturday - Warehouse Management System',
       shortDescription: 'A centralized warehouse system that helps distributors track inventory, manage multi-location stock, and prevent stock discrepancies.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>What is Saturday WMS?</strong><br/>
-        A warehouse management system that helps distributors and retailers track inventory across multiple locations, manage stock movements, and prevent shrinkage — all from one dashboard.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
-        <p class="font-semibold mb-2">For Warehouse Staff:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Scan products using barcode/smartphone</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Record inbound/outbound stock movements</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Perform digital stock opname</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Request inter-branch transfers</span></li>
-        </ul>
-        <p class="font-semibold mb-2">For Business Owners:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Monitor stock across all warehouses in real-time</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Approve transfer requests digitally</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Track revenue and sales from one dashboard</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Stock discrepancies (shrinkage) → <strong>Now every movement is tracked digitally</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lost items in warehouse → <strong>Now barcode scanning for accuracy</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manual stock counting → <strong>Now digital opname with auto-calculation</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Out-of-stock situations → <strong>Now low-stock alerts before it happens</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No visibility across branches → <strong>Now see all locations in one view</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reduce Stock Loss</strong> — Every item is tracked, minimizing shrinkage</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Real-time Visibility</strong> — See stock levels across all locations instantly</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Faster Operations</strong> — Digital processes replace manual paperwork</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Prevent Lost Sales</strong> — Auto alerts for low stock on fast-moving items</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Automatic Tax Calculation</strong> — 12% PPN included in all transactions</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Multi-Warehouse</strong> — Manage multiple locations from one system</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Barcode Scanning</strong> — Fast and accurate stock recording</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Digital Stock Opname</strong> — Auto-calculate discrepancies</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Transfer System</strong> — Digital approval for inter-branch moves</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Role-Based Access</strong> — Manager and Keeper roles with permissions</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Summary:</strong> Saturday WMS turns chaotic warehouse operations into organized, traceable processes. Know exactly what you have, where it is, and when to reorder.
-      </p>
-      `,
+      details: {
+        overview: "A warehouse management system that helps distributors and retailers track inventory across multiple locations, manage stock movements, and prevent shrinkage — all from one dashboard.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Warehouse Challenges",
+        challenges: [
+          { title: "Stock Shrinkage", desc: "Stock often missing or mismatched due to slow manual recording." },
+          { title: "Lost Items", desc: "Hard to track item positions in large warehouses without a location system." },
+          { title: "Slow Stock Opname", desc: "Counting stock takes days and is prone to human error." },
+          { title: "Sudden Stockouts", desc: "No early warning when best-selling items are running low." }
+        ],
+        solutionTitle: "Saturday WMS Solutions",
+        solutions: [
+          { title: "Digital Recording", desc: "Real-time recording of every item movement minimizes discrepancies." },
+          { title: "Barcode System", desc: "Scan items for 100% accuracy and precise location tracking." },
+          { title: "Smart Opname", desc: "Fast digital stock opname with auto-calculation features." },
+          { title: "Auto Alert", desc: "Automatic notifications when stock reaches minimum levels." }
+        ],
+        featuresTitle: "Key Features",
+        features: [
+          { title: "Multi-Warehouse", desc: "Manage stock across multiple branches/locations from a central dashboard." },
+          { title: "Barcode Scanning", desc: "Support barcode scanning for inbound, outbound, and opname." },
+          { title: "Stack Transfer", desc: "Item mutation between branches with an approval system." },
+          { title: "Real-time Reports", desc: "Analytics on stock movement, asset valuation, and product performance." },
+          { title: "Role-Based Access", desc: "Different access levels for Managers, Warehouse Admins, and Staff." }
+        ]
+      },
       industry: 'Logistics & Supply Chain',
       date: 'Full-Stack Developer'
     },
     '3': {
       title: 'Alizon Store - Full-Stack E-Commerce',
       shortDescription: 'An online store platform that allows businesses to sell products on the internet, accept payments, and manage orders from one place.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>What is Alizon Store?</strong><br/>
-        An online store platform that allows businesses to sell products on the internet, accept payments, and manage orders from one place.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">How It Works</h4>
-        <p class="font-semibold mb-2">For Customers:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Visit your online store anytime</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Browse products by category and brand</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Add items to shopping cart</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pay securely with credit/debit card</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Receive order confirmation & track orders</span></li>
-        </ul>
-        <p class="font-semibold mb-2">For Business Owners:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Add and update products easily</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Organize products into categories and brands</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Receive, process orders & track all sales from one dashboard</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Problems This Solves</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Limited to local customers → <strong>Now sell to anyone, anywhere</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Store closes at night → <strong>Now open 24 hours, every day</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Manual order tracking → <strong>Now automatic order management</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Cash payments only → <strong>Now accept cards online</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>No customer data → <strong>Now have customer database for marketing</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Business Benefits</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Sell 24/7</strong> — Your store never closes, customers can buy anytime</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Reach more customers</strong> — Sell beyond your local area</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Save money</strong> — No physical store rent or extra staff needed</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Secure payments</strong> — Customers trust safe online transactions</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Track everything</strong> — Orders, customers, products all in one place</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Key Features</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Product Catalog</strong> — Show all your products beautifully</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Shopping Cart & Wishlist</strong> — Customers collect items before buying</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Online Payments</strong> — Accept cards safely via Stripe</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Order Management</strong> — See all orders and status</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Admin Dashboard</strong> — Manage everything from one screen</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Summary:</strong> Alizon Store turns your business into a 24/7 selling machine. No limits on when or where you can sell. All operations in one easy dashboard.
-      </p>
-      `,
+      details: {
+        overview: "An online store platform that allows businesses to sell products on the internet, accept payments, and manage orders from one place. Turning local businesses into global players.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Limitasi Toko Fisik",
+        challenges: [
+          { title: "Limited Reach", desc: "Only able to serve customers in the immediate physical area." },
+          { title: "Operating Hours", desc: "Losing potential sales when the store is closed at night." },
+          { title: "Manual Order", desc: "Recording orders via chat/phone is slow and prone to errors." },
+          { title: "Cash Only", desc: "Limited payment options often cause customers to cancel purchases." }
+        ],
+        solutionTitle: "Alizon Digital Expansion",
+        solutions: [
+          { title: "24/7 Sales", desc: "Store remains open always, accepting orders even while you sleep." },
+          { title: "Global Reach", desc: "Ship products nationwide/globally without geographic limits." },
+          { title: "Automated System", desc: "Orders, stock, and payments managed automatically by the system." },
+          { title: "Secure Payment", desc: "Safely accept credit/debit card payments online." }
+        ],
+        featuresTitle: "Key Features",
+        features: [
+          { title: "Product Catalog", desc: "Beautiful product display with categories and filters." },
+          { title: "Shopping Cart", desc: "Shopping cart and wishlist functions for better user experience." },
+          { title: "Stripe Payment", desc: "Stripe integration for fast and secure card payments." },
+          { title: "Order Management", desc: "Dashboard to process orders and update shipping receipts." },
+          { title: "Admin Insights", desc: "Daily/monthly sales reports to monitor business performance." }
+        ]
+      },
       industry: 'E-Commerce & Retail',
       date: 'Full-Stack Developer'
     }

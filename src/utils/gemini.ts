@@ -1,10 +1,10 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 // Initialize Gemini AI
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 
 if (!API_KEY) {
-  console.warn('⚠️ Gemini API Key not found. Please add VITE_GEMINI_API_KEY to your .env.local file');
+  console.warn('⚠️ Gemini API Key not found. Please add NEXT_PUBLIC_GEMINI_API_KEY to your .env.local file');
 }
 
 const genAI = API_KEY ? new GoogleGenerativeAI(API_KEY) : null;

@@ -7,6 +7,7 @@ import Process from "@/components/sections/Process";
 import FAQ from "@/components/sections/FAQ";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
+import Pricing from "@/components/sections/Pricing";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WhyBooking />
       <BookingShowcase />
       <Projects />
+      <Pricing/>
       <Process />
       <FAQ />
       <About />
