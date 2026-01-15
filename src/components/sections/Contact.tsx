@@ -1,3 +1,4 @@
+"use client";
 
 import React, { useState } from 'react';
 import { Mail, Calendar, Send, Check, Loader2, AlertCircle, Phone } from 'lucide-react';
@@ -152,8 +153,8 @@ const Contact: React.FC = () => {
   const getInputClasses = (fieldId: keyof typeof errors) => {
     const hasError = errors[fieldId] && touched[fieldId];
     const baseClasses = "w-full px-4 py-3 rounded-xl border outline-none transition-all";
-    const defaultClasses = "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-4 focus:ring-primary/10 placeholder:text-slate-400 dark:placeholder:text-slate-500 shadow-sm";
-    const errorClasses = "bg-red-50 dark:bg-red-900/10 border-red-300 dark:border-red-800 text-slate-900 dark:text-white focus:border-red-500 focus:ring-4 focus:ring-red-500/10 placeholder:text-red-300";
+    const defaultClasses = "bg-slate-900 border-slate-700 text-white focus:border-primary focus:ring-4 focus:ring-primary/10 placeholder:text-slate-500 shadow-sm";
+    const errorClasses = "bg-red-900/10 border-red-800 text-white focus:border-red-500 focus:ring-4 focus:ring-red-500/10 placeholder:text-red-300";
 
     return `${baseClasses} ${hasError ? errorClasses : defaultClasses}`;
   };
@@ -167,7 +168,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300 border-t border-slate-200/60 dark:border-slate-800">
+    <section id="contact" className="py-24 bg-slate-950 transition-colors duration-300 border-t border-slate-800">
       <Toast
         message={t('contact.form.toast.success.title')}
         subMessage={t('contact.form.toast.success.message')}
@@ -185,31 +186,31 @@ const Contact: React.FC = () => {
         className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8"
       >
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">{t('contact.title')}</h2>
-          <p className="text-slate-600 dark:text-slate-400">{t('contact.subtitle')}</p>
+          <h2 className="text-3xl font-bold text-white mb-4">{t('contact.title')}</h2>
+          <p className="text-slate-400">{t('contact.subtitle')}</p>
         </div>
 
-        <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-2xl shadow-slate-200/50 dark:shadow-black/50 border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row">
+        <div className="bg-slate-900 rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-slate-800 flex flex-col lg:flex-row">
 
           {/* Info Side */}
-          <div className="hidden lg:flex bg-primary dark:bg-slate-800 p-10 lg:p-12 lg:w-2/5 text-white flex-col justify-between transition-colors duration-300 relative overflow-hidden">
+          <div className="hidden lg:flex bg-slate-800 p-10 lg:p-12 lg:w-2/5 text-white flex-col justify-between transition-colors duration-300 relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
             <div className="relative z-10">
               <h3 className="text-2xl font-bold mb-2">{t('contact.info.title')}</h3>
-              <p className="text-indigo-100 dark:text-slate-400 mb-10 leading-relaxed text-sm">
+              <p className="text-slate-400 mb-10 leading-relaxed text-sm">
                 {t('contact.info.description')}
               </p>
 
               <div className="space-y-8">
                 <div className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-indigo-500/40 dark:bg-slate-700/50 rounded-xl flex items-center justify-center text-white dark:text-primary backdrop-blur-sm group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-slate-700/50 rounded-xl flex items-center justify-center text-primary backdrop-blur-sm group-hover:scale-110 transition-transform">
                     <Mail size={22} />
                   </div>
                   <div>
-                    <div className="text-xs text-indigo-200 dark:text-slate-500 uppercase tracking-wider font-semibold mb-1">{t('contact.info.email')}</div>
-                    <a href="mailto:agam.latiff@gmail.com" className="text-lg font-medium hover:text-indigo-100 dark:hover:text-white transition-colors">agam.latiff@gmail.com</a>
+                    <div className="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-1">{t('contact.info.email')}</div>
+                    <a href="mailto:agam.latiff@gmail.com" className="text-lg font-medium hover:text-white transition-colors">agam.latiff@gmail.com</a>
                   </div>
                 </div>
 
@@ -219,8 +220,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <div className="text-xs text-indigo-200 dark:text-slate-500 uppercase tracking-wider font-semibold mb-1">{t('contact.info.status')}</div>
-                    <div className="inline-flex items-center gap-2 bg-white/20 dark:bg-blue-500/20 px-3 py-1 rounded-full">
-                      <span className="w-2 h-2 bg-blue-400 dark:bg-blue-500 rounded-full animate-pulse"></span>
+                    <div className="inline-flex items-center gap-2 bg-blue-500/20 px-3 py-1 rounded-full">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
                       <span className="text-sm font-medium">{t('contact.info.open')}</span>
                     </div>
                   </div>
@@ -238,7 +239,7 @@ const Contact: React.FC = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-indigo-500/40 dark:bg-slate-700/50 rounded-lg flex items-center justify-center hover:bg-white hover:text-primary dark:hover:bg-primary dark:hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+                    className="w-10 h-10 bg-slate-700/50 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 transform hover:-translate-y-1"
                   >
                     <social.icon size={20} />
                   </a>
@@ -248,12 +249,12 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Form Side */}
-          <div className="p-8 lg:p-12 lg:w-3/5 bg-slate-50/50 dark:bg-slate-900">
+          <div className="p-8 lg:p-12 lg:w-3/5 bg-slate-900">
             <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               {/* Name & Phone Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 transition-colors">{t('contact.form.name.label')}</label>
+                  <label htmlFor="name" className="block text-sm font-bold text-slate-300 mb-2 transition-colors">{t('contact.form.name.label')}</label>
                   <input
                     type="text"
                     id="name"
@@ -270,7 +271,7 @@ const Contact: React.FC = () => {
                   )}
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 transition-colors">{t('contact.form.phone.label')}</label>
+                  <label htmlFor="phone" className="block text-sm font-bold text-slate-300 mb-2 transition-colors">{t('contact.form.phone.label')}</label>
                   <div className="relative">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
                       <Phone size={16} />
@@ -295,7 +296,7 @@ const Contact: React.FC = () => {
 
               {/* Email (Full width) */}
               <div>
-                <label htmlFor="email" className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 transition-colors">{t('contact.form.email.label')}</label>
+                <label htmlFor="email" className="block text-sm font-bold text-slate-300 mb-2 transition-colors">{t('contact.form.email.label')}</label>
                 <input
                   type="email"
                   id="email"
@@ -313,7 +314,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 transition-colors">{t('contact.form.message.label')}</label>
+                <label htmlFor="message" className="block text-sm font-bold text-slate-300 mb-2 transition-colors">{t('contact.form.message.label')}</label>
                 <textarea
                   id="message"
                   rows={4}

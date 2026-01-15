@@ -1,17 +1,23 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+'use client';
+
+import React, { useState, useMemo, useCallback } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 import {
   ArrowLeft,
   ExternalLink,
-  Youtube,
   ChevronLeft,
   ChevronRight,
   X,
   Calendar,
   Briefcase,
   Layers,
-  ArrowUpRight
+  ArrowUpRight,
+  Zap,
+  AlertTriangle,
+  CheckCircle2,
+  Layout
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PROJECTS } from '@/constants/projects';
@@ -28,8 +34,7 @@ const Lightbox: React.FC<{
   onPrev: () => void;
   onSelectIndex: (idx: number) => void;
 }> = ({ images, currentIndex, isOpen, onClose, onNext, onPrev, onSelectIndex }) => {
-  // Keyboard navigation
-  useEffect(() => {
+  React.useEffect(() => {
     if (!isOpen) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -53,7 +58,6 @@ const Lightbox: React.FC<{
         className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex flex-col"
         onClick={onClose}
       >
-        {/* Close button */}
         <button
           onClick={onClose}
           aria-label="Close lightbox"
@@ -62,7 +66,6 @@ const Lightbox: React.FC<{
           <X size={24} aria-hidden="true" />
         </button>
 
-        {/* Main Image */}
         <div className="flex-1 flex items-center justify-center p-4 md:p-8" onClick={(e) => e.stopPropagation()}>
           <button
             onClick={(e) => { e.stopPropagation(); onPrev(); }}
@@ -92,7 +95,6 @@ const Lightbox: React.FC<{
           </button>
         </div>
 
-        {/* Thumbnail strip */}
         <div className="flex-shrink-0 p-4 bg-black/50" onClick={(e) => e.stopPropagation()}>
           <div className="flex gap-2 justify-center overflow-x-auto max-w-4xl mx-auto pb-2">
             {images.map((img, idx) => (
@@ -117,7 +119,7 @@ const Lightbox: React.FC<{
   );
 };
 
-// Tech Stack Badge with color coding
+// Tech Stack Badge
 const TechBadge: React.FC<{ tech: string }> = ({ tech }) => {
   const getColor = (t: string) => {
     const colors: Record<string, string> = {
@@ -152,12 +154,12 @@ const RelatedProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const { translations } = useLanguage();
   const projectTranslations = translations.projects as Record<string, any>;
   const localizedProject = (typeof projectTranslations[project.id] === 'object' && projectTranslations[project.id] !== null)
-    ? projectTranslations[project.id] as Record<string, string>
+    ? projectTranslations[project.id] as Record<string, any>
     : null;
 
   return (
     <Link
-      to={`/projects/${project.slug}`}
+      href={`/projects/${project.slug}`}
       className="group block bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:shadow-lg hover:-translate-y-1"
     >
       <div className="aspect-video overflow-hidden bg-slate-100 dark:bg-slate-800">
@@ -182,36 +184,28 @@ const RelatedProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 };
 
 // Main Page Component
-const ProjectDetail: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const navigate = useNavigate();
+export default function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = React.use(params);
+  const router = useRouter();
   const { translations } = useLanguage();
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
-
-  // Reset loading state when image index changes
-
-
-  // Find project
   const project = useMemo(() => {
     return PROJECTS.find(p => p.slug === slug);
   }, [slug]);
 
-  // Get localized content from translations object
   const localizedProject = useMemo(() => {
     if (!project) return null;
     const projectTranslations = translations.projects as Record<string, any>;
     const content = projectTranslations[project.id];
     if (typeof content === 'object' && content !== null) {
-      return content as Record<string, string>;
+      return content as Record<string, any>;
     }
     return null;
   }, [project, translations]);
 
-
-  // Related projects (same industry, excluding current)
   const relatedProjects = useMemo(() => {
     if (!project) return [];
     return PROJECTS
@@ -219,7 +213,6 @@ const ProjectDetail: React.FC = () => {
       .slice(0, 3);
   }, [project]);
 
-  // Gallery images (hero + gallery)
   const allImages = useMemo(() => {
     if (!project) return [];
     const images = [project.heroImage];
@@ -231,9 +224,6 @@ const ProjectDetail: React.FC = () => {
     return images;
   }, [project]);
 
-
-
-  // Navigation handlers
   const handleNext = useCallback(() => {
     setCurrentImageIndex(prev => (prev + 1) % allImages.length);
   }, [allImages.length]);
@@ -242,65 +232,14 @@ const ProjectDetail: React.FC = () => {
     setCurrentImageIndex(prev => (prev - 1 + allImages.length) % allImages.length);
   }, [allImages.length]);
 
-  // Scroll to top on mount + SEO meta tags
-  useEffect(() => {
-    window.scrollTo(0, 0);
-
-    // Update document title and meta tags for SEO
-    if (project) {
-      const pageTitle = `${localizedProject?.title || project.title} | Agam Portfolio`;
-      const pageDescription = localizedProject?.shortDescription || project.shortDescription;
-
-      document.title = pageTitle;
-
-      // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', pageDescription);
-      }
-
-      // Update Open Graph tags
-      let ogTitle = document.querySelector('meta[property="og:title"]');
-      if (!ogTitle) {
-        ogTitle = document.createElement('meta');
-        ogTitle.setAttribute('property', 'og:title');
-        document.head.appendChild(ogTitle);
-      }
-      ogTitle.setAttribute('content', pageTitle);
-
-      let ogDescription = document.querySelector('meta[property="og:description"]');
-      if (!ogDescription) {
-        ogDescription = document.createElement('meta');
-        ogDescription.setAttribute('property', 'og:description');
-        document.head.appendChild(ogDescription);
-      }
-      ogDescription.setAttribute('content', pageDescription);
-
-      let ogImage = document.querySelector('meta[property="og:image"]');
-      if (!ogImage) {
-        ogImage = document.createElement('meta');
-        ogImage.setAttribute('property', 'og:image');
-        document.head.appendChild(ogImage);
-      }
-      ogImage.setAttribute('content', window.location.origin + project.heroImage);
-    }
-
-    // Cleanup - restore default title when leaving
-    return () => {
-      document.title = 'Agam Latifullah';
-    };
-  }, [slug, project, localizedProject]);
-
-
-  // 404 handling
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-950">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Project Not Found</h1>
-          <p className="text-slate-600 dark:text-slate-400 mb-8">The project you're looking for doesn't exist.</p>
+          <p className="text-slate-600 dark:text-slate-400 mb-8">The project you&apos;re looking for doesn&apos;t exist.</p>
           <Link
-            to="/"
+            href="/"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary-hover transition-colors"
           >
             <ArrowLeft size={18} />
@@ -316,7 +255,6 @@ const ProjectDetail: React.FC = () => {
 
   return (
     <>
-      {/* Lightbox */}
       <Lightbox
         images={allImages}
         currentIndex={currentImageIndex}
@@ -328,10 +266,9 @@ const ProjectDetail: React.FC = () => {
       />
 
       <div className="min-h-screen w-full overflow-x-hidden bg-slate-50 dark:bg-slate-950 pt-16 sm:pt-20 md:pt-24">
-        {/* Back button */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => router.push('/')}
             className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary active:text-primary transition-colors group"
           >
             <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
@@ -339,19 +276,13 @@ const ProjectDetail: React.FC = () => {
           </button>
         </div>
 
-        {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
-
-            {/* Image Gallery */}
             <div className="space-y-4 w-full">
-              {/* Main Image */}
-              {/* Main Image Wrapper - REBUILT STRUCTURE */}
               <div
                 className="hero-image-container relative w-full rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800/50 cursor-pointer shadow-xl border border-slate-200 dark:border-slate-700 select-none pb-0 mb-4"
                 onClick={() => setLightboxOpen(true)}
               >
-                {/* Main Image */}
                 <img
                   key={allImages[currentImageIndex]}
                   src={allImages[currentImageIndex]}
@@ -363,21 +294,18 @@ const ProjectDetail: React.FC = () => {
                   className="w-full h-auto aspect-video object-cover transition-opacity duration-300"
                 />
 
-                {/* Overlay on hover */}
                 <div className="hidden md:flex absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors items-center justify-center">
                   <span className="opacity-0 hover:opacity-100 transition-opacity text-white font-medium bg-black/50 px-4 py-2 rounded-full text-sm">
                     Click to expand
                   </span>
                 </div>
 
-                {/* Mobile Hint */}
                 <div className="flex md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 pointer-events-none">
                   <span className="text-white font-medium bg-black/60 px-3 py-1.5 rounded-full text-xs backdrop-blur-sm">
                     Tap to expand
                   </span>
                 </div>
 
-                {/* Navigation arrows - Always visible on mobile */}
                 {allImages.length > 1 && (
                   <div className="absolute inset-0 flex items-center justify-between p-2 pointer-events-none">
                     <button
@@ -395,7 +323,6 @@ const ProjectDetail: React.FC = () => {
                   </div>
                 )}
 
-                {/* Counter */}
                 {allImages.length > 1 && (
                   <div className="absolute top-3 right-3 pointer-events-none">
                     <span className="text-white text-xs font-medium bg-black/60 px-2.5 py-1 rounded-full backdrop-blur-sm">
@@ -405,7 +332,6 @@ const ProjectDetail: React.FC = () => {
                 )}
               </div>
 
-              {/* Thumbnail Gallery - Scrollable on mobile */}
               {allImages.length > 1 && (
                 <div className="relative">
                   <div className="flex gap-2 overflow-x-auto pb-2 pt-2 scrollbar-hide snap-x touch-pan-x">
@@ -426,14 +352,12 @@ const ProjectDetail: React.FC = () => {
               )}
             </div>
 
-            {/* Project Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="space-y-4 sm:space-y-6"
             >
-              {/* Industry Badge */}
               <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                 <span className="px-3 sm:px-4 py-1 sm:py-1.5 bg-primary/10 text-primary text-xs sm:text-sm font-bold rounded-full border border-primary/20">
                   {localizedProject?.industry || project.industry}
@@ -445,12 +369,10 @@ const ProjectDetail: React.FC = () => {
                 )}
               </div>
 
-              {/* Title */}
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
                 {title}
               </h1>
 
-              {/* Meta info */}
               <div className="flex flex-wrap gap-4 text-sm text-slate-600 dark:text-slate-400">
                 <div className="flex items-center gap-2">
                   <Briefcase size={16} className="text-primary" />
@@ -462,7 +384,6 @@ const ProjectDetail: React.FC = () => {
                 </div>
               </div>
 
-              {/* Tech Stack */}
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400">
                   <Layers size={14} className="sm:w-4 sm:h-4" />
@@ -475,7 +396,6 @@ const ProjectDetail: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Buttons */}
               <div className="flex flex-col w-full pt-4 gap-3 max-w-full overflow-hidden">
                 {project.liveLink && (
                   <a
@@ -493,32 +413,129 @@ const ProjectDetail: React.FC = () => {
           </div>
         </section>
 
-        {/* Description Section */}
         <section className="bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-xl md:text-3xl font-bold text-slate-900 dark:text-white mb-6 md:mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-8 border-l-4 border-primary pl-4">
                 About This Project
               </h2>
-              <div
-                className="prose prose-base md:prose-lg dark:prose-invert max-w-none
-                  prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white
-                  prose-p:text-slate-600 dark:prose-p:text-slate-300 prose-p:leading-relaxed
-                  prose-strong:text-slate-900 dark:prose-strong:text-white
-                  prose-li:text-slate-600 dark:prose-li:text-slate-300
-                  prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                  prose-img:rounded-xl prose-img:shadow-lg"
-                dangerouslySetInnerHTML={{ __html: description }}
-              />
+
+              {/* Render Structured Content if Available */}
+              {localizedProject?.details ? (
+                <div className="space-y-16">
+
+                  {/* Overview */}
+                  <div className="prose prose-lg dark:prose-invert max-w-4xl">
+                    <p className="text-xl leading-relaxed text-slate-600 dark:text-slate-300">
+                      {localizedProject.details.overview}
+                    </p>
+                  </div>
+
+                  {/* Challenge vs Solution Grid */}
+                  <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    {/* Challenges */}
+                    <div className="bg-red-50 dark:bg-red-900/10 rounded-3xl p-8 border border-red-100 dark:border-red-900/20">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="p-2 bg-red-100 dark:bg-red-900/30 rounded-lg text-red-600 dark:text-red-400">
+                          <AlertTriangle size={24} />
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                          {localizedProject.details.challengeTitle || 'The Challenge'}
+                        </h3>
+                      </div>
+                      <div className="space-y-6">
+                        {localizedProject.details.challenges?.map((item: any, idx: number) => (
+                          <div key={idx} className="flex gap-4">
+                            <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 flex items-center justify-center font-bold text-xs mt-0.5">
+                              {idx + 1}
+                            </span>
+                            <div>
+                              <h4 className="font-bold text-slate-800 dark:text-slate-200 text-sm md:text-base">
+                                {item.title}
+                              </h4>
+                              <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                {item.desc}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Solutions */}
+                    <div className="bg-emerald-50 dark:bg-emerald-900/10 rounded-3xl p-8 border border-emerald-100 dark:border-emerald-900/20">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="p-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg text-emerald-600 dark:text-emerald-400">
+                          <Zap size={24} />
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                          {localizedProject.details.solutionTitle || 'Our Solution'}
+                        </h3>
+                      </div>
+                      <div className="space-y-6">
+                        {localizedProject.details.solutions?.map((item: any, idx: number) => (
+                          <div key={idx} className="flex gap-4">
+                            <div className="flex-shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400">
+                              <CheckCircle2 size={20} />
+                            </div>
+                            <div>
+                              <h4 className="font-bold text-slate-800 dark:text-slate-200 text-sm md:text-base">
+                                {item.title}
+                              </h4>
+                              <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                {item.desc}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Features Grid */}
+                  <div>
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+                      {localizedProject.details.featuresTitle || 'Key Features'}
+                    </h3>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {localizedProject.details.features?.map((item: any, idx: number) => (
+                        <div key={idx} className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-colors group">
+                          <div className="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl flex items-center justify-center text-primary shadow-sm mb-4 group-hover:scale-110 transition-transform">
+                            <Layout size={24} />
+                          </div>
+                          <h4 className="font-bold text-lg text-slate-900 dark:text-white mb-2">
+                            {item.title}
+                          </h4>
+                          <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+              ) : (
+                /* Fallback for projects without structured data */
+                <div
+                  className="prose prose-base md:prose-lg dark:prose-invert max-w-none
+                    prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white
+                    prose-p:text-slate-600 dark:prose-p:text-slate-300 prose-p:leading-relaxed
+                    prose-strong:text-slate-900 dark:prose-strong:text-white
+                    prose-li:text-slate-600 dark:prose-li:text-slate-300
+                    prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+                    prose-img:rounded-xl prose-img:shadow-lg"
+                  dangerouslySetInnerHTML={{ __html: description }}
+                />
+              )}
             </motion.div>
           </div>
         </section>
 
-        {/* Mini Contact CTA */}
         <section className="bg-gradient-to-r from-primary/5 via-blue-500/5 to-violet-500/5 dark:from-primary/10 dark:via-blue-500/10 dark:to-violet-500/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
             <motion.div
@@ -557,7 +574,6 @@ const ProjectDetail: React.FC = () => {
           </div>
         </section>
 
-        {/* Related Projects */}
         {relatedProjects.length > 0 && (
           <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
             <motion.div
@@ -570,7 +586,7 @@ const ProjectDetail: React.FC = () => {
                   More Projects
                 </h2>
                 <Link
-                  to="/#projects"
+                  href="/#projects"
                   className="text-primary hover:text-primary-hover font-medium flex items-center gap-1 group"
                 >
                   View All
@@ -588,6 +604,4 @@ const ProjectDetail: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default ProjectDetail;
+}

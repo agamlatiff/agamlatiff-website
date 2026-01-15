@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion, Variants, useReducedMotion, AnimatePresence } from 'framer-motion';
 import { AlertTriangle, TrendingDown, Clock, UserX, CheckCircle2, ArrowRight, XCircle, Zap, Smartphone, Tablet, Monitor } from 'lucide-react';
@@ -84,20 +86,20 @@ const WhyBooking: React.FC = () => {
   const PainCard = ({ point, idx }: { point: typeof painPoints[0]; idx: number }) => {
     const Icon = point.icon;
     return (
-      <div className="group flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-3xl bg-white dark:bg-[#111] border border-red-200 dark:border-red-500/20 hover:border-red-400 dark:hover:border-red-500/40 hover:bg-red-50 dark:hover:bg-[#161111] transition-all duration-300 shadow-sm dark:shadow-none">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-red-100 dark:bg-red-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+      <div className="group flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-3xl bg-[#111] border border-red-500/20 hover:border-red-500/40 hover:bg-[#161111] transition-all duration-300 shadow-none">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-red-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
           <Icon size={20} className="text-red-500 sm:w-6 sm:h-6" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <h4 className="font-bold text-slate-900 dark:text-white text-base sm:text-lg">{point.text}</h4>
+            <h4 className="font-bold text-white text-base sm:text-lg">{point.text}</h4>
           </div>
-          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{point.desc}</p>
+          <p className="text-sm text-slate-400 leading-relaxed">{point.desc}</p>
 
           {/* Mobile Stat */}
           <div className="mt-3 flex sm:hidden items-center gap-2">
             <span className="text-[10px] font-bold text-red-500 uppercase tracking-wider">LOSS</span>
-            <span className="px-2 py-0.5 text-[10px] font-bold text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-500/10 rounded-md border border-red-200 dark:border-red-500/20">
+            <span className="px-2 py-0.5 text-[10px] font-bold text-red-400 bg-red-500/10 rounded-md border border-red-500/20">
               {point.stat}
             </span>
           </div>
@@ -105,7 +107,7 @@ const WhyBooking: React.FC = () => {
         {/* Desktop Stat */}
         <div className="hidden sm:inline-flex flex-col items-end justify-center min-w-[80px]">
           <span className="text-xs font-bold text-red-400 uppercase tracking-wider mb-1">Loss</span>
-          <span className="inline-block px-2.5 py-1 text-xs font-bold text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-500/10 rounded-lg border border-red-200 dark:border-red-500/20">
+          <span className="inline-block px-2.5 py-1 text-xs font-bold text-red-400 bg-red-500/10 rounded-lg border border-red-500/20">
             {point.stat}
           </span>
         </div>
@@ -115,18 +117,18 @@ const WhyBooking: React.FC = () => {
 
   const SolutionCard = ({ sol, idx }: { sol: typeof solutions[0]; idx: number }) => {
     return (
-      <div className="group flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-3xl bg-white dark:bg-[#111] border border-blue-200 dark:border-blue-500/20 hover:border-blue-400 dark:hover:border-blue-500/40 hover:bg-blue-50 dark:hover:bg-[#111611] transition-all duration-300 shadow-sm dark:shadow-none">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-blue-100 dark:bg-blue-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+      <div className="group flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-3xl bg-[#111] border border-blue-500/20 hover:border-blue-500/40 hover:bg-[#111611] transition-all duration-300 shadow-none">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
           <CheckCircle2 size={20} className="text-blue-500 sm:w-6 sm:h-6" />
         </div>
         <div className="flex-1 min-w-0">
-          <h4 className="font-bold text-slate-900 dark:text-white text-base sm:text-lg mb-1">{sol.text}</h4>
-          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{sol.desc}</p>
+          <h4 className="font-bold text-white text-base sm:text-lg mb-1">{sol.text}</h4>
+          <p className="text-sm text-slate-400 leading-relaxed">{sol.desc}</p>
 
           {/* Mobile Stat */}
           <div className="mt-3 flex sm:hidden items-center gap-2">
             <span className="text-[10px] font-bold text-blue-500 uppercase tracking-wider">GAIN</span>
-            <span className="px-2 py-0.5 text-[10px] font-bold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-500/10 rounded-md border border-blue-200 dark:border-blue-500/20">
+            <span className="px-2 py-0.5 text-[10px] font-bold text-blue-400 bg-blue-500/10 rounded-md border border-blue-500/20">
               {sol.stat}
             </span>
           </div>
@@ -134,7 +136,7 @@ const WhyBooking: React.FC = () => {
         {/* Desktop Stat */}
         <div className="hidden sm:inline-flex flex-col items-end justify-center min-w-[80px]">
           <span className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">Gain</span>
-          <span className="inline-block px-2.5 py-1 text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-500/10 rounded-lg border border-blue-200 dark:border-blue-500/20 shadow-[0_0_10px_rgba(59,130,246,0.2)] animate-pulse">
+          <span className="inline-block px-2.5 py-1 text-xs font-bold text-blue-400 bg-blue-500/10 rounded-lg border border-blue-500/20 shadow-[0_0_10px_rgba(59,130,246,0.2)] animate-pulse">
             {sol.stat}
           </span>
         </div>
@@ -142,7 +144,7 @@ const WhyBooking: React.FC = () => {
     );
   };
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-hidden relative">
+    <section className="py-24 bg-slate-950 transition-colors duration-300 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-red-500/5 to-transparent" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-500/5 to-transparent" />
 
@@ -157,27 +159,27 @@ const WhyBooking: React.FC = () => {
         >
           <motion.h2
             variants={fadeInUpVariants}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
           >
             {translations.whyBooking?.title || 'Masih Terima Booking Lewat WhatsApp?'}
           </motion.h2>
           <motion.p
             variants={fadeInUpVariants}
-            className="text-slate-600 dark:text-slate-400 text-lg mb-8"
+            className="text-slate-400 text-lg mb-8"
           >
             {translations.whyBooking?.compareText || 'Bandingkan cara manual vs otomatis'}
           </motion.p>
 
           <motion.div
             variants={fadeInUpVariants}
-            className="inline-flex items-center gap-3 px-4 py-2 bg-slate-100 dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-800"
+            className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900 rounded-full border border-slate-800"
           >
-            <span className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+            <span className="flex items-center gap-1.5 text-slate-400">
               <Smartphone size={16} />
               <Tablet size={16} />
               <Monitor size={16} />
             </span>
-            <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+            <span className="text-xs font-semibold text-slate-300">
               Tersedia di Semua Device
             </span>
           </motion.div>
@@ -191,7 +193,7 @@ const WhyBooking: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="relative inline-flex p-1.5 rounded-2xl bg-slate-200 dark:bg-slate-800">
+          <div className="relative inline-flex p-1.5 rounded-2xl bg-slate-800">
             {/* Animated background */}
             <motion.div
               className={`absolute top-1.5 bottom-1.5 rounded-xl ${activeTab === 'pain'
@@ -205,14 +207,14 @@ const WhyBooking: React.FC = () => {
             />
             <button
               onClick={() => setActiveTab('pain')}
-              className={`relative z-10 px-6 py-3 rounded-xl font-bold text-sm transition-colors ${activeTab === 'pain' ? 'text-white' : 'text-slate-600 dark:text-slate-400'
+              className={`relative z-10 px-6 py-3 rounded-xl font-bold text-sm transition-colors ${activeTab === 'pain' ? 'text-white' : 'text-slate-400'
                 }`}
             >
               ❌ {translations.whyBooking?.tabPain || 'Tanpa App'}
             </button>
             <button
               onClick={() => setActiveTab('solution')}
-              className={`relative z-10 px-6 py-3 rounded-xl font-bold text-sm transition-colors ${activeTab === 'solution' ? 'text-white' : 'text-slate-600 dark:text-slate-400'
+              className={`relative z-10 px-6 py-3 rounded-xl font-bold text-sm transition-colors ${activeTab === 'solution' ? 'text-white' : 'text-slate-400'
                 }`}
             >
               ✅ {translations.whyBooking?.tabSolution || 'Dengan App'}
@@ -230,7 +232,7 @@ const WhyBooking: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="p-6 rounded-3xl bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/30 border border-red-200 dark:border-red-900/50"
+                className="p-6 rounded-3xl bg-gradient-to-br from-red-950/30 to-rose-950/30 border border-red-900/50"
               >
                 <div className="space-y-4">
                   {painPoints.map((point, idx) => (
@@ -245,7 +247,7 @@ const WhyBooking: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="p-6 rounded-3xl bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 border border-blue-200 dark:border-blue-900/50"
+                className="p-6 rounded-3xl bg-gradient-to-br from-blue-950/30 to-cyan-950/30 border border-blue-900/50"
               >
                 <div className="space-y-4">
                   {solutions.map((solution, idx) => (
@@ -270,7 +272,7 @@ const WhyBooking: React.FC = () => {
             <div className="relative">
               <div className="absolute top-1/2 -left-8 w-8 h-0.5 bg-gradient-to-r from-red-400 to-transparent" />
               <div className="absolute top-1/2 -right-8 w-8 h-0.5 bg-gradient-to-l from-blue-400 to-transparent" />
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center shadow-xl border-4 border-white dark:border-slate-600">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center shadow-xl border-4 border-slate-600">
                 <span className="text-white font-bold text-lg">VS</span>
               </div>
             </div>
@@ -279,9 +281,9 @@ const WhyBooking: React.FC = () => {
           {/* Pain Points */}
           <motion.div
             variants={fadeInLeftVariants}
-            className="relative p-8 rounded-3xl rounded-r-none bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/30 border border-red-200 dark:border-red-900/50 border-r-0"
+            className="relative p-8 rounded-3xl rounded-r-none bg-gradient-to-br from-red-950/30 to-rose-950/30 border border-red-900/50 border-r-0"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold uppercase tracking-wider text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-900/50 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold uppercase tracking-wider text-red-400 bg-red-900/50 rounded-full">
               <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
               {translations.whyBooking?.tabPain || 'Tanpa Booking App'}
             </div>
@@ -295,9 +297,9 @@ const WhyBooking: React.FC = () => {
           {/* Solutions */}
           <motion.div
             variants={fadeInRightVariants}
-            className="relative p-8 rounded-3xl rounded-l-none bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 border border-blue-200 dark:border-blue-900/50 border-l-0"
+            className="relative p-8 rounded-3xl rounded-l-none bg-gradient-to-br from-blue-950/30 to-cyan-950/30 border border-blue-900/50 border-l-0"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/50 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold uppercase tracking-wider text-blue-400 bg-blue-900/50 rounded-full">
               <Zap size={14} className="animate-pulse" />
               {translations.whyBooking?.tabSolution || 'Dengan Booking App'}
             </div>

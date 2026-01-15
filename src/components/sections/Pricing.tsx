@@ -1,3 +1,7 @@
+"use client"
+
+'use client';
+
 import React from 'react';
 import { motion, Variants, useReducedMotion } from 'framer-motion';
 import { Check, ArrowRight, Sparkles, Zap, Crown, Clock, RefreshCw, Gift, Users, CreditCard, Shield, Headphones, XCircle } from 'lucide-react';
@@ -32,7 +36,7 @@ const Pricing: React.FC = () => {
   })) || PACKAGE_CONFIG;
 
   return (
-    <section id="pricing" className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 overflow-hidden">
+    <section id="pricing" className="py-24 bg-slate-900 overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}

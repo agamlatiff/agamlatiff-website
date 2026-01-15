@@ -1,5 +1,7 @@
+'use client';
+
 import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useRouter, usePathname } from 'next/navigation';
 
 /**
  * Global keyboard shortcuts hook
@@ -7,8 +9,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
  * - ? : Show help overlay (TODO)
  */
 const useKeyboardShortcuts = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -21,14 +23,14 @@ const useKeyboardShortcuts = () => {
       }
 
       // ESC - Navigate back to home when on project page
-      if (e.key === 'Escape' && location.pathname.startsWith('/projects/')) {
-        navigate('/');
+      if (e.key === 'Escape' && pathname.startsWith('/projects/')) {
+        router.push('/');
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [navigate, location.pathname]);
+  }, [router, pathname]);
 };
 
 export default useKeyboardShortcuts;

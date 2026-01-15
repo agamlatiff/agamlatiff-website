@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Clock, CreditCard, History, LayoutDashboard, ExternalLink } from 'lucide-react';
@@ -11,8 +13,8 @@ const BookingShowcase: React.FC = () => {
 
   return (
     <section
-      id="booking-showcase"
-      className="py-20 md:py-28 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-hidden"
+      id="projects"
+      className="py-20 md:py-28 bg-slate-950 transition-colors duration-300 overflow-hidden"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -20,10 +22,10 @@ const BookingShowcase: React.FC = () => {
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-semibold text-sm rounded-full mb-4">
             {t('bookingShowcase.badge')}
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
             {t('bookingShowcase.title')}
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
             {t('bookingShowcase.subtitle')}
           </p>
         </div>
@@ -32,15 +34,15 @@ const BookingShowcase: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left: Demo Preview */}
           <div className="relative group order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
               {/* Browser Mockup */}
-              <div className="bg-slate-100 dark:bg-slate-800 px-4 py-3 flex items-center gap-2">
+              <div className="bg-slate-800 px-4 py-3 flex items-center gap-2">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-400"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                   <div className="w-3 h-3 rounded-full bg-blue-400"></div>
                 </div>
-                <div className="flex-1 bg-white dark:bg-slate-700 rounded-md px-3 py-1 text-xs text-slate-500 dark:text-slate-400 truncate ml-4">
+                <div className="flex-1 bg-slate-700 rounded-md px-3 py-1 text-xs text-slate-400 truncate ml-4">
                   booking-demo.vercel.app
                 </div>
               </div>
@@ -81,10 +83,10 @@ const BookingShowcase: React.FC = () => {
 
           {/* Right: Features */}
           <div className="order-1 lg:order-2">
-            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
               Fitur Booking App
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+            <p className="text-slate-400 mb-8 leading-relaxed">
               {t('bookingShowcase.projectDesc')}
             </p>
 
@@ -94,16 +96,16 @@ const BookingShowcase: React.FC = () => {
                 return (
                   <div
                     key={idx}
-                    className="flex gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+                    className="flex gap-4 p-4 bg-slate-900 rounded-xl border border-slate-800 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                       <Icon size={20} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">
+                      <h4 className="font-bold text-white text-sm mb-1">
                         {feature.title}
                       </h4>
-                      <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">
+                      <p className="text-slate-400 text-xs leading-relaxed">
                         {feature.desc}
                       </p>
                     </div>

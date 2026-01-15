@@ -1,3 +1,5 @@
+'use client';
+
 
 import React, { useEffect, useState } from 'react';
 
@@ -104,3 +106,4 @@ const SeoObserver: React.FC = () => {
 };
 
 export default SeoObserver;
+

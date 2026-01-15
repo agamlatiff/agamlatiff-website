@@ -1,8 +1,10 @@
+'use client';
+
 import React from 'react';
 import { motion, useReducedMotion, Variants } from 'framer-motion';
 import { ArrowRight, Code2, Users, Zap, Award, CheckCircle2, TrendingUp, Handshake, MonitorPlay } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
-import { Link } from 'react-router-dom';
+
 
 const About: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -42,12 +44,13 @@ const About: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left Column: Image */}
+          {/* Left Column: Image */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="relative"
+            className="relative order-2 lg:order-1"
           >
             <div className="relative rounded-[2.5rem] overflow-hidden border border-slate-800 shadow-2xl aspect-[4/5] group">
               <img
@@ -76,6 +79,7 @@ const About: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            className="order-1 lg:order-2"
           >
             <motion.div variants={fadeInUpVariants}>
               <span className="inline-block px-4 py-1.5 text-sm font-bold tracking-widest uppercase text-blue-400 border border-blue-500/30 rounded-full bg-blue-500/10 mb-6">
@@ -119,14 +123,6 @@ const About: React.FC = () => {
               >
                 Book Consultation Call <ArrowRight size={20} />
               </a>
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-[#0a0a0a] bg-slate-800" />
-                ))}
-                <div className="w-10 h-10 rounded-full border-2 border-[#0a0a0a] bg-slate-800 flex items-center justify-center text-[10px] text-white font-bold">
-                  64+
-                </div>
-              </div>
             </motion.div>
           </motion.div>
 

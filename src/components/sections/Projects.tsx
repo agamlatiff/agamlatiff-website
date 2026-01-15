@@ -1,133 +1,145 @@
+'use client';
+
 import React from 'react';
+import { motion, useReducedMotion, Variants } from 'framer-motion';
+import { ArrowRight, ExternalLink, Calendar, Code2 } from 'lucide-react';
+import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
-import { ExternalLink, PlayCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { PROJECTS } from '@/constants/projects';
 
-// Example project data structure - you can replace this with API calls or more detailed data
-const PROJECT_IMAGES: Record<string, string> = {
-  '1': '/upskills/1.webp',
-  '2': '/saturday/1.webp',
-  '3': '/alizonstore/1.webp',
-  '4': '/sukabaca/1.webp',
-  '5': '/flyhigher/1.webp',
-  '7': '/hiredio/1.webp',
-};
-
-const PROJECT_SLUGS: Record<string, string> = {
-  '1': 'upskills',
-  '2': 'saturday',
-  '3': 'alizon-store',
-  '4': 'suka-baca',
-  '5': 'fly-higher',
-  '7': 'hired-io',
-};
+// Order of projects to display
+const PROJECT_ORDER = ['7', '5', '4', '1', '2', '3'];
 
 const Projects: React.FC = () => {
-  const { t, translations } = useLanguage();
+  const { translations } = useLanguage();
+  const shouldReduceMotion = useReducedMotion();
+  const projectsTranslation = translations.projects;
 
-  // Get project keys from translations
-  const projectKeys = Object.keys(translations.projects).filter(
-    (key) => !isNaN(Number(key))
-  );
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
 
   return (
-    <section
-      id="projects"
-      className="py-20 md:py-28 bg-white dark:bg-slate-900 transition-colors duration-300"
-    >
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" className="py-24 bg-slate-950 relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-[100px]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-semibold text-sm rounded-full mb-4">
-            {t('projects.section.title')}
+            {projectsTranslation?.section?.title || 'Proven Results'}
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-4">
-            {t('projects.section.heading')}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            {projectsTranslation?.section?.heading || 'Case Studies & Portfolio'}
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-            {t('projects.section.subtitle')}
+          <p className="text-slate-400 text-lg leading-relaxed">
+            {projectsTranslation?.section?.subtitle || 'Case studies on how custom systems help businesses run more efficiently and profitably.'}
           </p>
         </div>
 
-        {/* Slider Controls */}
-        <div className="flex justify-end gap-3 mb-6">
-          <button
-            onClick={() => {
-              document.getElementById('projects-slider')?.scrollBy({ left: -400, behavior: 'smooth' });
-            }}
-            className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-            aria-label="Previous project"
-          >
-            <ArrowRight size={20} className="rotate-180" />
-          </button>
-          <button
-            onClick={() => {
-              document.getElementById('projects-slider')?.scrollBy({ left: 400, behavior: 'smooth' });
-            }}
-            className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-hover transition-colors"
-            aria-label="Next project"
-          >
-            <ArrowRight size={20} />
-          </button>
-        </div>
-
-        {/* Projects Slider */}
-        <div
-          id="projects-slider"
-          className="flex gap-6 md:gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        {/* Projects Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
-          {projectKeys.map((key) => {
-            const project = (translations.projects as any)[key];
-            if (!project || typeof project !== 'object') return null;
+          {PROJECT_ORDER.map((id) => {
+            const projectData = PROJECTS.find(p => p.id === id);
+            const projectTrans = (projectsTranslation as any)[id];
+
+            if (!projectData || !projectTrans) return null;
 
             return (
-              <div
-                key={key}
-                className="group flex-shrink-0 w-[85vw] md:w-[450px] snap-center bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              <motion.div
+                key={id}
+                variants={itemVariants}
+                className="group relative bg-[#0B1120] border border-slate-800 rounded-3xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 flex flex-col"
               >
-                {/* Project Image */}
-                <div className="relative aspect-video bg-slate-200 dark:bg-slate-700 overflow-hidden">
-                  <img
-                    src={PROJECT_IMAGES[key] || '/projects/placeholder.png'}
-                    alt={`${project.title} - ${project.industry} project screenshot`}
-                    width={450}
-                    height={253}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://via.placeholder.com/600x400?text=Project';
-                    }}
-                  />
-                </div>
-
-                {/* Project Content */}
-                <div className="p-6 md:p-8 flex flex-col h-[220px]">
-                  <div className="text-xs font-bold tracking-wider text-primary uppercase mb-3">
-                    {project.industry}
+                <Link href={`/projects/${projectData.slug}`} className="flex flex-col h-full">
+                  {/* Image Section */}
+                  <div className="relative h-48 w-full overflow-hidden bg-slate-800">
+                    <img
+                      src={projectData.heroImage}
+                      alt={projectTrans.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    {/* Static gradient for text legibility, no animation */}
+                    <div className="absolute inset-0 bg-linear-to-t from-[#0B1120] to-transparent opacity-60" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3 line-clamp-1">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2 flex-grow">
-                    {project.shortDescription}
-                  </p>
 
-                  <div className="flex items-center justify-between mt-auto">
-                    <Link
-                      to={`/projects/${PROJECT_SLUGS[key] || key}`}
-                      className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all"
-                    >
-                      {t('projects.section.viewDetail')}
-                      <ArrowRight size={18} />
-                    </Link>
+                  {/* Card Content */}
+                  <div className="p-6 pt-4 flex flex-col grow">
+
+                    {/* Title & Industry */}
+                    <div className="mb-4">
+                      <div className="text-xs font-semibold text-primary mb-2 uppercase tracking-wider flex justify-between items-center">
+                        {projectTrans.industry || 'Development'}
+                        <div className="bg-slate-900/50 p-1.5 rounded-lg group-hover:bg-primary/20 transition-colors">
+                          <Code2 size={16} className="text-slate-400 group-hover:text-primary transition-colors" />
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors line-clamp-2">
+                        {projectTrans.title}
+                      </h3>
+                    </div>
+
+                    {/* Description */}
+                    <div className="grow mb-6">
+                      <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">
+                        {projectTrans.shortDescription}
+                      </p>
+                    </div>
+
+                    {/* Footer */}
+                    <div className="pt-6 border-t border-slate-800 flex items-center justify-between mt-auto">
+                      <span className="text-xs text-slate-500 font-medium flex items-center gap-1.5">
+                        <Calendar size={14} />
+                        {projectTrans.date || '2025'}
+                      </span>
+
+                      <span className="flex items-center gap-2 text-sm font-bold text-white group-hover:text-primary transition-colors">
+                        {projectsTranslation?.section?.viewDetail || 'View Detail'}
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </Link>
+              </motion.div>
             );
           })}
+        </motion.div>
+
+        {/* Bottom Call to Action */}
+        <div className="mt-20 text-center">
+          <a
+            href="https://wa.me/6285888050785"
+            className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors border-b border-slate-800 hover:border-white pb-0.5"
+          >
+            Learn more about my work process <ExternalLink size={14} />
+          </a>
         </div>
+
       </div>
     </section>
   );

@@ -1,13 +1,13 @@
+'use client';
+
 import React, { useState } from 'react';
 import { ArrowRight, Loader2, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/context/LanguageContext';
 import { createWhatsAppLink } from '@/constants/whatsapp';
 
 const Hero: React.FC = () => {
   const [isNavigating, setIsNavigating] = useState(false);
-  const navigate = useNavigate();
   const { t } = useLanguage();
 
   const handleConsultationClick = (e: React.MouseEvent) => {
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-32 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-32 overflow-hidden bg-slate-950 transition-colors duration-300">
 
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -35,29 +35,34 @@ const Hero: React.FC = () => {
         <div className="absolute top-0 -right-20 w-80 h-80 bg-violet-500/20 rounded-full blur-[100px] animate-blob animation-delay-2000"></div>
         <div className="absolute -bottom-32 left-1/2 w-80 h-80 bg-blue-400/20 rounded-full blur-[100px] animate-blob animation-delay-4000"></div>
 
-        {/* Particles */}
+        {/* Particles - using fixed positions to avoid hydration mismatch */}
         <div className="absolute inset-0 pointer-events-none">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-primary/30 rounded-full"
-              initial={{
-                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-                y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)
-              }}
-              animate={{
-                y: [0, -100, 0],
-                opacity: [0.2, 0.8, 0.2],
-                scale: [1, 1.5, 1]
-              }}
-              transition={{
-                duration: 5 + Math.random() * 5,
-                repeat: Infinity,
-                ease: "linear",
-                delay: Math.random() * 5
-              }}
-            />
-          ))}
+          {[...Array(20)].map((_, i) => {
+            // Use deterministic values based on index to avoid hydration mismatch
+            const xPos = ((i * 127) % 100) + '%';
+            const yPos = ((i * 83) % 100) + '%';
+            const duration = 5 + (i % 5);
+            const delay = (i % 5);
+
+            return (
+              <motion.div
+                key={i}
+                className="absolute w-1 h-1 bg-primary/30 rounded-full"
+                style={{ left: xPos, top: yPos }}
+                animate={{
+                  y: [0, -100, 0],
+                  opacity: [0.2, 0.8, 0.2],
+                  scale: [1, 1.5, 1]
+                }}
+                transition={{
+                  duration: duration,
+                  repeat: Infinity,
+                  ease: "linear",
+                  delay: delay
+                }}
+              />
+            );
+          })}
         </div>
       </div>
 
@@ -83,7 +88,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl sm:text-7xl md:text-8xl font-black text-slate-900 dark:text-white leading-[1.05] mb-8 tracking-tight"
+            className="text-5xl sm:text-7xl md:text-8xl font-black text-white leading-[1.05] mb-8 tracking-tight"
           >
             {t('hero.headline.part1')}<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#9333EA] animate-gradient-x bg-[length:200%_auto]">
@@ -96,8 +101,8 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto"
-            dangerouslySetInnerHTML={{ __html: t('hero.subheadline').replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-900 dark:text-white">$1</strong>') }}
+            className="text-lg md:text-xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto"
+            dangerouslySetInnerHTML={{ __html: t('hero.subheadline').replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>') }}
           />
 
           {/* Buttons with Floating Animation */}
@@ -145,9 +150,10 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-50 dark:from-slate-950 to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-950 to-transparent z-10 pointer-events-none"></div>
     </section>
   );
 };
 
 export default Hero;
+

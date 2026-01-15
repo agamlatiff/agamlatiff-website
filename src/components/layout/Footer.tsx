@@ -1,8 +1,9 @@
+'use client';
 
 import React from 'react';
 import { Hexagon, ArrowRight, Mail, MapPin } from 'lucide-react';
 import { FaInstagram, FaTiktok, FaLinkedinIn, FaGithub, FaYoutube } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import { useLanguage } from '@/context/LanguageContext';
 import { createWhatsAppLink } from '@/constants/whatsapp';
@@ -56,7 +57,7 @@ const Footer: React.FC = () => {
 
           {/* Brand Column */}
           <div className="lg:col-span-5 space-y-8">
-            <Link to="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-violet-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/25">
                 <Hexagon size={20} fill="currentColor" />
               </div>

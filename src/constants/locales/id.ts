@@ -53,65 +53,32 @@ export const id = {
     '7': {
       title: 'Hired.io - Portal Lowongan Kerja Modern',
       shortDescription: 'Platform rekrutmen yang menghubungkan pencari kerja dengan perusahaan, menyederhanakan seluruh proses perekrutan dari lamaran hingga onboarding.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>Apa itu Hired.io?</strong><br/>
-        Platform rekrutmen yang menjembatani profesional berbakat dengan perusahaan inovatif. Menyederhanakan seluruh proses perekrutan dari pencarian lowongan hingga manajemen kandidat.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Cara Kerja</h4>
-        <p class="font-semibold mb-2">Untuk Pencari Kerja:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Cari lowongan dengan filter (kategori, lokasi, gaji)</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lamar dengan CV, cover letter, dan profil</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lacak status lamaran secara real-time</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Simpan lowongan dan dapatkan alert lowongan baru</span></li>
-        </ul>
-        <p class="font-semibold mb-2">Untuk Perusahaan:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Posting lowongan dan kelola listing</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Review lamaran dalam pipeline visual</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pindahkan kandidat melalui tahapan (Screening → Interview → Hired)</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lihat analitik performa lowongan</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Masalah yang Diselesaikan</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Proses rekrutmen lambat → <strong>Sekarang pipeline terstruktur dengan notifikasi real-time</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tracking lamaran berantakan → <strong>Sekarang manajemen kandidat visual ala Kanban</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tidak ada visibilitas metrik hiring → <strong>Sekarang dashboard analitik dengan data konversi</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pelamar tidak tahu status → <strong>Sekarang tracking lamaran real-time</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Keuntungan Bisnis</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Kurangi Time-to-Hire</strong> — Proses efisien bisa pangkas waktu rekrutmen 40%</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Pengalaman Kandidat Lebih Baik</strong> — Portal profesional menarik pelamar berkualitas</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Keputusan Berbasis Data</strong> — Analitik tunjukkan apa yang berhasil dan tidak</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Scale Tim Anda</strong> — Tangani lebih banyak pelamar tanpa tambah staf HR</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Fitur Utama</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Smart Job Search</strong> — Filter kategori, lokasi, gaji, tipe pekerjaan</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Application Pipeline</strong> — Tracking visual dari New ke Hired</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Role-Based Dashboard</strong> — View berbeda untuk pencari kerja dan perusahaan</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Analitik</strong> — Lacak views, lamaran, dan conversion rates</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Job Alerts</strong> — Dapat notifikasi untuk peluang yang cocok</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Ringkasan:</strong> Hired.io memodernisasi rekrutmen dengan membuat proses hiring lebih cepat, terorganisir, dan berbasis data. Hubungkan talenta tepat dengan peluang tepat.
-      </p>
-      `,
+      details: {
+        overview: "Platform rekrutmen yang menjembatani profesional berbakat dengan perusahaan inovatif. Menyederhanakan seluruh proses perekrutan dari pencarian lowongan hingga manajemen kandidat.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Masalah Rekrutmen Tradisional",
+        challenges: [
+          { title: "Proses Lambat", desc: "Screening manual memakan waktu berminggu-minggu, menyebabkan kandidat terbaik hilang." },
+          { title: "Tracking Berantakan", desc: "Lamaran tersebar di email dan spreadsheet, sulit melacak status kandidat." },
+          { title: "Buta Data", desc: "Tidak ada visibilitas tentang efektivitas channel rekrutmen atau performa tim." },
+          { title: "Pengalaman Buruk", desc: "Pelamar sering tidak mendapat kabar (ghosting) karena HR kewalahan." }
+        ],
+        solutionTitle: "Solusi Hired.io",
+        solutions: [
+          { title: "Pipeline Visual", desc: "Manajemen kandidat ala Kanban board untuk memindahkan status dengan drag-and-drop." },
+          { title: "Automated Tracking", desc: "Status lamaran terupdate otomatis dan notifikasi real-time ke pelamar." },
+          { title: "Analytics Dashboard", desc: "Data lengkap tentang time-to-hire, sources, dan conversion rate." },
+          { title: "Smart Filtering", desc: "Filter canggih untuk menemukan kandidat yang paling relevan dalam hitungan detik." }
+        ],
+        featuresTitle: "Fitur Utama",
+        features: [
+          { title: "Smart Job Search", desc: "Pencarian lowongan dengan filter kategori, lokasi, gaji, dan tipe pekerjaan." },
+          { title: "Application Pipeline", desc: "Visual tracking status lamaran dari 'New' hingga 'Hired'." },
+          { title: "Role-Based Access", desc: "Dashboard khusus untuk Pencari Kerja (user) dan Perusahaan (recruiter)." },
+          { title: "Hiring Analytics", desc: "Metrik performa rekrutmen untuk pengambilan keputusan berbasis data." },
+          { title: "Job Alerts", desc: "Notifikasi otomatis saat ada lowongan baru yang sesuai preferensi." }
+        ]
+      },
       industry: 'Recruitment & HR Tech',
       date: 'Full-Stack Developer'
     },
@@ -119,331 +86,160 @@ export const id = {
     '5': {
       title: 'Fly Higher - Platform Booking Penerbangan',
       shortDescription: 'Sistem reservasi penerbangan lengkap yang memungkinkan traveler mencari, memilih kursi, memesan tiket, dan mengelola e-tiket dengan QR code.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>Apa itu Fly Higher?</strong><br/>
-        Platform booking penerbangan end-to-end yang merevolusi cara orang memesan travel. Dari mencari penerbangan hingga scan boarding pass, semua terjadi dalam satu pengalaman yang seamless.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Cara Kerja</h4>
-        <p class="font-semibold mb-2">Untuk Traveler:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Cari penerbangan berdasarkan tujuan, tanggal, dan penumpang</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lihat ketersediaan dan harga real-time</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pilih kursi dengan peta kursi interaktif</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Bayar dengan aman via Midtrans payment gateway</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Terima e-tiket dengan QR code untuk boarding</span></li>
-        </ul>
-        <p class="font-semibold mb-2">Untuk Admin Maskapai:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Kelola jadwal penerbangan dan harga</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lacak booking dan pendapatan</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Konfigurasi layout kursi per pesawat</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Masalah yang Diselesaikan</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Proses booking rumit → <strong>Sekarang alur sederhana 4 langkah</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tidak tahu kursi yang tersedia → <strong>Sekarang pemilihan kursi interaktif</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tiket kertas bisa hilang → <strong>Sekarang e-tiket digital dengan QR code</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Ketidakpastian pembayaran → <strong>Sekarang konfirmasi pembayaran real-time yang aman</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Keuntungan Bisnis</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Tingkatkan Konversi</strong> — Booking streamlined kurangi cart abandonment</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Upsell Kursi Premium</strong> — Peta kursi visual mendorong upgrade</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Kurangi Biaya Support</strong> — E-tiket self-service hilangkan proses manual</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Transaksi Aman</strong> — Integrasi Midtrans jamin keandalan pembayaran</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Fitur Utama</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Pencarian Penerbangan Real-time</strong> — Ketersediaan dan harga live</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Pemilihan Kursi Interaktif</strong> — Pilih kursi favorit secara visual</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Pembayaran Aman</strong> — Multi-metode pembayaran via Midtrans</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>E-Tiket dengan QR</strong> — Boarding pass digital di HP Anda</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Dashboard Admin</strong> — Kontrol penuh penerbangan, booking, dan user</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Ringkasan:</strong> Fly Higher mengubah booking penerbangan menjadi pengalaman digital yang seamless. Dari pencarian hingga boarding pass, setiap langkah dirancang untuk kesederhanaan dan efisiensi.
-      </p>
-      `,
+      details: {
+        overview: "Platform booking penerbangan end-to-end yang merevolusi cara orang memesan travel. Dari mencari penerbangan hingga scan boarding pass, semua terjadi dalam satu pengalaman yang seamless.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Kendala Sistem Travel Lama",
+        challenges: [
+          { title: "Booking Rumit", desc: "User harus melewati banyak step membingungkan untuk satu tiket." },
+          { title: "Kursi Misterius", desc: "Tidak bisa memilih kursi spesifik, sering terpisah dari rombongan." },
+          { title: "Tiket Fisik", desc: "Resiko tiket hilang atau rusak sangat tinggi." },
+          { title: "Pembayaran Manual", desc: "Verifikasi transfer manual yang lama dan sering error." }
+        ],
+        solutionTitle: "Inovasi Fly Higher",
+        solutions: [
+          { title: "Streamlined Booking", desc: "Alur pemesanan disederhanakan menjadi 4 langkah cepat." },
+          { title: "Interactive Seat Map", desc: "Visualisasi denah pesawat untuk memilih kursi favorit." },
+          { title: "E-Ticket System", desc: "Tiket digital dengan QR Code yang aman dan praktis di HP." },
+          { title: "Instant Payment", desc: "Integrasi payment gateway untuk verifikasi pembayaran otomatis detik itu juga." }
+        ],
+        featuresTitle: "Fitur Unggulan",
+        features: [
+          { title: "Real-time Search", desc: "Pencarian penerbangan dengan harga dan ketersediaan live." },
+          { title: "Visual Seat Selection", desc: "Pilih kursi jendela atau lorong secara visual di peta pesawat." },
+          { title: "Secure Payment", desc: "Dukungan berbagai metode pembayaran via Midtrans." },
+          { title: "QR Boarding Pass", desc: "Check-in mudah dengan scan QR code di gate." },
+          { title: "Admin Flight Mgmt", desc: "Dashboard lengkap untuk maskapai mengatur jadwal dan harga." }
+        ]
+      },
       industry: 'Travel & Tourism',
       date: 'Full-Stack Developer'
     },
     '4': {
       title: 'Suka Baca - Sistem Manajemen Perpustakaan',
       shortDescription: 'Sistem perpustakaan yang memodernisasi peminjaman buku dengan katalog digital, denda otomatis, dan peminjaman self-service untuk anggota.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>Apa itu Suka Baca?</strong><br/>
-        Sistem manajemen perpustakaan komprehensif yang mengubah cara perpustakaan beroperasi. Dari menjelajahi katalog hingga mengembalikan buku, semuanya terdigitalisasi untuk efisiensi.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Cara Kerja</h4>
-        <p class="font-semibold mb-2">Untuk Anggota Perpustakaan:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Jelajahi katalog buku dengan pencarian dan filter</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Ajukan buku untuk dipinjam</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lacak pinjaman aktif dan tanggal jatuh tempo</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Ajukan perpanjangan jika perlu</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Bayar denda online untuk keterlambatan</span></li>
-        </ul>
-        <p class="font-semibold mb-2">Untuk Staf Perpustakaan:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Kelola inventaris buku dan katalog</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Proses permintaan peminjaman</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lacak buku terlambat dan denda secara otomatis</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Masalah yang Diselesaikan</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pencatatan berbasis kertas → <strong>Sekarang katalog digital dengan auto-fetch metadata</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Hitung denda manual → <strong>Sekarang tracking keterlambatan otomatis</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Antrian peminjaman panjang → <strong>Sekarang permintaan online self-service</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Catatan buku hilang → <strong>Sekarang tracking inventaris terpusat</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Keuntungan Bisnis</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Kurangi Beban Kerja</strong> — Otomasi gantikan pencatatan manual</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Inventaris Akurat</strong> — Tracking real-time cegah kehilangan buku</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Pengalaman Anggota Lebih Baik</strong> — Self-service hemat waktu semua orang</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Tingkatkan Pendapatan</strong> — Penagihan denda otomatis tingkatkan kepatuhan</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Fitur Utama</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Katalog Digital</strong> — Auto-fetch info buku via OpenLibrary API</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Peminjaman Cerdas</strong> — Wizard multi-langkah untuk permintaan pinjaman</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Manajemen Denda</strong> — Hitung dan lacak denda keterlambatan otomatis</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Dashboard Admin</strong> — Kontrol penuh via Filament admin panel</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Portal Anggota</strong> — Self-service untuk jelajah dan pinjam</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Ringkasan:</strong> Suka Baca membawa perpustakaan ke era digital. Lebih sedikit administrasi, lebih banyak membaca. Operasi otomatis, anggota senang.
-      </p>
-      `,
+      details: {
+        overview: "Sistem manajemen perpustakaan komprehensif yang mengubah cara perpustakaan beroperasi. Dari menjelajahi katalog hingga mengembalikan buku, semuanya terdigitalisasi untuk efisiensi.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Perpustakaan Manual",
+        challenges: [
+          { title: "Administrasi Ribet", desc: "Pencatatan peminjaman di buku besar yang lambat dan rentan error." },
+          { title: "Denda Terlewat", desc: "Penghitungan denda manual sering kali tidak akurat atau lupa ditagih." },
+          { title: "Antrian Panjang", desc: "Proses peminjaman dan pengembalian manual membuat antrian menumpuk." },
+          { title: "Inventaris Kacau", desc: "Sulit mengetahui status ketersediaan buku secara real-time." }
+        ],
+        solutionTitle: "Transformasi Digital Suka Baca",
+        solutions: [
+          { title: "Katalog Digital", desc: "Database buku digital yang bisa diakses anggota dari mana saja." },
+          { title: "Auto Fine System", desc: "Sistem otomatis menghitung hari keterlambatan dan nominal denda." },
+          { title: "Self-Service", desc: "Anggota bisa mengajukan peminjaman dan perpanjangan mandiri via app." },
+          { title: "Smart Tracking", desc: "Status setiap buku terlacak akurat (Tersedia, Dipinjam, Rusak)." }
+        ],
+        featuresTitle: "Fitur Unggulan",
+        features: [
+          { title: "Digital Catalog", desc: "Pencarian buku cepat dengan integrasi OpenLibrary API." },
+          { title: "Smart Loan Wizard", desc: "Proses peminjaman buku yang mudah dan terpandu." },
+          { title: "Fine Management", desc: "Kalkulasi dan pelacakan pembayaran denda otomatis." },
+          { title: "Admin Panel", desc: "Dashboard lengkap untuk pustakawan mengelola buku dan anggota." },
+          { title: "Member Portal", desc: "Area khusus anggota untuk riwayat pinjaman dan wishlist." }
+        ]
+      },
       industry: 'Education & Library',
       date: 'Full-Stack Developer'
     },
     '1': {
       title: 'UpSkills - Platform E-Learning',
       shortDescription: 'Platform pembelajaran online yang membantu orang mengembangkan skill baru melalui kursus terstruktur, tracking progress, dan akses berbasis langganan.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>Apa itu UpSkills?</strong><br/>
-        Platform e-learning yang membantu orang mengembangkan skill baru melalui kursus online terstruktur. Dengan akses berbasis langganan, pengguna bisa belajar sesuai tempo mereka sementara mentor bisa berbagi keahlian.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Cara Kerja</h4>
-        <p class="font-semibold mb-2">Untuk Pelajar:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Jelajahi dan temukan kursus berdasarkan kategori</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Berlangganan untuk akses konten premium</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Belajar dengan video, teks, dan konten interaktif</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lacak progress dan selesaikan kursus</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Dapatkan bantuan AI untuk pertanyaan</span></li>
-        </ul>
-        <p class="font-semibold mb-2">Untuk Mentor & Bisnis:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Buat dan publikasikan kursus dengan mudah</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Upload materi (video, PDF, teks)</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pantau progress dan engagement siswa</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Hasilkan dari langganan</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Masalah yang Diselesaikan</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Belajar tradisional mahal → <strong>Sekarang akses langganan terjangkau</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Jadwal tetap membatasi belajar → <strong>Sekarang belajar kapan saja, di mana saja</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Sulit lacak progress → <strong>Sekarang tracking progress otomatis</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tidak bisa monetisasi keahlian → <strong>Sekarang hasilkan dari pengetahuan Anda</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Stuck tanpa bantuan → <strong>Sekarang AI chatbot menjawab pertanyaan</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Keuntungan Bisnis</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Pendapatan Berulang</strong> — Model langganan menciptakan income yang predictable</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Scale Tanpa Batas</strong> — Jangkau unlimited siswa dengan konten yang sama</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Kelola Konten Mudah</strong> — Dashboard untuk kelola kursus dan siswa</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>User Engaged</strong> — Progress tracking menjaga motivasi siswa</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>AI Support</strong> — Chatbot mengurangi beban support</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Fitur Utama</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Katalog Kursus</strong> — Jelajahi dan cari kursus berdasarkan kategori</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Paket Langganan</strong> — Berbagai tier harga untuk kebutuhan berbeda</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Progress Tracking</strong> — Lihat status penyelesaian setiap kursus</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Dashboard Mentor</strong> — Buat dan kelola konten kursus</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>AI Chatbot</strong> — Dapatkan bantuan memahami materi kursus</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Ringkasan:</strong> UpSkills mendemokratisasi pendidikan dengan membuat pembelajaran berkualitas dapat diakses semua orang. Bangun kerajaan pengetahuan Anda dengan platform yang scale bersama audiens.
-      </p>
-      `,
+      details: {
+        overview: "Platform e-learning yang membantu orang mengembangkan skill baru melalui kursus online terstruktur. Dengan akses berbasis langganan, pengguna bisa belajar sesuai tempo mereka sementara mentor bisa berbagi keahlian.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Hambatan Belajar Konvensional",
+        challenges: [
+          { title: "Biaya Tinggi", desc: "Biaya kursus offline atau pendidikan formal seringkali tidak terjangkau." },
+          { title: "Jadwal Kaku", desc: "Harus hadir di waktu tertentu, sulit bagi yang bekerja." },
+          { title: "Motivasi Rendah", desc: "Belajar sendirian tanpa tracking progress mudah membuat bosan." },
+          { title: "Materi Terbatas", desc: "Akses ke materi berkualitas sering tersekat lokasi geografis." }
+        ],
+        solutionTitle: "Ekosistem UpSkills",
+        solutions: [
+          { title: "Subscription Model", desc: "Akses ratusan kursus dengan satu harga langganan bulanan." },
+          { title: "Flexible Learning", desc: "Belajar kapan saja dan di mana saja, on-demand." },
+          { title: "Gamification", desc: "Progress tracking dan sertifikat untuk menjaga motivasi belajar." },
+          { title: "Creator Economy", desc: "Platform bagi expert untuk monetisasi ilmu mereka." }
+        ],
+        featuresTitle: "Fitur Unggulan",
+        features: [
+          { title: "Course Catalog", desc: "Eksplorasi kursus dengan berbagai kategori interest." },
+          { title: "Subscription Plans", desc: "Pilihan paket langganan (Bulanan/Tahunan)." },
+          { title: "Progress Tracking", desc: "Lacak persentase penyelesaian kursus secara otomatis." },
+          { title: "Mentor Dashboard", desc: "Tools lengkap untuk upload materi dan kelola siswa." },
+          { title: "AI Chatbot", desc: "Asisten virtual untuk menjawab pertanyaan seputar materi." }
+        ]
+      },
       industry: 'Education & EdTech',
       date: 'Full-Stack Developer'
     },
     '2': {
       title: 'Saturday - Sistem Manajemen Gudang',
       shortDescription: 'Sistem gudang terpusat yang membantu distributor melacak inventaris, mengelola stok multi-lokasi, dan mencegah selisih stok.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>Apa itu Saturday WMS?</strong><br/>
-        Sistem manajemen gudang yang membantu distributor dan retailer melacak inventaris di berbagai lokasi, mengelola pergerakan stok, dan mencegah shrinkage — semua dari satu dashboard.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Cara Kerja</h4>
-        <p class="font-semibold mb-2">Untuk Staff Gudang:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Scan produk menggunakan barcode/smartphone</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Catat pergerakan stok masuk/keluar</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lakukan stock opname digital</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Ajukan transfer antar cabang</span></li>
-        </ul>
-        <p class="font-semibold mb-2">Untuk Pemilik Bisnis:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Pantau stok di semua gudang secara real-time</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Approve permintaan transfer secara digital</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Lacak pendapatan dan penjualan dari satu dashboard</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Masalah yang Diselesaikan</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Selisih stok (shrinkage) → <strong>Sekarang setiap pergerakan tercatat digital</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Barang hilang di gudang → <strong>Sekarang scan barcode untuk akurasi</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Hitung stok manual → <strong>Sekarang opname digital dengan hitung otomatis</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Kehabisan stok → <strong>Sekarang alert stok menipis sebelum terjadi</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tidak tahu stok cabang lain → <strong>Sekarang lihat semua lokasi dalam satu view</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Keuntungan Bisnis</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Kurangi Kehilangan Stok</strong> — Setiap item terlacak, minimalisir shrinkage</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Visibilitas Real-time</strong> — Lihat level stok di semua lokasi secara instan</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Operasi Lebih Cepat</strong> — Proses digital gantikan paperwork manual</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Cegah Lost Sales</strong> — Auto alert untuk stok menipis barang laris</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Hitung Pajak Otomatis</strong> — PPN 12% included di semua transaksi</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Fitur Utama</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Multi-Gudang</strong> — Kelola banyak lokasi dari satu sistem</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Barcode Scanning</strong> — Pencatatan stok cepat dan akurat</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Stock Opname Digital</strong> — Hitung selisih otomatis</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Sistem Transfer</strong> — Approval digital untuk mutasi antar cabang</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Role-Based Access</strong> — Peran Manager dan Keeper dengan permission</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Ringkasan:</strong> Saturday WMS mengubah operasi gudang yang kacau menjadi proses yang teratur dan terlacak. Tahu persis apa yang Anda punya, di mana lokasinya, dan kapan harus reorder.
-      </p>
-      `,
       industry: 'Logistik & Supply Chain',
-      date: 'Full-Stack Developer'
+      date: 'Full-Stack Developer',
+      details: {
+        overview: "Sistem manajemen gudang yang membantu distributor dan retailer melacak inventaris di berbagai lokasi, mengelola pergerakan stok, dan mencegah shrinkage — semua dari satu dashboard.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Tantangan Gudang Konvensional",
+        challenges: [
+          { title: "Selisih Stok (Shrinkage)", desc: "Stok sering hilang atau tidak sesuai catatan karena pencatatan manual." },
+          { title: "Barang Hilang", desc: "Sulit melacak posisi barang di gudang yang luas tanpa sistem lokasi." },
+          { title: "Stock Opname Lama", desc: "Menghitung stok memakan waktu berhari-hari dan rawan human error." },
+          { title: "Stok Habis Tiba-tiba", desc: "Tidak ada peringatan dini saat barang best-seller menipis." }
+        ],
+        solutionTitle: "Solusi Saturday WMS",
+        solutions: [
+          { title: "Pencatatan Digital", desc: "Setiap pergerakan barang tercatat real-time, meminimalisir selisih." },
+          { title: "Barcode Scanning", desc: "Scan barang masuk/keluar untuk akurasi 100% dan pelacakan lokasi." },
+          { title: "Smart Opname", desc: "Opname digital yang cepat dengan fitur hitung otomatis." },
+          { title: "Auto Alert", desc: "Notifikasi otomatis saat stok mencapai batas minimum." }
+        ],
+        featuresTitle: "Fitur Unggulan",
+        features: [
+          { title: "Multi-Gudang", desc: "Kelola stok di banyak cabang/lokasi dari satu dashboard pusat." },
+          { title: "Barcode System", desc: "Support scan barcode untuk inbound, outbound, dan opname." },
+          { title: "Transfer Stok", desc: "Fitur mutasi barang antar cabang dengan approval system." },
+          { title: "Laporan Real-time", desc: "Analitik pergerakan stok, valuasi aset, dan performa produk." },
+          { title: "Hak Akses Bertingkat", desc: "Akses berbeda untuk Manager, Admin Gudang, dan Staff." }
+        ]
+      }
     },
     '3': {
       title: 'Alizon Store - E-Commerce Full-Stack',
       shortDescription: 'Platform toko online yang memungkinkan bisnis menjual produk di internet, menerima pembayaran, dan mengelola pesanan dari satu tempat.',
-      fullDescription: `
-      <p class="mb-6 text-lg leading-relaxed">
-        <strong>Apa itu Alizon Store?</strong><br/>
-        Platform toko online yang memungkinkan bisnis menjual produk di internet, menerima pembayaran, dan mengelola pesanan dari satu tempat.
-      </p>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Cara Kerja</h4>
-        <p class="font-semibold mb-2">Untuk Pelanggan:</p>
-        <ul class="space-y-2 mb-4">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Kunjungi toko online kapan saja</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Jelajahi produk berdasarkan kategori dan brand</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tambahkan item ke keranjang belanja</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Bayar dengan aman menggunakan kartu kredit/debit</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Terima konfirmasi pesanan & lacak pengiriman</span></li>
-        </ul>
-        <p class="font-semibold mb-2">Untuk Pemilik Bisnis:</p>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tambah dan update produk dengan mudah</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Kelompokkan produk ke kategori dan brand</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Terima, proses pesanan & pantau semua penjualan dari satu dashboard</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Masalah yang Diselesaikan</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Terbatas pelanggan lokal → <strong>Sekarang jual ke siapa saja, di mana saja</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Toko tutup malam → <strong>Sekarang buka 24 jam, setiap hari</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tracking pesanan manual → <strong>Sekarang manajemen pesanan otomatis</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Hanya terima cash → <strong>Sekarang terima kartu online</strong></span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span>Tidak ada data pelanggan → <strong>Sekarang punya database pelanggan untuk marketing</strong></span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Keuntungan Bisnis</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Jualan 24/7</strong> — Toko tidak pernah tutup, pelanggan bisa beli kapan saja</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Jangkau lebih banyak pelanggan</strong> — Jual melampaui area lokal</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Hemat biaya</strong> — Tidak perlu sewa toko fisik atau staf tambahan</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Pembayaran aman</strong> — Pelanggan percaya transaksi online yang aman</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Lacak semuanya</strong> — Pesanan, pelanggan, produk semua dalam satu tempat</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-6">
-        <h4 class="text-lg font-bold mb-3 text-slate-900 dark:text-white">Fitur Utama</h4>
-        <ul class="space-y-2">
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Katalog Produk</strong> — Tampilkan semua produk dengan indah</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Keranjang & Wishlist</strong> — Pelanggan kumpulkan item sebelum beli</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Pembayaran Online</strong> — Terima kartu dengan aman via Stripe</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Manajemen Pesanan</strong> — Lihat semua pesanan dan statusnya</span></li>
-          <li class="flex gap-3"><span class="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary"></span><span><strong>Dashboard Admin</strong> — Kelola semuanya dari satu layar</span></li>
-        </ul>
-      </div>
-
-      <p class="italic text-slate-500 border-l-4 border-slate-200 pl-4 py-2 bg-slate-50 dark:bg-slate-800 dark:border-slate-600 rounded-r">
-        <strong>Ringkasan:</strong> Alizon Store mengubah bisnis Anda menjadi mesin penjualan 24/7. Tidak ada batasan kapan atau di mana Anda bisa menjual. Semua operasi dalam satu dashboard mudah.
-      </p>
-      `,
+      details: {
+        overview: "Platform toko online yang memungkinkan bisnis menjual produk di internet, menerima pembayaran, dan mengelola pesanan dari satu tempat. Mengubah bisnis lokal menjadi pemain global.",
+        role: "Full-Stack Developer",
+        challengeTitle: "Limitasi Toko Fisik",
+        challenges: [
+          { title: "Jangkauan Terbatas", desc: "Hanya bisa melayani pelanggan di area sekitar toko fisik." },
+          { title: "Jam Operasional", desc: "Kehilangan potensi penjualan saat toko tutup di malam hari." },
+          { title: "Manual Order", desc: "Mencatat pesanan via chat/telepon yang rawan kesalahan dan lambat." },
+          { title: "Cash Only", desc: "Opsi pembayaran terbatas membuat pelanggan sering batal beli." }
+        ],
+        solutionTitle: "Ekspansi Digital Alizon",
+        solutions: [
+          { title: "Jualan 24/7", desc: "Toko online selalu buka, menerima pesanan bahkan saat Anda tidur." },
+          { title: "Global Reach", desc: "Kirim produk ke seluruh negeri tanpa batasan geografis." },
+          { title: "Automated System", desc: "Pesanan, stok, dan pembayaran terkelola otomatis oleh sistem." },
+          { title: "Secure Payment", desc: "Terima pembayaran kartu kredit/debit dengan aman." }
+        ],
+        featuresTitle: "Fitur Unggulan",
+        features: [
+          { title: "Product Catalog", desc: "Etalase produk menarik dengan kategori dan filter." },
+          { title: "Shopping Cart", desc: "Fungsi keranjang belanja dan wishlist untuk pengalaman user." },
+          { title: "Stripe Payment", desc: "Integrasi Stripe untuk pembayaran kartu yang aman dan cepat." },
+          { title: "Order Management", desc: "Dashboard untuk memproses pesanan dan update resi pengiriman." },
+          { title: "Admin Insights", desc: "Laporan penjualan harian/bulanan untuk pantau performa bisnis." }
+        ]
+      },
       industry: 'E-Commerce & Retail',
       date: 'Full-Stack Developer'
     }
