@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
   // Get current project data
   const currentProjectId = PROJECT_ORDER[currentIndex];
   const currentProject = PROJECTS.find(p => p.id === currentProjectId);
-  const currentProjectTrans = (projectsTranslation as any)[currentProjectId];
+  const currentProjectTrans = projectsTranslation ? (projectsTranslation as any)[currentProjectId] : null;
   const currentTheme = currentProjectTrans ? getTheme(currentProjectTrans.industry) : getTheme('');
 
   // Get prev/next for preview
@@ -190,7 +190,7 @@ const Projects: React.FC = () => {
 
                     {/* Tech Stack / Features */}
                     <div className="flex flex-wrap gap-2 mb-8">
-                      {currentProject.technologies?.slice(0, 5).map((tech, i) => (
+                      {currentProject?.techStack?.slice(0, 5).map((tech, i) => (
                         <span key={i} className="px-3 py-1.5 text-xs font-medium text-slate-300 bg-slate-800/80 rounded-full border border-slate-700/50">
                           {tech}
                         </span>
@@ -204,12 +204,12 @@ const Projects: React.FC = () => {
                         className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${currentTheme.accent} text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300`}
                       >
                         <Eye size={18} />
-                        {projectsTranslation?.section?.viewDetail || 'Lihat Detail'}
+                        {projectsTranslation?.section?.viewDetail || 'View Detail'}
                       </Link>
 
-                      {currentProject.demoUrl && (
+                      {currentProject?.liveLink && (
                         <a
-                          href={currentProject.demoUrl}
+                          href={currentProject?.liveLink}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-white font-bold rounded-xl border border-slate-700 hover:bg-slate-700 hover:border-slate-600 transition-all duration-300"
@@ -245,7 +245,7 @@ const Projects: React.FC = () => {
                     <img src={prevProject.heroImage} alt={prevTrans.title} className="w-full h-full object-cover" />
                   </div>
                   <div className="text-left min-w-0">
-                    <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Sebelumnya</p>
+                    <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Previous</p>
                     <p className="text-sm font-semibold text-white truncate">{prevTrans.title}</p>
                   </div>
                 </>
@@ -291,7 +291,7 @@ const Projects: React.FC = () => {
               {nextProject && nextTrans && (
                 <>
                   <div className="text-right min-w-0">
-                    <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Selanjutnya</p>
+                    <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">Next</p>
                     <p className="text-sm font-semibold text-white truncate">{nextTrans.title}</p>
                   </div>
                   <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
@@ -313,12 +313,12 @@ const Projects: React.FC = () => {
           transition={{ delay: 0.2 }}
         >
           <a
-            href="https://wa.me/6285888050785?text=Hi%20Agam%2C%20saya%20mau%20diskusi%20tentang%20project"
+            href="https://wa.me/6285888050785?text=Hi%20Agam%2C%20I%20would%20like%20to%20discuss%20a%20project"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-violet-600 text-white font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300"
           >
-            Diskusikan Project Anda
+            Discuss Your Project
             <ExternalLink size={16} />
           </a>
         </motion.div>
