@@ -338,247 +338,84 @@ export const id = {
   },
   pricing: {
     badge: '💰 Investasi',
-    title: 'Pilih Layanan & Paket',
-    subtitle: 'Harga transparan dengan range yang jelas. Pembayaran bisa dicicil.',
+    title: 'Pilih Paket yang Tepat',
+    subtitle: 'Harga transparan, tanpa biaya tersembunyi. Pembayaran bisa dicicil.',
     popular: 'Paling Populer',
-    filterAll: 'Semua',
     startFrom: 'Mulai dari',
-    moreFeatures: 'fitur lainnya',
     cta: 'Konsultasi Gratis',
     note: '* Harga final tergantung kompleksitas fitur. Konsultasi gratis untuk estimasi yang lebih akurat.',
-    categories: [
+    packages: [
       {
-        id: 'landing-page',
-        name: 'Landing Page',
-        packages: [
-          {
-            tier: 'starter',
-            name: 'Starter',
-            tagline: 'Landing page simpel untuk promosi',
-            priceRange: 'Rp 500rb - 900rb',
-            timeline: '2-3 hari kerja',
-            features: [
-              'Single page layout responsif',
-              'Desain modern & mobile-friendly',
-              'Section: Hero, Produk, CTA',
-              'Integrasi WhatsApp langsung',
-              'Basic SEO on-page',
-              'Free hosting 1 tahun',
-              '2x revisi'
-            ]
-          },
-          {
-            tier: 'pro',
-            name: 'Pro',
-            tagline: 'Landing page konversi tinggi',
-            priceRange: 'Rp 900rb - 2jt',
-            timeline: '3-5 hari kerja',
-            features: [
-              'Semua fitur Starter',
-              'Multi-section lengkap',
-              'Testimoni & social proof',
-              'Form lead capture',
-              'Integrasi Google Analytics',
-              'Optimasi kecepatan',
-              'Free domain .com 1 tahun',
-              '4x revisi'
-            ]
-          },
-          {
-            tier: 'complete',
-            name: 'Complete',
-            tagline: 'Landing page premium full-custom',
-            priceRange: 'Rp 2jt - 3,5jt',
-            timeline: '5-7 hari kerja',
-            features: [
-              'Semua fitur Pro',
-              'Desain kustom full branding',
-              'Copywriting persuasif',
-              'A/B testing ready',
-              'Integrasi email marketing',
-              'Maintenance 30 hari',
-              '6x revisi',
-              'Priority support'
-            ]
-          }
-        ]
+        tier: 'starter',
+        name: 'Starter',
+        tagline: 'Landing Page',
+        description: '1 halaman promosi yang langsung convert visitor jadi customer',
+        priceRange: 'Rp 500rb - 2jt',
+        timeline: '2-5 hari kerja',
+        features: [
+          '1 halaman responsif (mobile & desktop)',
+          'Desain modern & premium sesuai branding',
+          'Section lengkap: Hero, Produk/Jasa, Keunggulan, Testimoni, FAQ, CTA',
+          'Tombol WhatsApp langsung chat',
+          'Optimasi kecepatan loading (skor 90+)',
+          'Basic SEO (meta title, description, Open Graph)',
+          'Integrasi Google Analytics',
+          'Kompatibel semua browser modern',
+          'Source code diberikan sepenuhnya',
+          'Free maintenance 15 hari',
+          '2x revisi desain'
+        ],
+        idealFor: ['UMKM baru mulai online', 'Promosi produk/jasa', 'Event & launching', 'Portfolio freelancer']
       },
       {
-        id: 'company-profile',
-        name: 'Company Profile',
-        packages: [
-          {
-            tier: 'starter',
-            name: 'Starter',
-            tagline: 'Website profil perusahaan dasar',
-            priceRange: 'Rp 1,5jt - 2,5jt',
-            timeline: '5-7 hari kerja',
-            features: [
-              '4-5 Halaman (Home, About, Services, Contact)',
-              'Desain profesional responsif',
-              'Profil perusahaan lengkap',
-              'Peta lokasi Google Maps',
-              'Form kontak',
-              'Basic SEO',
-              'Free hosting 1 tahun',
-              '2x revisi'
-            ]
-          },
-          {
-            tier: 'pro',
-            name: 'Pro',
-            tagline: 'Website company profile lengkap',
-            priceRange: 'Rp 2,5jt - 5jt',
-            timeline: '1-2 minggu',
-            features: [
-              'Semua fitur Starter',
-              '6-8 Halaman + Portfolio',
-              'Desain custom brand identity',
-              'Galeri project/portfolio',
-              'Blog/artikel sederhana',
-              'Integrasi sosial media',
-              'Google Analytics',
-              'Free domain .com 1 tahun',
-              '4x revisi'
-            ]
-          },
-          {
-            tier: 'complete',
-            name: 'Complete',
-            tagline: 'Website company profile premium',
-            priceRange: 'Rp 5jt - 9jt',
-            timeline: '2-3 minggu',
-            features: [
-              'Semua fitur Pro',
-              '10+ Halaman (Karir, Team, dll)',
-              'CMS untuk update konten mandiri',
-              'Blog lengkap dengan kategori',
-              'Multi-bahasa (ID/EN)',
-              'SEO advanced',
-              'Maintenance 45 hari',
-              '6x revisi',
-              'Priority support'
-            ]
-          }
-        ]
+        tier: 'growth',
+        name: 'Growth',
+        tagline: 'Company Profile',
+        description: 'Website profesional multi-halaman untuk bisnis yang ingin tampil kredibel',
+        priceRange: 'Rp 2jt - 5jt',
+        timeline: '1-2 minggu',
+        features: [
+          '5-8 halaman (Home, About, Services, Portfolio, Blog, Contact, dll)',
+          'Desain custom premium sesuai brand identity',
+          'Galeri produk/portfolio dengan lightbox',
+          'Form kontak dengan notifikasi email otomatis',
+          'WhatsApp Chat Widget floating (click-to-chat)',
+          'Blog/artikel untuk SEO (opsional)',
+          'Integrasi Google Analytics & Search Console',
+          'SEO on-page lengkap (sitemap, robots.txt, schema)',
+          'Optimasi kecepatan & performa',
+          'Responsif sempurna di semua device',
+          'Source code diberikan sepenuhnya',
+          'Free maintenance 1 bulan',
+          '3x revisi desain'
+        ],
+        idealFor: ['Bisnis yang berkembang', 'Company profile profesional', 'Jasa & konsultan', 'Toko offline ekspansi online']
       },
       {
-        id: 'ecommerce',
-        name: 'E-Commerce',
-        packages: [
-          {
-            tier: 'starter',
-            name: 'Starter',
-            tagline: 'Toko online sederhana',
-            priceRange: 'Rp 3,5jt - 6jt',
-            timeline: '1-2 minggu',
-            features: [
-              'Katalog produk (max 50 item)',
-              'Keranjang belanja',
-              'Checkout via WhatsApp',
-              'Manajemen order basic',
-              'Responsif mobile',
-              'SEO dasar',
-              'Free hosting 1 tahun',
-              '2x revisi'
-            ]
-          },
-          {
-            tier: 'pro',
-            name: 'Pro',
-            tagline: 'Toko online dengan pembayaran otomatis',
-            priceRange: 'Rp 6jt - 10jt',
-            timeline: '2-3 minggu',
-            features: [
-              'Semua fitur Starter',
-              'Produk unlimited',
-              'Payment gateway (Midtrans)',
-              'Manajemen stok otomatis',
-              'Dashboard admin lengkap',
-              'Laporan penjualan',
-              'Email notifikasi otomatis',
-              'Free domain .com 1 tahun',
-              '4x revisi'
-            ]
-          },
-          {
-            tier: 'complete',
-            name: 'Complete',
-            tagline: 'E-commerce full-featured',
-            priceRange: 'Rp 10jt - 18jt',
-            timeline: '3-4 minggu',
-            features: [
-              'Semua fitur Pro',
-              'Multi-vendor support',
-              'Kupon & promo otomatis',
-              'Integrasi ekspedisi (JNE, dll)',
-              'Customer account & wishlist',
-              'Review & rating produk',
-              'Analytics dashboard',
-              'Maintenance 60 hari',
-              '6x revisi'
-            ]
-          }
-        ]
-      },
-      {
-        id: 'pos-inventory',
-        name: 'POS & Inventory',
-        packages: [
-          {
-            tier: 'starter',
-            name: 'Starter',
-            tagline: 'Kasir & stok sederhana',
-            priceRange: 'Rp 3jt - 5jt',
-            timeline: '1-2 minggu',
-            features: [
-              'Point of Sale (kasir)',
-              'Manajemen produk & kategori',
-              'Cetak struk thermal',
-              'Riwayat transaksi',
-              'Laporan penjualan harian',
-              'Multi user (admin + kasir)',
-              '2x revisi',
-              'Maintenance 15 hari'
-            ]
-          },
-          {
-            tier: 'pro',
-            name: 'Pro',
-            tagline: 'POS dengan inventory lengkap',
-            priceRange: 'Rp 5jt - 9jt',
-            timeline: '2-3 minggu',
-            features: [
-              'Semua fitur Starter',
-              'Manajemen stok/inventory',
-              'Notifikasi stok menipis',
-              'Multiple payment (QRIS + Cash)',
-              'Laporan laba kotor',
-              'Export laporan (PDF/Excel)',
-              'Dashboard real-time',
-              '4x revisi',
-              'Maintenance 30 hari'
-            ]
-          },
-          {
-            tier: 'complete',
-            name: 'Complete',
-            tagline: 'Sistem POS enterprise',
-            priceRange: 'Rp 9jt - 15jt',
-            timeline: '3-4 minggu',
-            features: [
-              'Semua fitur Pro',
-              'Multi cabang & multi kasir',
-              'Manajemen supplier',
-              'Purchase Order & auto refill',
-              'Integrasi QRIS Gateway',
-              'Mode offline (auto sync)',
-              'Hak akses bertingkat',
-              '6x revisi',
-              'Maintenance 45 hari'
-            ]
-          }
-        ]
+        tier: 'pro',
+        name: 'Pro',
+        tagline: 'Booking / E-commerce',
+        description: 'Sistem bisnis lengkap dengan booking online atau toko online + pembayaran otomatis',
+        priceRange: 'Rp 5jt - 15jt',
+        timeline: '2-4 minggu',
+        features: [
+          'Sistem booking online ATAU toko online lengkap',
+          'Payment gateway (Midtrans/QRIS/Transfer Bank)',
+          'Dashboard admin untuk kelola pesanan & produk',
+          'Manajemen produk/layanan, kategori, & stok',
+          'Notifikasi otomatis ke WhatsApp (order masuk, status update)',
+          'Email notifikasi otomatis ke customer',
+          'Laporan penjualan & booking (export PDF/Excel)',
+          'Akun customer (registrasi, login, riwayat order)',
+          'Kalender booking dengan slot waktu (untuk booking)',
+          'Keranjang belanja & wishlist (untuk e-commerce)',
+          'SEO lengkap & Google Analytics',
+          'Responsif sempurna di semua device',
+          'Source code diberikan sepenuhnya',
+          'Free maintenance 1 bulan',
+          '5x revisi desain'
+        ],
+        idealFor: ['Salon, barbershop, spa', 'Klinik, dokter, terapis', 'Rental mobil, kamera, dll', 'Toko online & UMKM', 'Restoran & cafe']
       }
     ]
   },

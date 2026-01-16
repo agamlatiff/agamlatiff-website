@@ -33,7 +33,7 @@ export const en = {
       { title: "Complete Dashboard", desc: "Monitor all reservations from one place." }
     ],
     visitDemo: "Visit Live Demo"
-    
+
   },
   projects: {
     section: {
@@ -340,247 +340,84 @@ export const en = {
   },
   pricing: {
     badge: '💰 Investment',
-    title: 'Choose Service & Package',
-    subtitle: 'Transparent pricing with clear ranges. Installment payment available.',
+    title: 'Choose the Right Package',
+    subtitle: 'Transparent pricing, no hidden fees. Installment payment available.',
     popular: 'Most Popular',
-    filterAll: 'All',
     startFrom: 'Starting from',
-    moreFeatures: 'more features',
     cta: 'Free Consultation',
     note: '* Final price depends on feature complexity. Free consultation for a more accurate estimate.',
-    categories: [
+    packages: [
       {
-        id: 'landing-page',
-        name: 'Landing Page',
-        packages: [
-          {
-            tier: 'starter',
-            name: 'Starter',
-            tagline: 'Simple landing page for promotions',
-            priceRange: '$35 - $60',
-            timeline: '2-3 business days',
-            features: [
-              'Single page responsive layout',
-              'Modern & mobile-friendly design',
-              'Sections: Hero, Product, CTA',
-              'Direct WhatsApp integration',
-              'Basic SEO on-page',
-              'Free hosting 1 year',
-              '2x revisions'
-            ]
-          },
-          {
-            tier: 'pro',
-            name: 'Pro',
-            tagline: 'High-conversion landing page',
-            priceRange: '$60 - $130',
-            timeline: '3-5 business days',
-            features: [
-              'All Starter features',
-              'Complete multi-section layout',
-              'Testimonials & social proof',
-              'Lead capture form',
-              'Google Analytics integration',
-              'Speed optimization',
-              'Free .com domain 1 year',
-              '4x revisions'
-            ]
-          },
-          {
-            tier: 'complete',
-            name: 'Complete',
-            tagline: 'Premium full-custom landing page',
-            priceRange: '$130 - $230',
-            timeline: '5-7 business days',
-            features: [
-              'All Pro features',
-              'Full custom branding design',
-              'Persuasive copywriting',
-              'A/B testing ready',
-              'Email marketing integration',
-              '30-day maintenance',
-              '6x revisions',
-              'Priority support'
-            ]
-          }
-        ]
+        tier: 'starter',
+        name: 'Starter',
+        tagline: 'Landing Page',
+        description: '1-page promo that converts visitors into customers instantly',
+        priceRange: '$35 - $130',
+        timeline: '2-5 business days',
+        features: [
+          '1 responsive page (mobile & desktop)',
+          'Modern & premium design matching your branding',
+          'Complete sections: Hero, Products/Services, Benefits, Testimonials, FAQ, CTA',
+          'WhatsApp button for instant chat',
+          'Speed optimization (90+ score)',
+          'Basic SEO (meta title, description, Open Graph)',
+          'Google Analytics integration',
+          'Compatible with all modern browsers',
+          'Full source code ownership',
+          'Free 15-day maintenance',
+          '2x design revisions'
+        ],
+        idealFor: ['New SMEs going online', 'Product/service promotion', 'Events & launches', 'Freelancer portfolio']
       },
       {
-        id: 'company-profile',
-        name: 'Company Profile',
-        packages: [
-          {
-            tier: 'starter',
-            name: 'Starter',
-            tagline: 'Basic company profile website',
-            priceRange: '$100 - $170',
-            timeline: '5-7 business days',
-            features: [
-              '4-5 Pages (Home, About, Services, Contact)',
-              'Professional responsive design',
-              'Complete company profile',
-              'Google Maps location',
-              'Contact form',
-              'Basic SEO',
-              'Free hosting 1 year',
-              '2x revisions'
-            ]
-          },
-          {
-            tier: 'pro',
-            name: 'Pro',
-            tagline: 'Complete company profile website',
-            priceRange: '$170 - $330',
-            timeline: '1-2 weeks',
-            features: [
-              'All Starter features',
-              '6-8 Pages + Portfolio',
-              'Custom brand identity design',
-              'Project/portfolio gallery',
-              'Simple blog/articles',
-              'Social media integration',
-              'Google Analytics',
-              'Free .com domain 1 year',
-              '4x revisions'
-            ]
-          },
-          {
-            tier: 'complete',
-            name: 'Complete',
-            tagline: 'Premium company profile website',
-            priceRange: '$330 - $600',
-            timeline: '2-3 weeks',
-            features: [
-              'All Pro features',
-              '10+ Pages (Careers, Team, etc)',
-              'CMS for self content updates',
-              'Full blog with categories',
-              'Multi-language (ID/EN)',
-              'Advanced SEO',
-              '45-day maintenance',
-              '6x revisions',
-              'Priority support'
-            ]
-          }
-        ]
+        tier: 'growth',
+        name: 'Growth',
+        tagline: 'Company Profile',
+        description: 'Professional multi-page website for businesses that want to look credible',
+        priceRange: '$130 - $330',
+        timeline: '1-2 weeks',
+        features: [
+          '5-8 pages (Home, About, Services, Portfolio, Blog, Contact, etc)',
+          'Custom premium design matching brand identity',
+          'Product/portfolio gallery with lightbox',
+          'Contact form with automatic email notifications',
+          'Floating WhatsApp Chat Widget (click-to-chat)',
+          'Blog/articles for SEO (optional)',
+          'Google Analytics & Search Console integration',
+          'Complete on-page SEO (sitemap, robots.txt, schema)',
+          'Speed & performance optimization',
+          'Perfectly responsive on all devices',
+          'Full source code ownership',
+          'Free 1-month maintenance',
+          '3x design revisions'
+        ],
+        idealFor: ['Growing businesses', 'Professional company profile', 'Services & consultants', 'Offline stores expanding online']
       },
       {
-        id: 'ecommerce',
-        name: 'E-Commerce',
-        packages: [
-          {
-            tier: 'starter',
-            name: 'Starter',
-            tagline: 'Simple online store',
-            priceRange: '$230 - $400',
-            timeline: '1-2 weeks',
-            features: [
-              'Product catalog (max 50 items)',
-              'Shopping cart',
-              'WhatsApp checkout',
-              'Basic order management',
-              'Mobile responsive',
-              'Basic SEO',
-              'Free hosting 1 year',
-              '2x revisions'
-            ]
-          },
-          {
-            tier: 'pro',
-            name: 'Pro',
-            tagline: 'Online store with auto payment',
-            priceRange: '$400 - $660',
-            timeline: '2-3 weeks',
-            features: [
-              'All Starter features',
-              'Unlimited products',
-              'Payment gateway (Midtrans/Stripe)',
-              'Auto stock management',
-              'Complete admin dashboard',
-              'Sales reports',
-              'Auto email notifications',
-              'Free .com domain 1 year',
-              '4x revisions'
-            ]
-          },
-          {
-            tier: 'complete',
-            name: 'Complete',
-            tagline: 'Full-featured e-commerce',
-            priceRange: '$660 - $1,200',
-            timeline: '3-4 weeks',
-            features: [
-              'All Pro features',
-              'Multi-vendor support',
-              'Auto coupons & promos',
-              'Shipping integration',
-              'Customer accounts & wishlist',
-              'Product reviews & ratings',
-              'Analytics dashboard',
-              '60-day maintenance',
-              '6x revisions'
-            ]
-          }
-        ]
-      },
-      {
-        id: 'pos-inventory',
-        name: 'POS & Inventory',
-        packages: [
-          {
-            tier: 'starter',
-            name: 'Starter',
-            tagline: 'Simple cashier & stock',
-            priceRange: '$200 - $330',
-            timeline: '1-2 weeks',
-            features: [
-              'Point of Sale (cashier)',
-              'Product & category management',
-              'Thermal receipt printing',
-              'Transaction history',
-              'Daily sales reports',
-              'Multi user (admin + cashier)',
-              '2x revisions',
-              '15-day maintenance'
-            ]
-          },
-          {
-            tier: 'pro',
-            name: 'Pro',
-            tagline: 'POS with complete inventory',
-            priceRange: '$330 - $600',
-            timeline: '2-3 weeks',
-            features: [
-              'All Starter features',
-              'Stock/inventory management',
-              'Low stock notifications',
-              'Multiple payment (QRIS + Cash)',
-              'Gross profit reports',
-              'Export reports (PDF/Excel)',
-              'Real-time dashboard',
-              '4x revisions',
-              '30-day maintenance'
-            ]
-          },
-          {
-            tier: 'complete',
-            name: 'Complete',
-            tagline: 'Enterprise POS system',
-            priceRange: '$600 - $1,000',
-            timeline: '3-4 weeks',
-            features: [
-              'All Pro features',
-              'Multi-branch & multi-cashier',
-              'Supplier management',
-              'Purchase Order & auto refill',
-              'QRIS Gateway integration',
-              'Offline mode (auto sync)',
-              'Tiered access rights',
-              '6x revisions',
-              '45-day maintenance'
-            ]
-          }
-        ]
+        tier: 'pro',
+        name: 'Pro',
+        tagline: 'Booking / E-commerce',
+        description: 'Complete business system with online booking or online store + automatic payment',
+        priceRange: '$330 - $1,000',
+        timeline: '2-4 weeks',
+        features: [
+          'Complete online booking system OR online store',
+          'Payment gateway (Midtrans/QRIS/Bank Transfer)',
+          'Admin dashboard for orders & product management',
+          'Product/service, category, & stock management',
+          'Automatic WhatsApp notifications (new orders, status updates)',
+          'Automatic email notifications to customers',
+          'Sales & booking reports (PDF/Excel export)',
+          'Customer accounts (registration, login, order history)',
+          'Booking calendar with time slots (for booking)',
+          'Shopping cart & wishlist (for e-commerce)',
+          'Complete SEO & Google Analytics',
+          'Perfectly responsive on all devices',
+          'Full source code ownership',
+          'Free 1-month maintenance',
+          '5x design revisions'
+        ],
+        idealFor: ['Salons, barbershops, spas', 'Clinics, doctors, therapists', 'Car rental, camera rental, etc', 'Online stores & SMEs', 'Restaurants & cafes']
       }
     ]
   },

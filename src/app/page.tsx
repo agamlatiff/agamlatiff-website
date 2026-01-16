@@ -1,7 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import TechStack from "@/components/sections/TechStack";
 import WhyBooking from "@/components/sections/WhyBooking";
-import BookingShowcase from "@/components/sections/BookingShowcase";
 import Projects from "@/components/sections/Projects";
 import Process from "@/components/sections/Process";
 import FAQ from "@/components/sections/FAQ";
@@ -15,9 +14,8 @@ export default function Home() {
       <Hero />
       <TechStack />
       <WhyBooking />
-      <BookingShowcase />
       <Projects />
-      <Pricing/>
+      <Pricing />
       <Process />
       <FAQ />
       <About />
