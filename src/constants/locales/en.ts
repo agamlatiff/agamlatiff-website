@@ -33,6 +33,7 @@ export const en = {
       { title: "Complete Dashboard", desc: "Monitor all reservations from one place." }
     ],
     visitDemo: "Visit Live Demo"
+    
   },
   projects: {
     section: {
