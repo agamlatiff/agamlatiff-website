@@ -250,13 +250,16 @@ const TechStack: React.FC = () => {
         {/* ========================================================================= */}
         {/* OPSI 4: HORIZONTAL TELEMETRY BEAM / LINEAR DATA RAILS STAGE               */}
         {/* ========================================================================= */}
-        <div className="relative w-full lg:min-h-[780px] flex items-center justify-center">
+        <div className="relative w-full lg:min-h-[780px] flex flex-col items-center justify-center">
           
           {/* ======================================================================= */}
           {/* CENTER DOMINANT SVG RADAR (Hovering any ring activates that layer)     */}
           {/* ======================================================================= */}
-          <div className="relative w-full max-w-[540px] sm:max-w-[660px] lg:max-w-[800px] aspect-square flex items-center justify-center select-none z-10">
-            <svg viewBox="0 0 800 800" className="w-full h-full overflow-visible">
+          <div className="relative w-full max-w-[340px] xs:max-w-[420px] sm:max-w-[540px] md:max-w-[640px] lg:max-w-[800px] aspect-square flex items-center justify-center select-none z-10 mx-auto">
+            {/* Ambient Core Halo Glow behind SVG (dominant & pulsing on mobile & tablet) */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-gradient-to-tr from-cyan-500/35 via-blue-500/25 to-purple-500/30 rounded-full blur-2xl sm:blur-3xl pointer-events-none animate-pulse" />
+
+            <svg viewBox="0 0 800 800" className="w-full h-full overflow-visible relative z-10">
               <defs>
                 {/* Neon Cyan Glow Filter */}
                 <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
@@ -267,6 +270,23 @@ const TechStack: React.FC = () => {
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
+
+                {/* Intense Core Glow Filter */}
+                <filter id="core-intense-glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+
+                {/* Core Center Gradient */}
+                <radialGradient id="core-center-gradient" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#00e5ff" stopOpacity="0.3" />
+                  <stop offset="60%" stopColor="#0284c7" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#030712" stopOpacity="0.95" />
+                </radialGradient>
 
                 {/* Core Hub Gradient */}
                 <radialGradient id="hub-gradient" cx="50%" cy="50%" r="50%">
@@ -439,29 +459,111 @@ const TechStack: React.FC = () => {
                 );
               })}
 
-              {/* 5. Center Core Hub */}
+              {/* 5. Center Core Hub (Dominant, Eye-Catching & Pulsating on Mobile/Tablet) */}
               <g
                 className="cursor-pointer"
                 onMouseEnter={() => setActiveLayerId('architecture')}
                 onClick={() => setActiveLayerId('architecture')}
               >
+                {/* Generous Hitbox */}
+                <circle cx={CX} cy={CY} r="75" fill="transparent" />
+
+                {/* Outer Radar Ripple Wave (Subtle Expanding Beacon) */}
                 <circle
                   cx={CX}
                   cy={CY}
-                  r="42"
-                  fill="url(#hub-gradient)"
-                  stroke="#0284c7"
-                  strokeWidth="1.5"
+                  r="70"
+                  fill="none"
+                  stroke={activeLayerId === 'architecture' ? '#c084fc' : '#00e5ff'}
+                  strokeWidth="1.2"
+                  strokeDasharray="4 6"
+                  opacity={activeLayerId === 'architecture' ? '0.75' : '0.45'}
                   filter="url(#neon-glow)"
+                  className="transition-all duration-300"
                 />
-                <circle cx={CX} cy={CY} r="35" fill="#090d16" stroke="#334155" strokeWidth="1" />
-                
-                {/* Architectural Core Pillars */}
-                <g transform={`translate(${CX - 15}, ${CY - 15}) scale(0.7)`}>
-                  <path d="M 6 36 L 6 18 L 12 18 L 12 36 Z" fill="#38bdf8" />
-                  <path d="M 17 36 L 17 8 L 25 8 L 25 36 Z" fill="#ffffff" />
-                  <path d="M 30 36 L 30 18 L 36 18 L 36 36 Z" fill="#38bdf8" />
+
+                {/* Outer Secondary Radar Ripple Wave */}
+                <circle
+                  cx={CX}
+                  cy={CY}
+                  r="62"
+                  fill="none"
+                  stroke={activeLayerId === 'architecture' ? '#c084fc' : '#38bdf8'}
+                  strokeWidth="1"
+                  opacity="0.5"
+                  className="transition-all duration-300"
+                />
+
+                {/* 4 Precision Cardinal Accent Ticks around Core (N, E, S, W) */}
+                <line x1={CX} y1={CY - 58} x2={CX} y2={CY - 50} stroke="#00e5ff" strokeWidth="2" filter="url(#neon-glow)" />
+                <line x1={CX + 50} y1={CY} x2={CX + 58} y2={CY} stroke="#00e5ff" strokeWidth="2" filter="url(#neon-glow)" />
+                <line x1={CX} y1={CY + 50} x2={CX} y2={CY + 58} stroke="#00e5ff" strokeWidth="2" filter="url(#neon-glow)" />
+                <line x1={CX - 58} y1={CY} x2={CX - 50} y2={CY} stroke="#00e5ff" strokeWidth="2" filter="url(#neon-glow)" />
+
+                {/* Main Vibrant Core Halo Disk */}
+                <circle
+                  cx={CX}
+                  cy={CY}
+                  r="48"
+                  fill="url(#core-center-gradient)"
+                  stroke={activeLayerId === 'architecture' ? '#c084fc' : '#00e5ff'}
+                  strokeWidth="2.5"
+                  filter="url(#core-intense-glow)"
+                  className="transition-all duration-300"
+                />
+
+                {/* Inner High-Contrast Core Housing */}
+                <circle
+                  cx={CX}
+                  cy={CY}
+                  r="39"
+                  fill="#030712"
+                  stroke={activeLayerId === 'architecture' ? '#a855f7' : '#0284c7'}
+                  strokeWidth="1.5"
+                  className="transition-all duration-300"
+                />
+
+                {/* Futuristic Architectural / Server Core Isometric Emblem */}
+                <g transform={`translate(${CX - 15}, ${CY - 19})`}>
+                  {/* Top diamond facet */}
+                  <polygon
+                    points="15,3 26,9 15,15 4,9"
+                    fill={activeLayerId === 'architecture' ? '#c084fc' : '#00e5ff'}
+                    opacity="0.95"
+                  />
+                  {/* Left facet */}
+                  <polygon
+                    points="4,10 15,16 15,27 4,21"
+                    fill={activeLayerId === 'architecture' ? '#9333ea' : '#0284c7'}
+                    opacity="0.85"
+                  />
+                  {/* Right facet */}
+                  <polygon
+                    points="15,16 26,10 26,21 15,27"
+                    fill={activeLayerId === 'architecture' ? '#c084fc' : '#38bdf8'}
+                    opacity="0.95"
+                  />
+                  {/* Glowing Core Center Node */}
+                  <circle
+                    cx="15"
+                    cy="15"
+                    r="3.2"
+                    fill="#ffffff"
+                    filter="url(#neon-glow)"
+                  />
                 </g>
+
+                {/* Crisp Core Badge Label */}
+                <text
+                  x={CX}
+                  y={CY + 30}
+                  textAnchor="middle"
+                  className={`text-[8.5px] font-mono tracking-widest font-bold uppercase transition-colors duration-300 ${
+                    activeLayerId === 'architecture' ? 'fill-purple-300' : 'fill-cyan-300'
+                  }`}
+                >
+                  CORE
+                </text>
               </g>
             </svg>
           </div>
@@ -469,8 +571,8 @@ const TechStack: React.FC = () => {
           {/* ======================================================================= */}
           {/* HORIZONTAL TELEMETRY BEAMS / LINEAR DATA RAILS                         */}
           {/* ======================================================================= */}
-          <div className="w-full mt-10 lg:mt-0 lg:absolute lg:inset-0 pointer-events-none z-20">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:block gap-8">
+          <div className="w-full max-w-4xl lg:max-w-none mx-auto mt-10 sm:mt-14 lg:mt-0 lg:absolute lg:inset-0 pointer-events-none z-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:block gap-6 sm:gap-8">
               {LAYERS.map((layer) => {
                 const isActive = activeLayerId === layer.id;
                 const isLeft = layer.side === 'left';
