@@ -1,25 +1,31 @@
 export const id = {
   hero: {
-    badge: "Spesialis Sistem Booking Online",
+    badge: "Available for Software Engineering Roles",
+    greeting: "Halo, saya",
+    name: "Agam Latifullah",
+    role: "Full-Stack Developer",
     headline: {
-      part1: "Naikkin Omset Bisnis",
-      part2: "Dengan Sistem Booking"
+      title: "TypeScript & Golang",
+      part1: "Full-Stack Developer",
+      part2: "TypeScript & Golang"
     },
-    subheadline: "Booking app yang dirancang khusus untuk membantu pemilik bisnis <strong>menerima reservasi secara otomatis</strong> — tanpa perlu standby 24 jam membalas chat. Pelanggan bisa memilih jadwal, membayar DP, dan mendapat <strong>konfirmasi dalam hitungan detik</strong>.",
+    subheadline: "Membangun aplikasi web modern end-to-end dengan arsitektur bersih, performa tinggi, dan sistem backend yang handal.",
     cta: {
-      consult: "Konsultasi Gratis",
-      processing: "Memproses...",
-      roi: "Hired Me"
+      projects: "Lihat Proyek",
+      contact: "Hubungi Saya",
     }
   },
   nav: {
     home: "Beranda",
-    about: "Tentang",
     projects: "Proyek",
+    techStack: "Tech Stack",
+    experience: "Pengalaman",
+    about: "Tentang",
     contact: "Kontak"
   },
   techStack: {
-    title: "Technology Stack yang Saya Gunakan"
+    title: "Teknologi & Arsitektur yang Saya Gunakan",
+    subtitle: "Pilihan teknologi modern untuk membangun sistem yang scalable dan mudah di-maintain."
   },
   bookingShowcase: {
     badge: "Live Demo",
@@ -197,14 +203,14 @@ export const id = {
         solutionTitle: "Solusi Saturday WMS",
         solutions: [
           { title: "Pencatatan Digital", desc: "Setiap pergerakan barang tercatat real-time, meminimalisir selisih." },
-          { title: "Barcode Scanning", desc: "Scan barang masuk/keluar untuk akurasi 100% dan pelacakan lokasi." },
+          { title: "Audit Trail Lengkap", desc: "Riwayat setiap mutasi dan pergerakan stok tercatat detail untuk akurasi data." },
           { title: "Smart Opname", desc: "Opname digital yang cepat dengan fitur hitung otomatis." },
           { title: "Auto Alert", desc: "Notifikasi otomatis saat stok mencapai batas minimum." }
         ],
         featuresTitle: "Fitur Unggulan",
         features: [
           { title: "Multi-Gudang", desc: "Kelola stok di banyak cabang/lokasi dari satu dashboard pusat." },
-          { title: "Barcode System", desc: "Support scan barcode untuk inbound, outbound, dan opname." },
+          { title: "Alur Inbound & Outbound", desc: "Penerimaan dan pengeluaran barang tercatat rapi dan tersinkronisasi." },
           { title: "Transfer Stok", desc: "Fitur mutasi barang antar cabang dengan approval system." },
           { title: "Laporan Real-time", desc: "Analitik pergerakan stok, valuasi aset, dan performa produk." },
           { title: "Hak Akses Bertingkat", desc: "Akses berbeda untuk Manager, Admin Gudang, dan Staff." }

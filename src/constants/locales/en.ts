@@ -1,25 +1,31 @@
 export const en = {
   hero: {
-    badge: "Online Booking System Specialist",
+    badge: "Available for Software Engineering Roles",
+    greeting: "Hi, I'm",
+    name: "Agam Latifullah",
+    role: "Backend Developer",
     headline: {
-      part1: "Increase your business",
-      part2: "revenue with our online booking system"
+      title: "TypeScript & Golang",
+      part1: "Backend Developer",
+      part2: "TypeScript & Golang"
     },
-    subheadline: "A booking app designed specifically to help business owners <strong>receive reservations automatically</strong> — without needing to be available 24/7 to reply to messages. Customers can choose their schedule, pay a deposit, and get <strong>confirmation in seconds</strong>.",
+    subheadline: "Engineering modern, scalable web applications with clean architecture, high performance, and reliable backend systems.",
     cta: {
-      consult: "Consultation For Free",
-      processing: "Processing...",
-      roi: "Hired Me"
+      projects: "Explore Projects",
+      contact: "Get in Touch",
     }
   },
   nav: {
     home: "Home",
-    about: "About",
     projects: "Projects",
+    techStack: "Tech Stack",
+    experience: "Experience",
+    about: "About",
     contact: "Contact"
   },
   techStack: {
-    title: "Technology Stack I Use"
+    title: "Technologies & Architecture",
+    subtitle: "Battle-tested modern tech stack for building scalable and maintainable software systems."
   },
   bookingShowcase: {
     badge: "Live Demo",
@@ -197,14 +203,14 @@ export const en = {
         solutionTitle: "Saturday WMS Solutions",
         solutions: [
           { title: "Digital Recording", desc: "Real-time recording of every item movement minimizes discrepancies." },
-          { title: "Barcode System", desc: "Scan items for 100% accuracy and precise location tracking." },
+          { title: "Audit Trail & Logs", desc: "Detailed mutation and transaction history for reliable data accuracy." },
           { title: "Smart Opname", desc: "Fast digital stock opname with auto-calculation features." },
           { title: "Auto Alert", desc: "Automatic notifications when stock reaches minimum levels." }
         ],
         featuresTitle: "Key Features",
         features: [
           { title: "Multi-Warehouse", desc: "Manage stock across multiple branches/locations from a central dashboard." },
-          { title: "Barcode Scanning", desc: "Support barcode scanning for inbound, outbound, and opname." },
+          { title: "Inbound & Outbound Workflow", desc: "Structured receiving and dispatch tracking synchronized in real time." },
           { title: "Stack Transfer", desc: "Item mutation between branches with an approval system." },
           { title: "Real-time Reports", desc: "Analytics on stock movement, asset valuation, and product performance." },
           { title: "Role-Based Access", desc: "Different access levels for Managers, Warehouse Admins, and Staff." }

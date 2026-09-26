@@ -1,23 +1,17 @@
 import Hero from "@/components/sections/Hero";
-import TechStack from "@/components/sections/TechStack";
-import WhyBooking from "@/components/sections/WhyBooking";
 import Projects from "@/components/sections/Projects";
-import Process from "@/components/sections/Process";
-import FAQ from "@/components/sections/FAQ";
+import TechStack from "@/components/sections/TechStack";
+import Experience from "@/components/sections/Experience";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
-import Pricing from "@/components/sections/Pricing";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-0">
+    <div className="flex flex-col gap-0 w-full overflow-x-clip">
       <Hero />
-      <TechStack />
-      <WhyBooking />
       <Projects />
-      <Pricing />
-      <Process />
-      <FAQ />
+      <TechStack />
+      <Experience />
       <About />
       <Contact />
     </div>

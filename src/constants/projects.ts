@@ -21,11 +21,12 @@ export const PROJECTS: Project[] = [
       '/hiredio/10.webp',
       '/hiredio/11.webp',
     ],
-    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'NextAuth.js', 'Supabase'],
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'NextAuth.js', 'Supabase'],
     industry: 'Recruitment & HR Tech',
     date: 'Full-Stack Developer',
     isFeatured: true,
     liveLink: 'https://hired-io.vercel.app',
+    repoLink: 'https://github.com/agamlatiff/hired.io',
     tags: ['SaaS', 'Recruitment', 'B2B'],
     desc: {
       id: 'Platform rekrutmen end-to-end yang menjembatani profesional berbakat dengan perusahaan inovatif.',
@@ -55,11 +56,12 @@ export const PROJECTS: Project[] = [
       '/flyhigher/13.webp',
       '/flyhigher/14.webp',
     ],
-    techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Midtrans'],
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Midtrans'],
     industry: 'Travel & Tourism',
     date: 'Full-Stack Developer',
     isFeatured: true,
     liveLink: 'https://fly-higher.vercel.app',
+    repoLink: 'https://github.com/agamlatiff/fly-higher',
     tags: ['Booking System', 'Travel', 'Architecture'],
     desc: {
       id: 'Platform pemesanan tiket pesawat end-to-end yang dirancang untuk memberikan pengalaman reservasi penerbangan yang mulus dan efisien.',
@@ -92,12 +94,12 @@ export const PROJECTS: Project[] = [
     industry: 'Education & Public Sector',
     date: 'December 2024',
     isFeatured: true,
+    repoLink: 'https://github.com/agamlatiff/suka-baca',
     tags: ['Management System', 'Education', 'Public Sector'],
     desc: {
       id: 'Platform operasional perpustakaan komprehensif yang memodernisasi pengalaman peminjaman buku.',
       en: 'Comprehensive library operational platform designed to modernize the book lending experience.'
     }
-    // Add repo link if available or leave undefined
   },
   {
     id: '3',
@@ -127,6 +129,7 @@ export const PROJECTS: Project[] = [
     date: 'Oktober 2023',
     isFeatured: true,
     liveLink: 'https://alizonstore.vercel.app',
+    repoLink: 'https://github.com/agamlatiff/alizon-store',
     tags: ['E-Commerce', 'Retail', 'Payment Gateway'],
     desc: {
       id: 'Platform toko online yang memungkinkan bisnis menjual produk, menerima pembayaran, dan mengelola pesanan dalam satu tempat.',
@@ -150,10 +153,11 @@ export const PROJECTS: Project[] = [
       '/saturday/7.webp',
       '/saturday/8.webp',
     ],
-    techStack: ['Laravel', 'React', 'PostgreSQL', 'Barcode Scanner'],
+    techStack: ['Laravel', 'React', 'PostgreSQL'],
     industry: 'Logistik & Supply Chain',
     date: 'Desember 2023',
     isFeatured: true,
+    repoLink: 'https://github.com/agamlatiff/saturday',
     youtubeId: 'Sba29tQRzyE',
     tags: ['WMS', 'Logistics', 'Inventory'],
     desc: {
@@ -186,6 +190,7 @@ export const PROJECTS: Project[] = [
     industry: 'Education & EdTech',
     date: 'Januari 2024',
     isFeatured: true,
+    repoLink: 'https://github.com/agamlatiff/upskills',
     youtubeId: '-qq7Lu6KJ0o',
     tags: ['LMS', 'Education', 'Calculus'],
     desc: {
@@ -194,4 +199,3 @@ export const PROJECTS: Project[] = [
     }
   }
 ];
-

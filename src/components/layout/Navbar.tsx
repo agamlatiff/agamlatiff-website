@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Menu, X, Hexagon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const Navbar: React.FC = () => {
@@ -13,6 +13,8 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
   const router = useRouter();
 
+  const isId = language === 'id';
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -21,7 +23,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -40,7 +41,7 @@ const Navbar: React.FC = () => {
         setTimeout(() => {
           const element = document.querySelector(href);
           element?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+        }, 150);
       } else {
         const element = document.querySelector(href);
         element?.scrollIntoView({ behavior: 'smooth' });
@@ -51,130 +52,118 @@ const Navbar: React.FC = () => {
     }
   };
 
+  // Simplified to only 3 essential links
   const navLinks = [
-    { name: t('nav.home'), href: '#hero' }, // Assuming hero section has id='hero'
-    { name: t('nav.about'), href: '#about' },
-    { name: t('nav.projects'), href: '#projects' },
-    // { name: t('nav.services'), href: '#services' }, // Key might be missing in id.ts, hiding for now or hardcoding if needed. 
-    // Checking id.ts again, 'services' is not in 'nav'. But let's check if 'footer.menus.services' exists which is "Layanan".
-    // I will include Contact.
-    { name: t('nav.contact'), href: '#contact' },
+    { name: isId ? 'Proyek' : 'Projects', href: '#projects' },
+    { name: isId ? 'Perjalanan' : 'Journey', href: '#experience' },
+    { name: isId ? 'Tentang' : 'About', href: '#about' },
   ];
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isOpen
-          ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800 py-4 shadow-sm'
-          : 'bg-transparent py-6'
+      {/* Dark Obsidian Capsule Navbar */}
+      <header className="fixed top-4 sm:top-5 left-1/2 -translate-x-1/2 w-[92%] sm:w-[86%] max-w-4xl z-50 transition-all duration-300">
+        <nav
+          className={`w-full bg-zinc-950/95 backdrop-blur-2xl rounded-full border border-zinc-800/90 px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300 ${
+            scrolled
+              ? 'shadow-[0_16px_48px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.12)] border-zinc-700'
+              : 'shadow-[0_10px_35px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.12)]'
           }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link
-              href="/"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="flex items-center gap-2 group"
-            >
-              <span className={`font-black text-xl tracking-tight transition-colors ${scrolled || isOpen ? 'text-white' : 'text-white'}`}>
-                www.agamlatiff.com
-              </span>
-            </Link>
+        >
+          {/* Left: Brand Identity (Clean Agam Latifullah typography without AL badge) */}
+          <Link
+            href="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center gap-1.5 group flex-shrink-0 py-0.5"
+          >
+            <span className="font-bold text-white text-sm sm:text-base tracking-tight group-hover:text-zinc-300 transition-colors">
+              Agam Latifullah
+            </span>
+          </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
-              <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-full border border-slate-800">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={(e) => handleNavigation(e, link.href)}
-                    className="px-4 py-1.5 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800 rounded-full transition-all"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-              </div>
-
-              {/* Language Switcher */}
-              <button
-                onClick={() => setLanguage(language === 'id' ? 'en' : 'id')}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-800 text-sm font-medium hover:bg-slate-900 transition-colors"
-                aria-label={`Switch language to ${language === 'id' ? 'English' : 'Indonesian'}`}
+          {/* Center: Essential Nav Links (Desktop) */}
+          <div className="hidden md:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleNavigation(e, link.href)}
+                className="px-3.5 py-1.5 text-xs font-medium text-zinc-400 hover:text-white hover:bg-zinc-900 rounded-full transition-all"
               >
-                <span className={language === 'id' ? 'text-primary font-bold' : 'text-slate-400'}>ID</span>
-                <span className="text-slate-300" aria-hidden="true">|</span>
-                <span className={language === 'en' ? 'text-primary font-bold' : 'text-slate-400'}>EN</span>
-              </button>
+                {link.name}
+              </a>
+            ))}
+          </div>
 
+          {/* Right: Actions (Language Switcher + Dark Mode Toggle + Tactile White CTA) */}
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            {/* Dual-Script Linguistic Toggle Button (A / 文) */}
+            <button
+              onClick={() => setLanguage(language === 'id' ? 'en' : 'id')}
+              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/90 hover:bg-zinc-800 hover:border-zinc-700 text-zinc-300 transition-all font-mono text-[11px]"
+              aria-label={`Switch language to ${language === 'id' ? 'English' : 'Indonesian'}`}
+              title={isId ? 'Ganti Bahasa' : 'Switch Language'}
+            >
+              <svg className="w-3.5 h-3.5 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m5 8 6 6" />
+                <path d="m4 14 6-6 2-3" />
+                <path d="M2 5h12" />
+                <path d="M7 2h1" />
+                <path d="m22 22-5-10-5 10" />
+                <path d="M14 18h6" />
+              </svg>
+              <span className="font-bold tracking-wider uppercase text-zinc-200">
+                {language}
+              </span>
+            </button>
+
+
+            {/* Tactile White Action Button */}
+            <a
+              href="#contact"
+              onClick={(e) => handleNavigation(e, '#contact')}
+              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white text-zinc-950 text-xs font-semibold hover:bg-zinc-200 transition-all shadow-xs active:scale-95"
+            >
+              <span>{isId ? 'Hubungi Saya' : 'Get in Touch'}</span>
+            </a>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden w-8 h-8 rounded-full border border-zinc-800 bg-zinc-900 flex items-center justify-center text-zinc-300 hover:text-white transition-colors"
+              aria-label="Toggle Navigation Menu"
+            >
+              {isOpen ? <X size={16} /> : <Menu size={16} />}
+            </button>
+          </div>
+        </nav>
+
+        {/* Mobile Dropdown Panel */}
+        {isOpen && (
+          <div className="md:hidden mt-2.5 w-full bg-zinc-950/95 backdrop-blur-2xl rounded-2xl border border-zinc-800 shadow-2xl p-4 flex flex-col gap-2 animate-fade-in-down">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleNavigation(e, link.href)}
+                className="text-sm font-medium text-zinc-300 hover:text-white py-2 px-3 rounded-xl hover:bg-zinc-900 transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+
+            <div className="pt-2 border-t border-zinc-800">
               <a
                 href="#contact"
                 onClick={(e) => handleNavigation(e, '#contact')}
-                className="bg-primary text-white px-5 py-2.5 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 transition-all"
+                className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-white text-zinc-950 text-xs font-semibold hover:bg-zinc-200 shadow-xs"
               >
-                {t('hero.cta.consult')}
+                <span>{isId ? 'Hubungi Saya' : 'Get in Touch'}</span>
               </a>
             </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 text-slate-300 hover:bg-slate-900 rounded-lg transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
           </div>
-        </div>
-      </nav>
-
-      {/* Mobile Menu Overlay */}
-      <div
-        className={`fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl transition-transform duration-300 md:hidden flex flex-col pt-24 px-6 ${isOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-      >
-        <div className="flex flex-col gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => handleNavigation(e, link.href)}
-              className="text-2xl font-bold text-white border-b border-slate-800 pb-4"
-            >
-              {link.name}
-            </a>
-          ))}
-
-          <div className="flex items-center justify-between pt-4">
-            <span className="text-slate-500 font-medium">Language</span>
-            <div className="flex bg-slate-900 p-1 rounded-lg">
-              <button
-                onClick={() => setLanguage('id')}
-                aria-label="Switch to Indonesian"
-                className={`px-4 py-2 rounded-md text-sm font-bold transition-all ${language === 'id' ? 'bg-slate-800 shadow-sm text-primary' : 'text-slate-400'}`}
-              >
-                ID
-              </button>
-              <button
-                onClick={() => setLanguage('en')}
-                aria-label="Switch to English"
-                className={`px-4 py-2 rounded-md text-sm font-bold transition-all ${language === 'en' ? 'bg-slate-800 shadow-sm text-primary' : 'text-slate-400'}`}
-              >
-                EN
-              </button>
-            </div>
-          </div>
-
-          <a
-            href="#contact"
-            onClick={(e) => handleNavigation(e, '#contact')}
-            className="mt-4 w-full bg-primary text-white py-4 rounded-xl font-bold text-center text-lg shadow-lg shadow-primary/25 active:scale-95 transition-transform"
-          >
-            {t('hero.cta.consult')}
-          </a>
-        </div>
-      </div>
+        )}
+      </header>
     </>
   );
 };

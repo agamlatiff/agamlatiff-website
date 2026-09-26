@@ -1,46 +1,42 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Custom Theme - Tailwind 4 */
 @theme inline {
   /* Colors */
-  --color-primary: #6366f1;
-  --color-primary-hover: #4f46e5;
-  --color-accent: #8b5cf6;
-  --color-dark: #0f172a;
-  --color-light: #f8fafc;
+  --color-primary: #18181b;
+  --color-primary-hover: #27272a;
+  --color-accent: #2563eb;
+  --color-dark: #09090b;
+  --color-light: #ffffff;
   --color-success: #10b981;
   --color-error: #ef4444;
 
   /* Fonts */
-  --font-sans: "Inter", sans-serif;
-  --font-display: "Red Hat Display", sans-serif;
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
   /* Animations */
-  --animate-fade-in-down: fadeInDown 0.5s ease-out;
-  --animate-scale-up: scaleUp 0.3s ease-out forwards;
-  --animate-marquee: marquee 40s linear infinite;
-  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  --animate-shimmer: shimmer 2s linear infinite;
-  --animate-blob: blob 7s infinite;
-  --animate-gradient-x: gradient-x 3s ease infinite;
+  --animate-fade-in-down: fadeInDown 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-scale-up: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-marquee: marquee 35s linear infinite;
 }
 
-/* Dark mode variables forced */
 :root {
-  --background: #0f172a;
-  --foreground: #f8fafc;
+  --background: #09090b;
+  --foreground: #f4f4f5;
 }
 
 .dark {
-  --background: #0f172a;
-  --foreground: #f8fafc;
+  --background: #09090b;
+  --foreground: #f4f4f5;
 }
 
 /* Keyframes */
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-6px);
   }
   100% {
     opacity: 1;
@@ -51,7 +47,7 @@
 @keyframes scaleUp {
   0% {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.98);
   }
   100% {
     opacity: 1;
@@ -68,140 +64,56 @@
   }
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-}
-
-@keyframes gradient-x {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
 /* Animation classes */
 .animate-fade-in-down {
-  animation: fadeInDown 0.5s ease-out;
+  animation: fadeInDown 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .animate-scale-up {
-  animation: scaleUp 0.3s ease-out forwards;
+  animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 .animate-marquee {
-  animation: marquee 40s linear infinite;
-}
-.animate-pulse-slow {
-  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-.animate-shimmer {
-  animation: shimmer 2s linear infinite;
-}
-.animate-blob {
-  animation: blob 7s infinite;
-}
-.animate-gradient-x {
-  animation: gradient-x 3s ease infinite;
+  animation: marquee 35s linear infinite;
 }
 
-/* Animation delay utilities */
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-.animation-delay-4000 {
-  animation-delay: 4s;
+/* Linear Hairline Grid Pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-/* Custom scrollbar for webkit */
+/* Linear Precision Card Token */
+.linear-card {
+  background-color: #121215;
+  border: 1px solid rgba(39, 39, 42, 0.85);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.linear-card:hover {
+  border-color: rgba(63, 63, 70, 0.95);
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+}
+
+/* Clean Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.dark ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #18181b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-.dark ::-webkit-scrollbar-thumb {
-  background: #4338ca;
+  background: #3f3f46;
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #6366f1;
-}
-
-/* Smooth theme transition */
-.theme-transition,
-.theme-transition *,
-.theme-transition *::before,
-.theme-transition *::after {
-  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-/* Exclude animations from theme transition */
-.theme-transition [class*="animate-"],
-.theme-transition .marquee {
-  transition: background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: #52525b;
 }
 
 /* Utility for pausing marquee on hover */
 .hover-pause:hover .animate-marquee {
   animation-play-state: paused;
-}
-
-/* Hide scrollbar for tabs */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Smooth gradient mask */
-.mask-linear-gradient {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
 }
 
 /* Hide scrollbar utility */
@@ -215,7 +127,9 @@
 
 /* Base body styles */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
